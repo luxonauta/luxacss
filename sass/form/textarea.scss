@@ -1,0 +1,14 @@
+textarea {
+    outline: none;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0.3rem 0.6rem;
+    resize: vertical;
+
+    &:not([rows]) {
+        max-height: 40em;
+        min-height: 8em;
+    }
+}

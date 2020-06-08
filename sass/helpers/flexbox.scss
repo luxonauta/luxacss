@@ -1,0 +1,55 @@
+.dflex {
+    display: flex;
+
+    &.is-vstart {
+        align-items: flex-start;
+    }
+
+    &.is-vend {
+        align-items: flex-end;
+    }
+
+    &.is-stretch {
+        align-items: stretch;
+    }
+
+    &.is-start {
+        justify-content: flex-start;
+    }
+
+    &.is-end {
+        justify-content: flex-end;
+    }
+
+    &.is-even {
+        justify-content: space-evenly;
+    }
+
+    &.is-between {
+        justify-content: space-between;
+    }
+
+    &.no-wrap {
+        flex-wrap: nowrap;
+    }
+
+    &.wrap {
+        flex-wrap: wrap;
+    }
+
+    &.is-column {
+        flex-direction: column;
+    }
+
+    &.is-column-reverse {
+        flex-direction: column-reverse;
+    }
+
+    &.is-row {
+        flex-direction: row;
+    }
+
+    &.is-row-reverse {
+        flex-direction: row-reverse;
+    }
+}

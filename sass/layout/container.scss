@@ -1,0 +1,31 @@
+.lx-container {
+    $i: 50;
+    @while $i <= 100 {
+        &-#{$i} {
+            width: percentage($i/100);
+            max-width: #{($i / 100) * 1920}px;
+            min-width: #{($i / 100) * 320}px;
+            margin: 0 auto;
+            position: relative;
+
+            &.is-flex {
+                display: flex;
+            }
+        }
+
+        $i: $i + 5;
+    }
+}
+
+@media (max-width: 768px) {
+    .lx-container {
+        $i: 50;
+        @while $i <= 100 {
+            &-#{$i} {
+                max-width: #{($i / 100) * 768}px;
+            }
+
+            $i: $i + 5;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.lx-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    font-size: 0.8em;
+
+    .lx-item {
+        display: flex;
+        flex-wrap: nowrap;
+
+        &:not(:first-of-type) {
+            &:before {
+                content: ">";
+                margin: 0 0.64em 0 0.512em;
+                vertical-align: top;
+                display: inline-block;
+                font-style: normal;
+                font-weight: normal;
+            }
+        }
+    }
+}

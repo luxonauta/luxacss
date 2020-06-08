@@ -1,0 +1,32 @@
+.lx-table {
+    width: 100%;
+    display: table;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    thead,
+    tbody {
+        tr {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+            td,
+            th {
+                padding: 0.64em 0.328em;
+                display: table-cell;
+                vertical-align: middle;
+                border-radius: 0.168em;
+                text-align: left;
+            }
+        }
+    }
+
+    &.is-striped {
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    background-color: rgba(242, 242, 242, 0.5);
+                }
+            }
+        }
+    }
+}

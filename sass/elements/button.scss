@@ -1,0 +1,42 @@
+.lx-btn {
+    padding: calc(0.5em - 0.063em) 1em;
+    position: relative;
+    text-align: center;
+    border-radius: 0.262em;
+    border-width: 0.063em;
+
+    &.is-small {
+        padding: 0.688em 2.5em;
+        font-size: 0.75em;
+    }
+
+    &.is-medium {
+        padding: 0.813em 2.813em;
+        font-size: 1em;
+    }
+
+    &.is-large {
+        padding: 0.938em 3.125em;
+        font-size: 1.25em;
+    }
+
+    &.is-loading {
+        pointer-events: none;
+        color: transparent;
+
+        &:after {
+            display: block;
+            content: "";
+            width: 1em;
+            height: 1em;
+            position: absolute;
+            left: calc(50% - (1em / 2));
+            top: calc(50% - (1em / 2));
+            border-radius: 18155.375em;
+            border: 0.125em solid;
+            border-right-color: transparent;
+            border-top-color: transparent;
+            animation: spin-around 0.5s infinite linear;
+        }
+    }
+}

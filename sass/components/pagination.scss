@@ -1,0 +1,23 @@
+.lx-pagination {
+    margin-left: -0.125em;
+    margin-right: -0.125em;
+    display: flex;
+    flex-wrap: wrap;
+
+    .lx-item {
+        margin: 0 0.125em;
+        padding: 0 0.5em;
+        line-height: 1.9;
+        border-radius: 0.188em;
+        border: 0.063em solid $black;
+        font-size: 0.813em;
+        color: $black;
+        background-color: transparent;
+
+        &.is-selected {
+            border-color: transparent;
+            color: $white;
+            background-color: $gray;
+        }
+    }
+}

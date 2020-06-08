@@ -1,0 +1,27 @@
+{
+  "name": "luxa",
+  "version": "1.0.0",
+  "description": "CSS framework based on Flexbox",
+  "author": {
+    "name": "Lucas de França",
+    "email": "luxonauta@gmail.com"
+  },
+  "license": "MIT",
+  "main": "sass/luxa.scss",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "flexbox",
+    "responsive",
+    "framework"
+  ],
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.2.1",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1"
+  }
+}

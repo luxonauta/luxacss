@@ -1,0 +1,25 @@
+:root {
+    --primary-color: #febd69;
+    --primary-color-light: #ffef99;
+    --primary-color-dark: #c88d3b;
+
+    --black: #212121;
+    --gray: #424242;
+    --white: white;
+
+    --success: #24cf5f;
+    --error: #e25055;
+    --warning: #fbcf34;
+}
+
+$primary-color: var(--primary-color);
+$primary-color-light: var(--primary-color-light);
+$primary-color-dark: var(--primary-color-dark);
+
+$black: var(--black);
+$gray: var(--gray);
+$white: var(--white);
+
+$success: var(--success);
+$error: var(--error);
+$warning: var(--warning);

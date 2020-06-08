@@ -1,0 +1,33 @@
+select {
+    cursor: pointer;
+    outline: none;
+    max-width: 100%;
+    display: block;
+    font-size: 1em;
+
+    &[multiple] {
+        option {
+            padding: 0.5rem 1rem;
+        }
+    }
+
+    &:not([multiple]) {
+        padding-right: 2.5rem;
+    }
+
+    &.is-valid,
+    &:valid {
+        border-color: $success;
+    }
+
+    &.is-invalid,
+    &:invalid {
+        border-color: $error;
+    }
+
+    &:focus,
+    &:focus-within,
+    &:hover {
+        border-color: $warning;
+    }
+}

@@ -1,0 +1,13 @@
+.has-transition {
+    transition-duration: 0.3s;
+    transition-property: all;
+    transition-delay: 0s;
+
+    &-slow {
+        transition-duration: 1s;
+    }
+
+    &-fast {
+        transition-duration: 0.3s;
+    }
+}

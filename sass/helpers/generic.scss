@@ -1,0 +1,25 @@
+.is-hidden {
+    visibility: hidden;
+}
+
+.is-visible {
+    visibility: visible;
+}
+
+.is-marginless {
+    margin: 0;
+}
+
+.is-paddingless {
+    padding: 0;
+}
+
+.is {
+    &-left {
+        float: left;
+    }
+
+    &-right {
+        float: right;
+    }
+}

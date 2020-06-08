@@ -1,0 +1,39 @@
+.bs-none {
+    box-shadow: none;
+}
+
+.bs-sm {
+    box-shadow: 0 0.069em 0.134em rgba(0, 0, 0, 0.05), 0 0.069em 0.262em rgba(0, 0, 0, 0.05),
+        0 0.134em 0.512em rgba(0, 0, 0, 0.05);
+
+    &:focus,
+    &:focus-within,
+    &:hover {
+        box-shadow: 0 0.134em 0.21em rgba(0, 0, 0, 0.05), 0 0.134em 0.328em rgba(0, 0, 0, 0.05),
+            0 0.21em 0.512em rgba(0, 0, 0, 0.05);
+    }
+}
+
+.bs-md {
+    box-shadow: 0 0.069em 0.21em rgba(0, 0, 0, 0.06), 0 0.134em 0.41em rgba(0, 0, 0, 0.06),
+        0 0.21em 0.512em rgba(0, 0, 0, 0.09);
+
+    &:focus,
+    &:focus-within,
+    &:hover {
+        box-shadow: 0 0.134em 0.262em rgba(0, 0, 0, 0.06), 0 0.21em 0.512em rgba(0, 0, 0, 0.06),
+            0 0.262em 0.512em rgba(0, 0, 0, 0.09);
+    }
+}
+
+.bs-lg {
+    box-shadow: 0 0.069em 0.262em rgba(0, 0, 0, 0.09), 0 0.21em 0.512em rgba(0, 0, 0, 0.09),
+        0 0.262em 0.8em rgba(0, 0, 0, 0.13);
+
+    &:focus,
+    &:focus-within,
+    &:hover {
+        box-shadow: 0 0.134em 0.328em rgba(0, 0, 0, 0.09), 0 0.262em 0.512em rgba(0, 0, 0, 0.09),
+            0 0.328em 0.8em rgba(0, 0, 0, 0.13);
+    }
+}

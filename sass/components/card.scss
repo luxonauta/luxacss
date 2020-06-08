@@ -1,0 +1,11 @@
+.lx-card {
+    padding: 0.8em 1em;
+    border-radius: 0.328em;
+    border: 0.134em solid $black;
+    transition: 0.3s;
+
+    &.is-muted {
+        user-select: none;
+        filter: grayscale(0.4) opacity(0.6);
+    }
+}

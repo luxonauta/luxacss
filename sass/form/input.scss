@@ -1,0 +1,29 @@
+input {
+    outline: none;
+    width: 100%;
+    margin: 0;
+    padding: 0.3rem 0.6rem;
+    overflow: visible;
+    border-radius: 0;
+    border: 0;
+    border-bottom: 2px solid;
+    line-height: 1;
+    font-family: inherit;
+    font-size: inherit;
+
+    &.is-valid,
+    &:valid {
+        border-color: $success;
+    }
+
+    &.is-invalid,
+    &:invalid {
+        border-color: $error;
+    }
+
+    &:focus,
+    &:focus-within,
+    &:hover {
+        border-color: $warning;
+    }
+}
