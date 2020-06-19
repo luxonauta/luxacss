@@ -12,19 +12,19 @@
     }
 
     &.is-vstart {
-        align-items: start;
+        align-items: flex-start;
     }
 
     &.is-vend {
-        align-items: end;
+        align-items: flex-end;
     }
 
     &.is-start {
-        justify-content: start;
+        justify-content: flex-start;
     }
 
     &.is-end {
-        justify-content: end;
+        justify-content: flex-end;
     }
 
     &.is-even {
@@ -54,5 +54,14 @@
 @media screen and (max-width: 900px) {
     .lx-row {
         flex-flow: wrap column;
+    }
+
+    .lx-column {
+        width: 100%;
+        padding: 0.75rem 0;
+
+        &.is-* {
+            width: 100%;
+        }
     }
 }

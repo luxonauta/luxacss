@@ -9,6 +9,8 @@ exports.default = () => {
 
 const compileSass = () => {
     return gulp.src("sass/luxa.scss")
+        .pipe(sass({ outputStyle: "expanded" }).on("error", sass.logError))
+        .pipe(gulp.dest("dist/expanded"))
         .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
-        .pipe(gulp.dest("css/"));
+        .pipe(gulp.dest("dist/compressed"));
 }
