@@ -3,9 +3,14 @@
     --primary-color-light: #ffef99;
     --primary-color-dark: #c88d3b;
 
+    --secondary-color: #d2d6dc;
+    --secondary-color-light: #ffffff;
+    --secondary-color-dark: #a1a5aa;
+
     --black: #212121;
     --gray: #424242;
     --white: white;
+    --white-dark: #e0e0e0;
 
     --success: #24cf5f;
     --error: #e25055;
@@ -19,6 +24,7 @@ $primary-color-dark: var(--primary-color-dark);
 $black: var(--black);
 $gray: var(--gray);
 $white: var(--white);
+$white-dark: var(--white-dark);
 
 $success: var(--success);
 $error: var(--error);

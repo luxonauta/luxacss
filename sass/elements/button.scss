@@ -1,23 +1,27 @@
 .lx-btn {
+    outline: 0;
     padding: calc(0.5em - 0.063em) 1em;
-    position: relative;
+    vertical-align: middle;
     text-align: center;
     border-radius: 0.262em;
-    border-width: 0.063em;
+    border: none;
+    text-transform: uppercase;
+    box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.14), 0 0.1875rem 0.0625rem -0.125rem rgba(0, 0, 0, 0.12),
+        0 0.0625rem 0.3125rem 0 rgba(0, 0, 0, 0.2);
 
     &.is-small {
         padding: 0.688em 2.5em;
-        font-size: 0.75em;
+        font-size: 0.75rem;
     }
 
     &.is-medium {
         padding: 0.813em 2.813em;
-        font-size: 1em;
+        font-size: 1rem;
     }
 
     &.is-large {
         padding: 0.938em 3.125em;
-        font-size: 1.25em;
+        font-size: 1.25rem;
     }
 
     &.is-loading {
