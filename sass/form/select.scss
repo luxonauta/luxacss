@@ -14,20 +14,4 @@ select {
     &:not([multiple]) {
         padding-right: 2.5rem;
     }
-
-    &.is-valid,
-    &:valid {
-        border-color: $success;
-    }
-
-    &.is-invalid,
-    &:invalid {
-        border-color: $error;
-    }
-
-    &:focus,
-    &:focus-within,
-    &:hover {
-        border-color: $warning;
-    }
 }

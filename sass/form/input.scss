@@ -10,20 +10,4 @@ input {
     line-height: 1;
     font-family: inherit;
     font-size: inherit;
-
-    &.is-valid,
-    &:valid {
-        border-color: $success;
-    }
-
-    &.is-invalid,
-    &:invalid {
-        border-color: $error;
-    }
-
-    &:focus,
-    &:focus-within,
-    &:hover {
-        border-color: $warning;
-    }
 }

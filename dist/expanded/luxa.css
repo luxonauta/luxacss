@@ -7,11 +7,8 @@
   --secondary-color-dark: #a1a5aa;
   --black: #212121;
   --gray: #424242;
+  --gray-light: #e0e0e0;
   --white: white;
-  --white-dark: #e0e0e0;
-  --success: #24cf5f;
-  --error: #e25055;
-  --warning: #fbcf34;
 }
 
 *,
@@ -456,18 +453,6 @@ input {
   font-size: inherit;
 }
 
-input.is-valid, input:valid {
-  border-color: var(--success);
-}
-
-input.is-invalid, input:invalid {
-  border-color: var(--error);
-}
-
-input:focus, input:focus-within, input:hover {
-  border-color: var(--warning);
-}
-
 label {
   display: block;
   font-size: inherit;
@@ -494,38 +479,11 @@ select:not([multiple]) {
   padding-right: 2.5rem;
 }
 
-select.is-valid, select:valid {
-  border-color: var(--success);
-}
-
-select.is-invalid, select:invalid {
-  border-color: var(--error);
-}
-
-select:focus, select:focus-within, select:hover {
-  border-color: var(--warning);
-}
-
 .help,
 small {
   display: block;
   margin-top: 0.25rem;
   font-size: 0.75rem;
-}
-
-.help.is-success,
-small.is-success {
-  color: var(--success);
-}
-
-.help.is-error,
-small.is-error {
-  color: var(--error);
-}
-
-.help.is-warning,
-small.is-warning {
-  color: var(--warning);
 }
 
 textarea {
