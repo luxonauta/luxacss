@@ -6,6 +6,10 @@
     "name": "Lucas de França",
     "email": "luxonauta@gmail.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luxonauta/luxa.git"
+  },
   "license": "MIT",
   "main": "sass/luxa.scss",
   "scripts": {
