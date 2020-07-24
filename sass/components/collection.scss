@@ -5,12 +5,12 @@
     overflow: hidden;
     list-style-type: none;
     border-radius: 0.328em;
-    border: 0.0625rem solid $white-dark;
+    border: 0.0625rem solid $gray-light;
 
     .lx-collection-header {
         width: 100%;
         padding: 0.625em 1.25em;
-        border-bottom: 0.0625rem solid $white-dark;
+        border-bottom: 0.0625rem solid $gray-light;
         background-color: inherit;
     }
 
@@ -19,7 +19,7 @@
         margin: 0;
         padding: 0.625em 1.25em;
         background-color: inherit;
-        border-bottom: 0.0625rem solid $white-dark;
+        border-bottom: 0.0625rem solid $gray-light;
 
         &:last-child {
             border-bottom: none;
