@@ -9,38 +9,20 @@
     box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.14), 0 0.1875rem 0.0625rem -0.125rem rgba(0, 0, 0, 0.12),
         0 0.0625rem 0.3125rem 0 rgba(0, 0, 0, 0.2);
 
-    &.is-small {
-        padding: 0.688em 2.5em;
-        font-size: 0.75rem;
-    }
+    &.is {
+        &-small {
+            padding: 0.688em 2.5em;
+            font-size: 0.75rem;
+        }
 
-    &.is-medium {
-        padding: 0.813em 2.813em;
-        font-size: 1rem;
-    }
+        &-medium {
+            padding: 0.813em 2.813em;
+            font-size: 1rem;
+        }
 
-    &.is-large {
-        padding: 0.938em 3.125em;
-        font-size: 1.25rem;
-    }
-
-    &.is-loading {
-        pointer-events: none;
-        color: transparent;
-
-        &:after {
-            display: block;
-            content: "";
-            width: 1em;
-            height: 1em;
-            position: absolute;
-            left: calc(50% - (1em / 2));
-            top: calc(50% - (1em / 2));
-            border-radius: 18155.375em;
-            border: 0.125em solid;
-            border-right-color: transparent;
-            border-top-color: transparent;
-            animation: spin-around 0.5s infinite linear;
+        &-large {
+            padding: 0.938em 3.125em;
+            font-size: 1.25rem;
         }
     }
 }

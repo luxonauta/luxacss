@@ -235,19 +235,19 @@ template,
   box-shadow: 0 0.063rem 0.25rem rgba(0, 0, 0, 0.09), 0 0.188rem 0.5rem rgba(0, 0, 0, 0.09), 0 0.25rem 10.188rem rgba(0, 0, 0, 0.13);
 }
 
-.lx-avatar .lx-avatar-pic {
+.lx-avatar-pic {
   width: 100%;
   height: 100%;
 }
 
-.lx-avatar .lx-avatar-pic img,
-.lx-avatar .lx-avatar-pic svg {
+.lx-avatar-pic img,
+.lx-avatar-pic svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.lx-avatar .info {
+.lx-avatar-info {
   width: 100%;
   height: 50%;
   padding: 0.25rem 0.5rem;
@@ -268,12 +268,12 @@ template,
   font-size: 0.8em;
 }
 
-.lx-breadcrumb .lx-item {
+.lx-breadcrumb-item {
   display: flex;
   flex-wrap: nowrap;
 }
 
-.lx-breadcrumb .lx-item:not(:first-of-type):before {
+.lx-breadcrumb-item:not(:first-of-type):before {
   content: ">";
   margin: 0 0.64em 0 0.512em;
   vertical-align: top;
@@ -283,60 +283,10 @@ template,
 }
 
 .lx-card {
-  padding: 0.8em 1em;
+  padding: 2em;
   border-radius: 0.328em;
   border: none;
   box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.14), 0 0.1875rem 0.0625rem -0.125rem rgba(0, 0, 0, 0.12), 0 0.0625rem 0.3125rem 0 rgba(0, 0, 0, 0.2);
-}
-
-.lx-card .lx-card-content {
-  padding: 1.5em;
-}
-
-.lx-card .lx-card-content .lx-card-title {
-  margin: 0 0 0.5em 0;
-  font-size: 1.5rem;
-}
-
-.lx-card .lx-card-action {
-  padding: 1rem 1.5rem;
-  border-radius: 0 0 0.125em 0.125em;
-  border-top: 0.0625rem solid rgba(160, 160, 160, 0.2);
-  background-color: inherit;
-}
-
-.lx-card .lx-card-action .lx-card-btn {
-  margin: 0 1.5em 0 0;
-  text-transform: uppercase;
-}
-
-.lx-card .lx-card-action .lx-card-btn:last-child {
-  margin: 0;
-}
-
-.lx-card.image .lx-card-image {
-  width: 100%;
-  position: relative;
-}
-
-.lx-card.image .lx-card-image img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
-}
-
-.lx-card.image .lx-card-image .lx-card-title {
-  max-width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  padding: 1.5em;
-  color: var(--white);
-}
-
-.lx-card.panel {
-  padding: 1.5em;
-  border-radius: 0.125em;
 }
 
 .lx-card.is-muted {
@@ -354,14 +304,14 @@ template,
   border: 0.0625rem solid var(--gray-light);
 }
 
-.lx-collection .lx-collection-header {
+.lx-collection-header {
   width: 100%;
   padding: 0.625em 1.25em;
   border-bottom: 0.0625rem solid var(--gray-light);
   background-color: inherit;
 }
 
-.lx-collection .lx-collection-item {
+.lx-collection-item {
   width: 100%;
   margin: 0;
   padding: 0.625em 1.25em;
@@ -369,29 +319,28 @@ template,
   border-bottom: 0.0625rem solid var(--gray-light);
 }
 
-.lx-collection .lx-collection-item:last-child {
+.lx-collection-item:last-child {
   border-bottom: none;
 }
 
 .lx-pagination {
-  margin-left: -0.125em;
-  margin-right: -0.125em;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.lx-pagination .lx-item {
-  margin: 0 0.125em;
+.lx-pagination-item {
   padding: 0 0.5em;
-  line-height: 1.9;
   border-radius: 0.188em;
   border: 0.063em solid var(--black);
+  line-height: normal;
   font-size: 0.813em;
   color: var(--black);
   background-color: transparent;
 }
 
-.lx-pagination .lx-item.is-selected {
+.lx-pagination-item.is-selected {
   border-color: transparent;
   color: var(--white);
   background-color: var(--gray);
@@ -423,42 +372,19 @@ template,
   font-size: 1.25rem;
 }
 
-.lx-btn.is-loading {
-  pointer-events: none;
-  color: transparent;
-}
-
-.lx-btn.is-loading:after {
-  display: block;
-  content: "";
-  width: 1em;
-  height: 1em;
-  position: absolute;
-  left: calc(50% - (1em / 2));
-  top: calc(50% - (1em / 2));
-  border-radius: 18155.375em;
-  border: 0.125em solid;
-  border-right-color: transparent;
-  border-top-color: transparent;
-  animation: spin-around 0.5s infinite linear;
-}
-
 input {
   outline: none;
   width: 100%;
   margin: 0;
   padding: 0.3rem 0.6rem;
-  overflow: visible;
-  border-radius: 0;
-  border: 0;
-  border-bottom: 2px solid;
-  line-height: 1;
+  line-height: normal;
   font-family: inherit;
   font-size: inherit;
 }
 
 label {
   display: block;
+  font-family: inherit;
   font-size: inherit;
   font-weight: 700;
 }
@@ -472,7 +398,7 @@ select {
   outline: none;
   max-width: 100%;
   display: block;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 select[multiple] option {
@@ -587,11 +513,11 @@ textarea:not([rows]) {
   padding: 0 !important;
 }
 
-.is-left {
+.is-float-left {
   float: left;
 }
 
-.is-right {
+.is-float-right {
   float: right;
 }
 

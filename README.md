@@ -1,6 +1,6 @@
 # luxa
 
-> luxa is a [Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes) based CSS framework.
+> luxa is a minimalist CSS framework.
 
 Simple and focused, its goal is to provide a lightweight solution that can be easily implemented in any development context.
 
@@ -60,7 +60,7 @@ If they are not installed, follow the instructions [here](https://nodejs.org/en/
 You can install it following the [Gulp installation tutorial](https://gulpjs.com/docs/en/getting-started/quick-start), or you can simply run the command on your terminal:
 
 ```sh
-npm install gulp gulp-cli node-sass gulp-sass --save-dev
+npm i --save-dev
 ```
 
 #### Verify your Gulp versions
@@ -87,5 +87,3 @@ If you want to help, there are many ways to do it! Start by reading the [contrib
 Copyright (c) 2020 [Lucas de França](https://github.com/luxonauta). Code released under [the MIT license](https://github.com/luxonauta/luxa/blob/master/LICENSE).
 
 English is not my native language, if there are any grammatical errors, please feel free to correct me, I will be very grateful!
-
-/dev with :coffee::black_heart: in :brazil:
