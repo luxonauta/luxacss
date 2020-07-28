@@ -1,49 +1,53 @@
 .has-dflex {
     display: flex;
+
+    &-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
-.has-dflex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.align {
+    &-center {
+        align-items: center !important;
+    }
+
+    &-end {
+        align-items: flex-end !important;
+    }
+
+    &-start {
+        align-items: flex-start !important;
+    }
+
+    &-stretch {
+        align-items: stretch !important;
+    }
 }
 
-.align-center {
-    align-items: center !important;
-}
+.justify {
+    &-around {
+        justify-content: space-around !important;
+    }
 
-.align-end {
-    align-items: flex-end !important;
-}
+    &-between {
+        justify-content: space-between !important;
+    }
 
-.align-start {
-    align-items: flex-start !important;
-}
+    &-evenly {
+        justify-content: space-evenly !important;
+    }
 
-.align-stretch {
-    align-items: stretch !important;
-}
+    &-center {
+        justify-content: center !important;
+    }
 
-.justify-around {
-    justify-content: space-around !important;
-}
+    &-end {
+        justify-content: flex-end !important;
+    }
 
-.justify-between {
-    justify-content: space-between !important;
-}
-
-.justify-evenly {
-    justify-content: space-evenly !important;
-}
-
-.justify-center {
-    justify-content: center !important;
-}
-
-.justify-end {
-    justify-content: flex-end !important;
-}
-
-.justify-start {
-    justify-content: flex-start !important;
+    &-start {
+        justify-content: flex-start !important;
+    }
 }

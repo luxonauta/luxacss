@@ -1,19 +1,21 @@
-.ps-absolute {
-    position: absolute;
-}
+.ps {
+    &-absolute {
+        position: absolute;
+    }
 
-.ps-fixed {
-    position: fixed;
-}
+    &-fixed {
+        position: fixed;
+    }
 
-.ps-relative {
-    position: relative;
-}
+    &-relative {
+        position: relative;
+    }
 
-.ps-static {
-    position: static;
-}
+    &-static {
+        position: static;
+    }
 
-.ps-sticky {
-    position: sticky;
+    &-sticky {
+        position: sticky;
+    }
 }

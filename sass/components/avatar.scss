@@ -7,7 +7,7 @@
     box-shadow: 0 0.063rem 0.25rem rgba(0, 0, 0, 0.09), 0 0.188rem 0.5rem rgba(0, 0, 0, 0.09),
         0 0.25rem 10.188rem rgba(0, 0, 0, 0.13);
 
-    .lx-avatar-pic {
+    &-pic {
         width: 100%;
         height: 100%;
 
@@ -19,7 +19,7 @@
         }
     }
 
-    .info {
+    &-info {
         width: 100%;
         height: 50%;
         padding: 0.25rem 0.5rem;

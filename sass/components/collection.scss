@@ -7,14 +7,14 @@
     border-radius: 0.328em;
     border: 0.0625rem solid $gray-light;
 
-    .lx-collection-header {
+    &-header {
         width: 100%;
         padding: 0.625em 1.25em;
         border-bottom: 0.0625rem solid $gray-light;
         background-color: inherit;
     }
 
-    .lx-collection-item {
+    &-item {
         width: 100%;
         margin: 0;
         padding: 0.625em 1.25em;
