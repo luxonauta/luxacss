@@ -227,17 +227,18 @@ template,
 }
 
 .lx-avatar {
-  width: 6.5rem;
-  height: 7rem;
+  max-width: 10rem;
   display: flex;
+  flex-flow: wrap column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0.063rem 0.25rem rgba(0, 0, 0, 0.09), 0 0.188rem 0.5rem rgba(0, 0, 0, 0.09), 0 0.25rem 10.188rem rgba(0, 0, 0, 0.13);
+  box-shadow: 0 0.063rem 0.125rem rgba(0, 0, 0, 0.05), 0 0.063rem 0.25rem rgba(0, 0, 0, 0.05), 0 0.125rem 0.5rem rgba(0, 0, 0, 0.05);
 }
 
 .lx-avatar-pic {
   width: 100%;
-  height: 100%;
+  height: 50%;
+  overflow: hidden;
 }
 
 .lx-avatar-pic img,
@@ -250,9 +251,10 @@ template,
 .lx-avatar-info {
   width: 100%;
   height: 50%;
-  padding: 0.25rem 0.5rem;
+  padding: 0 0.5rem;
   line-height: 1;
   text-align: center;
+  font-size: 0.75rem;
 }
 
 .lx-badge {
