@@ -1,15 +1,15 @@
 .lx-pagination {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1rem;
+    place-content: center;
 
     &-item {
-        padding: 0 0.5em;
+        padding: 0.25rem 0.5rem;
         border-radius: 0.188em;
         border: 0.063em solid $black;
         line-height: normal;
-        font-size: 0.813em;
+        font-size: 0.8rem;
         color: $black;
         background-color: transparent;
 
