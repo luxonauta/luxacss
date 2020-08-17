@@ -7,14 +7,14 @@
     thead,
     tbody {
         tr {
-            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.12);
 
             td,
             th {
-                padding: 0.64em 0.328em;
+                padding: 0.64rem 0.328rem;
                 display: table-cell;
                 vertical-align: middle;
-                border-radius: 0.168em;
+                border-radius: 0.168rem;
                 text-align: left;
             }
         }
@@ -24,7 +24,7 @@
         tbody {
             tr {
                 &:nth-child(odd) {
-                    background-color: rgba(242, 242, 242, 0.5);
+                    background-color: rgba(255, 255, 255, 0.5);
                 }
             }
         }
