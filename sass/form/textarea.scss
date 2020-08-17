@@ -8,7 +8,7 @@ textarea {
     resize: vertical;
 
     &:not([rows]) {
-        max-height: 40em;
-        min-height: 8em;
+        max-height: 40rem;
+        min-height: 8rem;
     }
 }

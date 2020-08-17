@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 
     &-item {
         display: flex;
@@ -11,7 +11,7 @@
         &:not(:first-of-type) {
             &:before {
                 content: ">";
-                margin: 0 0.64em 0 0.512em;
+                margin: 0 0.64rem 0 0.512rem;
                 vertical-align: top;
                 display: inline-block;
                 font-style: normal;

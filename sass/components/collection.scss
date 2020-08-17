@@ -4,12 +4,12 @@
     padding: 1rem;
     overflow: hidden;
     list-style-type: none;
-    border-radius: 0.328em;
+    border-radius: 0.328rem;
     border: 0.0625rem solid $gray-light;
 
     &-header {
         width: 100%;
-        padding: 0.625em 1.25em;
+        padding: 0.625rem 1.25rem;
         border-bottom: 0.0625rem solid $gray-light;
         background-color: inherit;
     }
@@ -17,7 +17,7 @@
     &-item {
         width: 100%;
         margin: 0;
-        padding: 0.625em 1.25em;
+        padding: 0.625rem 1.25rem;
         background-color: inherit;
         border-bottom: 0.0625rem solid $gray-light;
 
