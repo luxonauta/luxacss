@@ -4,6 +4,7 @@
     flex-flow: wrap row;
     align-items: center;
     justify-content: center;
+    gap: 0.75rem;
 
     &.is-gapless {
         .lx-column {
@@ -41,7 +42,6 @@
     flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
-    padding: 0.75rem;
 
     @for $i from 0 through 12 {
         &.is-#{$i} {
@@ -58,7 +58,6 @@
 
     .lx-column {
         width: 100%;
-        padding: 0.75rem 0;
 
         &.is-* {
             width: 100%;
