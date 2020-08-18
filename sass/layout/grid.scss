@@ -1,16 +1,16 @@
 $min-col-width: 15rem;
 $grid-gap: 2rem;
 
-.grid-wrap {
+.lx-grid-wrap {
     padding: $grid-gap;
 }
 
-.grid {
+.lx-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax($min-col-width, 1fr));
     grid-gap: 2rem;
 
-    & + .grid {
+    & + .lx-grid {
         margin-top: $grid-gap;
     }
 }
