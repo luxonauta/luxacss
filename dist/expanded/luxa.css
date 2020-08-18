@@ -717,6 +717,7 @@ textarea:not([rows]) {
   flex-flow: wrap row;
   align-items: center;
   justify-content: center;
+  gap: 0.75rem;
 }
 
 .lx-row.is-gapless .lx-column {
@@ -752,7 +753,6 @@ textarea:not([rows]) {
   flex-basis: 0;
   flex-grow: 1;
   flex-shrink: 1;
-  padding: 0.75rem;
 }
 
 .lx-column.is-0 {
@@ -826,7 +826,6 @@ textarea:not([rows]) {
   }
   .lx-column {
     width: 100%;
-    padding: 0.75rem 0;
   }
   .lx-column.is-* {
     width: 100%;
