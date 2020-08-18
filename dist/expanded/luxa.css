@@ -711,6 +711,20 @@ textarea:not([rows]) {
   }
 }
 
+.grid-wrap {
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.grid + .grid {
+  margin-top: 2rem;
+}
+
 .lx-row {
   width: 100%;
   display: flex;
