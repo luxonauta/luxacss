@@ -2,6 +2,10 @@
 
 > luxa is a minimalist CSS framework.
 
+luxa now have documentation with examples, see [here](https://luxonauta.github.io/luxadocs/)!
+
+You can also see the [collection on Codepen](https://codepen.io/collection/XbOwvm) :sparkling_heart:
+
 Simple and focused, its goal is to provide a lightweight solution that can be easily implemented in any development context.
 
 With simple class names like `.lx-btn` or `.lx-row`, and a simple modifier system, like `.is-left`.
