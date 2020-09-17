@@ -59,8 +59,10 @@
     .lx-column {
         width: 100%;
 
-        &.is-* {
-            width: 100%;
+        @for $i from 0 through 12 {
+            &.is-#{$i} {
+                width: 100%;
+            }
         }
     }
 }
