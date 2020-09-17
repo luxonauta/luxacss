@@ -1,0 +1,16 @@
+.hide,
+.hide-on-desk {
+    display: none;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 56.25rem) {
+    .hide-on-desk {
+        display: block;
+    }
+
+    .hide-on-mb {
+        display: none;
+        visibility: hidden;
+    }
+}

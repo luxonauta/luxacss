@@ -261,6 +261,10 @@ textarea {
   box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.14), 0 0.1875rem 0.0625rem -0.125rem rgba(0, 0, 0, 0.12), 0 0.0625rem 0.3125rem 0 rgba(0, 0, 0, 0.2);
 }
 
+.lx-card.is-shadowless {
+  box-shadow: none;
+}
+
 .lx-card.is-muted {
   user-select: none;
   filter: grayscale(0.4) opacity(0.6);
@@ -491,6 +495,22 @@ textarea:not([rows]) {
 
 .is-float-right {
   float: right;
+}
+
+.hide,
+.hide-on-desk {
+  display: none;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 56.25rem) {
+  .hide-on-desk {
+    display: block;
+  }
+  .hide-on-mb {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .ps-absolute {
@@ -841,7 +861,43 @@ textarea:not([rows]) {
   .lx-column {
     width: 100%;
   }
-  .lx-column.is-* {
+  .lx-column.is-0 {
+    width: 100%;
+  }
+  .lx-column.is-1 {
+    width: 100%;
+  }
+  .lx-column.is-2 {
+    width: 100%;
+  }
+  .lx-column.is-3 {
+    width: 100%;
+  }
+  .lx-column.is-4 {
+    width: 100%;
+  }
+  .lx-column.is-5 {
+    width: 100%;
+  }
+  .lx-column.is-6 {
+    width: 100%;
+  }
+  .lx-column.is-7 {
+    width: 100%;
+  }
+  .lx-column.is-8 {
+    width: 100%;
+  }
+  .lx-column.is-9 {
+    width: 100%;
+  }
+  .lx-column.is-10 {
+    width: 100%;
+  }
+  .lx-column.is-11 {
+    width: 100%;
+  }
+  .lx-column.is-12 {
     width: 100%;
   }
 }
