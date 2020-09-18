@@ -755,8 +755,8 @@ textarea:not([rows]) {
   gap: 0.75rem;
 }
 
-.lx-row.is-gapless .lx-column {
-  padding: 0;
+.lx-row.is-gapless {
+  gap: 0;
 }
 
 .lx-row.is-vstart {

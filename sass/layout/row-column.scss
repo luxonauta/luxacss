@@ -7,9 +7,7 @@
     gap: 0.75rem;
 
     &.is-gapless {
-        .lx-column {
-            padding: 0;
-        }
+        gap: 0;
     }
 
     &.is-vstart {
