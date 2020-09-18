@@ -497,23 +497,6 @@ textarea:not([rows]) {
   float: right;
 }
 
-.hide,
-.hide-on-desk {
-  display: none;
-  visibility: hidden;
-}
-
-@media screen and (max-width: 56.25rem) {
-  .hide-on-desk {
-    display: block;
-    visibility: visible;
-  }
-  .hide-on-mb {
-    display: none;
-    visibility: hidden;
-  }
-}
-
 .ps-absolute {
   position: absolute;
 }
@@ -562,6 +545,23 @@ textarea:not([rows]) {
 
 .is-text-justified {
   text-align: justify;
+}
+
+.hide,
+.hide-on-desk {
+  display: none;
+  visibility: hidden;
+}
+
+@media screen and (max-width: 56.25rem) {
+  .hide-on-desk {
+    display: block;
+    visibility: visible;
+  }
+  .hide-on-mb {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 .lx-container-50 {
