@@ -1,8 +1,8 @@
-# luxa
+# Luxa
 
-> luxa is a minimalist CSS framework.
+> Luxa is a minimalist CSS framework.
 
-luxa now have documentation with examples, see [here](https://luxonauta.github.io/luxadocs/)!
+Luxa now have documentation with examples, see [here](https://luxonauta.github.io/luxadocs/)!
 
 You can also see the [collection on Codepen](https://codepen.io/collection/XbOwvm) :sparkling_heart:
 
@@ -14,7 +14,7 @@ With simple class names like `.lx-btn` or `.lx-row`, and a simple modifier syste
 
 #### by CDN
 
-You can use **luxa** by CDN, provided by the :mechanical_arm:[jsDeliver](https://www.jsdelivr.com/) service, below:
+You can use **Luxa** by CDN, provided by the :mechanical_arm:[jsDeliver](https://www.jsdelivr.com/) service, below:
 
 ```
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/luxonauta/luxa@latest/dist/expanded/luxa.css">
