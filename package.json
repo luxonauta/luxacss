@@ -1,5 +1,5 @@
 {
-  "name": "luxa",
+  "name": "luxacss",
   "version": "1.0.0",
   "description": "CSS framework based on Flexbox",
   "author": {
@@ -11,7 +11,7 @@
     "url": "https://github.com/luxonauta/luxa.git"
   },
   "license": "MIT",
-  "main": "sass/luxa.scss",
+  "main": "sass/luxa.sass",
   "scripts": {
     "gulp": "gulp"
   },
@@ -20,7 +20,8 @@
     "sass",
     "flexbox",
     "responsive",
-    "framework"
+    "framework",
+    "minimalist"
   ],
   "devDependencies": {
     "gulp": "^4.0.2",

@@ -1,0 +1,119 @@
+*,
+*:after,
+*:before
+    box-sizing: border-box
+
+html,
+body
+    word-break: break-word
+    margin: 0
+    padding: 0
+    line-height: 1.5
+    font-size: 100%
+    color: $black
+
+body
+    scroll-behavior: smooth
+
+main
+    display: block
+
+@for $i from 0 through 6
+    h#{$i}
+        margin: .67rem 0
+
+h1
+    margin-top: 0
+    font-size: 3.052rem
+
+h2
+    font-size: 2.441rem
+
+h3
+    font-size: 1.953rem
+
+h4
+    font-size: 1.563rem
+
+h5,
+h6
+    font-size: 1.25rem
+
+hr
+    box-sizing: content-box
+    overflow: visible
+
+a,
+button
+    -webkit-tap-highlight-color: transparent
+    outline: none
+    cursor: pointer
+    text-decoration: none
+    color: inherit
+    background-color: transparent
+
+b,
+strong
+    font-weight: bold
+
+sub,
+sup
+    font-size: 75%
+    line-height: 0
+    position: relative
+    vertical-align: baseline
+
+sub
+    bottom: -.25rem
+
+sup
+    top: -.5rem
+
+small
+    font-size: .8rem
+
+figure,
+article
+    margin: 0
+    padding: 0
+
+img
+    max-width: 100%
+    max-height: 100%
+    border-style: none
+
+button,
+input,
+optgroup,
+select,
+textarea
+    font-family: inherit
+    font-size: 100%
+    line-height: 1
+    margin: 0
+    padding: .75rem 1.25rem
+    border-radius: .25rem
+
+button,
+select
+    text-transform: none
+
+fieldset
+    padding: .35rem .75rem .625rem
+
+progress
+    vertical-align: baseline
+
+textarea
+    overflow: auto
+
+[type="checkbox"],
+[type="radio"]
+    padding: 0
+
+[type="search"]
+    outline-offset: -0.125rem
+
+@media (prefers-reduced-motion: reduce)
+    *
+        animation: none
