@@ -1,0 +1,23 @@
+.lx-container
+    $i: 50
+    @while $i <= 100
+        &-#{$i}
+            width: percentage($i/100)
+            max-width: #{($i / 100) * 120}rem
+            min-width: #{($i / 100) * 20}rem
+            margin: 0 auto
+            position: relative
+
+            &.is-flex
+                display: flex
+
+        $i: $i + 5
+
+@media (max-width: 48rem)
+    .lx-container
+        $i: 50
+        @while $i <= 100
+            &-#{$i}
+                max-width: #{($i / 100) * 48}rem
+
+            $i: $i + 5

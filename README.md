@@ -1,6 +1,6 @@
-# Luxa
+# Luxa CSS
 
-> Luxa is a minimalist CSS framework.
+> luxa CSS is a minimalist CSS framework.
 
 Luxa now have documentation with examples, see [here](https://luxonauta.github.io/luxadocs/)!
 
@@ -14,7 +14,7 @@ With simple class names like `.lx-btn` or `.lx-row`, and a simple modifier syste
 
 #### by CDN
 
-You can use **Luxa** by CDN, provided by the :mechanical_arm:[jsDeliver](https://www.jsdelivr.com/) service, below:
+You can use **Luxa CSS** by CDN, provided by the :mechanical_arm:[jsDeliver](https://www.jsdelivr.com/) service, below:
 
 ```
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/luxonauta/luxa@latest/dist/expanded/luxa.css">
