@@ -27,10 +27,6 @@ main {
   display: block;
 }
 
-h0 {
-  margin: .67rem 0;
-}
-
 h1 {
   margin: .67rem 0;
 }
@@ -57,24 +53,6 @@ h6 {
 
 h1 {
   margin-top: 0;
-  font-size: 3.052rem;
-}
-
-h2 {
-  font-size: 2.441rem;
-}
-
-h3 {
-  font-size: 1.953rem;
-}
-
-h4 {
-  font-size: 1.563rem;
-}
-
-h5,
-h6 {
-  font-size: 1.25rem;
 }
 
 hr {
@@ -203,10 +181,12 @@ textarea {
 
 .lx-avatar {
   max-width: 10rem;
+  overflow: hidden;
   display: flex;
   flex-flow: wrap column;
   align-items: center;
   justify-content: center;
+  border-radius: .328rem;
   box-shadow: 0 0.063rem 0.125rem rgba(0, 0, 0, 0.05), 0 0.063rem 0.25rem rgba(0, 0, 0, 0.05), 0 0.125rem 0.5rem rgba(0, 0, 0, 0.05);
 }
 
@@ -508,6 +488,28 @@ textarea {
   .lx-nav-menu.is-active {
     display: flex;
     background-color: var(--nav-bg);
+  }
+}
+
+@keyframes swing-in-top-fwd {
+  0% {
+    transform: rotateX(-100deg);
+    transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: top;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

@@ -189,3 +189,19 @@
             &.is-active
                 display: flex
                 background-color: $nav-bg
+
+@keyframes swing-in-top-fwd
+    0%
+        transform: rotateX(-100deg)
+        transform-origin: top
+        opacity: 0
+    100%
+        transform: rotateX(0deg)
+        transform-origin: top
+        opacity: 1
+
+@keyframes fade-in
+    0%
+        opacity: 0
+    100%
+        opacity: 1
