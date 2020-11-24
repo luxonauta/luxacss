@@ -18,9 +18,19 @@ body
 main
     display: block
 
-@for $i from 1 through 6
+$exponent: 1
+
+@for $i from 5 through 1
+    $exponent: $exponent * 1.25
+    
     h#{$i}
-        margin: .67rem 0
+        font-size: #{str-slice("" + $exponent, 0, 5)}rem
+
+h2,
+h3,
+h4,
+h5
+    margin: .67rem 0
 
 h1
     margin-top: 0
