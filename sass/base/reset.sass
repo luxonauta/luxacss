@@ -19,21 +19,22 @@ main
     display: block
 
 $exponent: 1
+$scale: 1.25
 
 @for $i from 5 through 1
-    $exponent: $exponent * 1.25
-    
+    $exponent: $exponent * $scale
+
     h#{$i}
         font-size: #{str-slice("" + $exponent, 0, 5)}rem
+
+h1
+    margin: 0 0 .67rem 0
 
 h2,
 h3,
 h4,
 h5
     margin: .67rem 0
-
-h1
-    margin-top: 0
 
 hr
     box-sizing: content-box
