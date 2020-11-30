@@ -1,7 +1,7 @@
 {
   "name": "luxacss",
   "version": "1.0.0",
-  "description": "CSS framework based on Flexbox",
+  "description": "A minimalist CSS framework.",
   "author": {
     "name": "Lucas de França",
     "email": "luxonauta@gmail.com"
@@ -17,11 +17,13 @@
   },
   "keywords": [
     "css",
-    "sass",
     "flexbox",
-    "responsive",
     "framework",
-    "minimalist"
+    "front-end",
+    "minimalist",
+    "responsive",
+    "sass",
+    "web"
   ],
   "devDependencies": {
     "gulp": "^4.0.2",

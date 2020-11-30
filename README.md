@@ -2,9 +2,9 @@
 
 > luxa CSS is a minimalist CSS framework.
 
-Luxa now have documentation with examples, see [here](https://luxonauta.github.io/luxadocs/)!
+See the documentation with examples [here](https://luxonauta.github.io/luxadocs/)!
 
-You can also see the [collection on Codepen](https://codepen.io/collection/XbOwvm) :sparkling_heart:
+You can also see the [collection on Codepen](https://codepen.io/collection/XEkzjB) :sparkling_heart:
 
 Simple and focused, its goal is to provide a lightweight solution that can be easily implemented in any development context.
 
@@ -64,7 +64,7 @@ If they are not installed, follow the instructions [here](https://nodejs.org/en/
 You can install it following the [Gulp installation tutorial](https://gulpjs.com/docs/en/getting-started/quick-start), or you can simply run the command on your terminal:
 
 ```sh
-npm i --save-dev
+npm i
 ```
 
 #### Verify your Gulp versions
