@@ -1,6 +1,6 @@
 # Luxa CSS
 
-> luxa CSS is a minimalist CSS framework.
+> Luxa CSS is a minimalist CSS framework.
 
 See the documentation with examples [here](https://luxonauta.github.io/luxadocs/)!
 
