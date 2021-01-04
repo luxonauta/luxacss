@@ -1,10 +1,10 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 
-sass.compiler = require("node-sass");
+sass.compiler = require("sass");
 
 exports.default = () => {
-    gulp.watch("sass/*/*.sass", compileSass);
+    gulp.watch(["sass/luxa.sass", "sass/*/*.sass"], compileSass);
 }
 
 const compileSass = () => {
