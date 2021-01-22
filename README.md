@@ -16,7 +16,7 @@ With simple class names like `.lx-btn` or `.lx-row`, and a simple modifier syste
 
 You can use **Luxa CSS** by CDN, provided by the :mechanical_arm:[jsDeliver](https://www.jsdelivr.com/) service, below:
 
-```
+```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/luxonauta/luxa@latest/dist/expanded/luxa.css">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/luxonauta/luxa@latest/dist/compressed/luxa.css">
@@ -37,7 +37,7 @@ If you want to rewrite or change something, to better suit your needs.
 
 You can start by cloning the repository:
 
-```
+```sh
 git clone https://github.com/luxonauta/luxa.git
 ```
 
