@@ -1,16 +1,16 @@
 .lx-avatar
-    max-width: 10rem
+    width: 10rem
+    height: 20rem
     overflow: hidden
     display: flex
     flex-flow: wrap column
-    align-items: center
-    justify-content: center
-    border-radius: .328rem
-    box-shadow: 0 .063rem .125rem rgba(0, 0, 0, 0.05), 0 .063rem .25rem rgba(0, 0, 0, 0.05), 0 .125rem .5rem rgba(0, 0, 0, 0.05)
+    border-radius: $radius
+    border: .0625rem solid $border
+    background-color: $bg-comp
 
     &-pic
         width: 100%
-        height: 50%
+        height: 70%
         overflow: hidden
 
         img,
@@ -21,8 +21,13 @@
 
     &-info
         width: 100%
-        height: 50%
-        padding: 0 .5rem
+        height: 30%
+        padding: .5rem
+        display: flex
+        flex-flow: wrap column
+        place-items: flex-start
+        place-content: center
+        gap: .5rem
         line-height: 1
-        text-align: center
+        text-align: left
         font-size: .75rem

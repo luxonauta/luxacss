@@ -1,11 +1,26 @@
+a.lx-btn,
+button,
 .lx-btn
-    padding: .688rem 2.5rem
-    vertical-align: middle
-    text-align: center
-    border-radius: .262rem
+    width: fit-content
+    width: -moz-fit-content
+    padding: 1rem 1.5rem
+    position: relative
+    display: block
+    outline: none
+    border-radius: $radius
     border: none
-    text-transform: uppercase
-    box-shadow: 0 .125rem .25rem rgba(black,.075)
+    text-align: center
+    text-decoration: none
+    font-family: inherit
+    font-size: 100%
+    font-weight: 600
+    color: inherit
+    background-color: $bg-comp
+    transition: box-shadow $transition ease
+
+    &:focus,
+    &:hover
+        box-shadow: 0 0 0 .125rem $focus
 
     &.is
         &-small

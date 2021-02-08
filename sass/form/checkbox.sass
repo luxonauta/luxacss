@@ -1,0 +1,57 @@
+.lx-checkbox
+    width: 100%
+    display: block
+    position: relative
+
+    input[type="checkbox"]
+        opacity: 0
+        height: 0
+        width: 0
+        position: absolute
+
+        &:checked
+            ~label
+                &:before
+                    border-color: $focus
+                    background-color: $focus
+
+                &:after
+                    display: block
+
+        &:disabled
+            ~label
+                opacity: 0.6
+                cursor: not-allowed
+
+    label
+        width: 100%
+        display: inline-block
+        margin: 0
+        padding-left: 2rem
+        cursor: pointer
+        user-select: none
+
+        &:before
+            content: ""
+            height: 1.25rem
+            width: 1.25rem
+            display: inline-block
+            position: absolute
+            top: 0
+            left: 0
+            border-radius: 0.2rem
+            border: .125rem solid $border
+            background-color: $bg-alt
+            transition: border-color, background-color, .15s ease
+
+        &:after
+            content: ""
+            width: .5rem
+            height: .75rem
+            position: absolute
+            transform: translate(-50%, -50%) rotate(45deg)
+            top: .5rem
+            left: .65rem
+            display: none
+            border: solid #fff
+            border-width: 0 0.2rem 0.2rem 0

@@ -1,0 +1,27 @@
+.lx-file
+    input[type="file"]
+        opacity: 0
+        width: 0
+        height: 0
+        position: absolute
+        z-index: -1
+
+    label
+        padding: 1rem 1.5rem
+        position: relative
+        display: block
+        outline: none
+        border-radius: $radius
+        border: none
+        cursor: pointer
+        text-align: center
+        text-decoration: none
+        font-family: inherit
+        font-size: 100%
+        color: inherit
+        background-color: $bg-comp
+        transition: box-shadow $transition ease
+
+        &:focus,
+        &:hover
+            box-shadow: 0 0 0 .125rem $focus
