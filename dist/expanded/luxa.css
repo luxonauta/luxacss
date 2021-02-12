@@ -70,6 +70,15 @@ body ::selection {
   }
 }
 
+header {
+  z-index: 2;
+}
+
+main,
+footer {
+  z-index: 1;
+}
+
 h6 {
   font-size: 1.25rem;
 }
@@ -115,6 +124,11 @@ blockquote {
   border-left: 0.25rem solid var(--link);
   font-style: italic;
   background-color: var(--bg-comp);
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 b,
@@ -229,11 +243,14 @@ details[open] summary {
 }
 
 .lx-badge {
+  width: fit-content;
+  width: -moz-fit-content;
   margin: 0.125rem;
   padding: 0.375rem 0.75rem;
   border-radius: var(--radius);
   border: 0.0625em solid var(--border);
   cursor: default;
+  font-weight: 600;
   background-color: var(--bg-comp);
 }
 

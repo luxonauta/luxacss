@@ -27,6 +27,13 @@ body
     @media (prefers-reduced-motion: no-preference)
         scroll-behavior: smooth
 
+header
+    z-index: 2
+
+main,
+footer
+    z-index: 1
+
 $exponent: 1
 $scale: 1.25
 
@@ -55,6 +62,10 @@ blockquote
     border-left: .25rem solid $link
     font-style: italic
     background-color: $bg-comp
+
+p
+    font-size: 1rem
+    font-weight: 400
 
 b,
 strong
@@ -123,7 +134,7 @@ details
         margin: 0
         padding: 1rem
         font-size: 1rem
-    
+
     &[open]
         summary
             border-bottom: .0625em solid $border
