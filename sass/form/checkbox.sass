@@ -42,7 +42,9 @@
             border-radius: 0.2rem
             border: .125rem solid $border
             background-color: $bg-alt
-            transition: border-color, background-color, .15s ease
+            transition-property: border-color, background-color
+            transition-duration: .15s
+            transition-timing-function: ease-in
 
         &:after
             content: ""
@@ -53,5 +55,6 @@
             top: .5rem
             left: .65rem
             display: none
-            border: solid #fff
+            border-style: solid
             border-width: 0 0.2rem 0.2rem 0
+            border-color: $text

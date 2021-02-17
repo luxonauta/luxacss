@@ -153,11 +153,10 @@ button {
 
 a[href^="http:"], a[href^="https:"] {
   display: inline-block;
-  text-decoration: underline;
+  text-decoration-line: underline;
   color: var(--link);
 }
 a[href^="http:"]:focus, a[href^="http:"]:hover, a[href^="https:"]:focus, a[href^="https:"]:hover {
-  text-decoration: underline;
   color: var(--focus);
 }
 
@@ -188,7 +187,7 @@ details {
 }
 details summary {
   padding: 1rem;
-  outline: none;
+  outline-style: none;
   user-select: none;
   cursor: pointer;
   font-size: 1.1rem;
@@ -234,8 +233,8 @@ details[open] summary {
   padding: 0.5rem;
   display: flex;
   flex-flow: wrap column;
-  place-items: flex-start;
-  place-content: center;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   line-height: 1;
   text-align: left;
@@ -257,14 +256,14 @@ details[open] summary {
 .lx-breadcrumb {
   display: flex;
   flex-flow: nowrap row;
-  place-items: center;
+  align-items: center;
   gap: 0.25rem;
   font-size: 0.9em;
   font-weight: 500;
 }
 .lx-breadcrumb-item {
   display: flex;
-  place-items: center;
+  align-items: center;
   gap: 0.5rem;
   color: var(--text);
   transition: color var(--transition);
@@ -327,6 +326,61 @@ details[open] summary {
   border-bottom: none;
 }
 
+.lx-modal {
+  width: fit-content;
+  width: -moz-fit-content;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-flow: wrap column;
+  border-radius: var(--radius);
+  border: 0.0625rem solid var(--border);
+  background-color: var(--bg-alt);
+}
+.lx-modal-header, .lx-modal-body {
+  width: 100%;
+  display: flex;
+  gap: 0.35rem;
+}
+.lx-modal-header > *, .lx-modal-body > * {
+  margin: 0;
+}
+.lx-modal-header {
+  padding: 0.5rem;
+  flex-flow: nowrap row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-comp);
+}
+.lx-modal-header .lx-modal-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.lx-modal-header button {
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0;
+}
+.lx-modal-header button:before, .lx-modal-header button:after {
+  content: "";
+  width: 0.15rem;
+  height: 75%;
+  position: absolute;
+  border-radius: 0.25rem;
+  background-color: var(--text);
+}
+.lx-modal-header button:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.lx-modal-header button:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.lx-modal-body {
+  padding: 0.5rem 0.75rem;
+  flex-flow: wrap column;
+  font-size: 0.9rem;
+}
+
 .lx-nav {
   width: 100%;
   padding: 0.5rem var(--nav-pad);
@@ -353,15 +407,14 @@ details[open] summary {
   object-fit: contain;
 }
 .lx-nav-burger {
-  width: 3.25rem;
-  height: 3.25rem;
+  width: 2rem;
+  height: 2rem;
   padding: 0;
-  position: relative;
   display: none;
-  border-radius: 0.25rem;
-  border: none;
+  border-radius: var(--radius);
 }
-.lx-nav-burger span {
+.lx-nav-burger span.icon {
+  will-change: opacity, transform;
   width: 1rem;
   height: 0.125rem;
   position: absolute;
@@ -370,24 +423,26 @@ details[open] summary {
   border-radius: 0.5rem;
   color: var(--text);
   background-color: currentColor;
-  transition: color, opacity, transform 9ms ease-out;
+  transition-property: opacity, transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
 }
-.lx-nav-burger span:nth-child(1) {
+.lx-nav-burger span.icon:nth-child(1) {
   top: calc(50% - .375rem);
 }
-.lx-nav-burger span:nth-child(3) {
+.lx-nav-burger span.icon:nth-child(3) {
   top: calc(50% + .375rem);
 }
-.lx-nav-burger.is-active span {
+.lx-nav-burger.is-active span.icon {
   color: var(--focus);
 }
-.lx-nav-burger.is-active span:nth-child(1) {
+.lx-nav-burger.is-active span.icon:nth-child(1) {
   transform: translateY(0.375rem) rotate(45deg);
 }
-.lx-nav-burger.is-active span:nth-child(2) {
+.lx-nav-burger.is-active span.icon:nth-child(2) {
   opacity: 0;
 }
-.lx-nav-burger.is-active span:nth-child(3) {
+.lx-nav-burger.is-active span.icon:nth-child(3) {
   transform: translateY(-0.375rem) rotate(-45deg);
 }
 .lx-nav-menu {
@@ -407,10 +462,12 @@ details[open] summary {
   align-items: center;
   justify-content: center;
   border-radius: 0.25rem;
-  text-decoration: none !important;
+  text-decoration-line: none !important;
   font-weight: 500;
   color: var(--text) !important;
-  transition: color 0.3s;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
 }
 .lx-nav-item.dropdown {
   width: max-content;
@@ -532,7 +589,9 @@ details[open] summary {
   font-weight: 400;
   color: var(--text) !important;
   background-color: transparent;
-  transition: background-color var(--transition);
+  transition-property: background-color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in;
 }
 .lx-pagination-item.is-selected, .lx-pagination-item:hover {
   background-color: var(--bg-comp);
@@ -542,38 +601,45 @@ details[open] summary {
   width: fit-content;
   width: -moz-fit-content;
   max-width: 100%;
+  padding: 0.5rem;
   overflow: hidden;
   display: flex;
-  flex-flow: wrap column;
+  flex-flow: nowrap row;
+  place-items: center;
+  gap: 1rem;
   border-radius: var(--radius);
   border: 0.0625rem solid var(--border);
   background-color: var(--bg-alt);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
 }
-.lx-toast-header, .lx-toast-body {
-  width: 100%;
+.lx-toast-status {
+  width: 1.25rem;
+  height: 1.25rem;
   display: flex;
-  gap: 0.35rem;
-}
-.lx-toast-header > *, .lx-toast-body > * {
-  margin: 0;
-}
-.lx-toast-header {
-  padding: 0.5rem;
-  flex-flow: nowrap row;
   place-items: center;
-  justify-content: space-between;
+  place-content: center;
+  border-radius: var(--radius);
+  font-size: 1rem;
   background-color: var(--bg-comp);
 }
-.lx-toast-header .lx-toast-title {
+.lx-toast-status img,
+.lx-toast-status svg {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+.lx-toast-content {
   font-size: 0.95rem;
   font-weight: 500;
 }
-.lx-toast-header button {
+.lx-toast button {
   width: 1.25rem;
   height: 1.25rem;
   padding: 0;
+  display: inline-block;
 }
-.lx-toast-header button:before, .lx-toast-header button:after {
+.lx-toast button:before, .lx-toast button:after {
   content: "";
   width: 0.15rem;
   height: 75%;
@@ -581,16 +647,11 @@ details[open] summary {
   border-radius: 0.25rem;
   background-color: var(--text);
 }
-.lx-toast-header button:before {
+.lx-toast button:before {
   transform: translate(-50%, -50%) rotate(45deg);
 }
-.lx-toast-header button:after {
+.lx-toast button:after {
   transform: translate(-50%, -50%) rotate(-45deg);
-}
-.lx-toast-body {
-  padding: 0.5rem 0.75rem;
-  flex-flow: wrap column;
-  font-size: 0.9rem;
 }
 
 a.lx-btn,
@@ -601,17 +662,30 @@ button,
   padding: 1rem 1.5rem;
   position: relative;
   display: block;
-  outline: none;
+  appearance: none;
+  outline-style: none;
   border-radius: var(--radius);
-  border: none;
+  border-style: none;
   text-align: center;
-  text-decoration: none;
+  text-decoration-line: none;
   font-family: inherit;
   font-size: 100%;
   font-weight: 600;
   color: inherit;
   background-color: var(--bg-comp);
-  transition: box-shadow var(--transition) ease;
+  transition-property: box-shadow;
+  transition-duration: var(--transition);
+  transition-timing-function: ease;
+}
+a.lx-btn .visually-hidden,
+button .visually-hidden,
+.lx-btn .visually-hidden {
+  width: 0.75pt;
+  height: 0.75pt;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
 }
 a.lx-btn:focus, a.lx-btn:hover,
 button:focus,
@@ -693,7 +767,7 @@ button.is-large,
 
 fieldset {
   padding: 0;
-  border: none;
+  border-style: none;
 }
 
 legend {
@@ -728,7 +802,7 @@ textarea {
   position: relative;
   display: block;
   appearance: none;
-  outline: none;
+  outline-style: none;
   border-radius: var(--radius);
   border: 0.0625rem solid var(--border);
   font-family: inherit;
@@ -736,7 +810,9 @@ textarea {
   color: var(--text);
   background-color: var(--bg-alt);
   box-shadow: none;
-  transition: box-shadow, border-color, 0.25s ease;
+  transition-property: box-shadow, border-color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
 }
 input:not([type=radio]):not([type=checkbox]).is-invalid,
 select.is-invalid,
@@ -775,12 +851,12 @@ select:not([multiple]) {
 }
 
 textarea {
-  outline: none;
   width: 100%;
   max-width: 100%;
   min-width: 100%;
   margin: 0;
   padding: 0.3rem 0.6rem;
+  outline-style: none;
   resize: vertical;
 }
 textarea:not([rows]) {
@@ -837,7 +913,9 @@ progress {
   border-radius: 0.2rem;
   border: 0.125rem solid var(--border);
   background-color: var(--bg-alt);
-  transition: border-color, background-color, 0.15s ease;
+  transition-property: border-color, background-color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
 }
 .lx-checkbox label:after {
   content: "";
@@ -848,22 +926,23 @@ progress {
   top: 0.5rem;
   left: 0.65rem;
   display: none;
-  border: solid #fff;
+  border-style: solid;
   border-width: 0 0.2rem 0.2rem 0;
+  border-color: var(--text);
 }
 
 .lx-form {
   width: 100%;
   display: flex;
   flex-flow: wrap column;
-  place-items: flex-start;
+  align-items: flex-start;
   gap: 2em;
 }
 .lx-form .lx-form-group {
   width: 100%;
   display: flex;
   flex-flow: wrap column;
-  place-items: flex-start;
+  align-items: flex-start;
   gap: 1em;
 }
 .lx-form .lx-form-group small {
@@ -882,17 +961,19 @@ progress {
   padding: 1rem 1.5rem;
   position: relative;
   display: block;
-  outline: none;
+  outline-style: none;
   border-radius: var(--radius);
-  border: none;
+  border-style: none;
   cursor: pointer;
   text-align: center;
-  text-decoration: none;
+  text-decoration-line: none;
   font-family: inherit;
   font-size: 100%;
   color: inherit;
   background-color: var(--bg-comp);
-  transition: box-shadow var(--transition) ease;
+  transition-property: box-shadow;
+  transition-duration: var(--transition);
+  transition-timing-function: ease;
 }
 .lx-file label:focus, .lx-file label:hover {
   box-shadow: 0 0 0 0.125rem var(--focus);
@@ -937,7 +1018,9 @@ progress {
   border-radius: 50%;
   border: 0.0625rem solid var(--border);
   background-color: var(--bg-comp);
-  transition: border-color, background-color, 0.15s ease;
+  transition-property: border-color, background-color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in;
 }
 .lx-radio label:after {
   content: "";
@@ -949,7 +1032,7 @@ progress {
   left: 0.625rem;
   display: none;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: var(--text);
 }
 
 .lx-switch {
@@ -969,7 +1052,6 @@ progress {
 }
 .lx-switch input[type=checkbox]:checked ~ label:after {
   left: 2.25rem;
-  background-color: #fff;
 }
 .lx-switch input[type=checkbox]:disabled ~ label {
   opacity: 0.6;
@@ -993,7 +1075,9 @@ progress {
   border-radius: 2rem;
   border: 0.125rem solid var(--border);
   background-color: var(--bg-alt);
-  transition: box-shadow 0.25s ease;
+  transition-property: border-color, background-color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
 }
 .lx-switch label:after {
   content: "";
@@ -1004,8 +1088,10 @@ progress {
   top: 0.75rem;
   left: 0.75rem;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.85);
-  transition: left 0.15s ease;
+  background-color: var(--text);
+  transition-property: left;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
 }
 
 .bs-none {

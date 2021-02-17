@@ -40,7 +40,9 @@
             border-radius: 50%
             border: .0625rem solid $border
             background-color: $bg-comp
-            transition: border-color, background-color, .15s ease
+            transition-property: border-color, background-color
+            transition-duration: .15s
+            transition-timing-function: ease-in
 
         &:after
             content: ""
@@ -52,4 +54,4 @@
             left: .625rem
             display: none
             border-radius: 50%
-            background-color: #fff
+            background-color: $text

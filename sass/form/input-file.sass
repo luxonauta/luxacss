@@ -10,17 +10,19 @@
         padding: 1rem 1.5rem
         position: relative
         display: block
-        outline: none
+        outline-style: none
         border-radius: $radius
-        border: none
+        border-style: none
         cursor: pointer
         text-align: center
-        text-decoration: none
+        text-decoration-line: none
         font-family: inherit
         font-size: 100%
         color: inherit
         background-color: $bg-comp
-        transition: box-shadow $transition ease
+        transition-property: box-shadow
+        transition-duration: $transition
+        transition-timing-function: ease
 
         &:focus,
         &:hover

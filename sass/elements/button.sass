@@ -6,17 +6,28 @@ button,
     padding: 1rem 1.5rem
     position: relative
     display: block
-    outline: none
+    appearance: none
+    outline-style: none
     border-radius: $radius
-    border: none
+    border-style: none
     text-align: center
-    text-decoration: none
+    text-decoration-line: none
     font-family: inherit
     font-size: 100%
     font-weight: 600
     color: inherit
     background-color: $bg-comp
-    transition: box-shadow $transition ease
+    transition-property: box-shadow
+    transition-duration: $transition
+    transition-timing-function: ease
+
+    .visually-hidden
+        width: .75pt
+        height: .75pt
+        position: absolute
+        overflow: hidden
+        clip: rect(0, 0, 0, 0)
+        white-space: nowrap
 
     &:focus,
     &:hover

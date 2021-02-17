@@ -17,7 +17,6 @@
 
                 &:after
                     left: 2.25rem
-                    background-color: #fff
 
         &:disabled
             ~label
@@ -42,7 +41,9 @@
             border-radius: 2rem
             border: .125rem solid $border
             background-color: $bg-alt
-            transition: box-shadow .25s ease
+            transition-property: border-color, background-color
+            transition-duration: .25s
+            transition-timing-function: ease
 
         &:after
             content: ""
@@ -53,5 +54,7 @@
             top: .75rem
             left: .75rem
             border-radius: 50%
-            background-color: rgba(0,0,0,.85)
-            transition: left .15s ease
+            background-color: $text
+            transition-property: left
+            transition-duration: .15s
+            transition-timing-function: ease-in-out

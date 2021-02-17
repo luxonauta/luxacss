@@ -1,6 +1,6 @@
 fieldset
     padding: 0
-    border: none
+    border-style: none
 
 legend
     display: block
@@ -32,7 +32,7 @@ textarea
     position: relative
     display: block
     appearance: none
-    outline: none
+    outline-style: none
     border-radius: $radius
     border: .0625rem solid $border
     font-family: inherit
@@ -40,7 +40,9 @@ textarea
     color: $text
     background-color: $bg-alt
     box-shadow: none
-    transition: box-shadow, border-color, .25s ease
+    transition-property: box-shadow, border-color
+    transition-duration: .25s
+    transition-timing-function: ease
 
     &.is-invalid
         border-color: $required
@@ -72,12 +74,12 @@ select
         background-repeat: no-repeat
 
 textarea
-    outline: none
     width: 100%
     max-width: 100%
     min-width: 100%
     margin: 0
     padding: .3rem .6rem
+    outline-style: none
     resize: vertical
 
     &:not([rows])

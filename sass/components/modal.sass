@@ -1,0 +1,55 @@
+.lx-modal
+    width: fit-content
+    width: -moz-fit-content
+    max-width: 100%
+    overflow: hidden
+    display: flex
+    flex-flow: wrap column
+    border-radius: $radius
+    border: .0625rem solid $border
+    background-color: $bg-alt
+
+    &-header,
+    &-body
+        width: 100%
+        display: flex
+        gap: .35rem
+
+        > *
+            margin: 0
+
+    &-header
+        padding: .5rem
+        flex-flow: nowrap row
+        align-items: center
+        justify-content: space-between
+        background-color: $bg-comp
+
+        .lx-modal-title
+            font-size: .95rem
+            font-weight: 500
+
+        button
+            width: 1.25rem
+            height: 1.25rem
+            padding: 0
+
+            &:before,
+            &:after
+                content: ""
+                width: .15rem
+                height: 75%
+                position: absolute
+                border-radius: .25rem
+                background-color: $text
+
+            &:before
+                transform: translate(-50%, -50%) rotate(45deg)
+
+            &:after
+                transform: translate(-50%, -50%) rotate(-45deg)
+
+    &-body
+        padding: .5rem .75rem
+        flex-flow: wrap column
+        font-size: .9rem
