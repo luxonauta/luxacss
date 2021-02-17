@@ -14,6 +14,7 @@
   --border: #dbdbdb;
   --focus: #41adff;
   --link: #0076d1;
+  --nav-bg: #efefef;
   --selection: #c8c8c8;
   --text: #363636;
   --thumb-hover: #c4c4c4;
@@ -28,6 +29,7 @@
   --border: #526980;
   --focus: #0076d1;
   --link: #41adff;
+  --nav-bg: #161f27;
   --selection: #1c76c5;
   --text: #dbdbdb;
   --thumb-hover: #5b698b;
@@ -389,7 +391,7 @@ details[open] summary {
   align-items: stretch;
   justify-content: space-between;
   gap: 1rem;
-  background-color: var(--bg-comp);
+  background-color: var(--nav-bg);
 }
 .lx-nav-brand {
   display: flex;
@@ -476,7 +478,7 @@ details[open] summary {
   top: 100%;
   left: 50%;
   display: none;
-  background-color: var(--bg-comp);
+  background-color: var(--nav-bg);
 }
 .lx-nav-item.dropdown .lx-nav-item {
   padding: 0.5rem 1rem;
@@ -568,7 +570,7 @@ details[open] summary {
   }
   .lx-nav-menu.is-active {
     display: flex;
-    background-color: var(--bg-comp);
+    background-color: var(--nav-bg);
   }
 }
 .lx-pagination {
