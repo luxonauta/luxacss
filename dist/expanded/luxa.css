@@ -2,39 +2,39 @@
   --base-size: 87.5%;
   --nav-pad: 10%;
   --radius: .262rem;
-  --required: #ff4d4f;
+  --required: #D93535;
   --row-gap: .75rem;
   --transition: .5s;
 }
 
 .lx-light {
-  --bg-alt: #f7f7f7;
-  --bg-comp: #efefef;
+  --bg-alt: #F2F2F2;
+  --bg-comp: #F2F2F2;
   --bg-main: #fff;
-  --border: #dbdbdb;
-  --focus: #41adff;
-  --link: #0076d1;
-  --nav-bg: #efefef;
+  --border: #CCCCCC;
+  --focus: #0076d1;
+  --link: #307FE2;
+  --nav-bg: #F2F2F2;
   --selection: #c8c8c8;
   --text: #363636;
   --thumb-hover: #c4c4c4;
-  --thumb: #d5d5d5;
+  --thumb: #CCCCCC;
   --track: #e5e7eb;
 }
 
 .lx-dark {
-  --bg-alt: #1a242f;
-  --bg-comp: #161f27;
-  --bg-main: #202b38;
-  --border: #526980;
+  --bg-alt: #161b22;
+  --bg-comp: #18202b;
+  --bg-main: #0e131a;
+  --border: #30363d;
   --focus: #0076d1;
-  --link: #41adff;
-  --nav-bg: #161f27;
+  --link: #307FE2;
+  --nav-bg: #161b22;
   --selection: #1c76c5;
   --text: #dbdbdb;
-  --thumb-hover: #5b698b;
-  --thumb: #47526c;
-  --track: #1f2330;
+  --thumb-hover: #8b949e;
+  --thumb: #30363d;
+  --track: #06090f;
 }
 
 *,
@@ -1558,4 +1558,41 @@ progress {
   border-left: 0.75pt solid var(--thumb);
   border-top: 0.75pt solid var(--thumb);
   background-color: transparent;
+}
+
+.has-transition > * {
+  --property: transform;
+  --transition: .75s;
+  will-change: transform;
+  transition-property: var(--property);
+  transition-duration: var(--transition);
+  transition-delay: 0.2s;
+}
+.has-transition:hover {
+  --transition: .45s;
+}
+.has-transition.rise > * {
+  transition-timing-function: cubic-bezier(0.25, 0.45, 0.4, 0.95);
+}
+.has-transition.rise > *:hover {
+  transform: translateY(-25%);
+}
+.has-transition.scale > * {
+  transition-timing-function: cubic-bezier(0.4, 0.55, 0.5, 1);
+}
+.has-transition.scale > *:hover {
+  transform: scale(1.1);
+}
+.has-transition.fade > * {
+  will-change: opacity;
+  --property: opacity;
+}
+.has-transition.fade > *:hover {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .has-transition {
+    --transition-duration: .01ms;
+  }
 }

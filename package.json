@@ -18,12 +18,14 @@
   "keywords": [
     "css",
     "flexbox",
+    "grid",
     "framework",
     "front-end",
     "minimalist",
     "responsive",
     "sass",
-    "web"
+    "web",
+    "reset"
   ],
   "devDependencies": {
     "gulp": "^4.0.2",
