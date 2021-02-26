@@ -4,12 +4,12 @@
     flex-flow: wrap row
     align-items: center
     justify-content: center
-    gap: 0.75rem
+    gap: $row-gap
 
     &.is-gapless
         gap: 0
 
-.lx-column
+.lx-col
     display: block
     flex-basis: 0
     flex-grow: 1
@@ -20,11 +20,11 @@
             flex: none
             width: percentage($i / 12)
 
-@media screen and (max-width: 57rem)
+@media screen and (max-width: 64rem)
     .lx-row
         flex-flow: wrap column
 
-    .lx-column
+    .lx-col
         width: 100%
 
         @for $i from 0 through 12

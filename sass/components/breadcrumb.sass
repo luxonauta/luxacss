@@ -1,18 +1,35 @@
 .lx-breadcrumb
     display: flex
-    flex-wrap: wrap
-    align-items: flex-start
-    font-size: .9rem
+    flex-flow: nowrap row
+    align-items: center
+    gap: .25rem
+    font-size: .9em
+    font-weight: 500
 
     &-item
         display: flex
-        flex-wrap: nowrap
+        align-items: center
+        gap: .5rem
+        color: $text
+        transition: color $transition
 
         &:not(:first-of-type)
             &:before
-                content: ">"
-                margin: 0 .64rem 0 .512rem
-                vertical-align: top
-                display: inline-block
-                font-style: normal
-                font-weight: normal
+                content: ""
+                width: .5rem
+                height: .5rem
+                transform-origin: center
+                transform: rotate(45deg)
+                display: block
+                border-radius: .125rem
+                border: .1875rem solid $text
+                border-bottom: 0
+                border-left: 0
+                pointer-events: none
+
+        &:last-child
+            font-weight: 900
+
+        &:focus,
+        &:hover
+            color: $focus

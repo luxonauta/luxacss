@@ -1,11 +1,37 @@
+a.lx-btn,
+button,
 .lx-btn
-    padding: .688rem 2.5rem
-    vertical-align: middle
+    width: fit-content
+    width: -moz-fit-content
+    padding: 1rem 1.5rem
+    position: relative
+    display: block
+    appearance: none
+    outline-style: none
+    border-radius: $radius
+    border-style: none
     text-align: center
-    border-radius: .262rem
-    border: none
-    text-transform: uppercase
-    box-shadow: 0 .125rem .25rem rgba(black,.075)
+    text-decoration-line: none
+    font-family: inherit
+    font-size: 100%
+    font-weight: 600
+    color: inherit
+    background-color: $bg-comp
+    transition-property: box-shadow
+    transition-duration: $transition
+    transition-timing-function: ease
+
+    .visually-hidden
+        width: .75pt
+        height: .75pt
+        position: absolute
+        overflow: hidden
+        clip: rect(0, 0, 0, 0)
+        white-space: nowrap
+
+    &:focus,
+    &:hover
+        box-shadow: 0 0 0 .125rem $focus
 
     &.is
         &-small

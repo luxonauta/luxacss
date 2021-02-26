@@ -1,12 +1,10 @@
 .lx-card
     padding: 2rem
-    border-radius: .328rem
-    border: none
-    box-shadow: 0 .5rem 1rem rgba(black,.15)
-
-    &.is-shadowless
-        box-shadow: none
+    border-radius: $radius
+    border: .0625em solid $border
+    background-color: $bg-comp
 
     &.is-muted
+        cursor: not-allowed
         user-select: none
-        filter: grayscale(0.4) opacity(0.6)
+        filter: opacity(.6)

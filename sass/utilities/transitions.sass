@@ -1,0 +1,34 @@
+.has-transition
+    & > *
+        --property: transform
+        --transition: .75s
+        will-change: transform
+        transition-property: var(--property)
+        transition-duration: var(--transition)
+        transition-delay: .2s
+
+    &:hover
+        --transition: .45s
+
+    &.rise > *
+        transition-timing-function: cubic-bezier(.25, .45, .4, .95)
+
+        &:hover
+            transform: translateY(-25%)
+
+    &.scale > *
+        transition-timing-function: cubic-bezier(.4, .55, .5, 1)
+
+        &:hover
+            transform: scale(1.1)
+
+    &.fade > *
+        will-change: opacity
+        --property: opacity
+
+        &:hover
+            opacity: 0
+
+@media (prefers-reduced-motion: reduce)
+    .has-transition
+        --transition-duration: .01ms

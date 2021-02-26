@@ -1,24 +1,22 @@
 .lx-nav
     width: 100%
-    padding: .5rem 15%
+    padding: .5rem $nav-pad
     position: relative
     display: flex
     align-items: stretch
     justify-content: space-between
     gap: 1rem
-    color: $nav-color
     background-color: $nav-bg
 
     &-brand
         display: flex
-        align-items: stretch
+        align-items: center
         justify-content: space-between
 
         .lx-nav-item
-            span
-                font-family: inherit
-                font-size: 1.5rem
-                font-weight: 600
+            font-family: inherit
+            font-size: 1.25rem
+            font-weight: 600
 
             img,
             svg
@@ -26,48 +24,46 @@
                 object-fit: contain
 
     &-burger
-        width: 3.25rem
-        height: 3.25rem
+        width: 2rem
+        height: 2rem
         padding: 0
-        position: relative
         display: none
-        border-radius: .25rem
-        border: none
-        transition: background-color .3s ease-in-out
+        border-radius: $radius
 
         span
-            width: 1rem
-            height: .125rem
-            position: absolute
-            left: calc(50% - .5rem)
-            display: block
-            border-radius: .5rem
-            background-color: currentColor
-            transition-duration: 86ms
-            transition-property: background-color,opacity,transform
-            transition-timing-function: ease-out
+            &.icon
+                will-change: opacity, transform
+                width: 1rem
+                height: .125rem
+                position: absolute
+                left: calc(50% - .5rem)
+                display: block
+                border-radius: .5rem
+                color: $text
+                background-color: currentColor
+                transition-property: opacity, transform
+                transition-duration: .2s
+                transition-timing-function: ease-out
 
-            &:nth-child(1)
-                top: calc(50% - .375rem)
+                &:nth-child(1)
+                    top: calc(50% - .375rem)
 
-            &:nth-child(3)
-                top: calc(50% + .375rem)
-
-        &.is-active,
-        &:focus,
-        &:hover
-            background-color: rgba(0,0,0,0.3)
+                &:nth-child(3)
+                    top: calc(50% + .375rem)
 
         &.is-active
             span
-                &:nth-child(1)
-                    transform: translateY(.375rem) rotate(45deg)
+                &.icon
+                    color: $focus
 
-                &:nth-child(2)
-                    opacity: 0
+                    &:nth-child(1)
+                        transform: translateY(.375rem) rotate(45deg)
 
-                &:nth-child(3)
-                    transform: translateY(-.375rem) rotate(-45deg)
+                    &:nth-child(2)
+                        opacity: 0
+
+                    &:nth-child(3)
+                        transform: translateY(-.375rem) rotate(-45deg)
 
     &-menu
         flex-basis: 0
@@ -86,9 +82,12 @@
         align-items: center
         justify-content: center
         border-radius: .25rem
-        cursor: pointer
-        font-size: 1rem
-        transition: background-color .3s ease-in-out
+        text-decoration-line: none !important
+        font-weight: 500
+        color: $text !important
+        transition-property: color
+        transition-duration: .3s
+        transition-timing-function: ease-in
 
         &.dropdown
             width: max-content
@@ -104,7 +103,6 @@
 
         &.has-dropdown
             gap: .5rem
-            background-color: $nav-bg
 
             &:after
                 content: ""
@@ -114,27 +112,34 @@
                 transform: rotate(45deg)
                 display: block
                 border-radius: .125rem
-                border: .1875rem solid $nav-color
+                border-width: .1875rem
+                border-style: solid
+                border-color: $text
                 border-bottom: 0
                 border-left: 0
                 pointer-events: none
+                transition-property: border-color, transform
+                transition-duration: .35s
+                transition-timing-function: ease
 
         &:focus,
         &:hover
-            &:not(.dropdown)
-                background-color: rgba(0,0,0,0.3)
+            &:not(.has-dropdown):not(.dropdown)
+                color: $focus !important
 
             &.has-dropdown
+                span
+                    color: $focus !important
+
                 &>.dropdown
                     display: block
 
                 &:after
-                    border-top: 0
-                    border-bottom: .1875rem solid $nav-color
+                    transform: rotate(135deg)
+                    border-color: $focus
 
 @media screen and (max-width: 70rem)
     .lx-nav
-        padding: .5rem 5%
         flex-flow: wrap column
 
         &-brand
@@ -181,7 +186,7 @@
                         top: 50%
                         left: .5rem
                         border-radius: 1rem
-                        background-color: $nav-color
+                        background-color: $text
 
             &.is-active
                 display: flex

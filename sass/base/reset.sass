@@ -2,115 +2,138 @@
 *:after,
 *:before
     box-sizing: border-box
+    -webkit-tap-highlight-color: transparent
+
+html
+    font-size: $base-size
 
 html,
 body
     word-break: break-word
     margin: 0
     padding: 0
-    line-height: 1.5
-    font-size: 100%
-    color: $black
 
 body
-    scroll-behavior: smooth
+    text-rendering: optimizeLegibility
+    line-height: 1.5
+    font-family: system-ui, sans-serif
+    -webkit-font-smoothing: antialiased
+    color: $text
+    background-color: $bg-main
 
-main
-    display: block
+    ::selection
+        background-color: $selection
+
+    @media (prefers-reduced-motion: no-preference)
+        scroll-behavior: smooth
+
+header
+    z-index: 2
+
+main,
+footer
+    z-index: 1
 
 $exponent: 1
 $scale: 1.25
 
-@for $i from 5 through 1
+@for $i from 6 through 1
     $exponent: $exponent * $scale
 
     h#{$i}
         font-size: #{str-slice("" + $exponent, 0, 5)}rem
 
 h1
-    margin: 0 0 .67rem 0
+    margin: 0 0 .5em 0
 
 h2,
 h3,
 h4,
-h5
-    margin: .67rem 0
+h5,
+h6
+    margin: .5em 0
 
-hr
-    box-sizing: content-box
-    overflow: visible
+blockquote
+    width: fit-content
+    width: -moz-fit-content
+    margin: 0
+    padding: .5em 1em
+    border-radius: $radius
+    border-left: .25rem solid $link
+    font-style: italic
+    background-color: $bg-comp
 
-a,
-button
-    -webkit-tap-highlight-color: transparent
-    outline: none
-    cursor: pointer
-    text-decoration: none
-    color: inherit
-    background-color: transparent
+p
+    font-size: 1rem
+    font-weight: 400
 
 b,
 strong
-    font-weight: bold
+    font-weight: 600
 
 sub,
 sup
-    font-size: 75%
-    line-height: 0
     position: relative
     vertical-align: baseline
 
-sub
-    bottom: -.25rem
+span
+    display: inline-block
 
-sup
-    top: -.5rem
+a,
+button
+    cursor: pointer
 
-small
-    font-size: .8rem
+a
+    &[href^="http:"],
+    &[href^="https:"]
+        display: inline-block
+        text-decoration-line: underline
+        color: $link
+
+        &:focus,
+        &:hover
+            color: $focus
 
 figure,
 article
     margin: 0
     padding: 0
+    border-style: none
 
 img
     max-width: 100%
     max-height: 100%
     border-style: none
 
-button,
-input,
-optgroup,
-select,
-textarea
-    font-family: inherit
-    font-size: 100%
-    line-height: 1
+details
+    width: 100%
     margin: 0
-    padding: .75rem 1.25rem
-    border-radius: .25rem
+    position: relative
+    overflow: hidden
+    display: flex
+    flex-flow: wrap column
+    gap: .75rem
+    border-radius: $radius
+    border: .0625em solid $border
+    background-color: $bg-alt
 
-button,
-select
-    text-transform: none
+    summary
+        padding: 1rem
+        outline-style: none
+        user-select: none
+        cursor: pointer
+        font-size: 1.1rem
+        font-weight: 500
+        background-color: $bg-comp
 
-fieldset
-    padding: .35rem .75rem .625rem
+        &::-webkit-details-marker
+            color: $text
 
-progress
-    vertical-align: baseline
+    > :not(summary)
+        margin: 0
+        padding: 1rem
+        font-size: 1rem
 
-textarea
-    overflow: auto
-
-[type="checkbox"],
-[type="radio"]
-    padding: 0
-
-[type="search"]
-    outline-offset: -0.125rem
-
-@media (prefers-reduced-motion: reduce)
-    *
-        animation: none
+    &[open]
+        summary
+            border-bottom: .0625em solid $border

@@ -1,0 +1,33 @@
+.lx-table
+    width: 100%
+    height: auto
+    margin: 0
+    padding: .15rem
+    position: relative
+    overflow: auto hidden
+    display: block
+    border-radius: $radius
+    border: .0625rem solid $border
+
+    table
+        width: 100%
+        min-width: max-content
+        margin: 0
+        padding: 0
+        border-spacing: .3em
+
+        thead,
+        tbody
+            td,
+            th
+                padding: 1.3em
+                vertical-align: middle
+                text-align: left
+                border-radius: $radius
+
+    &.is-striped
+        table
+            tbody
+                tr
+                    &:nth-child(odd)
+                        background-color: $bg-comp

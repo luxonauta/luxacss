@@ -1,19 +1,25 @@
 .lx-pagination
+    width: 100%
     display: grid
     grid-auto-flow: column
-    gap: 1rem
-    place-content: center
+    gap: .5em
+    place-items: center
+    place-content: flex-start
 
     &-item
-        padding: .5rem
-        border-radius: .328rem
-        border: .063rem solid $black
+        padding: .6em .65em
+        border-radius: $radius
+        border: .15rem solid $border
         line-height: normal
-        font-size: .9rem
-        color: $black
+        text-decoration: none !important
+        font-size: .9em
+        font-weight: 400
+        color: $text !important
         background-color: transparent
+        transition-property: background-color
+        transition-duration: .25s
+        transition-timing-function: ease-in
 
-        &.is-selected
-            border-color: transparent
-            color: $white
-            background-color: $gray
+        &.is-selected,
+        &:hover
+            background-color: $bg-comp
