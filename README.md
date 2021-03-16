@@ -99,7 +99,7 @@ See the compatibility table below:
 
 ![Chrome logo](readme/chrome.svg) | ![Firefox logo](readme/firefox.svg) | ![Microsoft Edge logo](readme/microsoft-edge.svg) | ![Opera logo](readme/opera.svg) | ![Safari logo](readme/safari.svg)
 --------------------------------- | ----------------------------------- | ------------------------------------------------- | ------------------------------- | ---------------------------------
-84+ = ✔ Ok | 63+ = ✔ Ok | 84+ = ✔ Ok | ✗ Not supported | ✗ Not supported
+84+ = ✔ Ok | 63+ = ✔ Ok | 84+ = ✔ Ok | ✗ Not sup. | ✗ Not sup.
 
 See the [source here (CanIUse.com)](https://caniuse.com/flexbox-gap).
 
