@@ -12,13 +12,6 @@ Simple and focused, its goal is to provide a lightweight solution that can be ea
 
 With simple class names like ``.lx-btn`` or ``.lx-row``, and a simple modifier system, like ``.is-left``.
 
-## Table of contents
-
-1. :rocket: [Quick Start](#quick-start)
-2. :heavy_check_mark: [Browser Support](#browser-support)
-3. :handshake: [How to contribute](#how-to-contribute)
-4. :page_with_curl: [Copyright and License](#copyright-and-license)
-
 ## Quick Start
 
 ### by CDN
@@ -99,7 +92,7 @@ See the compatibility table below:
 
 ![Chrome logo](readme/chrome.svg) | ![Firefox logo](readme/firefox.svg) | ![Microsoft Edge logo](readme/microsoft-edge.svg) | ![Opera logo](readme/opera.svg) | ![Safari logo](readme/safari.svg)
 --------------------------------- | ----------------------------------- | ------------------------------------------------- | ------------------------------- | ---------------------------------
-84+ = ✔ Ok | 63+ = ✔ Ok | 84+ = ✔ Ok | ✗ Not sup. | ✗ Not sup.
+84.0+ = ✔ Ok | 63.0+ = ✔ Ok | 84.0+ = ✔ Ok | ✗ Not sup. | 14.1+ = ✔ Ok.
 
 See the [source here (CanIUse.com)](https://caniuse.com/flexbox-gap).
 
