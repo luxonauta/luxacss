@@ -1,0 +1,127 @@
+form
+    width: fit-content
+    max-width: 100%
+    height: auto
+    margin: 0
+    padding: 0
+    position: relative
+    display: block
+
+    input
+        --accent-color: #{$primary-color}
+        accent-color: var(--accent-color)
+
+fieldset,
+.fieldset
+    width: fit-content
+    max-width: 100%
+    margin: 0
+    padding: 0
+    position: relative
+    display: inline-flex
+    flex-flow: wrap column
+    align-items: flex-start
+    justify-content: flex-start
+    gap: 1rem
+    border: none
+
+label
+    display: inline-block
+    font-family: inherit
+    font-size: inherit
+    font-weight: 600
+
+    &.is-cbox,
+    &.is-radio
+        display: inline-flex
+        align-items: center
+        justify-content: flex-start
+        gap: .5em
+        user-select: none
+        outline-style: none
+        outline-offset: 0
+        line-height: 1
+        transition-property: outline-offset
+        transition-duration: .2s
+        transition-timing-function: ease
+
+        &:focus-within
+            --outline-color: #{$primary-text-color}
+            border-radius: $radius-small
+
+            outline: .125rem solid var(--outline-color)
+            outline-offset: .35rem
+
+    &.is-required
+        &:after
+            --color: #{$error-color}
+
+            content: "*"
+            color: var(--color)
+            margin-left: 0.3rem
+
+input
+    margin: 0
+
+input:not([type="radio"]):not([type="checkbox"]):not([type="file"]),
+select,
+textarea
+    --outline-color: #{$primary-text-color}
+    --border-color: #{$secondary-background-color}
+    --color: #{$primary-text-color}
+    --background-color: #{$secondary-background-color}
+
+    width: fit-content
+    min-width: var(--min-width, 165pt)
+    max-width: 100%
+    min-height: 3.15rem
+    padding: .5rem .75rem
+    position: relative
+    display: block
+    appearance: none
+    outline-style: none
+    outline-offset: 0
+    border-radius: $radius-small
+    border-width: .0625rem
+    border-style: solid
+    border-color: var(--border-color)
+    line-height: 1.75
+    font-family: inherit
+    font-size: .9rem
+    color: var(--color)
+    background-color: var(--background-color)
+    box-shadow: none
+    transition-property: outline-offset, background-color
+    transition-duration: .2s
+    transition-timing-function: ease
+
+    &[readonly]
+        opacity: .95
+        border-width: 1.5pt
+        border-style: dotted
+        cursor: not-allowed
+
+    &[disabled]
+        opacity: .75
+        cursor: not-allowed
+
+    &.is-invalid
+        --border-color: #{$error-color}
+
+    &.is-valid
+        --border-color: #{$sucess-color}
+
+    &:focus-visible,
+    &:hover
+        --background-color: #{$primary-background-color}
+
+    &:focus-visible
+        outline: .125rem solid var(--outline-color)
+        outline-offset: .25rem
+
+input[type="radio"],
+input[type="checkbox"]
+    outline-style: none
+
+progress
+    vertical-align: baseline

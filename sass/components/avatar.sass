@@ -1,33 +1,25 @@
 .lx-avatar
-    width: 10rem
-    height: 20rem
+    --background-color: #{$secondary-background-color}
+
+    width: 5.625rem
+    height: 5.625rem
+    position: relative
+    display: inline-flex
+    border-radius: 50%
     overflow: hidden
-    display: flex
-    flex-flow: wrap column
-    border-radius: $radius
-    border: .0625rem solid $border
-    background-color: $bg-comp
+    background-color: var(--background-color)
 
-    &-pic
+    img,
+    svg
         width: 100%
-        height: 70%
-        overflow: hidden
+        height: 100%
+        object-fit: cover
+        object-position: center
 
-        img,
-        svg
-            width: 100%
-            height: 100%
-            object-fit: cover
+    &.small
+        width: 4.375rem
+        height: 4.375rem
 
-    &-info
-        width: 100%
-        height: 30%
-        padding: .5rem
-        display: flex
-        flex-flow: wrap column
-        align-items: center
-        justify-content: center
-        gap: .5rem
-        line-height: 1
-        text-align: left
-        font-size: .75rem
+    &.large
+        width: 6.875rem
+        height: 6.875rem

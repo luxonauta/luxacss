@@ -1,193 +1,126 @@
-.lx-nav
+.lx-navbar
+    --border-color: #{$secondary-background-color}
+    --background-color: #{$primary-background-color}
+
     width: 100%
-    padding: .5rem $nav-pad
+    height: 5.75rem
     position: relative
     display: flex
-    align-items: stretch
-    justify-content: space-between
-    gap: 1rem
-    background-color: $nav-bg
+    align-items: center
+    border-width: 0 0 .0625rem 0
+    border-style: solid
+    border-color: var(--border-color)
+    background-color: var(--background-color)
 
-    &-brand
+    .lx-navbar-container
         display: flex
         align-items: center
         justify-content: space-between
+        background-color: var(--background-color)
 
-        .lx-nav-item
-            font-family: inherit
-            font-size: 1.25rem
-            font-weight: 600
+    .lx-navbar-brand
+        --max-height: 2.5rem
 
-            img,
-            svg
-                max-height: 1.75rem
-                object-fit: contain
-
-    &-burger
-        width: 2rem
-        height: 2rem
-        padding: 0
-        display: none
-        border-radius: $radius
-
-        span
-            &.icon
-                will-change: opacity, transform
-                width: 1rem
-                height: .125rem
-                position: absolute
-                left: calc(50% - .5rem)
-                display: block
-                border-radius: .5rem
-                color: $text
-                background-color: currentColor
-                transition-property: opacity, transform
-                transition-duration: .2s
-                transition-timing-function: ease-out
-
-                &:nth-child(1)
-                    top: calc(50% - .375rem)
-
-                &:nth-child(3)
-                    top: calc(50% + .375rem)
-
-        &.is-active
-            span
-                &.icon
-                    color: $focus
-
-                    &:nth-child(1)
-                        transform: translateY(.375rem) rotate(45deg)
-
-                    &:nth-child(2)
-                        opacity: 0
-
-                    &:nth-child(3)
-                        transform: translateY(-.375rem) rotate(-45deg)
-
-    &-menu
-        flex-basis: 0
-        flex-grow: 1
+        max-height: var(--max-height)
         display: flex
-        flex-flow: nowrap row
-        align-items: center
-        justify-content: flex-end
-        gap: .5rem
+        text-decoration: none
+        font-weight: 600
+        font-size: 1.25rem
 
-    &-item
-        margin: 0
-        padding: .5rem .75rem
-        position: relative
-        display: flex
-        align-items: center
-        justify-content: center
-        border-radius: .25rem
-        text-decoration-line: none !important
-        font-weight: 500
-        color: $text !important
-        transition-property: color
-        transition-duration: .3s
-        transition-timing-function: ease-in
+        img,
+        svg
+            max-width: 100%
+            max-height: 100%
+            object-fit: contain
+            object-position: center
 
-        &.dropdown
-            width: max-content
-            position: absolute
-            transform: translateX(-50%)
-            top: 100%
-            left: 50%
+    .lx-navbar-nav
+        display: block
+
+        .lx-nav-toggle
             display: none
-            background-color: $nav-bg
 
-            .lx-nav-item
-                padding: .5rem 1rem
+        .lx-nav-wrapper
+            margin: 0
+            padding: 0
+            display: flex
+            flex-flow: nowrap row
+            align-items: center
+            gap: 2.5rem
+            list-style: none
 
-        &.has-dropdown
-            gap: .5rem
+            .lx-item
+                --outline-color: #{$primary-text-color}
+                --color: #{$primary-text-color}
 
-            &:after
-                content: ""
-                width: .6rem
-                height: .6rem
-                transform-origin: center
-                transform: rotate(45deg)
-                display: block
-                border-radius: .125rem
-                border-width: .1875rem
-                border-style: solid
-                border-color: $text
-                border-bottom: 0
-                border-left: 0
-                pointer-events: none
-                transition-property: border-color, transform
-                transition-duration: .35s
+                padding: 0
+                display: inline-flex
+                gap: 1rem
+                cursor: pointer
+                user-select: none
+                outline-style: none
+                outline-offset: 0
+                border-radius: $radius-small
+                text-decoration: none
+                font-family: inherit
+                font-weight: 700
+                color: var(--color)
+                transition-property: outline-offset, color
+                transition-duration: .2s
                 transition-timing-function: ease
 
-        &:focus,
-        &:hover
-            &:not(.has-dropdown):not(.dropdown)
-                color: $focus !important
+                a
+                    display: inline-flex
+                    align-items: center
+                    gap: 0.5rem
+                    text-decoration: none
 
-            &.has-dropdown
-                span
-                    color: $focus !important
+                    &:visited
+                        color: inherit
 
-                &>.dropdown
-                    display: block
+                &:focus-visible
+                    outline: .125rem solid var(--outline-color)
+                    outline-offset: .25rem
 
-                &:after
-                    transform: rotate(135deg)
-                    border-color: $focus
+                &:hover
+                    --color: #{$primary-color-lighten}
 
-@media screen and (max-width: 70rem)
-    .lx-nav
-        flex-flow: wrap column
+    &.is-sticky-top
+        position: sticky
+        top: 0
 
-        &-brand
-            flex-grow: 1
-
-        &-burger
-            display: block
-
-        &-menu
-            padding: 1rem 5% 2rem
-            display: none
-            flex-flow: wrap column
-            gap: 1rem
-
-            .lx-nav-item
-                width: 100%
-                justify-content: flex-start
-
-                &.has-dropdown
-                    flex-flow: wrap column
-                    align-items: flex-start
-                    justify-content: center
-
-                    &:after
-                        display: none
-
-                &.dropdown
-                    position: relative
-                    display: block
-                    transform: none
-                    top: unset
-                    left: unset
-
-                    .lx-nav-item
-                        border-top-left-radius: 0
-                        border-bottom-left-radius: 0
-
-                    &:before
-                        content: ""
-                        width: .125rem
-                        height: 80%
-                        position: absolute
-                        transform: translateY(-50%)
-                        top: 50%
-                        left: .5rem
-                        border-radius: 1rem
-                        background-color: $text
-
-            &.is-active
+    @media (max-width: $breakpoint)
+        .lx-navbar-nav
+            .lx-nav-toggle
                 display: flex
-                background-color: $nav-bg
+
+            .lx-nav-wrapper
+                width: 100%
+                padding: 1.5rem 10% 2.5rem 10%
+                position: absolute
+                transform: translateY(-100%)
+                top: 100%
+                right: 0
+                left: 0
+                flex-flow: wrap column
+                opacity: 0
+                visibility: hidden
+                border-width: 0 0 .0625rem 0
+                border-style: solid
+                border-color: var(--border-color)
+                background-color: var(--background-color)
+                transition-property: opacity, visibility, transform
+                transition-duration: .15s, .175s, .175s
+                transition-timing-function: ease-in
+                z-index: -1
+
+                .lx-item
+                    width: 100%
+                    text-align: left
+
+                &.is-active
+                    transform: translateY(0)
+                    opacity: 1
+                    visibility: visible
+                    transition-duration: .3s, .35s, .35s
+                    transition-timing-function: ease-out

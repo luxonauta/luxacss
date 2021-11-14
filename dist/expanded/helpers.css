@@ -1,0 +1,261 @@
+:root {
+  --lx-primary-background-color: hsl(0, 0%, 8.5%);
+  --lx-secondary-background-color: hsl(0, 0%, 15%);
+  --lx-primary-text-color: hsl(0, 0%, 90%);
+  --lx-secondary-text-color: hsl(0, 0%, 65%);
+  --lx-primary-color-lighten: hsl(160, 65%, 55%);
+  --lx-primary-color: hsl(160, 65%, 45%);
+  --lx-primary-color-darken: hsl(160, 65%, 35%);
+  --lx-info-color: hsl(190, 95%, 75%);
+  --lx-warning-color: hsl(35, 90%, 65%);
+  --lx-error-color: hsl(0, 100%, 65%);
+  --lx-sucess-color: hsl(135, 95%, 65%);
+  --lx-bs-s: 0 .0715rem .0715rem hsla(0, 0%, 0%, 25%), 0 0 .0715rem hsla(0, 0%, 0%, 35%);
+  --lx-bs-m: 0 .214rem .355rem hsla(0, 0%, 0%, 20%), 0 0 .0715rem hsla(0, 0%, 0%, 35%);
+  --lx-bs-l: 0 .570rem .855rem hsla(0, 0%, 0%, 15%), 0 0 .0715rem hsla(0, 0%, 0%, 35%);
+}
+
+:root {
+  --base-size: 87.5%;
+  --lx-radius-small: .285rem;
+  --lx-radius-medium: .570rem;
+  --lx-radius-large: 1.15rem;
+  --row-gap: 1rem;
+}
+
+.bs-none {
+  box-shadow: none !important;
+}
+.bs-s {
+  box-shadow: var(--lx-bs-s);
+}
+.bs-m {
+  box-shadow: var(--lx-bs-m);
+}
+.bs-l {
+  box-shadow: var(--lx-bs-l);
+}
+
+.has-dflex {
+  display: flex !important;
+}
+.has-dflex-center {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.flow-w-col {
+  flex-flow: wrap column !important;
+}
+.flow-nw-col {
+  flex-flow: nowrap column !important;
+}
+.flow-w-row {
+  flex-flow: wrap row !important;
+}
+.flow-nw-row {
+  flex-flow: nowrap row !important;
+}
+
+.align-center {
+  align-items: center !important;
+}
+.align-end {
+  align-items: flex-end !important;
+}
+.align-start {
+  align-items: flex-start !important;
+}
+.align-stretch {
+  align-items: stretch !important;
+}
+
+.justify-around {
+  justify-content: space-around !important;
+}
+.justify-between {
+  justify-content: space-between !important;
+}
+.justify-evenly {
+  justify-content: space-evenly !important;
+}
+.justify-center {
+  justify-content: center !important;
+}
+.justify-end {
+  justify-content: flex-end !important;
+}
+.justify-start {
+  justify-content: flex-start !important;
+}
+
+.is-gapless {
+  gap: 0;
+}
+
+.has-gap-1 {
+  gap: 1rem !important;
+}
+
+.has-gap-2 {
+  gap: 2rem !important;
+}
+
+.has-gap-3 {
+  gap: 3rem !important;
+}
+
+.has-gap-4 {
+  gap: 4rem !important;
+}
+
+.has-gap-5 {
+  gap: 5rem !important;
+}
+
+.has-gap-6 {
+  gap: 6rem !important;
+}
+
+.has-gap-7 {
+  gap: 7rem !important;
+}
+
+.has-gap-8 {
+  gap: 8rem !important;
+}
+
+.has-gap-9 {
+  gap: 9rem !important;
+}
+
+.has-gap-10 {
+  gap: 10rem !important;
+}
+
+.ps-absolute {
+  position: absolute;
+}
+.ps-fixed {
+  position: fixed;
+}
+.ps-relative {
+  position: relative;
+}
+.ps-static {
+  position: static;
+}
+.ps-sticky {
+  position: sticky;
+}
+
+.is-float-left {
+  float: left;
+}
+.is-float-right {
+  float: right;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-end {
+  text-align: right;
+}
+.text-justified {
+  text-align: justify;
+}
+
+.featured {
+  font-size: 1.2rem;
+}
+
+.lx-title,
+.lx-subtitle {
+  margin: 0;
+}
+
+.lx-title {
+  font-size: 2.25rem;
+}
+@media (max-width: 60rem) {
+  .lx-title {
+    font-size: 2rem;
+  }
+}
+
+.lx-subtitle {
+  --color: var(--lx-secondary-text-color);
+  font-size: 1.5rem;
+  color: var(--color);
+}
+@media (max-width: 60rem) {
+  .lx-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+.lx-text {
+  width: 100%;
+  margin: 1rem 0;
+  display: flex;
+  flex-flow: wrap column;
+}
+.lx-text * {
+  margin: 0;
+}
+
+.lx-icon {
+  width: 1em;
+  height: 1em;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.is-hidden {
+  visibility: hidden !important;
+}
+
+.is-visible {
+  visibility: visible !important;
+}
+
+.hide,
+.hide-on-desk {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.desk-prompt {
+  display: block;
+}
+@media (hover: none) {
+  .desk-prompt {
+    display: none;
+  }
+}
+
+.mb-prompt {
+  display: block;
+}
+@media (hover: hover) {
+  .mb-prompt {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 60rem) {
+  .hide-on-desk {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .hide-on-mb {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}

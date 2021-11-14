@@ -1,33 +1,20 @@
-.lx-custom-scrollbar
-    scrollbar-width: thin
-    scrollbar-color: $thumb $bg-main
+.lx-scrollbar
+    overflow: auto
 
     &::-webkit-scrollbar
-        width: 13.5pt
-        height: 13.5pt
+        width: 1.125rem
+        height: 1.125rem
         background-color: transparent
 
-    &::-webkit-scrollbar-track:vertical
-        border-top-right-radius: $radius
-        border-bottom-right-radius: $radius
-        border-left: .75pt solid $thumb
-
-    &::-webkit-scrollbar-track:horizontal
-        border-bottom-left-radius: $radius
-        border-bottom-right-radius: $radius
-        border-top: .75pt solid $thumb
+    &::-webkit-scrollbar-track
+        border: none
+        background-color: $primary-background-color
+        box-shadow: none
 
     &::-webkit-scrollbar-thumb
-        border-radius: 1rem
-        border: 0.4rem solid transparent
-        background-clip: content-box
-        background-color: $thumb
+        border-radius: $radius-medium
+        border: .35rem solid $primary-background-color
+        background-color: $primary-color
 
     &::-webkit-scrollbar-thumb:hover
-        border-color: transparent
-        background-color: $thumb-hover
-
-    &::-webkit-scrollbar-corner
-        border-left: .75pt solid $thumb
-        border-top: .75pt solid $thumb
-        background-color: transparent
+        background-color: $primary-color-lighten
