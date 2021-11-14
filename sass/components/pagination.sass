@@ -1,25 +1,48 @@
 .lx-pagination
+    --outline-color: #{$primary-text-color}
+    --border-color: #{$secondary-background-color}
+    --color: #{$primary-text-color}
+    --background-color: #{$secondary-background-color}
+
     width: 100%
     display: grid
     grid-auto-flow: column
-    gap: .5em
+    gap: .5rem
     place-items: center
     place-content: flex-start
 
-    &-item
-        padding: .6em .65em
-        border-radius: $radius
-        border: .15rem solid $border
-        line-height: normal
+    .lx-item
+        padding: .45rem .5rem
+        display: block
+        border-radius: $radius-small
+        outline-style: none
+        outline-offset: 0
+        border-width: .0625rem
+        border-style: solid
+        border-color: var(--border-color)
+        line-height: 1
         text-decoration: none !important
-        font-size: .9em
-        font-weight: 400
-        color: $text !important
-        background-color: transparent
-        transition-property: background-color
-        transition-duration: .25s
-        transition-timing-function: ease-in
+        font-size: 1rem
+        font-weight: 700
+        color: var(--color) !important
+        background-color: var(--background-color)
+        transition-property: outline-offset, color, background-color
+        transition-duration: .2s
+        transition-timing-function: ease
 
-        &.is-selected,
         &:hover
-            background-color: $bg-comp
+            --background-color: #{$primary-background-color}
+
+        &:focus-visible
+            --background-color: #{$primary-background-color}
+
+            outline: .125rem solid var(--outline-color)
+            outline-offset: .25rem
+
+        &.is-selected
+            --border-color: #{$primary-color}
+            --color: #{$primary-background-color}
+            --background-color: #{$primary-color}
+
+            &:hover
+                --background-color: #{$primary-color-lighten}

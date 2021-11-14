@@ -1,35 +1,48 @@
 .lx-breadcrumb
-    display: flex
-    flex-flow: nowrap row
-    align-items: center
-    gap: .25rem
-    font-size: .9em
-    font-weight: 500
+    --color: #{$secondary-text-color}
 
-    &-item
+    display: flex
+    flex-flow: wrap row
+    align-items: center
+    gap: 1rem
+    font-size: 1rem
+    font-weight: 400
+
+    .lx-item
+        --outline-color: #{$primary-text-color}
+
         display: flex
         align-items: center
-        gap: .5rem
-        color: $text
-        transition: color $transition
+        gap: 1rem
+        outline-style: none
+        outline-offset: 0
+        color: var(--color)
+        transition-property: outline-offset, color
+        transition-duration: .2s
+        transition-timing-function: ease
 
         &:not(:first-of-type)
             &:before
-                content: ""
-                width: .5rem
-                height: .5rem
-                transform-origin: center
-                transform: rotate(45deg)
+                --color: #{$primary-text-color}
+
+                content: "/"
                 display: block
-                border-radius: .125rem
-                border: .1875rem solid $text
-                border-bottom: 0
-                border-left: 0
-                pointer-events: none
+                font-size: 1rem
+                font-weight: 600
+                color: var(--color)
 
         &:last-child
-            font-weight: 900
+            --color: #{$primary-color}
 
-        &:focus,
+            font-weight: 700
+
+            &:hover
+                --color: #{$primary-color-lighten}
+
+        &:focus-visible
+            outline: .125rem solid var(--outline-color)
+            outline-offset: .25rem
+            border-radius: $radius-small
+
         &:hover
-            color: $focus
+            --color: #{$primary-color}

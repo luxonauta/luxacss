@@ -1,3 +1,9 @@
+.is-hidden
+    visibility: hidden !important
+
+.is-visible
+    visibility: visible !important
+
 .hide,
 .hide-on-desk
     display: none !important
@@ -15,7 +21,7 @@
     @media (hover: hover)
         display: none
 
-@media screen and (max-width: 57rem)
+@media screen and (max-width: #{$breakpoint})
     .hide-on-desk
         display: block !important
         visibility: visible !important

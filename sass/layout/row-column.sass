@@ -18,9 +18,9 @@
     @for $i from 0 through 12
         &.is-#{$i}
             flex: none
-            width: percentage($i / 12)
+            width: percentage(math.div($i, 12))
 
-@media screen and (max-width: 64rem)
+@media screen and (max-width: #{$breakpoint})
     .lx-row
         flex-flow: wrap column
 

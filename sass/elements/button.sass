@@ -1,27 +1,75 @@
-a.lx-btn,
+a,
+button
+    cursor: pointer
+
+a
+    &[href]
+        --outline-color: #{$primary-text-color}
+        --color: #{$primary-color}
+
+        padding: 0
+        display: inline-flex
+        outline-style: none
+        outline-offset: 0
+        border-radius: $radius-small
+        text-underline-offset: .0625rem
+        text-decoration: none
+        font-family: inherit
+        font-weight: 500
+        color: var(--color)
+        transition-property: outline-offset, color
+        transition-duration: .2s
+        transition-timing-function: ease
+
+        &:focus-visible
+            outline: .125rem solid var(--outline-color)
+            outline-offset: .25rem
+
+        &:hover
+            --color: #{$primary-color-lighten}
+            text-decoration: underline
+
+        &:visited
+            --color: #{$primary-color-darken}
+
 button,
 .lx-btn
+    --outline-color: #{$primary-text-color}
+    --border-color: #{$secondary-background-color}
+    --color: #{$primary-text-color}
+    --background-color: #{$secondary-background-color}
+
     width: fit-content
-    width: -moz-fit-content
-    padding: 1rem 1.5rem
+    margin: 0
+    padding: .65rem .85rem
     position: relative
-    display: block
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: .5rem
     appearance: none
+    cursor: pointer
+    user-select: none
     outline-style: none
-    border-radius: $radius
-    border-style: none
-    text-align: center
-    text-decoration-line: none
+    outline-offset: 0
+    border-radius: $radius-small
+    border-width: .0625rem
+    border-style: solid
+    border-color: var(--border-color)
+    line-height: 1
+    text-decoration: none
     font-family: inherit
-    font-size: 100%
-    font-weight: 600
-    color: inherit
-    background-color: $bg-comp
-    transition-property: box-shadow
-    transition-duration: $transition
+    font-style: normal
+    font-size: 1rem
+    font-weight: 700
+    color: var(--color)
+    background-color: var(--background-color)
+    box-shadow: none
+    transition-property: outline-offset, background-color
+    transition-duration: .2s
     transition-timing-function: ease
 
-    .visually-hidden
+    .vh
         width: .75pt
         height: .75pt
         position: absolute
@@ -29,18 +77,52 @@ button,
         clip: rect(0, 0, 0, 0)
         white-space: nowrap
 
-    &:focus,
     &:hover
-        box-shadow: 0 0 0 .125rem $focus
+        --background-color: #{$primary-background-color}
 
-    &.is
-        &-small
-            font-size: .8rem
+    &:focus-visible
+        outline: .125rem solid var(--outline-color)
+        outline-offset: .25rem
 
-        &-medium
-            padding: .813rem 2.813rem
-            font-size: 1rem
+        &.link
+            --color: #{$primary-color-lighten}
+            text-decoration: underline
 
-        &-large
-            padding: .938rem 3.125rem
-            font-size: 1.25rem
+        &.subtle
+            --background-color: #{$secondary-background-color}
+
+    &.link
+        --border-color: transparent
+        --color: #{$primary-color}
+        --background-color: transparent
+
+        display: inline-flex
+        text-underline-offset: .0625rem
+
+        &:hover
+            --color: #{$primary-color-lighten}
+            text-decoration: underline
+
+        &:visited
+            --color: #{$primary-color-darken}
+
+    &.subtle
+        --border-color: transparent
+        --color: #{$secondary-text-color}
+        --background-color: transparent
+
+        &:hover
+            --background-color: #{$secondary-background-color}
+
+    &.primary
+        --border-color: #{$primary-color}
+        --color: #{$primary-background-color}
+        --background-color: #{$primary-color}
+
+        &:hover
+            --background-color: #{$primary-color-lighten}
+
+    &.is-muted
+        cursor: not-allowed
+        user-select: none
+        filter: opacity(.6)

@@ -2,18 +2,20 @@
   "name": "luxacss",
   "version": "1.0.0",
   "description": "A minimalist CSS framework.",
-  "author": {
-    "name": "Lucas de França",
-    "email": "luxonauta@gmail.com"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/luxonauta/luxa.git"
-  },
-  "license": "MIT",
   "main": "sass/luxa.sass",
   "scripts": {
     "gulp": "gulp"
+  },
+  "devDependencies": {
+    "fibers": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-coffee": "^3.0.3",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.35.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luxonauta/luxa.git"
   },
   "keywords": [
     "css",
@@ -27,10 +29,13 @@
     "web",
     "reset"
   ],
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-cli": "^2.3.0",
-    "gulp-sass": "^4.1.0",
-    "sass": "^1.32.0"
-  }
+  "author": {
+    "name": "Lucas de França",
+    "email": "luxonauta@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luxonauta/luxa/issues"
+  },
+  "homepage": "https://github.com/luxonauta/luxa/blob/master/README.md"
 }

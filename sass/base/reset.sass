@@ -1,6 +1,4 @@
-*,
-*:after,
-*:before
+*
     box-sizing: border-box
     -webkit-tap-highlight-color: transparent
 
@@ -9,20 +7,17 @@ html
 
 html,
 body
-    word-break: break-word
     margin: 0
     padding: 0
+    word-break: break-word
 
 body
     text-rendering: optimizeLegibility
-    line-height: 1.5
-    font-family: system-ui, sans-serif
+    line-height: 1.75
+    font-family: "Nunito", sans-serif
     -webkit-font-smoothing: antialiased
-    color: $text
-    background-color: $bg-main
-
-    ::selection
-        background-color: $selection
+    color: $primary-text-color
+    background-color: $primary-background-color
 
     @media (prefers-reduced-motion: no-preference)
         scroll-behavior: smooth
@@ -34,36 +29,36 @@ main,
 footer
     z-index: 1
 
-$exponent: 1
-$scale: 1.25
-
-@for $i from 6 through 1
-    $exponent: $exponent * $scale
-
-    h#{$i}
-        font-size: #{str-slice("" + $exponent, 0, 5)}rem
-
-h1
-    margin: 0 0 .5em 0
-
+h1,
 h2,
 h3,
 h4,
-h5,
-h6
-    margin: .5em 0
+h5
+    margin: 3rem 0 1.38rem
+    font-weight: 700
 
-blockquote
-    width: fit-content
-    width: -moz-fit-content
-    margin: 0
-    padding: .5em 1em
-    border-radius: $radius
-    border-left: .25rem solid $link
-    font-style: italic
-    background-color: $bg-comp
+h1
+    margin-top: 0
+    font-size: 2.488rem
+
+h2
+    font-size: 2.074rem
+
+h3
+    font-size: 1.728rem
+
+h4
+    font-size: 1.44rem
+
+h5
+    font-size: 1.2rem
+
+small,
+.lx-text-small
+    font-size: .833rem
 
 p
+    margin: 0 0 1rem 0
     font-size: 1rem
     font-weight: 400
 
@@ -79,20 +74,8 @@ sup
 span
     display: inline-block
 
-a,
-button
-    cursor: pointer
-
-a
-    &[href^="http:"],
-    &[href^="https:"]
-        display: inline-block
-        text-decoration-line: underline
-        color: $link
-
-        &:focus,
-        &:hover
-            color: $focus
+section
+    width: 100%
 
 figure,
 article
@@ -105,35 +88,14 @@ img
     max-height: 100%
     border-style: none
 
-details
+hr
+    --background-color: #{$secondary-background-color}
+
     width: 100%
+    height: .0625rem
     margin: 0
+    padding: 0
     position: relative
-    overflow: hidden
-    display: flex
-    flex-flow: wrap column
-    gap: .75rem
-    border-radius: $radius
-    border: .0625em solid $border
-    background-color: $bg-alt
-
-    summary
-        padding: 1rem
-        outline-style: none
-        user-select: none
-        cursor: pointer
-        font-size: 1.1rem
-        font-weight: 500
-        background-color: $bg-comp
-
-        &::-webkit-details-marker
-            color: $text
-
-    > :not(summary)
-        margin: 0
-        padding: 1rem
-        font-size: 1rem
-
-    &[open]
-        summary
-            border-bottom: .0625em solid $border
+    display: block
+    border: none
+    background-color: var(--background-color)
