@@ -3,7 +3,10 @@ button
     cursor: pointer
 
 a
-    &.lx-link
+    &[href^="http:"],
+    &[href^="https:"],
+    &.lx-link,
+    &:not(.not-styled)
         --outline-color: #{$primary-text-color}
         --color: #{$primary-color}
 
