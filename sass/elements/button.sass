@@ -5,35 +5,35 @@ button
 a
     &[href^="http:"],
     &[href^="https:"],
-    &.lx-link,
-    &:not(.not-styled)
-        --outline-color: #{$primary-text-color}
-        --color: #{$primary-color}
+    &.lx-link
+        &:not(.not-styled)
+            --outline-color: #{$primary-text-color}
+            --color: #{$primary-color}
 
-        padding: 0
-        display: inline-flex
-        outline-style: none
-        outline-offset: 0
-        border-radius: $radius-small
-        text-underline-offset: .0625rem
-        text-decoration: none
-        font-family: inherit
-        font-weight: 500
-        color: var(--color)
-        transition-property: outline-offset, color
-        transition-duration: .2s
-        transition-timing-function: ease
+            padding: 0
+            display: inline-flex
+            outline-style: none
+            outline-offset: 0
+            border-radius: $radius-small
+            text-underline-offset: .0625rem
+            text-decoration: none
+            font-family: inherit
+            font-weight: 500
+            color: var(--color)
+            transition-property: outline-offset, color
+            transition-duration: .2s
+            transition-timing-function: ease
 
-        &:focus-visible
-            outline: .125rem solid var(--outline-color)
-            outline-offset: .25rem
+            &:focus-visible
+                outline: .125rem solid var(--outline-color)
+                outline-offset: .25rem
 
-        &:hover
-            --color: #{$primary-color-lighten}
-            text-decoration: underline
+            &:hover
+                --color: #{$primary-color-lighten}
+                text-decoration: underline
 
-        &:visited
-            --color: #{$primary-color-darken}
+            &:visited
+                --color: #{$primary-color-darken}
 
 button,
 .lx-btn
