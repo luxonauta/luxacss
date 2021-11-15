@@ -28,7 +28,7 @@ button {
   cursor: pointer;
 }
 
-a[href] {
+a.lx-link {
   --outline-color: var(--lx-primary-text-color);
   --color: var(--lx-primary-color);
   padding: 0;
@@ -45,15 +45,15 @@ a[href] {
   transition-duration: 0.2s;
   transition-timing-function: ease;
 }
-a[href]:focus-visible {
+a.lx-link:focus-visible {
   outline: 0.125rem solid var(--outline-color);
   outline-offset: 0.25rem;
 }
-a[href]:hover {
+a.lx-link:hover {
   --color: var(--lx-primary-color-lighten);
   text-decoration: underline;
 }
-a[href]:visited {
+a.lx-link:visited {
   --color: var(--lx-primary-color-darken);
 }
 
