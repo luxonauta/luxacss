@@ -1,8 +1,11 @@
-.text
-    &-center
+.is
+    &-left-aligned
+        text-align: left
+
+    &-centralized
         text-align: center
 
-    &-end
+    &-right-aligned
         text-align: right
 
     &-justified
@@ -13,7 +16,11 @@
 
 .lx-title,
 .lx-subtitle
+    width: 100%
     margin: 0
+
+    &.fit
+        width: fit-content
 
 .lx-title
     font-size: 2.25rem
@@ -34,6 +41,9 @@
     width: 100%
     display: flex
     flex-flow: wrap column
+    align-items: flex-start
+    justify-content: flex-start
+    gap: 1em
 
     *
         margin: 0

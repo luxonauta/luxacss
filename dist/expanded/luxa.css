@@ -99,7 +99,6 @@ small,
 
 p {
   margin: 0 0 1rem 0;
-  font-size: 1rem;
   font-weight: 400;
 }
 
@@ -150,6 +149,7 @@ hr {
 a,
 button {
   cursor: pointer;
+  color: currentColor;
 }
 
 a[href^="http:"]:not(.not-styled), a[href^="https:"]:not(.not-styled), a.lx-link:not(.not-styled) {
@@ -304,6 +304,9 @@ button.is-muted,
   border-radius: 50%;
   object-fit: cover;
 }
+.lx-image.is-cover {
+  height: 100%;
+}
 .lx-image.is-cover img {
   width: 100%;
   height: 100%;
@@ -343,7 +346,8 @@ button.is-muted,
   background-color: var(--background-color);
 }
 
-form {
+form.lx-form,
+.lx-form {
   width: fit-content;
   max-width: 100%;
   height: auto;
@@ -352,13 +356,15 @@ form {
   position: relative;
   display: block;
 }
-form input {
+form.lx-form input,
+.lx-form input {
   --accent-color: var(--lx-primary-color);
   accent-color: var(--accent-color);
 }
-
-fieldset,
-.fieldset {
+form.lx-form fieldset,
+form.lx-form .lx-fieldset,
+.lx-form fieldset,
+.lx-form .lx-fieldset {
   width: fit-content;
   max-width: 100%;
   margin: 0;
@@ -371,14 +377,16 @@ fieldset,
   gap: 1rem;
   border: none;
 }
-
-label {
+form.lx-form label,
+.lx-form label {
   display: inline-block;
   font-family: inherit;
   font-size: inherit;
   font-weight: 600;
 }
-label.is-cbox, label.is-radio {
+form.lx-form label.is-cbox, form.lx-form label.is-radio,
+.lx-form label.is-cbox,
+.lx-form label.is-radio {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
@@ -391,26 +399,31 @@ label.is-cbox, label.is-radio {
   transition-duration: 0.2s;
   transition-timing-function: ease;
 }
-label.is-cbox:focus-within, label.is-radio:focus-within {
+form.lx-form label.is-cbox:focus-within, form.lx-form label.is-radio:focus-within,
+.lx-form label.is-cbox:focus-within,
+.lx-form label.is-radio:focus-within {
   --outline-color: var(--lx-primary-text-color);
   border-radius: var(--lx-radius-small);
   outline: 0.125rem solid var(--outline-color);
   outline-offset: 0.35rem;
 }
-label.is-required:after {
+form.lx-form label.is-required:after,
+.lx-form label.is-required:after {
   --color: var(--lx-error-color);
   content: "*";
   color: var(--color);
   margin-left: 0.3rem;
 }
-
-input {
+form.lx-form input,
+.lx-form input {
   margin: 0;
 }
-
-input:not([type=radio]):not([type=checkbox]):not([type=file]),
-select,
-textarea {
+form.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file]),
+form.lx-form select,
+form.lx-form textarea,
+.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file]),
+.lx-form select,
+.lx-form textarea {
   --outline-color: var(--lx-primary-text-color);
   --border-color: var(--lx-secondary-background-color);
   --color: var(--lx-primary-text-color);
@@ -439,50 +452,72 @@ textarea {
   transition-duration: 0.2s;
   transition-timing-function: ease;
 }
-input:not([type=radio]):not([type=checkbox]):not([type=file])[readonly],
-select[readonly],
-textarea[readonly] {
+form.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file])[readonly],
+form.lx-form select[readonly],
+form.lx-form textarea[readonly],
+.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file])[readonly],
+.lx-form select[readonly],
+.lx-form textarea[readonly] {
   opacity: 0.95;
   border-width: 1.5pt;
   border-style: dotted;
   cursor: not-allowed;
 }
-input:not([type=radio]):not([type=checkbox]):not([type=file])[disabled],
-select[disabled],
-textarea[disabled] {
+form.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file])[disabled],
+form.lx-form select[disabled],
+form.lx-form textarea[disabled],
+.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file])[disabled],
+.lx-form select[disabled],
+.lx-form textarea[disabled] {
   opacity: 0.75;
   cursor: not-allowed;
 }
-input:not([type=radio]):not([type=checkbox]):not([type=file]).is-invalid,
-select.is-invalid,
-textarea.is-invalid {
+form.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file]).is-invalid,
+form.lx-form select.is-invalid,
+form.lx-form textarea.is-invalid,
+.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file]).is-invalid,
+.lx-form select.is-invalid,
+.lx-form textarea.is-invalid {
   --border-color: var(--lx-error-color);
 }
-input:not([type=radio]):not([type=checkbox]):not([type=file]).is-valid,
-select.is-valid,
-textarea.is-valid {
+form.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file]).is-valid,
+form.lx-form select.is-valid,
+form.lx-form textarea.is-valid,
+.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file]).is-valid,
+.lx-form select.is-valid,
+.lx-form textarea.is-valid {
   --border-color: var(--lx-sucess-color);
 }
-input:not([type=radio]):not([type=checkbox]):not([type=file]):focus-visible, input:not([type=radio]):not([type=checkbox]):not([type=file]):hover,
-select:focus-visible,
-select:hover,
-textarea:focus-visible,
-textarea:hover {
+form.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file]):focus-visible, form.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file]):hover,
+form.lx-form select:focus-visible,
+form.lx-form select:hover,
+form.lx-form textarea:focus-visible,
+form.lx-form textarea:hover,
+.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file]):focus-visible,
+.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file]):hover,
+.lx-form select:focus-visible,
+.lx-form select:hover,
+.lx-form textarea:focus-visible,
+.lx-form textarea:hover {
   --background-color: var(--lx-primary-background-color);
 }
-input:not([type=radio]):not([type=checkbox]):not([type=file]):focus-visible,
-select:focus-visible,
-textarea:focus-visible {
+form.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file]):focus-visible,
+form.lx-form select:focus-visible,
+form.lx-form textarea:focus-visible,
+.lx-form input:not([type=radio]):not([type=checkbox]):not([type=file]):focus-visible,
+.lx-form select:focus-visible,
+.lx-form textarea:focus-visible {
   outline: 0.125rem solid var(--outline-color);
   outline-offset: 0.25rem;
 }
-
-input[type=radio],
-input[type=checkbox] {
+form.lx-form input[type=radio],
+form.lx-form input[type=checkbox],
+.lx-form input[type=radio],
+.lx-form input[type=checkbox] {
   outline-style: none;
 }
-
-progress {
+form.lx-form progress,
+.lx-form progress {
   vertical-align: baseline;
 }
 
@@ -536,16 +571,16 @@ progress {
   --background-color: var(--lx-primary-background-color);
 }
 
-select[multiple] {
+.lx-form select[multiple] {
   height: auto;
   padding: 0.8rem;
   overflow: auto;
 }
-select[multiple] option {
+.lx-form select[multiple] option {
   padding: 0.5rem 1rem;
   border-radius: var(--lx-radius-small);
 }
-select:not([multiple]) {
+.lx-form select:not([multiple]) {
   padding-right: 3.6rem;
   cursor: pointer;
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgb(255,255,255)'><path fill-rule='evenodd' d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>");
@@ -553,11 +588,11 @@ select:not([multiple]) {
   background-position: calc(100% - 1rem) center;
   background-repeat: no-repeat;
 }
-select.arrow-fill-black:not([multiple]) {
+.lx-form select.arrow-fill-black:not([multiple]) {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='rgba(0,0,0,.75)'><path fill-rule='evenodd' d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>");
 }
 
-textarea {
+.lx-form textarea {
   width: 100%;
   max-width: 100%;
   margin: 0;
@@ -565,7 +600,7 @@ textarea {
   outline-style: none;
   resize: vertical;
 }
-textarea:not([rows]) {
+.lx-form textarea:not([rows]) {
   max-height: 40rem;
   min-height: 8rem;
 }
@@ -1115,13 +1150,16 @@ textarea:not([rows]) {
   float: right;
 }
 
-.text-center {
+.is-left-aligned {
+  text-align: left;
+}
+.is-centralized {
   text-align: center;
 }
-.text-end {
+.is-right-aligned {
   text-align: right;
 }
-.text-justified {
+.is-justified {
   text-align: justify;
 }
 
@@ -1131,7 +1169,12 @@ textarea:not([rows]) {
 
 .lx-title,
 .lx-subtitle {
+  width: 100%;
   margin: 0;
+}
+.lx-title.fit,
+.lx-subtitle.fit {
+  width: fit-content;
 }
 
 .lx-title {
@@ -1158,6 +1201,9 @@ textarea:not([rows]) {
   width: 100%;
   display: flex;
   flex-flow: wrap column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1em;
 }
 .lx-text * {
   margin: 0;

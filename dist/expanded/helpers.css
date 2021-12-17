@@ -157,13 +157,16 @@
   float: right;
 }
 
-.text-center {
+.is-left-aligned {
+  text-align: left;
+}
+.is-centralized {
   text-align: center;
 }
-.text-end {
+.is-right-aligned {
   text-align: right;
 }
-.text-justified {
+.is-justified {
   text-align: justify;
 }
 
@@ -173,7 +176,12 @@
 
 .lx-title,
 .lx-subtitle {
+  width: 100%;
   margin: 0;
+}
+.lx-title.fit,
+.lx-subtitle.fit {
+  width: fit-content;
 }
 
 .lx-title {
@@ -200,6 +208,9 @@
   width: 100%;
   display: flex;
   flex-flow: wrap column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1em;
 }
 .lx-text * {
   margin: 0;

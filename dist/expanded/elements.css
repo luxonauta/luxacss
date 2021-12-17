@@ -26,6 +26,7 @@
 a,
 button {
   cursor: pointer;
+  color: currentColor;
 }
 
 a[href^="http:"]:not(.not-styled), a[href^="https:"]:not(.not-styled), a.lx-link:not(.not-styled) {
@@ -179,6 +180,9 @@ button.is-muted,
 .lx-image.is-rounded img {
   border-radius: 50%;
   object-fit: cover;
+}
+.lx-image.is-cover {
+  height: 100%;
 }
 .lx-image.is-cover img {
   width: 100%;
