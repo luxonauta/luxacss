@@ -2,6 +2,10 @@
     box-sizing: border-box
     -webkit-tap-highlight-color: transparent
 
+    &::selection
+        background-color: $selection-background-color
+        color: $selection-color
+
 html
     font-size: $base-size
 
@@ -14,7 +18,7 @@ body
 body
     text-rendering: optimizeLegibility
     line-height: 1.75
-    font-family: "Nunito", sans-serif
+    font-family: system-ui, sans-serif
     -webkit-font-smoothing: antialiased
     color: $primary-text-color
     background-color: $primary-background-color
