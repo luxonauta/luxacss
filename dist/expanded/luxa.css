@@ -77,10 +77,10 @@
 }
 
 :root {
-  --base-size: 87.5%;
-  --lx-radius-small: .285rem;
-  --lx-radius-medium: .570rem;
-  --lx-radius-large: 1.15rem;
+  --base-size: 100%;
+  --lx-radius-small: .25rem;
+  --lx-radius-medium: .5rem;
+  --lx-radius-large: 1rem;
   --row-gap: 1rem;
 }
 
@@ -138,33 +138,32 @@ h5 {
 
 h1 {
   margin-top: 0;
-  font-size: 2.488rem;
+  font-size: 1.802rem;
 }
 
 h2 {
-  font-size: 2.074rem;
+  font-size: 1.602rem;
 }
 
 h3 {
-  font-size: 1.728rem;
+  font-size: 1.424rem;
 }
 
 h4 {
-  font-size: 1.44rem;
+  font-size: 1.266rem;
 }
 
 h5 {
-  font-size: 1.2rem;
+  font-size: 1.125rem;
 }
 
 small,
 .lx-text-small {
-  font-size: 0.833rem;
+  font-size: 0.889rem;
 }
 
 p {
-  margin: 0 0 1rem 0;
-  font-weight: 400;
+  margin: 0 0 1em 0;
 }
 
 b,
@@ -368,6 +367,9 @@ button.is-muted,
 .lx-image.is-rounded img {
   border-radius: 50%;
   object-fit: cover;
+}
+.lx-image.fit {
+  width: fit-content;
 }
 .lx-image.is-cover {
   height: 100%;
@@ -1232,36 +1234,6 @@ form.lx-form progress,
   font-size: 1.2rem;
 }
 
-.lx-title,
-.lx-subtitle {
-  width: 100%;
-  margin: 0;
-}
-.lx-title.fit,
-.lx-subtitle.fit {
-  width: fit-content;
-}
-
-.lx-title {
-  font-size: 2.25rem;
-}
-@media (max-width: 60rem) {
-  .lx-title {
-    font-size: 2rem;
-  }
-}
-
-.lx-subtitle {
-  --color: var(--lx-secondary-text-color);
-  font-size: 1.5rem;
-  color: var(--color);
-}
-@media (max-width: 60rem) {
-  .lx-subtitle {
-    font-size: 1.25rem;
-  }
-}
-
 .lx-text {
   width: 100%;
   display: flex;
@@ -1272,6 +1244,9 @@ form.lx-form progress,
 }
 .lx-text * {
   margin: 0;
+}
+.lx-text.fit {
+  width: fit-content;
 }
 
 .lx-icon {

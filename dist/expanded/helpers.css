@@ -77,10 +77,10 @@
 }
 
 :root {
-  --base-size: 87.5%;
-  --lx-radius-small: .285rem;
-  --lx-radius-medium: .570rem;
-  --lx-radius-large: 1.15rem;
+  --base-size: 100%;
+  --lx-radius-small: .25rem;
+  --lx-radius-medium: .5rem;
+  --lx-radius-large: 1rem;
   --row-gap: 1rem;
 }
 
@@ -235,36 +235,6 @@
   font-size: 1.2rem;
 }
 
-.lx-title,
-.lx-subtitle {
-  width: 100%;
-  margin: 0;
-}
-.lx-title.fit,
-.lx-subtitle.fit {
-  width: fit-content;
-}
-
-.lx-title {
-  font-size: 2.25rem;
-}
-@media (max-width: 60rem) {
-  .lx-title {
-    font-size: 2rem;
-  }
-}
-
-.lx-subtitle {
-  --color: var(--lx-secondary-text-color);
-  font-size: 1.5rem;
-  color: var(--color);
-}
-@media (max-width: 60rem) {
-  .lx-subtitle {
-    font-size: 1.25rem;
-  }
-}
-
 .lx-text {
   width: 100%;
   display: flex;
@@ -275,6 +245,9 @@
 }
 .lx-text * {
   margin: 0;
+}
+.lx-text.fit {
+  width: fit-content;
 }
 
 .lx-icon {

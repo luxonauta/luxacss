@@ -77,10 +77,10 @@
 }
 
 :root {
-  --base-size: 87.5%;
-  --lx-radius-small: .285rem;
-  --lx-radius-medium: .570rem;
-  --lx-radius-large: 1.15rem;
+  --base-size: 100%;
+  --lx-radius-small: .25rem;
+  --lx-radius-medium: .5rem;
+  --lx-radius-large: 1rem;
   --row-gap: 1rem;
 }
 
@@ -241,6 +241,9 @@ button.is-muted,
 .lx-image.is-rounded img {
   border-radius: 50%;
   object-fit: cover;
+}
+.lx-image.fit {
+  width: fit-content;
 }
 .lx-image.is-cover {
   height: 100%;
