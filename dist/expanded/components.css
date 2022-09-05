@@ -5,9 +5,21 @@
   --lx-warning-color: hsl(35, 90%, 65%);
   --lx-error-color: hsl(0, 100%, 65%);
   --lx-sucess-color: hsl(135, 95%, 65%);
-  --lx-bs-s: 0.3px 0.5px 0.7px hsla(var(--shadow-color), 34%), 0.4px 0.8px 1px -1.2px hsla(var(--shadow-color), 34%), 1px 2px 2.5px -2.5px hsla(var(--shadow-color), 34%);
-  --lx-bs-m: 0.3px 0.5px 0.7px hsla(var(--shadow-color), 36%), 0.8px 1.6px 2px -0.8px hsla(var(--shadow-color), 36%), 2.1px 4.1px 5.2px -1.7px hsla(var(--shadow-color), 36%), 5px 10px 12.6px -2.5px hsla(var(--shadow-color), 36%);
-  --lx-bs-l: 0.3px 0.5px 0.7px hsla(var(--shadow-color), 34%), 1.5px 2.9px 3.7px -0.4px hsla(var(--shadow-color), 34%), 2.7px 5.4px 6.8px -0.7px hsla(var(--shadow-color), 34%), 4.5px 8.9px 11.2px -1.1px hsla(var(--shadow-color), 34%), 7.1px 14.3px 18px -1.4px hsla(var(--shadow-color), 34%), 11.2px 22.3px 28.1px -1.8px hsla(var(--shadow-color), 34%), 17px 33.9px 42.7px -2.1px hsla(var(--shadow-color), 34%), 25px 50px 62.9px -2.5px hsla(var(--shadow-color), 34%);
+  --lx-bs-s: 0.0187rem 0.0313rem 0.0437rem hsla(var(--shadow-color), 34%),
+  	0.025rem 0.05rem 0.0625rem -0.075rem hsla(var(--shadow-color), 34%),
+  	0.0625rem 0.125rem 0.1563rem -0.1563rem hsla(var(--shadow-color), 34%);
+  --lx-bs-m: 0.0187rem 0.0313rem 0.0437rem hsla(var(--shadow-color), 36%),
+  	0.05rem 0.1rem 0.125rem -0.05rem hsla(var(--shadow-color), 36%),
+  	0.1313rem 0.2562rem 0.325rem -0.1062rem hsla(var(--shadow-color), 36%),
+  	0.3125rem 0.625rem 0.7875rem -0.1563rem hsla(var(--shadow-color), 36%);
+  --lx-bs-l: 0.0187rem 0.0313rem 0.0437rem hsla(var(--shadow-color), 34%),
+  	0.0938rem 0.1812rem 0.2313rem -0.025rem hsla(var(--shadow-color), 34%),
+  	0.1688rem 0.3375rem 0.425rem -0.0437rem hsla(var(--shadow-color), 34%),
+  	0.2813rem 0.5563rem 0.7rem -0.0688rem hsla(var(--shadow-color), 34%),
+  	0.4437rem 0.8938rem 1.125rem -0.0875rem hsla(var(--shadow-color), 34%),
+  	0.7rem 1.3938rem 1.7563rem -0.1125rem hsla(var(--shadow-color), 34%),
+  	1.0625rem 2.1187rem 2.6688rem -0.1313rem hsla(var(--shadow-color), 34%),
+  	1.5625rem 3.125rem 3.9312rem -0.1563rem hsla(var(--shadow-color), 34%);
   --lx-primary-background-color-light: hsl(0, 0%, 100%);
   --lx-secondary-background-color-light: hsl(160, 20%, 98%);
   --lx-primary-text-color-light: hsl(0, 0%, 5%);
@@ -78,8 +90,8 @@
 
 :root {
   --base-size: 100%;
-  --lx-radius-small: .25rem;
-  --lx-radius-medium: .5rem;
+  --lx-radius-small: 0.25rem;
+  --lx-radius-medium: 0.5rem;
   --lx-radius-large: 1rem;
   --row-gap: 1rem;
 }
@@ -258,7 +270,7 @@
   gap: 2.5rem;
   list-style: none;
 }
-.lx-navbar .lx-navbar-container .lx-navbar-nav .lx-nav-wrapper .lx-item {
+.lx-navbar .lx-navbar-container .lx-navbar-nav .lx-item {
   --outline-color: var(--lx-primary-text-color);
   --color: var(--lx-primary-text-color);
   padding: 0;
@@ -277,20 +289,20 @@
   transition-duration: 0.2s;
   transition-timing-function: ease;
 }
-.lx-navbar .lx-navbar-container .lx-navbar-nav .lx-nav-wrapper .lx-item a {
+.lx-navbar .lx-navbar-container .lx-navbar-nav a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
 }
-.lx-navbar .lx-navbar-container .lx-navbar-nav .lx-nav-wrapper .lx-item a:visited {
+.lx-navbar .lx-navbar-container .lx-navbar-nav:visited {
   color: inherit;
 }
-.lx-navbar .lx-navbar-container .lx-navbar-nav .lx-nav-wrapper .lx-item:focus-visible {
+.lx-navbar .lx-navbar-container .lx-navbar-nav:focus-visible {
   outline: 0.125rem solid var(--outline-color);
   outline-offset: 0.25rem;
 }
-.lx-navbar .lx-navbar-container .lx-navbar-nav .lx-nav-wrapper .lx-item:hover {
+.lx-navbar .lx-navbar-container .lx-navbar-nav:hover {
   --color: var(--lx-primary-color-lighten);
 }
 .lx-navbar.is-sticky-top {
