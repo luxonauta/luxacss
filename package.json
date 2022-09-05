@@ -1,41 +1,39 @@
 {
-  "name": "luxacss",
-  "version": "1.0.0",
-  "description": "A minimalist CSS framework.",
-  "main": "sass/luxa.sass",
-  "scripts": {
-    "gulp": "gulp"
-  },
-  "devDependencies": {
-    "fibers": "^5.0.0",
-    "gulp": "^4.0.2",
-    "gulp-coffee": "^3.0.3",
-    "gulp-sass": "^5.0.0",
-    "sass": "^1.35.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/luxonauta/luxa.git"
-  },
-  "keywords": [
-    "css",
-    "flexbox",
-    "grid",
-    "framework",
-    "front-end",
-    "minimalist",
-    "responsive",
-    "sass",
-    "web",
-    "reset"
-  ],
-  "author": {
-    "name": "Lucas de França",
-    "email": "luxonauta@gmail.com"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/luxonauta/luxa/issues"
-  },
-  "homepage": "https://github.com/luxonauta/luxa/blob/master/README.md"
+	"name": "luxacss",
+	"version": "1.0.0",
+	"description": "A minimalist CSS framework.",
+	"main": "sass/luxa.sass",
+	"scripts": {
+		"gulp": "gulp"
+	},
+	"devDependencies": {
+		"gulp": "^4.0.2",
+		"gulp-sass": "^5.0.0",
+		"sass": "^1.35.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/luxonauta/luxa.git"
+	},
+	"keywords": [
+		"css",
+		"flexbox",
+		"grid",
+		"framework",
+		"front-end",
+		"minimalist",
+		"responsive",
+		"sass",
+		"web",
+		"reset"
+	],
+	"author": {
+		"name": "Lucas de França",
+		"email": "luxonauta@gmail.com"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/luxonauta/luxa/issues"
+	},
+	"homepage": "https://luxacss.com/"
 }
