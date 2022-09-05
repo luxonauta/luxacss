@@ -38,11 +38,11 @@ When creating a issue, use the following labels:
 
 If you've found a bug, please report it using the following guidelines (sticking to these guidelines helps me better understand the problem).
 
-1.  [**Search for previous issues**](https://github.com/luxonauta/luxa/issues?utf8=%E2%9C%93&q=) — Check that this issue has not already been reported.
-2.  **What’s the problem?** — If the problem was not reported, explain what you are trying to do and what happened.
-3.  **Provide an example** — A [CodePen](https://codepen.io/) that illustrates the problem is perfect. 💫
-4.  **Describe what you've tried so far** — Understanding what you've tried so far will help me respond faster. Also include possible related issues that you read or explored.
-5.  **Label your Issue as a `bug`** - This has already been said, but it's vital to keep everything organized!
+1. [**Search for previous issues**](https://github.com/luxonauta/luxa/issues?utf8=%E2%9C%93&q=) — Check that this issue has not already been reported.
+2. **What’s the problem?** — If the problem was not reported, explain what you are trying to do and what happened.
+3. **Provide an example** — A [CodePen](https://codepen.io/) that illustrates the problem is perfect. 💫
+4. **Describe what you've tried so far** — Understanding what you've tried so far will help me respond faster. Also include possible related issues that you read or explored.
+5. **Label your Issue as a `bug`** - This has already been said, but it's vital to keep everything organized!
 
 ## Feature requests
 
@@ -52,11 +52,11 @@ Open a issue first. 😅
 
 When opening an Issue, provide the following information:
 
-1.  Proposed feature – What are you proposing? 🤔
-2.  Why do you need it? - Is this necessary for the project? What is your timeline? Have you tried using other elements and components first?
-3.  Provide examples - If you have examples of how others have solved this problem, please provide them so I can better understand what you are asking for.
-4.  Who do you want to create this? - Are you building this, or do you want me to build it?
-5.  Label your issue as a `feature`!
+1. Proposed feature – What are you proposing? 🤔
+2. Why do you need it? - Is this necessary for the project? What is your timeline? Have you tried using other elements and components first?
+3. Provide examples - If you have examples of how others have solved this problem, please provide them so I can better understand what you are asking for.
+4. Who do you want to create this? - Are you building this, or do you want me to build it?
+5. Label your issue as a `feature`!
 
 ## Pull Requests
 
@@ -64,21 +64,21 @@ No Pull Request is too small or too early! I strive to provide early feedback pr
 
 Adhering to the following process is the best way to include your contribution.
 
-1.  Make sure you have the latest changes!
-2.  Check out the dev branch and create a new topic branch for your feature, change, or fix.
-3.  Commit your changes in logical blocks.
-4.  Locally merge (or rebase) the upstream dev branch into your topic branch.
-5.  Push your branch to the fork.
-6.  [Open a Pull Request](https://github.com/luxonauta/luxa/pulls) with a clear title and description.
+1. Make sure you have the latest changes!
+2. Check out the dev branch and create a new topic branch for your feature, change, or fix.
+3. Commit your changes in logical blocks.
+4. Locally merge (or rebase) the upstream dev branch into your topic branch.
+5. Push your branch to the fork.
+6. [Open a Pull Request](https://github.com/luxonauta/luxa/pulls) with a clear title and description.
 
 > Note that all Pull Requests must be merged into the dev branch. Any pull request to the principal (main) will be rejected.
 
 ## General preferences
 
-1.  Always use double quotes;
-2.  Do not use [Shorthand properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties);
-3.  Do not change the default extension (`.sass`).
-4.  Use Luxa's modifier system.
+1. Always use double quotes;
+2. Do not use [Shorthand properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties);
+3. Do not change the default extension (`.sass`).
+4. Use Luxa's modifier system.
 
 ## License
 

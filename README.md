@@ -18,13 +18,13 @@ You can use **Luxa CSS** by CDN, provided by the :mechanical_arm: [jsDeliver](ht
 
 ```html
 <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/luxonauta/luxa@1.1/dist/expanded/luxa.css"
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/gh/luxonauta/luxa@1.1/dist/expanded/luxa.css"
 />
 
 <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/luxonauta/luxa@1.1/dist/compressed/luxa.css"
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/gh/luxonauta/luxa@1.1/dist/compressed/luxa.css"
 />
 ```
 
