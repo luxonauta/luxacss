@@ -1,0 +1,56 @@
+.lx-input-file {
+	input[type="file"] {
+		opacity: 0;
+		width: 0;
+		height: 0;
+		position: absolute;
+		display: none;
+		user-select: none;
+		pointer-events: none;
+		z-index: -1;
+	}
+
+	label {
+		--outline-color: #{$primary-text-color};
+		--border-color: #{$secondary-background-color};
+		--color: #{$primary-text-color};
+		--background-color: #{$secondary-background-color};
+
+		padding: 0.65rem 0.85rem;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		appearance: none;
+		cursor: pointer;
+		user-select: none;
+		outline-style: none;
+		border-radius: $radius-small;
+		border-width: 0.0625rem;
+		border-style: solid;
+		border-color: var(--border-color);
+		line-height: 1;
+		text-decoration: none;
+		font-family: inherit;
+		font-style: normal;
+		font-size: 1rem;
+		font-weight: 700;
+		color: var(--color);
+		background-color: var(--background-color);
+		box-shadow: none;
+		transition-property: background-color;
+		transition-duration: 0.2s;
+		transition-timing-function: ease;
+
+		&:focus-within,
+		&:focus-visible {
+			outline: 0.125rem solid var(--outline-color);
+			outline-offset: 0.25rem;
+		}
+
+		&:hover {
+			--background-color: #{$primary-background-color};
+		}
+	}
+}

@@ -1,0 +1,56 @@
+.lx-breadcrumb {
+	--color: #{$secondary-text-color};
+
+	display: flex;
+	flex-flow: wrap row;
+	align-items: center;
+	gap: 1rem;
+	font-size: 1rem;
+	font-weight: 400;
+
+	.lx-item {
+		--outline-color: #{$primary-text-color};
+
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		outline-style: none;
+		outline-offset: 0;
+		color: var(--color);
+		transition-property: outline-offset, color;
+		transition-duration: 0.2s;
+		transition-timing-function: ease;
+
+		&:not(:first-of-type) {
+			&:before {
+				--color: #{$primary-text-color};
+
+				content: "/";
+				display: block;
+				font-size: 1rem;
+				font-weight: 600;
+				color: var(--color);
+			}
+		}
+
+		&:last-child {
+			--color: #{$primary-color};
+
+			font-weight: 700;
+
+			&:hover {
+				--color: #{$primary-color-lighten};
+			}
+		}
+
+		&:focus-visible {
+			outline: 0.125rem solid var(--outline-color);
+			outline-offset: 0.25rem;
+			border-radius: $radius-small;
+		}
+
+		&:hover {
+			--color: #{$primary-color};
+		}
+	}
+}

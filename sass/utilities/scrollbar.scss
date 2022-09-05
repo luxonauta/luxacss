@@ -1,0 +1,25 @@
+.lx-scrollbar {
+	overflow: auto;
+
+	&::-webkit-scrollbar {
+		width: 1.125rem;
+		height: 1.125rem;
+		background-color: transparent;
+	}
+
+	&::-webkit-scrollbar-track {
+		border: none;
+		background-color: $primary-background-color;
+		box-shadow: none;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border-radius: $radius-medium;
+		border: 0.35rem solid $primary-background-color;
+		background-color: $primary-color;
+	}
+
+	&::-webkit-scrollbar-thumb:hover {
+		background-color: $primary-color-lighten;
+	}
+}

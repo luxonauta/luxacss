@@ -1,0 +1,56 @@
+.is {
+	&-left-aligned {
+		text-align: left;
+	}
+
+	&-centralized {
+		text-align: center;
+	}
+
+	&-right-aligned {
+		text-align: right;
+	}
+
+	&-justified {
+		text-align: justify;
+	}
+}
+
+.featured {
+	font-size: 1.2rem;
+}
+
+.lx-text {
+	width: 100%;
+	display: flex;
+	flex-flow: wrap column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 1em;
+
+	* {
+		margin: 0;
+	}
+
+	&.fit {
+		width: fit-content;
+	}
+}
+
+.lx-icon {
+	width: 1em;
+	height: 1em;
+	stroke: currentColor;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+
+	&.has-margin-left {
+		margin-left: 0.5em;
+	}
+
+	&.has-margin-right {
+		margin-right: 0.5em;
+	}
+}

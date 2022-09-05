@@ -1,0 +1,46 @@
+.lx-badge {
+	--outline-color: #{$primary-text-color};
+	--color: #{$primary-background-color};
+	--background-color: #{$primary-color};
+
+	width: fit-content;
+	margin: 0.125rem;
+	padding: 0.715rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5em;
+	outline-style: none;
+	outline-offset: 0;
+	border-radius: $radius-large;
+	cursor: default;
+	user-select: none;
+	line-height: 1;
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--color);
+	background-color: var(--background-color);
+	transition-property: outline-offset, background-color;
+	transition-duration: 0.2s;
+	transition-timing-function: ease;
+
+	.lx-icon {
+		width: 0.75em;
+		height: 0.75em;
+		fill: currentColor;
+	}
+
+	&.small {
+		padding: 0.5rem;
+		font-size: 0.85rem;
+	}
+
+	&:focus-visible {
+		outline: 0.125rem solid var(--outline-color);
+		outline-offset: 0.25rem;
+	}
+
+	&:hover {
+		--background-color: #{$primary-color-lighten};
+	}
+}

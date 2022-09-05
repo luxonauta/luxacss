@@ -1,0 +1,13 @@
+.lx-card {
+	--background-color: #{$secondary-background-color};
+
+	padding: 2rem;
+	border-radius: $radius-small;
+	background-color: var(--background-color);
+
+	&.is-muted {
+		cursor: not-allowed;
+		user-select: none;
+		filter: opacity(0.6);
+	}
+}

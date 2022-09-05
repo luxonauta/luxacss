@@ -1,0 +1,19 @@
+:root {
+	--base-size: 100%;
+
+	--lx-radius-small: 0.25rem;
+	--lx-radius-medium: 0.5rem;
+	--lx-radius-large: 1rem;
+
+	--row-gap: 1rem;
+}
+
+$base-size: var(--base-size);
+
+$breakpoint: 60rem;
+
+$radius-small: var(--lx-radius-small);
+$radius-medium: var(--lx-radius-medium);
+$radius-large: var(--lx-radius-large);
+
+$row-gap: var(--row-gap);

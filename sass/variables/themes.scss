@@ -1,0 +1,135 @@
+:root {
+	--lx-selection-color: hsl(0, 0%, 20%) !important;
+	--lx-selection-background-color: hsl(156, 72%, 67%);
+
+	--lx-info-color: hsl(190, 95%, 75%);
+	--lx-warning-color: hsl(35, 90%, 65%);
+	--lx-error-color: hsl(0, 100%, 65%);
+	--lx-sucess-color: hsl(135, 95%, 65%);
+
+	--lx-bs-s: 0.0187rem 0.0313rem 0.0437rem hsla(var(--shadow-color), 34%),
+		0.025rem 0.05rem 0.0625rem -0.075rem hsla(var(--shadow-color), 34%),
+		0.0625rem 0.125rem 0.1563rem -0.1563rem hsla(var(--shadow-color), 34%);
+	--lx-bs-m: 0.0187rem 0.0313rem 0.0437rem hsla(var(--shadow-color), 36%),
+		0.05rem 0.1rem 0.125rem -0.05rem hsla(var(--shadow-color), 36%),
+		0.1313rem 0.2562rem 0.325rem -0.1062rem hsla(var(--shadow-color), 36%),
+		0.3125rem 0.625rem 0.7875rem -0.1563rem hsla(var(--shadow-color), 36%);
+	--lx-bs-l: 0.0187rem 0.0313rem 0.0437rem hsla(var(--shadow-color), 34%),
+		0.0938rem 0.1812rem 0.2313rem -0.025rem hsla(var(--shadow-color), 34%),
+		0.1688rem 0.3375rem 0.425rem -0.0437rem hsla(var(--shadow-color), 34%),
+		0.2813rem 0.5563rem 0.7rem -0.0688rem hsla(var(--shadow-color), 34%),
+		0.4437rem 0.8938rem 1.125rem -0.0875rem hsla(var(--shadow-color), 34%),
+		0.7rem 1.3938rem 1.7563rem -0.1125rem hsla(var(--shadow-color), 34%),
+		1.0625rem 2.1187rem 2.6688rem -0.1313rem hsla(var(--shadow-color), 34%),
+		1.5625rem 3.125rem 3.9312rem -0.1563rem hsla(var(--shadow-color), 34%);
+
+	--lx-primary-background-color-light: hsl(0, 0%, 100%);
+	--lx-secondary-background-color-light: hsl(160, 20%, 98%);
+
+	--lx-primary-text-color-light: hsl(0, 0%, 5%);
+	--lx-secondary-text-color-light: hsl(215, 14%, 34%);
+
+	--lx-primary-color-lighten-light: hsl(160, 55%, 30%);
+	--lx-primary-color-light: hsl(160, 70%, 30%);
+	--lx-primary-color-darken-light: hsl(160, 70%, 20%);
+
+	--shadow-color-light: 0, 0%, 63%;
+
+	--lx-primary-background-color-dark: hsl(0, 0%, 9%);
+	--lx-secondary-background-color-dark: hsl(0, 0%, 12%);
+
+	--lx-primary-text-color-dark: hsl(0, 0%, 90%);
+	--lx-secondary-text-color-dark: hsl(0, 0%, 65%);
+
+	--lx-primary-color-lighten-dark: hsl(160, 65%, 55%);
+	--lx-primary-color-dark: hsl(160, 65%, 45%);
+	--lx-primary-color-darken-dark: hsl(160, 65%, 35%);
+
+	--shadow-color-dark: 0, 0%, 2%;
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		color-scheme: light;
+
+		--lx-primary-background-color: var(--lx-primary-background-color-light);
+		--lx-secondary-background-color: var(--lx-secondary-background-color-light);
+
+		--lx-primary-text-color: var(--lx-primary-text-color-light);
+		--lx-secondary-text-color: var(--lx-secondary-text-color-light);
+
+		--lx-primary-color-lighten: var(--lx-primary-color-lighten-light);
+		--lx-primary-color: var(--lx-primary-color-light);
+		--lx-primary-color-darken: var(--lx-primary-color-darken-light);
+
+		--shadow-color: var(--shadow-color-light);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		color-scheme: dark;
+
+		--lx-primary-background-color: var(--lx-primary-background-color-dark);
+		--lx-secondary-background-color: var(--lx-secondary-background-color-dark);
+
+		--lx-primary-text-color: var(--lx-primary-text-color-dark);
+		--lx-secondary-text-color: var(--lx-secondary-text-color-dark);
+
+		--lx-primary-color-lighten: var(--lx-primary-color-lighten-dark);
+		--lx-primary-color: var(--lx-primary-color-dark);
+		--lx-primary-color-darken: var(--lx-primary-color-darken-dark);
+
+		--shadow-color: var(--shadow-color-dark);
+	}
+}
+
+[color-scheme="light"] {
+	color-scheme: light;
+
+	--lx-primary-background-color: var(--lx-primary-background-color-light);
+	--lx-secondary-background-color: var(--lx-secondary-background-color-light);
+
+	--lx-primary-text-color: var(--lx-primary-text-color-light);
+	--lx-secondary-text-color: var(--lx-secondary-text-color-light);
+
+	--lx-primary-color-lighten: var(--lx-primary-color-lighten-light);
+	--lx-primary-color: var(--lx-primary-color-light);
+	--lx-primary-color-darken: var(--lx-primary-color-darken-light);
+
+	--shadow-color: var(--shadow-color-light);
+}
+
+[color-scheme="dark"] {
+	color-scheme: dark;
+
+	--lx-primary-background-color: var(--lx-primary-background-color-dark);
+	--lx-secondary-background-color: var(--lx-secondary-background-color-dark);
+
+	--lx-primary-text-color: var(--lx-primary-text-color-dark);
+	--lx-secondary-text-color: var(--lx-secondary-text-color-dark);
+
+	--lx-primary-color-lighten: var(--lx-primary-color-lighten-dark);
+	--lx-primary-color: var(--lx-primary-color-dark);
+	--lx-primary-color-darken: var(--lx-primary-color-darken-dark);
+
+	--shadow-color: var(--shadow-color-dark);
+}
+
+$primary-background-color: var(--lx-primary-background-color);
+$secondary-background-color: var(--lx-secondary-background-color);
+
+$primary-text-color: var(--lx-primary-text-color);
+$secondary-text-color: var(--lx-secondary-text-color);
+
+$selection-color: var(--lx-selection-color);
+$selection-background-color: var(--lx-selection-background-color);
+
+$primary-color-lighten: var(--lx-primary-color-lighten);
+$primary-color: var(--lx-primary-color);
+$primary-color-darken: var(--lx-primary-color-darken);
+
+$info-color: var(--lx-info-color);
+$warning-color: var(--lx-warning-color);
+$error-color: var(--lx-error-color);
+$sucess-color: var(--lx-sucess-color);

@@ -1,0 +1,81 @@
+.has-dflex {
+	display: flex !important;
+
+	&-center {
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
+	}
+}
+
+.flow {
+	&-w-col {
+		flex-flow: wrap column !important;
+	}
+
+	&-nw-col {
+		flex-flow: nowrap column !important;
+	}
+
+	&-w-row {
+		flex-flow: wrap row !important;
+	}
+
+	&-nw-row {
+		flex-flow: nowrap row !important;
+	}
+}
+
+.align {
+	&-center {
+		align-items: center !important;
+	}
+
+	&-end {
+		align-items: flex-end !important;
+	}
+
+	&-start {
+		align-items: flex-start !important;
+	}
+
+	&-stretch {
+		align-items: stretch !important;
+	}
+}
+
+.justify {
+	&-around {
+		justify-content: space-around !important;
+	}
+
+	&-between {
+		justify-content: space-between !important;
+	}
+
+	&-evenly {
+		justify-content: space-evenly !important;
+	}
+
+	&-center {
+		justify-content: center !important;
+	}
+
+	&-end {
+		justify-content: flex-end !important;
+	}
+
+	&-start {
+		justify-content: flex-start !important;
+	}
+}
+
+.is-gapless {
+	gap: 0;
+}
+
+@for $i from 1 through 10 {
+	.has-gap-#{$i} {
+		gap: #{$i}rem !important;
+	}
+}

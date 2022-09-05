@@ -1,0 +1,17 @@
+.bs {
+	&-none {
+		box-shadow: none !important;
+	}
+
+	&-s {
+		box-shadow: var(--lx-bs-s);
+	}
+
+	&-m {
+		box-shadow: var(--lx-bs-m);
+	}
+
+	&-l {
+		box-shadow: var(--lx-bs-l);
+	}
+}

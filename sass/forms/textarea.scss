@@ -1,0 +1,15 @@
+.lx-form {
+	textarea {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+		padding: 0.3rem 0.6rem;
+		outline-style: none;
+		resize: vertical;
+
+		&:not([rows]) {
+			max-height: 40rem;
+			min-height: 8rem;
+		}
+	}
+}
