@@ -1,0 +1,23 @@
+$breakpoint: 75rem;
+
+:root {
+  --lx-base-size: 100%;
+
+  --lx-gap: 1.125em;
+
+  --lx-radius-01: 0.375rem;
+  --lx-radius-02: 0.75rem;
+  --lx-radius-03: 1.125rem;
+
+  --lx-error: hsl(354, 100%, 59%);
+  --lx-info: hsl(205, 100%, 45%);
+  --lx-success: hsl(110, 100%, 35%);
+  --lx-warning: hsl(29, 100%, 55%);
+
+  --lx-neutral-01: hsl(0, 0%, 96%);
+  --lx-neutral-02: hsl(0, 0%, 72%);
+  --lx-neutral-03: hsl(0, 0%, 48%);
+  --lx-neutral-04: hsl(0, 0%, 36%);
+  --lx-neutral-05: hsl(0, 0%, 24%);
+  --lx-neutral-06: hsl(0, 0%, 12%);
+}

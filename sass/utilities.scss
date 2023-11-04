@@ -1,0 +1,17 @@
+.lx-hide,
+.lx-hide-on-desk {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+@media screen and (max-width: #{$breakpoint}) {
+  .lx-hide-on-desk {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  .lx-hide-on-mb {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}

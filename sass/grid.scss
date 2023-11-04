@@ -1,0 +1,61 @@
+.lx-container {
+  $i: 50;
+
+  @while $i <= 100 {
+    &-#{$i} {
+      width: math.percentage(math.div($i, 100));
+      max-width: #{math.div($i, 100) * 120}rem;
+      min-width: #{math.div($i, 100) * 20}rem;
+      margin: 0 auto;
+    }
+
+    $i: $i + 5;
+  }
+}
+
+.lx-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--lx-gap);
+
+  &.is-gapless {
+    gap: 0;
+  }
+}
+
+.lx-col {
+  display: block;
+  flex: auto;
+
+  @for $i from 1 through 12 {
+    &.is-#{$i} {
+      flex: none;
+      width: percentage(math.div($i, 12));
+    }
+  }
+}
+
+@media screen and (max-width: #{$breakpoint}) {
+  .lx-container {
+    $i: 50;
+
+    @while $i <= 100 {
+      &-#{$i} {
+        max-width: #{math.div($i, 100) * 48}rem;
+      }
+
+      $i: $i + 5;
+    }
+  }
+
+  .lx-row {
+    flex-direction: column;
+  }
+
+  .lx-col {
+    width: 100%;
+  }
+}
