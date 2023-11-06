@@ -1,5 +1,5 @@
-.lx-hide,
-.lx-hide-on-desk {
+.hide,
+.hide-on-desk {
   display: none;
   visibility: hidden;
 }
@@ -15,20 +15,24 @@
 }
 
 .flow {
-  &-w-col {
-    flex-flow: wrap column;
+  &-column-wrap {
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
-  &-nw-col {
-    flex-flow: nowrap column;
+  &-column-nowrap {
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
 
-  &-w-row {
-    flex-flow: wrap row;
+  &-row-wrap {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
-  &-nw-row {
-    flex-flow: nowrap row;
+  &-row-nowrap {
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 }
 
@@ -81,12 +85,12 @@
 }
 
 @media screen and (max-width: #{$breakpoint}) {
-  .lx-hide-on-desk {
+  .hide-on-desk {
     display: block;
     visibility: visible;
   }
 
-  .lx-hide-on-mb {
+  .hide-on-mb {
     display: none;
     visibility: hidden;
   }
