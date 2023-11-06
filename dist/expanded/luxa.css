@@ -176,22 +176,6 @@ hr {
   --space-06: clamp(3rem, 2.1724rem + 4.1379vw, 6rem);
 }
 
-.lx-hide,
-.lx-hide-on-desk {
-  display: none !important;
-  visibility: hidden !important;
-}
-
-@media screen and (max-width: 75rem) {
-  .lx-hide-on-desk {
-    display: block !important;
-    visibility: visible !important;
-  }
-  .lx-hide-on-mb {
-    display: none !important;
-    visibility: hidden !important;
-  }
-}
 .lx-container-50 {
   width: 50%;
   max-width: 60rem;
@@ -363,5 +347,79 @@ hr {
   }
   .lx-col {
     width: 100%;
+  }
+}
+.lx-hide,
+.lx-hide-on-desk {
+  display: none;
+  visibility: hidden;
+}
+
+.has-dflex {
+  display: flex;
+}
+.has-dflex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flow-w-col {
+  flex-flow: wrap column;
+}
+.flow-nw-col {
+  flex-flow: nowrap column;
+}
+.flow-w-row {
+  flex-flow: wrap row;
+}
+.flow-nw-row {
+  flex-flow: nowrap row;
+}
+
+.align-center {
+  align-items: center;
+}
+.align-end {
+  align-items: flex-end;
+}
+.align-start {
+  align-items: flex-start;
+}
+.align-stretch {
+  align-items: stretch;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-evenly {
+  justify-content: space-evenly;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-start {
+  justify-content: flex-start;
+}
+
+.is-gapless {
+  gap: 0;
+}
+
+@media screen and (max-width: 75rem) {
+  .lx-hide-on-desk {
+    display: block;
+    visibility: visible;
+  }
+  .lx-hide-on-mb {
+    display: none;
+    visibility: hidden;
   }
 }

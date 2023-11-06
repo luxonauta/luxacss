@@ -1,17 +1,93 @@
 .lx-hide,
 .lx-hide-on-desk {
-  display: none !important;
-  visibility: hidden !important;
+  display: none;
+  visibility: hidden;
+}
+
+.has-dflex {
+  display: flex;
+
+  &-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.flow {
+  &-w-col {
+    flex-flow: wrap column;
+  }
+
+  &-nw-col {
+    flex-flow: nowrap column;
+  }
+
+  &-w-row {
+    flex-flow: wrap row;
+  }
+
+  &-nw-row {
+    flex-flow: nowrap row;
+  }
+}
+
+.align {
+  &-center {
+    align-items: center;
+  }
+
+  &-end {
+    align-items: flex-end;
+  }
+
+  &-start {
+    align-items: flex-start;
+  }
+
+  &-stretch {
+    align-items: stretch;
+  }
+}
+
+.justify {
+  &-around {
+    justify-content: space-around;
+  }
+
+  &-between {
+    justify-content: space-between;
+  }
+
+  &-evenly {
+    justify-content: space-evenly;
+  }
+
+  &-center {
+    justify-content: center;
+  }
+
+  &-end {
+    justify-content: flex-end;
+  }
+
+  &-start {
+    justify-content: flex-start;
+  }
+}
+
+.is-gapless {
+  gap: 0;
 }
 
 @media screen and (max-width: #{$breakpoint}) {
   .lx-hide-on-desk {
-    display: block !important;
-    visibility: visible !important;
+    display: block;
+    visibility: visible;
   }
 
   .lx-hide-on-mb {
-    display: none !important;
-    visibility: hidden !important;
+    display: none;
+    visibility: hidden;
   }
 }
