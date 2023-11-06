@@ -139,12 +139,12 @@ hr {
 
 @supports (font-size: clamp(1rem, 1vw, 1rem)) {
   :root {
-    --lx-text-01: clamp(0.75rem, 0.54vw + 0.64rem, 1.13rem);
-    --lx-text-02: clamp(0.9rem, 0.64vw + 0.77rem, 1.35rem);
-    --lx-text-03: clamp(1.08rem, 0.77vw + 0.93rem, 1.62rem);
-    --lx-text-04: clamp(1.3rem, 0.93vw + 1.11rem, 1.94rem);
-    --lx-text-05: clamp(1.56rem, 1.11vw + 1.33rem, 2.33rem);
-    --lx-text-06: clamp(1.87rem, 1.33vw + 1.6rem, 2.8rem);
+    --lx-text-01: clamp(0.75rem, 0.23vw + 0.69rem, 0.88rem);
+    --lx-text-02: clamp(0.9rem, 0.36vw + 0.81rem, 1.09rem);
+    --lx-text-03: clamp(1.08rem, 0.53vw + 0.94rem, 1.37rem);
+    --lx-text-04: clamp(1.3rem, 0.77vw + 1.09rem, 1.71rem);
+    --lx-text-05: clamp(1.56rem, 1.08vw + 1.27rem, 2.14rem);
+    --lx-text-06: clamp(1.87rem, 1.5vw + 1.47rem, 2.67rem);
   }
 }
 @supports not (font-size: clamp(1rem, 1vw, 1rem)) {
@@ -158,12 +158,12 @@ hr {
   }
   @media screen and (min-width: breakpoint) {
     :root {
-      --lx-text-01: 1.13rem;
-      --lx-text-02: 1.35rem;
-      --lx-text-03: 1.62rem;
-      --lx-text-04: 1.94rem;
-      --lx-text-05: 2.33rem;
-      --lx-text-06: 2.8rem;
+      --lx-text-01: 0.88rem;
+      --lx-text-02: 1.09rem;
+      --lx-text-03: 1.37rem;
+      --lx-text-04: 1.71rem;
+      --lx-text-05: 2.14rem;
+      --lx-text-06: 2.67rem;
     }
   }
 }
