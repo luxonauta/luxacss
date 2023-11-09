@@ -16,6 +16,45 @@
   --lx-neutral-06: hsl(0, 0%, 12%);
 }
 
+@supports (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --lx-text-01: clamp(0.8rem, 0.2vw + 0.7rem, 0.9rem);
+    --lx-text-02: clamp(0.9rem, 0.3vw + 0.8rem, 1.1rem);
+    --lx-text-03: clamp(1.1rem, 0.5vw + 1rem, 1.4rem);
+    --lx-text-04: clamp(1.3rem, 0.7vw + 1.2rem, 1.7rem);
+    --lx-text-05: clamp(1.6rem, 1vw + 1.4rem, 2.1rem);
+    --lx-text-06: clamp(1.9rem, 1.3vw + 1.6rem, 2.7rem);
+  }
+}
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --lx-text-01: 0.8rem;
+    --lx-text-02: 0.9rem;
+    --lx-text-03: 1.1rem;
+    --lx-text-04: 1.3rem;
+    --lx-text-05: 1.6rem;
+    --lx-text-06: 1.9rem;
+  }
+  @media screen and (min-width: 75rem) {
+    :root {
+      --lx-text-01: 0.9rem;
+      --lx-text-02: 1.1rem;
+      --lx-text-03: 1.4rem;
+      --lx-text-04: 1.7rem;
+      --lx-text-05: 2.1rem;
+      --lx-text-06: 2.7rem;
+    }
+  }
+}
+:root {
+  --lx-space-01: clamp(0.5625rem, 0.4073rem + 0.7759vw, 1.125rem);
+  --lx-space-02: clamp(0.75rem, 0.5431rem + 1.0345vw, 1.5rem);
+  --lx-space-03: clamp(1.125rem, 0.8147rem + 1.5517vw, 2.25rem);
+  --lx-space-04: clamp(1.5rem, 1.0862rem + 2.069vw, 3rem);
+  --lx-space-05: clamp(2.25rem, 1.6293rem + 3.1034vw, 4.5rem);
+  --lx-space-06: clamp(3rem, 2.1724rem + 4.1379vw, 6rem);
+}
+
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
@@ -135,45 +174,6 @@ hr {
   position: relative;
   display: block;
   border: none;
-}
-
-@supports (font-size: clamp(1rem, 1vw, 1rem)) {
-  :root {
-    --lx-text-01: clamp(0.75rem, 0.23vw + 0.69rem, 0.88rem);
-    --lx-text-02: clamp(0.9rem, 0.36vw + 0.81rem, 1.09rem);
-    --lx-text-03: clamp(1.08rem, 0.53vw + 0.94rem, 1.37rem);
-    --lx-text-04: clamp(1.3rem, 0.77vw + 1.09rem, 1.71rem);
-    --lx-text-05: clamp(1.56rem, 1.08vw + 1.27rem, 2.14rem);
-    --lx-text-06: clamp(1.87rem, 1.5vw + 1.47rem, 2.67rem);
-  }
-}
-@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
-  :root {
-    --lx-text-01: 0.75rem;
-    --lx-text-02: 0.9rem;
-    --lx-text-03: 1.08rem;
-    --lx-text-04: 1.3rem;
-    --lx-text-05: 1.56rem;
-    --lx-text-06: 1.87rem;
-  }
-  @media screen and (min-width: breakpoint) {
-    :root {
-      --lx-text-01: 0.88rem;
-      --lx-text-02: 1.09rem;
-      --lx-text-03: 1.37rem;
-      --lx-text-04: 1.71rem;
-      --lx-text-05: 2.14rem;
-      --lx-text-06: 2.67rem;
-    }
-  }
-}
-:root {
-  --lx-space-01: clamp(0.5625rem, 0.4073rem + 0.7759vw, 1.125rem);
-  --lx-space-02: clamp(0.75rem, 0.5431rem + 1.0345vw, 1.5rem);
-  --lx-space-03: clamp(1.125rem, 0.8147rem + 1.5517vw, 2.25rem);
-  --lx-space-04: clamp(1.5rem, 1.0862rem + 2.069vw, 3rem);
-  --lx-space-05: clamp(2.25rem, 1.6293rem + 3.1034vw, 4.5rem);
-  --lx-space-06: clamp(3rem, 2.1724rem + 4.1379vw, 6rem);
 }
 
 .lx-container-50 {

@@ -21,3 +21,6 @@ $breakpoint: 75rem;
   --lx-neutral-05: hsl(0, 0%, 24%);
   --lx-neutral-06: hsl(0, 0%, 12%);
 }
+
+@import "./typography.scss";
+@import "./spacing.scss";
