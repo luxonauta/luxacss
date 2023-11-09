@@ -13,7 +13,6 @@ const SASS_MAPS = "./maps";
 
 const sassErrorHandler = (error) => {
   sass.logError(error);
-  this.emit("end");
 };
 
 const compileSass = (outputStyle) => {
