@@ -16,13 +16,21 @@ const sassErrorHandler = (error) => {
 };
 
 const compileSass = (outputStyle) => {
-  return gulp
-    .src(SASS_SRC)
-    .pipe(sourcemaps.init())
+  let pipeline = gulp.src(SASS_SRC);
+
+  if (outputStyle === "expanded") {
+    pipeline = pipeline.pipe(sourcemaps.init());
+  }
+
+  pipeline = pipeline
     .pipe(sass({ outputStyle }).on("error", sassErrorHandler))
-    .pipe(postcss([autoprefixer()]))
-    .pipe(sourcemaps.write(SASS_MAPS))
-    .pipe(gulp.dest(`${SASS_DEST}/${outputStyle}`));
+    .pipe(postcss([autoprefixer()]));
+
+  if (outputStyle === "expanded") {
+    pipeline = pipeline.pipe(sourcemaps.write(SASS_MAPS));
+  }
+
+  return pipeline.pipe(gulp.dest(`${SASS_DEST}/${outputStyle}`));
 };
 
 const compileSassExpanded = () => compileSass("expanded");
