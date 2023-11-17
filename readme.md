@@ -32,6 +32,12 @@ You can easily include Luxa CSS in your project using a CDN. Choose the version 
 />
 ```
 
+📦 Alternatively, you can install with NPM:
+
+```bash
+npm i luxacss
+```
+
 #### 🧰 Resources
 
 - 📃 [Documentation](https://luxacss.com)
