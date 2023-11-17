@@ -37,6 +37,10 @@ You can easily include Luxa CSS in your project using a CDN. Choose the version 
 - 📃 [Documentation](https://luxacss.com)
 - 🐈‍⬛ [GitHub Repository](https://github.com/luxonauta/luxacss)
 
+#### 🫱🏻‍🫲🏻 Contributing
+
+If you are interested in contributing to Luxa CSS, please read our [contributing guidelines](https://github.com/luxonauta/luxacss/blob/master/.github/contributing.md).
+
 #### ©️ License
 
 Luxa CSS is released under the [MIT License](https://opensource.org/licenses/MIT). You are free to use and modify it for your projects.
