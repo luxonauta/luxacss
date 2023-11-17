@@ -1,15 +1,18 @@
 {
-  "name": "luxa",
+  "name": "luxacss",
+  "version": "1.0.0",
   "description": "A minimalist CSS framework",
   "author": "luxonauta",
-  "version": "1.0.0",
-  "main": "readme.md",
+  "license": "MIT",
   "homepage": "https://luxacss.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luxonauta/luxa.git"
+    "url": "git+https://github.com/luxonauta/luxacss.git"
   },
-  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luxonauta/luxacss/issues"
+  },
+  "main": "dist/compressed/luxa.css",
   "type": "module",
   "scripts": {
     "gulp": "gulp",
@@ -17,9 +20,10 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.16",
-    "gulp": "^4.0.2",
     "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp": "^4.0.2",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
     "prettier": "3.0.3",
@@ -28,7 +32,13 @@
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"
   },
-  "dependencies": {
-    "gulp-sourcemaps": "^3.0.0"
-  }
+  "keywords": [
+    "clean-code",
+    "css-framework",
+    "lightweight",
+    "minimal",
+    "minimalist",
+    "responsive",
+    "scss-framework"
+  ]
 }
