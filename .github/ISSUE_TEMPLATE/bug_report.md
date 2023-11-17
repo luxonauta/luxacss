@@ -3,8 +3,7 @@ name: Bug report
 about: "\U0001FAF1\U0001F3FB‍\U0001FAF2\U0001F3FB Create a report to help us improve"
 title: "[BUG]"
 labels: bug
-assignees: ''
-
+assignees: ""
 ---
 
 🦗 **Describe the bug**
