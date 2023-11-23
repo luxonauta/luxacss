@@ -28,12 +28,14 @@
 
 .lx-col {
   display: block;
-  flex: auto;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
 
   @for $i from 1 through 12 {
     &.is-#{$i} {
-      flex: none;
       width: percentage(math.div($i, 12));
+      flex: none;
     }
   }
 }
