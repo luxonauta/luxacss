@@ -16,6 +16,7 @@ body {
   margin: 0;
   padding: 0;
   word-break: break-word;
+  text-wrap: balance;
   line-height: 1.8;
 }
 
@@ -27,6 +28,11 @@ html {
 
 body {
   font-size: var(--lx-text-01);
+}
+
+#root,
+#__next {
+  isolation: isolate;
 }
 
 h1,
