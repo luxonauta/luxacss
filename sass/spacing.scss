@@ -1,8 +1,8 @@
 :root {
-  --lx-space-01: clamp(0.5625rem, 0.4073rem + 0.7759vw, 1.125rem);
-  --lx-space-02: clamp(0.75rem, 0.5431rem + 1.0345vw, 1.5rem);
-  --lx-space-03: clamp(1.125rem, 0.8147rem + 1.5517vw, 2.25rem);
-  --lx-space-04: clamp(1.5rem, 1.0862rem + 2.069vw, 3rem);
-  --lx-space-05: clamp(2.25rem, 1.6293rem + 3.1034vw, 4.5rem);
-  --lx-space-06: clamp(3rem, 2.1724rem + 4.1379vw, 6rem);
+  --lx-space-01: clamp(0.75rem, 0.625rem + 0.625vw, 1.125rem);
+  --lx-space-02: clamp(1.125rem, 0.9375rem + 0.9375vw, 1.6875rem);
+  --lx-space-03: clamp(1.5rem, 1.25rem + 1.25vw, 2.25rem);
+  --lx-space-04: clamp(2.25rem, 1.875rem + 1.875vw, 3.375rem);
+  --lx-space-05: clamp(3rem, 2.5rem + 2.5vw, 4.5rem);
+  --lx-space-06: clamp(4.5rem, 3.75rem + 3.75vw, 6.75rem);
 }

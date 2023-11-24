@@ -19,23 +19,27 @@
 You can easily include Luxa CSS in your project using a CDN. Choose the version that suits your needs:
 
 ```html
-<!-- 🦣 Expanded - 6.65 KB -->
+<!-- 🦣 Expanded - 6.66 KB -->
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/luxonauta/luxacss@latest/dist/expanded/luxa.css"
 />
 
-<!-- 🦐 Compressed - 5.33 KB -->
+<!-- 🦐 Compressed - 5.31 KB -->
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/luxonauta/luxacss@latest/dist/compressed/luxa.css"
 />
 ```
 
-📦 Alternatively, you can install with NPM:
+📦 Alternatively, you can install with a package manager:
 
-```bash
+```sh
 npm i luxacss
+
+pnpm i luxacss
+
+bun i luxacss
 ```
 
 #### 🧰 Resources
@@ -45,8 +49,8 @@ npm i luxacss
 
 #### 🫱🏻‍🫲🏻 Contributing
 
-If you are interested in contributing to Luxa CSS, please read our [contributing guidelines](https://github.com/luxonauta/luxacss/blob/master/.github/contributing.md).
+If you are interested in contributing to Luxa CSS, please read our [contributing guidelines](./.github/contributing.md).
 
 #### ©️ License
 
-Luxa CSS is released under the [MIT License](https://opensource.org/licenses/MIT). You are free to use and modify it for your projects.
+Luxa CSS is released under the [MIT License](./license.md). You are free to use and modify it for your projects.
