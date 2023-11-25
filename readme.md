@@ -1,5 +1,5 @@
 <h3 align="center">
-	<img src="./readme/icon.svg" width="100" alt="Luxa CSS logo."/>
+	<img src="./.github/icon.svg" width="84" alt="Luxa CSS logo."/>
     <br/>
     <br/>
 	Luxa CSS
@@ -19,13 +19,13 @@
 You can easily include Luxa CSS in your project using a CDN. Choose the version that suits your needs:
 
 ```html
-<!-- 🦣 Expanded - 6.66 KB -->
+<!-- 🦣 Expanded - 6.74 KB -->
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/luxonauta/luxacss@latest/dist/expanded/luxa.css"
 />
 
-<!-- 🦐 Compressed - 5.31 KB -->
+<!-- 🦐 Compressed - 5.39 KB -->
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/luxonauta/luxacss@latest/dist/compressed/luxa.css"
@@ -47,9 +47,16 @@ bun i luxacss
 - 📃 [Documentation](https://luxacss.com)
 - 🐈‍⬛ [GitHub Repository](https://github.com/luxonauta/luxacss)
 
+#### ☕ Support this project
+
+Buy-me a coffee:
+
+- [Ko-Fi](https://ko-fi.com/luxonauta)
+- [GitHub Sponsors](https://github.com/sponsors/luxonauta)
+
 #### 🫱🏻‍🫲🏻 Contributing
 
-If you are interested in contributing to Luxa CSS, please read our [contributing guidelines](./.github/contributing.md).
+Please read our [contributing guidelines](./.github/contributing.md) if you want to contribute to Luxa CSS.
 
 #### ©️ License
 
