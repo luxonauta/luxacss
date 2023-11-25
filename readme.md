@@ -14,7 +14,7 @@
 
 ✅ By using it, you avoid intricate and difficult-to-tweak CSS structures, resulting in a more streamlined development process and better project performance.
 
-#### 🏗️ Installation
+### 🏗️ Installation
 
 You can easily include Luxa CSS in your project using a CDN. Choose the version that suits your needs:
 
@@ -42,22 +42,23 @@ pnpm i luxacss
 bun i luxacss
 ```
 
-#### 🧰 Resources
+### 🧰 Resources
 
 - 📃 [Documentation](https://luxacss.com)
 - 🐈‍⬛ [GitHub Repository](https://github.com/luxonauta/luxacss)
+- 🗨️ [Discord](https://discord.gg/D9nGMmqqvj)
 
-#### ☕ Support this project
+### ☕ Support this project
 
 Buy-me a coffee:
 
 - [Ko-Fi](https://ko-fi.com/luxonauta)
 - [GitHub Sponsors](https://github.com/sponsors/luxonauta)
 
-#### 🫱🏻‍🫲🏻 Contributing
+### 🫱🏻‍🫲🏻 Contributing
 
 Please read our [contributing guidelines](./.github/contributing.md) if you want to contribute to Luxa CSS.
 
-#### ©️ License
+### ©️ License
 
 Luxa CSS is released under the [MIT License](./license.md). You are free to use and modify it for your projects.
