@@ -12,7 +12,7 @@
   "bugs": {
     "url": "https://github.com/luxonauta/luxacss/issues"
   },
-  "main": "dist/compressed/luxa.css",
+  "main": "dist/compressed/luxa.min.css",
   "type": "module",
   "scripts": {
     "build": "node build.js",
