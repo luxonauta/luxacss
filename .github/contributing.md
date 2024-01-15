@@ -18,4 +18,4 @@ We recommend that you first [suggest your feature idea in our discussion forums]
 
 [`dev`](https://github.com/luxonauta/luxacss/tree/dev) branch is open to pull requests.
 
-**Do not edit [`/dist`](https://github.com/luxonauta/luxacss/tree/master/dist) files directly.** Edit the source files in [`/sass`](https://github.com/luxonauta/luxacss/tree/master/sass), then recompile the [`/dist`](https://github.com/luxonauta/luxacss/tree/master/dist) files with `npm run gulp`.
+**Do not edit [`/dist`](https://github.com/luxonauta/luxacss/tree/master/dist) files directly.** Edit the source files in [`/sass`](https://github.com/luxonauta/luxacss/tree/master/sass), then recompile the [`/dist`](https://github.com/luxonauta/luxacss/tree/master/dist) files with `npm build`.
