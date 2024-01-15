@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 
+  min-width: 0;
+  position: relative;
+
   -webkit-tap-highlight-color: transparent;
 
   -webkit-font-smoothing: antialiased;
@@ -27,6 +30,7 @@ html {
 }
 
 body {
+  min-height: 100dvh;
   font-size: var(--lx-text-01);
 }
 
@@ -42,6 +46,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  text-wrap: balance;
   font-weight: 700;
 }
 
@@ -72,6 +77,10 @@ strong,
 sub,
 sup {
   margin: 0;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 b,
