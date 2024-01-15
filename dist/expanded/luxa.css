@@ -81,9 +81,7 @@ body {
 }
 
 html {
-  -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-          text-size-adjust: 100%;
+  text-size-adjust: 100%;
   font-size: var(--base-size);
   font-variation-settings: normal;
 }
@@ -436,4 +434,3 @@ hr {
     visibility: hidden;
   }
 }
-/*# sourceMappingURL=maps/luxa.css.map */
