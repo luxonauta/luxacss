@@ -1,6 +1,6 @@
 {
   "name": "luxacss",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A minimalist CSS framework",
   "author": "luxonauta",
   "license": "MIT",
@@ -15,22 +15,13 @@
   "main": "dist/compressed/luxa.css",
   "type": "module",
   "scripts": {
-    "gulp": "gulp",
-    "prepare": "husky install"
+    "build": "node build.js",
+    "format": "prettier --write ."
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "gulp-postcss": "^9.0.1",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp": "^4.0.2",
-    "husky": "^8.0.3",
-    "lint-staged": "^15.0.2",
+    "chokidar": "^3.5.3",
     "prettier": "3.0.3",
-    "sass-embedded": "^1.69.5"
-  },
-  "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "sass": "^1.69.7"
   },
   "keywords": [
     "clean-code",
