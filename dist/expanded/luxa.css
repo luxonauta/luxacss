@@ -59,6 +59,8 @@
 
 * {
   box-sizing: border-box;
+  min-width: 0;
+  position: relative;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -80,13 +82,14 @@ body {
 
 html {
   -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
   font-size: var(--base-size);
   font-variation-settings: normal;
 }
 
 body {
+  min-height: 100dvh;
   font-size: var(--lx-text-01);
 }
 
@@ -102,6 +105,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  text-wrap: balance;
   font-weight: 700;
 }
 
@@ -132,6 +136,10 @@ strong,
 sub,
 sup {
   margin: 0;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 b,
