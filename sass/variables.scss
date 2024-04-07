@@ -1,28 +1,20 @@
 $breakpoint: 80rem;
 
 :root {
-  --lx-base-size: 100%;
+  --base-size: 100%;
 
-  --lx-gap: 1.125em;
+  --gap: 1.125em;
 
-  --lx-radius-01: 0.375rem;
-  --lx-radius-02: 0.75rem;
-  --lx-radius-03: 1.125rem;
+  --rounded-sm: 0.375rem;
+  --rounded-md: 0.75rem;
+  --rounded-lg: 1.125rem;
 
-  --lx-tag-purple: hsl(276, 100%, 76%);
-  --lx-tag-green: hsl(216, 66%, 48%);
-  --lx-tag-blue: hsl(198, 92%, 54%);
-  --lx-tag-yellow: hsl(48, 100%, 50%);
-  --lx-tag-orange: hsl(36, 100%, 50%);
-  --lx-tag-red: hsl(0, 100%, 66%);
-
-  --lx-neutral-01: hsl(0, 0%, 96%);
-  --lx-neutral-02: hsl(0, 0%, 72%);
-  --lx-neutral-03: hsl(0, 0%, 48%);
-  --lx-neutral-04: hsl(0, 0%, 36%);
-  --lx-neutral-05: hsl(0, 0%, 24%);
-  --lx-neutral-06: hsl(0, 0%, 12%);
+  --fluid: cubic-bezier(0.36, 0.66, 0.6, 1);
+  --sharp: cubic-bezier(0.6, 0.12, 0.34, 0.96);
+  --elastic: cubic-bezier(0.42, 0, 0.58, 1.8);
+  --impact: cubic-bezier(0.24, 0.9, 0.32, 1.4);
 }
 
 @import "./typography.scss";
 @import "./spacing.scss";
+@import "./colors.scss";
