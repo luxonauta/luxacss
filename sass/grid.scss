@@ -1,4 +1,4 @@
-.lx-container {
+.container {
   $i: 50;
 
   @while $i <= 100 {
@@ -13,10 +13,11 @@
   }
 }
 
-.lx-row {
+.row {
   width: 100%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: var(--lx-gap);
@@ -26,7 +27,7 @@
   }
 }
 
-.lx-col {
+.col {
   display: block;
   flex-basis: 0;
   flex-grow: 1;
@@ -41,7 +42,7 @@
 }
 
 @media screen and (max-width: #{$breakpoint}) {
-  .lx-container {
+  .container {
     $i: 50;
 
     @while $i <= 100 {
@@ -53,11 +54,11 @@
     }
   }
 
-  .lx-row {
+  .row {
     flex-direction: column;
   }
 
-  .lx-col {
+  .col {
     width: 100%;
   }
 }

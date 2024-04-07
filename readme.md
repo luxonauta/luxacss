@@ -1,9 +1,6 @@
-<h3 align="center">
-	<img src="./.github/icon.svg" width="84" alt="Luxa CSS logo."/>
-    <br/>
-    <br/>
+<h1 align="center">
 	Luxa CSS
-</h3>
+</h1>
 
 <p align="center">✨ Quickly design, build and ship!</p>
 
@@ -14,7 +11,7 @@
 
 ✅ By using it, you avoid intricate and difficult-to-tweak CSS structures, resulting in a more streamlined development process and better project performance.
 
-### 🏗️ Installation
+## 🏗️ Installation
 
 You can easily include Luxa CSS in your project using a CDN. Choose the version that suits your needs:
 
@@ -46,7 +43,6 @@ bun i luxacss
 
 - 📃 [Documentation](https://luxacss.com)
 - 🐈‍⬛ [GitHub Repository](https://github.com/luxonauta/luxacss)
-- 🗨️ [Discord](https://discord.gg/D9nGMmqqvj)
 
 ### ☕ Support this project
 

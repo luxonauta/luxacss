@@ -1,0 +1,43 @@
+:root {
+  --purple: hsl(276, 90%, 66%);
+  --green: hsl(144, 78%, 48%);
+  --blue: hsl(216, 90%, 60%);
+  --yellow: hsl(48, 100%, 48%);
+  --orange: hsl(24, 100%, 54%);
+  --red: hsl(0, 90%, 60%);
+
+  --neutral-01: hsl(210, 16%, 94%);
+  --neutral-02: hsl(220, 12%, 85%);
+  --neutral-03: hsl(220, 12%, 76%);
+  --neutral-04: hsl(220, 12%, 67%);
+  --neutral-05: hsl(220, 12%, 55%);
+  --neutral-06: hsl(220, 12%, 44%);
+  --neutral-07: hsl(220, 18%, 28%);
+  --neutral-08: hsl(220, 30%, 19%);
+  --neutral-09: hsl(220, 36%, 10%);
+  --neutral-10: hsl(220, 72%, 6%);
+}
+
+@media (color-gamut: p3) {
+  @supports (color: color(display-p3 0 0 0)) {
+    :root {
+      --purple: color(display-p3 0.717647 0.352941 0.964706);
+      --green: color(display-p3 0.101961 0.85098 0.403922);
+      --blue: color(display-p3 0.239216 0.52549 0.956863);
+      --yellow: color(display-p3 0.956863 0.764706 0);
+      --orange: color(display-p3 1 0.447059 0.078431);
+      --red: color(display-p3 0.956863 0.239216 0.239216);
+
+      --neutral-01: color(display-p3 0.929412 0.937255 0.94902);
+      --neutral-02: color(display-p3 0.831373 0.843137 0.866667);
+      --neutral-03: color(display-p3 0.729412 0.74902 0.788235);
+      --neutral-04: color(display-p3 0.627451 0.654902 0.705882);
+      --neutral-05: color(display-p3 0.494118 0.529412 0.603922);
+      --neutral-06: color(display-p3 0.384314 0.419608 0.490196);
+      --neutral-07: color(display-p3 0.227451 0.262745 0.329412);
+      --neutral-08: color(display-p3 0.129412 0.168627 0.243137);
+      --neutral-09: color(display-p3 0.062745 0.086275 0.133333);
+      --neutral-10: color(display-p3 0.015686 0.043137 0.101961);
+    }
+  }
+}
