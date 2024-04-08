@@ -80,6 +80,18 @@
   }
 }
 
+.gap {
+  $i: 1;
+
+  @while $i <= 6 {
+    &-0#{$i} {
+      gap: var(--space-0#{$i});
+    }
+
+    $i: $i + 1;
+  }
+}
+
 .is-gapless {
   gap: 0;
 }

@@ -20,7 +20,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: var(--lx-gap);
+  gap: var(--gap);
 
   &.is-gapless {
     gap: 0;
