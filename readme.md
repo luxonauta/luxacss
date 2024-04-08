@@ -16,13 +16,13 @@
 You can easily include Luxa CSS in your project using a CDN. Choose the version that suits your needs:
 
 ```html
-<!-- 🦣 Expanded - 6.9 KB -->
+<!-- 🦣 Expanded - 8KB -->
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/luxonauta/luxacss@latest/dist/expanded/luxa.css"
 />
 
-<!-- 🦐 Compressed - 5.5 KB -->
+<!-- 🦐 Compressed - 6KB -->
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/luxonauta/luxacss@latest/dist/compressed/luxa.min.css"
