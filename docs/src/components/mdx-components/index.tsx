@@ -1,0 +1,15 @@
+import CodeBlock from "../code-block";
+import createHeading from "../heading";
+import Table from "../table";
+
+const mdxComponents = {
+  h2: createHeading(2),
+  h3: createHeading(3),
+  h4: createHeading(4),
+  h5: createHeading(5),
+  h6: createHeading(6),
+  table: Table,
+  pre: CodeBlock
+};
+
+export default mdxComponents;

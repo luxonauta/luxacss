@@ -17,7 +17,7 @@ const log = async (type, message) => {
   const timestamp = new Date().toLocaleTimeString("pt-BR", {
     hour: "2-digit",
     minute: "2-digit",
-    hour12: false,
+    hour12: false
   });
 
   let typeTag;
@@ -52,7 +52,7 @@ const compileSass = async (filePath, outputPath, options) => {
   try {
     const result = sass.compile(filePath, {
       style: options.minify ? "compressed" : "expanded",
-      sourceMap: options.sourceMap,
+      sourceMap: options.sourceMap
     });
 
     ensureDirectoryExistence(outputPath);
@@ -84,11 +84,11 @@ const run = async () => {
   try {
     await compileSass(sassFilePath, minifiedOutputPath, {
       minify: true,
-      sourceMap: false,
+      sourceMap: false
     });
     await compileSass(sassFilePath, expandedOutputPath, {
       minify: false,
-      sourceMap: true,
+      sourceMap: true
     });
 
     log("success", "Compilation process completed successfully.");
@@ -102,7 +102,7 @@ const watchFiles = () => {
 
   const watcher = chokidar.watch(join(__dirname, "sass"), {
     ignored: /^\./,
-    persistent: true,
+    persistent: true
   });
 
   watcher.on("change", (path) => {

@@ -12,11 +12,16 @@
   "bugs": {
     "url": "https://github.com/luxonauta/luxacss/issues"
   },
-  "main": "dist/compressed/luxa.min.css",
+  "main": "readme.md",
   "type": "module",
   "scripts": {
+    "build:docs": "cd docs && npm run build",
     "build": "node build.js",
-    "format": "prettier --write ."
+    "dev:docs": "cd docs && npm run dev",
+    "format": "prettier --write .",
+    "install:all": "npm install && cd docs && npm install",
+    "lint:docs": "cd docs && npx next lint --fix",
+    "start:docs": "cd docs && npm start"
   },
   "devDependencies": {
     "chokidar": "^3.5.3",
