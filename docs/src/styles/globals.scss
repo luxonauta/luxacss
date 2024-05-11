@@ -1,0 +1,130 @@
+@use "../../../sass/luxa.scss";
+
+* {
+  position: relative;
+  outline-width: thin;
+  outline-offset: 0.125rem;
+  outline-color: var(--neutral-03);
+}
+
+::selection {
+  color: var(--neutral-09);
+  background-color: var(--neutral-03);
+}
+
+body {
+  min-height: 100dvh;
+  padding: var(--space-04) var(--space-03) var(--space-06) var(--space-03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-geist-sans);
+  font-size: 0.75rem;
+  color: var(--neutral-07);
+}
+
+.container {
+  width: 100%;
+  max-width: 40rem;
+
+  @media (max-width: 40rem) {
+    max-width: 100%;
+  }
+}
+
+main {
+  --gap: var(--space-03);
+  margin-top: var(--space-06);
+}
+
+hr {
+  height: 0.0625rem;
+  background-color: var(--neutral-03);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+  font-size: inherit;
+  font-weight: 500;
+  color: var(--neutral-08);
+
+  &.primary {
+    color: var(--neutral-09);
+    font-weight: 700;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: var(--space-01);
+}
+
+.icon {
+  font-size: 2em;
+  color: inherit;
+}
+
+.actions-group {
+  margin: 1em 0 0 0;
+  gap: 1em;
+}
+
+.action {
+  appearance: none;
+  width: fit-content;
+  margin: 0;
+  padding: 0.75em 1em;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  user-select: none;
+  border: 0.0625rem solid var(--neutral-03);
+  border-radius: var(--rounded-sm);
+  line-height: 1;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  color: var(--neutral-09);
+  background-color: var(--neutral-01);
+  transition: background-color 240ms var(--fluid);
+
+  &:hover {
+    background-color: var(--neutral-02);
+  }
+
+  &.primary {
+    border: 0.0625rem solid var(--neutral-10);
+    color: var(--neutral-01);
+    background-color: var(--neutral-09);
+
+    &:hover {
+      background-color: var(--neutral-08);
+    }
+  }
+}
+
+.card {
+  padding: var(--space-01);
+  border: 0.0625rem solid var(--neutral-03);
+  border-radius: var(--rounded-sm);
+  transition: border-color 240ms var(--fluid);
+
+  &:hover {
+    border-color: var(--neutral-04);
+  }
+}
