@@ -1,0 +1,47 @@
+.table {
+  width: 100%;
+  margin: 0.5em 0;
+  position: relative;
+  overflow: auto hidden;
+  border: 0.0625rem solid var(--neutral-04);
+  border-radius: var(--rounded-sm);
+
+  table {
+    width: max-content;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    text-align: left;
+
+    tr {
+      &:first-child {
+        th {
+          padding-top: 1em;
+        }
+      }
+
+      &:last-child {
+        td {
+          padding-bottom: 1em;
+          border-bottom: none;
+        }
+      }
+    }
+
+    th,
+    td {
+      padding: 0.5em 1em;
+      border-right: 0.0625rem solid var(--neutral-04);
+      border-bottom: 0.0625rem solid var(--neutral-04);
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    th {
+      font-weight: 700;
+    }
+  }
+}

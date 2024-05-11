@@ -1,0 +1,59 @@
+.code-block {
+  width: 100%;
+  margin: 0.5em 0;
+  position: relative;
+
+  pre {
+    width: 100%;
+    margin: 0;
+    padding: 2em;
+    position: relative;
+    overflow: auto hidden;
+    border: 0.0625rem solid var(--neutral-03);
+    border-radius: var(--rounded-sm);
+    background-color: var(--neutral-01);
+    transition: border-color 240ms var(--fluid);
+
+    code {
+      .token {
+        &.comment {
+          font-style: italic;
+          color: var(--neutral-06);
+        }
+
+        &.tag {
+          .punctuation,
+          .tag,
+          .attr-name {
+            color: var(--neutral-09);
+          }
+        }
+
+        &.function {
+          color: var(--neutral-08);
+        }
+      }
+    }
+  }
+
+  .copy-button {
+    min-width: 4.5rem;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    border-radius: 0.25rem;
+    background-color: white;
+    transition-property: border-color;
+
+    &:hover {
+      border-color: var(--neutral-04);
+    }
+  }
+
+  &:focus-within,
+  &:hover {
+    pre {
+      border-color: var(--neutral-04);
+    }
+  }
+}
