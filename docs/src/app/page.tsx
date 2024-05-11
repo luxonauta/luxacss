@@ -1,11 +1,15 @@
 import "@/styles/pages/home.scss";
+import { faShapes } from "@awesome.me/kit-a9a956ae09/icons/duotone/solid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import Features from "@/components/home/features";
 
 const Home = () => (
   <section className="row flow-column-wrap align-start">
     <div>
-      <i className="icon fa-duotone fa-shapes" />
+      <div className="icon">
+        <FontAwesomeIcon icon={faShapes} />
+      </div>
       <h1 className="title primary">Luxa CSS</h1>
       <h2 className="title">Quickly design, build and ship!</h2>
     </div>

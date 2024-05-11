@@ -1,8 +1,11 @@
 import "@/styles/globals.scss";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
 import { Analytics } from "@vercel/analytics/react";
 import { GeistSans } from "geist/font/sans";
-import Script from "next/script";
 import Header from "@/components/header";
+
+config.autoAddCss = false;
 
 export const metadata = {
   metadataBase: new URL("https://www.luxacss.com"),
@@ -55,10 +58,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <Header />
           <main>{children}</main>
         </div>
-        <Script
-          src="https://kit.fontawesome.com/a9a956ae09.js"
-          crossOrigin="anonymous"
-        />
         <Analytics />
       </body>
     </html>
