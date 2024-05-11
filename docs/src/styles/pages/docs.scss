@@ -1,0 +1,164 @@
+article {
+  --gap: var(--space-01);
+
+  position: relative;
+
+  .title {
+    margin: 1em 0 0 0;
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:has(> code) {
+      text-underline-offset: 0.25rem;
+    }
+  }
+}
+
+code {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+:not(pre) {
+  & > code {
+    padding: 0.0625rem 0.375rem;
+    overflow-wrap: break-word;
+    border: 0.0625rem solid var(--neutral-03);
+    border-radius: var(--rounded-sm);
+    color: var(--neutral-09);
+    background-color: var(--neutral-01);
+    transition: border-color 240ms var(--fluid);
+
+    &:hover {
+      border-color: var(--neutral-04);
+    }
+  }
+}
+
+.colors {
+  margin: 0.5rem 0 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  .color {
+    width: 9rem;
+    height: 9rem;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    border: 0.0625rem solid var(--neutral-04);
+    border-radius: var(--rounded-sm);
+
+    div {
+      aspect-ratio: 1/1;
+      width: 7rem;
+      height: 7rem;
+      border: 0.0625rem solid var(--neutral-04);
+      border-radius: var(--rounded-sm);
+    }
+
+    &.neutral {
+      &-01 {
+        .col {
+          background-color: var(--neutral-01);
+        }
+      }
+
+      &-02 {
+        .col {
+          background-color: var(--neutral-02);
+        }
+      }
+
+      &-03 {
+        .col {
+          background-color: var(--neutral-03);
+        }
+      }
+
+      &-04 {
+        .col {
+          background-color: var(--neutral-04);
+        }
+      }
+
+      &-05 {
+        .col {
+          background-color: var(--neutral-05);
+        }
+      }
+
+      &-06 {
+        .col {
+          background-color: var(--neutral-06);
+        }
+      }
+
+      &-07 {
+        .col {
+          background-color: var(--neutral-07);
+        }
+      }
+
+      &-08 {
+        .col {
+          background-color: var(--neutral-08);
+        }
+      }
+
+      &-09 {
+        .col {
+          background-color: var(--neutral-09);
+        }
+      }
+
+      &-10 {
+        .col {
+          background-color: var(--neutral-10);
+        }
+      }
+    }
+
+    &.purple {
+      .col {
+        background-color: var(--purple);
+      }
+    }
+
+    &.green {
+      .col {
+        background-color: var(--green);
+      }
+    }
+
+    &.blue {
+      .col {
+        background-color: var(--blue);
+      }
+    }
+
+    &.yellow {
+      .col {
+        background-color: var(--yellow);
+      }
+    }
+
+    &.orange {
+      .col {
+        background-color: var(--orange);
+      }
+    }
+
+    &.red {
+      .col {
+        background-color: var(--red);
+      }
+    }
+  }
+}

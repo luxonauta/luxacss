@@ -1,0 +1,27 @@
+---
+title: Typography
+description: Enhance readability across devices with Luxa CSS's fluid typography scale.
+---
+
+Luxa dynamically adjusts font sizes with the viewport width through a fluid-type scale, ensuring optimal readability on any device. A simple formula in the CSS’s clamp function creates this fluidity, making the text appear perfectly on screens of any size.
+
+| Name        | Min size (px) | Calc (vw + px) | Max size (px) | Fallback size (px) | Fallback size at `80rem` (px) |
+| ----------- | ------------- | -------------- | ------------- | ------------------ | ----------------------------- |
+| `--text-01` | 12            | 0.21vw + 11.36 | 14.08         | 12                 | 14.08                         |
+| `--text-02` | 14.4          | 0.32vw + 13.44 | 17.44         | 14.4               | 17.44                         |
+| `--text-03` | 17.28         | 0.48vw + 15.68 | 21.92         | 17.28              | 21.92                         |
+| `--text-04` | 20.8          | 0.69vw + 18.56 | 27.36         | 20.8               | 27.36                         |
+| `--text-05` | 24.96         | 0.97vw + 21.76 | 34.24         | 24.96              | 34.24                         |
+| `--text-06` | 29.92         | 1.34vw + 25.6  | 42.72         | 29.92              | 42.72                         |
+
+## Pixel perfection and design intention
+
+Embracing fluid-type scales marks a shift from pixel-perfect design to a more flexible approach. Instead of clinging to precise values and rigid breakpoint control, entrusting the browser with layout adjustments ensures a tailored experience on every device. This 'letting go' doesn't mean losing grip but gaining a more robust, universally adaptive design.
+
+Further reading:
+
+- [The Myth of Pixel Perfection](https://www.kelliekowalski.com/articles/the-myth-of-pixel-perfection)
+
+### Reproduce in Tailwind CSS
+
+You can reproduce this system in Tailwind CSS in your `tailwind.config.js` theme section. Using this file, you can define your project's type scale.
