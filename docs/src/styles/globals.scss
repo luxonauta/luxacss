@@ -5,7 +5,7 @@
   outline-width: thin;
   outline-offset: 0.125rem;
   outline-color: var(--neutral-03);
-  font-size: 0.75rem;
+  font-size: inherit;
 }
 
 ::selection {
@@ -102,6 +102,7 @@ h6,
   font-weight: 500;
   color: var(--neutral-09);
   background-color: var(--neutral-01);
+  box-shadow: var(--custom-box-shadow);
   transition: background-color 240ms var(--fluid);
 
   &:hover {
