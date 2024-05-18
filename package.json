@@ -19,12 +19,13 @@
     "build": "node build.js",
     "dev:docs": "cd docs && npm run dev",
     "format": "prettier --write .",
-    "install:all": "npm install && cd docs && npm install",
+    "install:all": "npm install && cd docs && dotenv -e .env npm install",
     "lint:docs": "cd docs && npx next lint --fix",
     "start:docs": "cd docs && npm start"
   },
   "devDependencies": {
     "chokidar": "^3.5.3",
+    "dotenv-cli": "^7.4.2",
     "prettier": "3.0.3",
     "sass": "^1.69.7"
   },
