@@ -13,11 +13,6 @@
   background-color: var(--neutral-03);
 }
 
-html {
-  text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-}
-
 body {
   min-height: 100dvh;
   padding: var(--space-04) var(--space-03) var(--space-06) var(--space-03);
@@ -25,7 +20,6 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: var(--font-geist-sans);
-  font-size: 0.75rem;
   color: var(--neutral-07);
 }
 
