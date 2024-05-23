@@ -1,8 +1,8 @@
 "use client";
 
 import "./index.scss";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Link } from "next-view-transitions";
 import isActive from "@/lib/active-pathname";
 
 const pages = [

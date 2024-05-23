@@ -4,7 +4,6 @@
   position: relative;
   overflow: auto hidden;
   border: 0.0625rem solid var(--neutral-04);
-  border-radius: var(--rounded-sm);
 
   table {
     width: max-content;
@@ -41,7 +40,10 @@
     }
 
     th {
-      font-weight: 700;
+      text-transform: uppercase;
+      font-family: var(--font-general-sans);
+      font-size: 0.75rem;
+      font-weight: 600;
     }
   }
 }

@@ -1,7 +1,7 @@
 import "@/styles/pages/home.scss";
 import { faShapes } from "@awesome.me/kit-a9a956ae09/icons/duotone/solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import Features from "@/components/home/features";
 
 const Home = () => (

@@ -8,33 +8,46 @@
   font: inherit;
 }
 
+:root {
+  --animation-blend-mode: lighten;
+  --animation-duration: 12s;
+  --background-color: #ffff;
+  --gradient-end: #03f241;
+  --gradient-middle: #03e5f2;
+  --gradient-start: #d549dd;
+  --height-overlay: 18rem;
+}
+
 ::selection {
   color: var(--neutral-09);
   background-color: var(--neutral-03);
+  background-blend-mode: multiply;
 }
 
 body {
   min-height: 100dvh;
   padding: var(--space-04) var(--space-03) var(--space-06) var(--space-03);
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: var(--font-geist-sans);
+  font-family: var(--font-inter);
   color: var(--neutral-07);
-}
-
-.container {
-  width: 100%;
-  max-width: 40rem;
-
-  @media (max-width: 40rem) {
-    max-width: 100%;
-  }
+  background-color: var(--background-color);
+  background-image: url("/aurora.png"),
+    linear-gradient(180deg, var(--background-color), var(--neutral-01));
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 main {
   --gap: var(--space-03);
   margin-top: var(--space-06);
+}
+
+b,
+strong {
+  font-weight: 500;
 }
 
 hr {
@@ -54,14 +67,45 @@ h4,
 h5,
 h6,
 .title {
+  text-transform: uppercase;
+  font-family: var(--font-general-sans);
   font-size: inherit;
-  font-weight: 500;
-  color: var(--neutral-08);
+  font-weight: 600;
+  color: inherit;
 
   &.primary {
+    font-size: var(--text-02);
+    font-weight: 900;
     color: var(--neutral-09);
-    font-weight: 700;
   }
+}
+
+.container {
+  width: 100%;
+  max-width: 42rem;
+  margin-top: var(--space-03);
+
+  @media (max-width: 42rem) {
+    max-width: 100%;
+  }
+}
+
+.aurora-overlay {
+  width: 100%;
+  height: var(--height-overlay);
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  mix-blend-mode: var(--animation-blend-mode);
+  background: linear-gradient(
+    218deg,
+    var(--gradient-start),
+    var(--gradient-middle),
+    var(--gradient-end)
+  );
+  background-size: 400% 400%;
+  animation: aurora-overlay var(--animation-duration) var(--fluid) infinite;
+  z-index: -1;
 }
 
 .text {
@@ -93,12 +137,13 @@ h6,
   gap: 0.5rem;
   user-select: none;
   border: 0.0625rem solid var(--neutral-03);
-  border-radius: var(--rounded-sm);
+  border-radius: none;
   line-height: 1;
   text-decoration: none;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: 500;
+  text-transform: uppercase;
+  font-family: var(--font-general-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
   color: var(--neutral-09);
   background-color: var(--neutral-01);
   box-shadow: var(--custom-box-shadow);
@@ -122,10 +167,21 @@ h6,
 .card {
   padding: var(--space-01);
   border: 0.0625rem solid var(--neutral-03);
-  border-radius: var(--rounded-sm);
   transition: border-color 240ms var(--fluid);
 
   &:hover {
     border-color: var(--neutral-04);
+  }
+}
+
+@keyframes aurora-overlay {
+  0% {
+    background-position: 0 96%;
+  }
+  50% {
+    background-position: 100% 6%;
+  }
+  100% {
+    background-position: 0 96%;
   }
 }
