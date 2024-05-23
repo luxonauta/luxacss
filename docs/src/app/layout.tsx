@@ -2,10 +2,55 @@ import "@/styles/globals.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { Analytics } from "@vercel/analytics/react";
-import { GeistSans } from "geist/font/sans";
+import localFont from "next/font/local";
+import { ViewTransitions } from "next-view-transitions";
 import Header from "@/components/header";
 
 config.autoAddCss = false;
+
+const inter = localFont({
+  display: "swap",
+  preload: true,
+  src: "../../public/fonts/inter/inter.ttf",
+  variable: "--font-inter",
+  weight: "400 700"
+});
+
+const generalSans = localFont({
+  display: "swap",
+  preload: true,
+  src: [
+    {
+      path: "../../public/fonts/general-sans/general-sans-regular.ttf",
+      style: "normal",
+      weight: "400 700"
+    },
+    {
+      path: "../../public/fonts/general-sans/general-sans-italic.ttf",
+      style: "italic",
+      weight: "400 700"
+    }
+  ],
+  variable: "--font-general-sans"
+});
+
+const commitMono = localFont({
+  display: "swap",
+  preload: true,
+  src: [
+    {
+      path: "../../public/fonts/commit-mono/commit-mono-regular.ttf",
+      style: "normal",
+      weight: "400"
+    },
+    {
+      path: "../../public/fonts/commit-mono/commit-mono-italic.ttf",
+      style: "italic",
+      weight: "400"
+    }
+  ],
+  variable: "--font-commit-mono"
+});
 
 export const metadata = {
   metadataBase: new URL("https://www.luxacss.com"),
@@ -52,15 +97,21 @@ export const viewport = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en">
-      <body className={GeistSans.variable}>
-        <div className="container">
-          <Header />
-          <main>{children}</main>
-        </div>
-        <Analytics />
-      </body>
-    </html>
+    <ViewTransitions>
+      <html
+        lang="en"
+        className={`${inter.variable} ${generalSans.variable} ${commitMono.variable}`}
+      >
+        <body>
+          <div className="aurora-overlay" aria-hidden="true" />
+          <div className="container">
+            <Header />
+            <main>{children}</main>
+          </div>
+          <Analytics />
+        </body>
+      </html>
+    </ViewTransitions>
   );
 };
 

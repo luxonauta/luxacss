@@ -1,13 +1,12 @@
 aside {
   width: fit-content;
   min-width: 12rem;
-  padding: var(--space-01) var(--space-01) var(--space-01) var(--space-02);
+  padding: var(--space-02) var(--space-01) var(--space-02) var(--space-02);
   position: absolute;
   transform: translateX(-100%);
   top: 0;
   left: calc(-1 * var(--space-04));
   border: 0.0625rem solid var(--neutral-03);
-  border-radius: var(--rounded-sm);
   transition: border-color 240ms var(--fluid);
 
   ul {

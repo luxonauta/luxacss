@@ -10,7 +10,6 @@
     position: relative;
     overflow: auto hidden;
     border: 0.0625rem solid var(--neutral-03);
-    border-radius: var(--rounded-sm);
     background-color: var(--neutral-01);
     transition: border-color 240ms var(--fluid);
 
@@ -41,7 +40,6 @@
     position: absolute;
     top: 1em;
     right: 1em;
-    border-radius: 0.25rem;
     background-color: white;
     transition-property: border-color;
 
