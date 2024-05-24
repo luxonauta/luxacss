@@ -1,7 +1,12 @@
 "use client";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./index.scss";
 import { HTMLAttributes, isValidElement, ReactNode, useState } from "react";
+import {
+  faClipboard,
+  faCopy
+} from "@awesome.me/kit-a9a956ae09/icons/duotone/solid";
 
 interface CodeBlockProps extends HTMLAttributes<HTMLPreElement> {
   children?: ReactNode;
@@ -41,8 +46,13 @@ const CodeBlock = ({ children, ...preProps }: CodeBlockProps) => {
       <pre {...preProps} tabIndex={0}>
         {children}
       </pre>
-      <button onClick={copyToClipboard} className="action copy-button">
-        <span>{copied ? "Copied!" : "Copy"}</span>
+      <button
+        onClick={copyToClipboard}
+        className="action copy-button"
+        title={copied ? "Copied!" : "Copy"}
+      >
+        <FontAwesomeIcon icon={faClipboard} />
+        <span className="sr-only">{copied ? "Copied!" : "Copy"}</span>
       </button>
     </div>
   );

@@ -16,24 +16,6 @@ const inter = localFont({
   weight: "400 700"
 });
 
-const generalSans = localFont({
-  display: "swap",
-  preload: true,
-  src: [
-    {
-      path: "../../public/fonts/general-sans/general-sans-regular.ttf",
-      style: "normal",
-      weight: "400 700"
-    },
-    {
-      path: "../../public/fonts/general-sans/general-sans-italic.ttf",
-      style: "italic",
-      weight: "400 700"
-    }
-  ],
-  variable: "--font-general-sans"
-});
-
 const commitMono = localFont({
   display: "swap",
   preload: true,
@@ -98,10 +80,7 @@ export const viewport = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <ViewTransitions>
-      <html
-        lang="en"
-        className={`${inter.variable} ${generalSans.variable} ${commitMono.variable}`}
-      >
+      <html lang="en" className={`${inter.variable} ${commitMono.variable}`}>
         <body>
           <div className="aurora-overlay" aria-hidden="true" />
           <div className="container">
