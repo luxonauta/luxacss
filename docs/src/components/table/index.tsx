@@ -6,7 +6,7 @@ interface TableProps extends TableHTMLAttributes<HTMLTableElement> {
 }
 
 const Table: FC<TableProps> = ({ children, ...props }) => (
-  <div className="table">
+  <div className="table" tabIndex={0}>
     <table {...props}>{children}</table>
   </div>
 );
