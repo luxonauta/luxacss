@@ -35,14 +35,32 @@ body {
   color: var(--neutral-07);
   background-color: var(--background-color);
   background-image: url("/aurora.png"),
-    linear-gradient(180deg, var(--background-color), var(--neutral-01));
+    linear-gradient(
+      180deg,
+      var(--background-color) 0,
+      var(--background-color) 80%,
+      var(--neutral-01) 100%
+    );
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 main {
   --gap: var(--space-03);
+  width: 100%;
   margin-top: var(--space-06);
+}
+
+article {
+  a {
+    text-decoration: underline;
+    text-underline-offset: 0.125rem;
+    font-weight: 500;
+
+    &:has(> code) {
+      text-underline-offset: 0.25rem;
+    }
+  }
 }
 
 b,
@@ -76,7 +94,7 @@ h6,
   &.primary {
     font-size: var(--text-02);
     font-weight: 900;
-    color: var(--neutral-09);
+    color: var(--neutral-08);
   }
 }
 
@@ -144,7 +162,7 @@ h6,
   font-family: var(--font-general-sans);
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--neutral-09);
+  color: var(--neutral-08);
   background-color: var(--neutral-01);
   box-shadow: var(--custom-box-shadow);
   transition: background-color 240ms var(--fluid);
@@ -156,7 +174,7 @@ h6,
   &.primary {
     border: 0.0625rem solid var(--neutral-10);
     color: var(--neutral-01);
-    background-color: var(--neutral-09);
+    background-color: var(--neutral-08);
 
     &:hover {
       background-color: var(--neutral-08);

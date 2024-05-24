@@ -6,14 +6,6 @@ article {
   .title {
     margin: 1em 0 0 0;
   }
-
-  a {
-    text-decoration: underline;
-
-    &:has(> code) {
-      text-underline-offset: 0.25rem;
-    }
-  }
 }
 
 pre,
@@ -38,124 +30,78 @@ code {
 }
 
 .colors {
+  width: 100%;
   margin: 0.5rem 0 1rem 0;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
 
-  .color {
-    width: 9rem;
-    height: 9rem;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    border: 0.0625rem solid var(--neutral-04);
-
-    div {
-      aspect-ratio: 1/1;
-      width: 7rem;
-      height: 7rem;
-    }
+  .col {
+    aspect-ratio: 1 / 1;
+    max-height: 3rem;
 
     &.neutral {
       &-01 {
-        .col {
-          background-color: var(--neutral-01);
-        }
+        background-color: var(--neutral-01);
       }
 
       &-02 {
-        .col {
-          background-color: var(--neutral-02);
-        }
+        background-color: var(--neutral-02);
       }
 
       &-03 {
-        .col {
-          background-color: var(--neutral-03);
-        }
+        background-color: var(--neutral-03);
       }
 
       &-04 {
-        .col {
-          background-color: var(--neutral-04);
-        }
+        background-color: var(--neutral-04);
       }
 
       &-05 {
-        .col {
-          background-color: var(--neutral-05);
-        }
+        background-color: var(--neutral-05);
       }
 
       &-06 {
-        .col {
-          background-color: var(--neutral-06);
-        }
+        background-color: var(--neutral-06);
       }
 
       &-07 {
-        .col {
-          background-color: var(--neutral-07);
-        }
+        background-color: var(--neutral-07);
       }
 
       &-08 {
-        .col {
-          background-color: var(--neutral-08);
-        }
+        background-color: var(--neutral-08);
       }
 
       &-09 {
-        .col {
-          background-color: var(--neutral-09);
-        }
+        background-color: var(--neutral-09);
       }
 
       &-10 {
-        .col {
-          background-color: var(--neutral-10);
-        }
+        background-color: var(--neutral-10);
       }
     }
 
     &.purple {
-      .col {
-        background-color: var(--purple);
-      }
+      background-color: var(--purple);
     }
 
     &.green {
-      .col {
-        background-color: var(--green);
-      }
+      background-color: var(--green);
     }
 
     &.blue {
-      .col {
-        background-color: var(--blue);
-      }
+      background-color: var(--blue);
     }
 
     &.yellow {
-      .col {
-        background-color: var(--yellow);
-      }
+      background-color: var(--yellow);
     }
 
     &.orange {
-      .col {
-        background-color: var(--orange);
-      }
+      background-color: var(--orange);
     }
 
     &.red {
-      .col {
-        background-color: var(--red);
-      }
+      background-color: var(--red);
     }
   }
 }

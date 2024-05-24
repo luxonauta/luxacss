@@ -13,6 +13,7 @@ interface MenuItemProps {
 const menuItems = [
   { href: "/getting-started", text: "Getting Started" },
   { href: "/responsive-design", text: "Responsive Design" },
+  { href: "/usage-scenarios", text: "Usage Scenarios" },
   { href: "/grid", text: "Grid" },
   { href: "/typography", text: "Typography" },
   { href: "/colours", text: "Colours" },
