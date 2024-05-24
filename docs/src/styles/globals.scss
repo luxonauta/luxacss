@@ -32,7 +32,8 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: var(--font-inter);
-  color: var(--neutral-07);
+  font-size: 0.75rem;
+  color: var(--neutral-08);
   background-color: var(--background-color);
   background-image: url("/aurora.png"),
     linear-gradient(
@@ -86,15 +87,13 @@ h5,
 h6,
 .title {
   text-transform: uppercase;
-  font-family: var(--font-general-sans);
   font-size: inherit;
   font-weight: 600;
   color: inherit;
 
   &.primary {
-    font-size: var(--text-02);
     font-weight: 900;
-    color: var(--neutral-08);
+    color: var(--neutral-09);
   }
 }
 
@@ -155,12 +154,11 @@ h6,
   gap: 0.5rem;
   user-select: none;
   border: 0.0625rem solid var(--neutral-03);
-  border-radius: none;
   line-height: 1;
   text-decoration: none;
   text-transform: uppercase;
   font-family: var(--font-general-sans);
-  font-size: 0.75rem;
+  font-size: inherit;
   font-weight: 600;
   color: var(--neutral-08);
   background-color: var(--neutral-01);
@@ -172,12 +170,12 @@ h6,
   }
 
   &.primary {
-    border: 0.0625rem solid var(--neutral-10);
+    border: 0.0625rem solid var(--neutral-08);
     color: var(--neutral-01);
     background-color: var(--neutral-08);
 
     &:hover {
-      background-color: var(--neutral-08);
+      background-color: var(--neutral-09);
     }
   }
 }
