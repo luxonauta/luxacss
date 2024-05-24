@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "About",
   description:
@@ -43,6 +45,49 @@ const About = () => (
         significantly reduces the time and frustration usually spent wrestling
         with other frameworks.
       </p>
+      <p>A breath of fresh air. 🪔</p>
+    </article>
+    <article className="text">
+      <h2 className="title">Built With</h2>
+      <p>
+        The core technologies and resources powering both Luxa CSS and its
+        documentation website:
+      </p>
+      <ul>
+        <li>
+          <Link href="https://sass-lang.com/?ref=luxacss.com" target="_blank">
+            Sass:
+          </Link>
+          <span> CSS pre-processor;</span>
+        </li>
+        <li>
+          <Link
+            href="https://www.jsdelivr.com/?ref=luxacss.com"
+            target="_blank"
+          >
+            jsDelivr:
+          </Link>
+          <span> CDN;</span>
+        </li>
+        <li>
+          <Link href="https://nextjs.org/?ref=luxacss.com" target="_blank">
+            Next.js:
+          </Link>
+          <span> React framework;</span>
+        </li>
+        <li>
+          <Link href="https://mdxjs.com/?ref=luxacss.com" target="_blank">
+            MDX:
+          </Link>
+          <span> Markdown with JSX;</span>
+        </li>
+        <li>
+          <Link href="https://vercel.com/?ref=luxacss.com" target="_blank">
+            Vercel:
+          </Link>
+          <span> Hosting and website CDN.</span>
+        </li>
+      </ul>
     </article>
   </section>
 );
