@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PageTransition from "@/components/page-transition";
 
 export const metadata = {
   title: "About",
@@ -10,7 +11,7 @@ export const metadata = {
 };
 
 const About = () => (
-  <section className="row flow-column-wrap align-start">
+  <PageTransition className="row flow-column-wrap align-start">
     <h1 className="title primary">About</h1>
     <article className="text">
       <p>
@@ -89,7 +90,7 @@ const About = () => (
         </li>
       </ul>
     </article>
-  </section>
+  </PageTransition>
 );
 
 export default About;

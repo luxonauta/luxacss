@@ -1,11 +1,12 @@
 import "@/styles/pages/home.scss";
 import { faShapes } from "@awesome.me/kit-a9a956ae09/icons/duotone/solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 import Features from "@/components/home/features";
+import PageTransition from "@/components/page-transition";
 
 const Home = () => (
-  <section className="row flow-column-wrap align-start">
+  <PageTransition className="row flow-column-wrap align-start">
     <div>
       <div className="icon">
         <FontAwesomeIcon icon={faShapes} />
@@ -39,7 +40,7 @@ const Home = () => (
     </div>
     <hr />
     <Features />
-  </section>
+  </PageTransition>
 );
 
 export default Home;
