@@ -1,6 +1,6 @@
-import CodeBlock from "../code-block";
-import createHeading from "../heading";
 import Table from "../table";
+import CodeBlock from "./code-block";
+import createHeading from "./heading";
 
 const mdxComponents = {
   h2: createHeading(2),

@@ -2,6 +2,7 @@ article {
   --gap: var(--space-01);
 
   position: relative;
+  overflow: hidden;
 
   .title {
     margin: 1em 0 0 0;
@@ -10,6 +11,7 @@ article {
 
 pre,
 code {
+  border-radius: var(--rounded-sm);
   font-family: var(--font-commit-mono);
   font-size: inherit;
 }
@@ -40,6 +42,7 @@ code {
 
     &.neutral {
       &-01 {
+        border-radius: var(--rounded-sm) 0 0 var(--rounded-sm);
         background-color: var(--neutral-01);
       }
 
@@ -76,11 +79,13 @@ code {
       }
 
       &-10 {
+        border-radius: 0 var(--rounded-sm) var(--rounded-sm) 0;
         background-color: var(--neutral-10);
       }
     }
 
     &.purple {
+      border-radius: 0 var(--rounded-sm) var(--rounded-sm) 0;
       background-color: var(--purple);
     }
 
@@ -101,6 +106,7 @@ code {
     }
 
     &.red {
+      border-radius: var(--rounded-sm) 0 0 var(--rounded-sm);
       background-color: var(--red);
     }
   }

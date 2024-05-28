@@ -16,35 +16,27 @@
     code {
       .token {
         &.comment {
+          font-family: var(--font-shantell-sans);
           font-style: italic;
           color: var(--neutral-06);
+        }
+
+        &.property {
+          color: var(--neutral-10);
         }
 
         &.tag {
           .punctuation,
           .tag,
           .attr-name {
-            color: var(--neutral-09);
+            color: var(--neutral-10);
           }
         }
 
         &.function {
-          color: var(--neutral-08);
+          color: var(--neutral-09);
         }
       }
-    }
-  }
-
-  .copy-button {
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    font-weight: 500;
-    background-color: white;
-    transition-property: border-color;
-
-    &:hover {
-      border-color: var(--neutral-04);
     }
   }
 

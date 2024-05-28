@@ -1,18 +1,18 @@
 "use client";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./index.scss";
-import { HTMLAttributes, isValidElement, ReactNode, useState } from "react";
 import {
-  faClipboard,
-  faCopy
+  faCheck,
+  faClone
 } from "@awesome.me/kit-a9a956ae09/icons/duotone/solid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { isValidElement, ReactNode, useState } from "react";
 
-interface CodeBlockProps extends HTMLAttributes<HTMLPreElement> {
-  children?: ReactNode;
+interface CopyButtonProps {
+  children: ReactNode;
 }
 
-const CodeBlock = ({ children, ...preProps }: CodeBlockProps) => {
+const CopyButton = ({ children }: CopyButtonProps) => {
   const [copied, setCopied] = useState(false);
 
   const getTextFromChildren = (children: React.ReactNode): string | null => {
@@ -35,27 +35,24 @@ const CodeBlock = ({ children, ...preProps }: CodeBlockProps) => {
         await navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
-      } catch (error) {
-        console.error("Failed to copy!", error);
-      }
+      } catch (error) {}
     }
   };
 
   return (
-    <div className="code-block">
-      <pre {...preProps} tabIndex={0}>
-        {children}
-      </pre>
-      <button
-        onClick={copyToClipboard}
-        className="action copy-button"
-        title={copied ? "Copied!" : "Copy"}
-      >
-        <FontAwesomeIcon icon={faClipboard} />
-        <span className="sr-only">{copied ? "Copied!" : "Copy"}</span>
-      </button>
-    </div>
+    <button
+      onClick={copyToClipboard}
+      className="action copy-button"
+      data-state={copied ? "copied" : "not-copied"}
+      title={copied ? "Copied!" : "Copy"}
+    >
+      <div className="icon">
+        <FontAwesomeIcon icon={faClone} className="icon-copy" />
+        <FontAwesomeIcon icon={faCheck} className="icon-check" />
+      </div>
+      <span className="sr-only">{copied ? "Copied!" : "Copy"}</span>
+    </button>
   );
 };
 
-export default CodeBlock;
+export default CopyButton;

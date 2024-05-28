@@ -16,6 +16,24 @@ const inter = localFont({
   weight: "400 700"
 });
 
+const shantellSans = localFont({
+  display: "swap",
+  preload: true,
+  src: [
+    {
+      path: "../../public/fonts/shantell-sans/shantell-sans-regular.ttf",
+      style: "normal",
+      weight: "400 700"
+    },
+    {
+      path: "../../public/fonts/shantell-sans/shantell-sans-italic.ttf",
+      style: "italic",
+      weight: "400 700"
+    }
+  ],
+  variable: "--font-shantell-sans"
+});
+
 const commitMono = localFont({
   display: "swap",
   preload: true,
@@ -80,7 +98,10 @@ export const viewport = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <ViewTransitions>
-      <html lang="en" className={`${inter.variable} ${commitMono.variable}`}>
+      <html
+        lang="en"
+        className={`${inter.variable} ${shantellSans.variable} ${commitMono.variable}`}
+      >
         <body>
           <div className="aurora-overlay" aria-hidden="true" />
           <div className="container">
