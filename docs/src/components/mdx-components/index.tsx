@@ -1,4 +1,5 @@
 import Table from "../table";
+import Blockquote from "./blockquote";
 import CodeBlock from "./code-block";
 import createHeading from "./heading";
 
@@ -9,7 +10,8 @@ const mdxComponents = {
   h5: createHeading(5),
   h6: createHeading(6),
   table: Table,
-  pre: CodeBlock
+  pre: CodeBlock,
+  blockquote: Blockquote
 };
 
 export default mdxComponents;

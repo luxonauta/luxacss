@@ -5,6 +5,8 @@ description: Enhance readability across devices with Luxa CSS's fluid typography
 
 Luxa dynamically adjusts font sizes with the viewport width through a fluid-type scale, ensuring optimal readability on any device. A simple formula in the CSS's clamp function creates this fluidity, making the text appear perfectly on screens of any size.
 
+> The `clamp()` function in CSS takes three parameters: a minimum value, a preferred value (usually calculated based on the viewport width), and a maximum value. It ensures that the element's size scales fluidly between the minimum and maximum values based on the viewport size.
+
 | Name        | Min size (px) | Calc (vw + px) | Max size (px) | Fallback size (px) | Fallback size at `80rem` (px) |
 | ----------- | ------------- | -------------- | ------------- | ------------------ | ----------------------------- |
 | `--text-01` | 12            | 0.21vw + 11.36 | 14.08         | 12                 | 14.08                         |
@@ -20,7 +22,7 @@ Embracing fluid-type scales marks a shift from pixel-perfect design to a more fl
 
 Further reading:
 
-- [The Myth of Pixel Perfection](https://www.kelliekowalski.com/articles/the-myth-of-pixel-perfection)
+- [The Myth of Pixel Perfection](https://www.kelliekowalski.com/articles/the-myth-of-pixel-perfection/?ref=luxacss.com)
 
 ### Reproduce in Tailwind CSS
 

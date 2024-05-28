@@ -1,9 +1,8 @@
 import "@/styles/globals.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import { Analytics } from "@vercel/analytics/react";
 import localFont from "next/font/local";
-import { ViewTransitions } from "next-view-transitions";
+import Script from "next/script";
 import Header from "@/components/header";
 
 config.autoAddCss = false;
@@ -97,21 +96,22 @@ export const viewport = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <ViewTransitions>
-      <html
-        lang="en"
-        className={`${inter.variable} ${shantellSans.variable} ${commitMono.variable}`}
-      >
-        <body>
-          <div className="aurora-overlay" aria-hidden="true" />
-          <div className="container">
-            <Header />
-            <main>{children}</main>
-          </div>
-          <Analytics />
-        </body>
-      </html>
-    </ViewTransitions>
+    <html
+      lang="en"
+      className={`${inter.variable} ${shantellSans.variable} ${commitMono.variable}`}
+    >
+      <body>
+        <div className="aurora-overlay" aria-hidden="true" />
+        <div className="container">
+          <Header />
+          <main>{children}</main>
+        </div>
+        <Script
+          data-domain="luxacss.com"
+          src="https://plausible.io/js/script.js"
+        />
+      </body>
+    </html>
   );
 };
 

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import path from "path";
 import TableOfContents from "@/components/docs/table-of-contents";
 import mdxComponents from "@/components/mdx-components";
+import PageTransition from "@/components/page-transition";
 import { extractHeadings } from "@/lib/extract-headings";
 import getFile from "@/lib/get-file";
 
@@ -51,14 +52,14 @@ const DynamicPage = async ({ params }: { params: { slug: string } }) => {
   });
 
   return (
-    <article className="row flow-column-wrap align-start">
+    <PageTransition className="row flow-column-wrap align-start" as={"article"}>
       <div>
         <h1 className="title primary">{String(frontmatter.title)}</h1>
         <p className="description">{String(frontmatter.description)}</p>
       </div>
       <TableOfContents headings={toc} />
       {content}
-    </article>
+    </PageTransition>
   );
 };
 
