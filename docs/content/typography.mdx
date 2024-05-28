@@ -3,7 +3,7 @@ title: Typography
 description: Enhance readability across devices with Luxa CSS's fluid typography scale.
 ---
 
-Luxa dynamically adjusts font sizes with the viewport width through a fluid-type scale, ensuring optimal readability on any device. A simple formula in the CSS’s clamp function creates this fluidity, making the text appear perfectly on screens of any size.
+Luxa dynamically adjusts font sizes with the viewport width through a fluid-type scale, ensuring optimal readability on any device. A simple formula in the CSS's clamp function creates this fluidity, making the text appear perfectly on screens of any size.
 
 | Name        | Min size (px) | Calc (vw + px) | Max size (px) | Fallback size (px) | Fallback size at `80rem` (px) |
 | ----------- | ------------- | -------------- | ------------- | ------------------ | ----------------------------- |
@@ -24,4 +24,24 @@ Further reading:
 
 ### Reproduce in Tailwind CSS
 
-You can reproduce this system in Tailwind CSS in your `tailwind.config.js` theme section. Using this file, you can define your project's type scale.
+By default, Tailwind will look for an optional `tailwind.config.js` file at the root of your project, where you can define any customizations, such as a fluid-type scale.
+
+Add the following settings within the `theme.extend` section to replicate the Luxa-type scale:
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      fontSize: {
+        "text-01": "clamp(0.75rem, 0.21vw + 0.71rem, 0.88rem)",
+        "text-02": "clamp(0.9rem, 0.32vw + 0.84rem, 1.09rem)",
+        "text-03": "clamp(1.08rem, 0.48vw + 0.98rem, 1.37rem)",
+        "text-04": "clamp(1.3rem, 0.69vw + 1.16rem, 1.71rem)",
+        "text-05": "clamp(1.56rem, 0.97vw + 1.36rem, 2.14rem)",
+        "text-06": "clamp(1.87rem, 1.34vw + 1.6rem, 2.67rem)"
+      }
+    }
+  }
+};
+```

@@ -86,7 +86,6 @@ h4,
 h5,
 h6,
 .title {
-  text-transform: uppercase;
   font-size: inherit;
   font-weight: 600;
   color: inherit;
@@ -153,10 +152,11 @@ h6,
   justify-content: center;
   gap: 0.5rem;
   user-select: none;
+  cursor: pointer;
   border: 0.0625rem solid var(--neutral-03);
+  border-radius: var(--rounded-sm);
   line-height: 1;
   text-decoration: none;
-  text-transform: uppercase;
   font-family: var(--font-general-sans);
   font-size: inherit;
   font-weight: 600;
@@ -183,6 +183,7 @@ h6,
 .card {
   padding: var(--space-01);
   border: 0.0625rem solid var(--neutral-03);
+  border-radius: var(--rounded-sm);
   transition: border-color 240ms var(--fluid);
 
   &:hover {

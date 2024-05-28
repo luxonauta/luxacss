@@ -2,8 +2,8 @@ import { getCompiledServerMdx } from "@mintlify/mdx";
 import fs from "fs/promises";
 import { notFound } from "next/navigation";
 import path from "path";
+import TableOfContents from "@/components/docs/table-of-contents";
 import mdxComponents from "@/components/mdx-components";
-import TableOfContents from "@/components/table-of-contents";
 import { extractHeadings } from "@/lib/extract-headings";
 import getFile from "@/lib/get-file";
 
