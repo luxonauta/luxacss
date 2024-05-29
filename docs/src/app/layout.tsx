@@ -107,6 +107,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           <main>{children}</main>
         </div>
         <Script
+          defer
           data-domain="luxacss.com"
           src="https://plausible.io/js/script.js"
         />

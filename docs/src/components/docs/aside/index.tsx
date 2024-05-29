@@ -4,6 +4,7 @@ import "./index.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import isActive from "@/lib/active-pathname";
+import Ad from "../../ad";
 
 interface MenuItemProps {
   href: string;
@@ -48,6 +49,7 @@ const Aside = () => (
         ))}
       </ul>
     </nav>
+    <Ad />
   </aside>
 );
 
