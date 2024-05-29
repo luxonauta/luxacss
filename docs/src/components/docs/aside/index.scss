@@ -1,14 +1,20 @@
 aside {
-  width: fit-content;
-  min-width: 12rem;
-  padding: var(--space-02) var(--space-01) var(--space-02) var(--space-02);
+  width: 12rem;
   position: absolute;
   transform: translateX(-100%);
   top: 0;
   left: calc(-1 * var(--space-04));
-  border: 0.0625rem solid var(--neutral-03);
-  border-radius: var(--rounded-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-02);
   transition: border-color 240ms var(--fluid);
+
+  nav {
+    width: 100%;
+    padding: var(--space-02) var(--space-01) var(--space-02) var(--space-02);
+    border: 0.0625rem solid var(--neutral-03);
+    border-radius: var(--rounded-sm);
+  }
 
   ul {
     --gap: 0.5em;
@@ -63,6 +69,7 @@ aside {
 
 @media (max-width: 64rem) {
   aside {
+    width: 100%;
     position: relative;
     transform: none;
     top: unset;
