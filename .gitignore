@@ -6,7 +6,7 @@
 node_modules/
 
 ### Avoid tracking `package-lock.json` to prevent conflicts between different npm installs.
-package_lock.json
+package-lock.json
 
 ## System-specific files
 ### Files created by OS that aren't relevant to the project's functionality.
