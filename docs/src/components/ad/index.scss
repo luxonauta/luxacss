@@ -1,7 +1,8 @@
 .ad {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
+  width: calc(10rem + 0.5rem) !important;
+  position: absolute;
+  top: 0;
+  left: calc(100% + var(--space-04));
 
   #carbonads {
     #carbon-responsive {
@@ -13,6 +14,8 @@
       }
 
       .carbon-responsive-wrap {
+        width: 100% !important;
+        margin: 0 0 0 auto !important;
         padding: 0.5rem !important;
         border: 0.0625rem solid var(--neutral-03) !important;
         border-radius: var(--rounded-sm) !important;
@@ -35,12 +38,17 @@
         &:hover {
           border-color: var(--neutral-04) !important;
         }
+      }
 
-        @media screen and (max-width: 64rem) {
-          max-width: calc(10rem + 0.5rem) !important;
-          margin: 0 0 0 auto !important;
-        }
+      .carbon-poweredby {
+        display: none !important;
       }
     }
+  }
+
+  @media (max-width: 64rem) {
+    position: relative;
+    top: unset;
+    left: unset;
   }
 }
