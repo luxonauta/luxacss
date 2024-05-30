@@ -65,10 +65,8 @@ aside {
   &:hover {
     border-color: var(--neutral-04);
   }
-}
 
-@media (max-width: 64rem) {
-  aside {
+  @media (max-width: 64rem) {
     width: 100%;
     position: relative;
     transform: none;
