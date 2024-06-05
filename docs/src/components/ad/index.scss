@@ -17,6 +17,7 @@
         width: 100% !important;
         margin: 0 0 0 auto !important;
         padding: 0.5rem !important;
+        gap: 0.5rem !important;
         border: 0.0625rem solid var(--neutral-03) !important;
         border-radius: var(--rounded-sm) !important;
         text-wrap: balance !important;
@@ -33,6 +34,11 @@
             height: auto !important;
             border-radius: 0.25rem !important;
           }
+        }
+
+        .carbon-text {
+          width: 100% !important;
+          padding: 0 0.25rem !important;
         }
 
         &:hover {

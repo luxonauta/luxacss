@@ -101,7 +101,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       className={`${inter.variable} ${shantellSans.variable} ${commitMono.variable}`}
     >
       <body>
-        <div className="aurora-overlay" aria-hidden="true" />
         <div className="container">
           <Header />
           <main>{children}</main>
