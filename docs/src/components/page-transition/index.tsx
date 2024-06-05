@@ -12,13 +12,13 @@ interface PageTransitionProps extends HTMLMotionProps<"section"> {
 const variants = {
   initial: {
     opacity: 0,
-    y: 12
+    y: 6
   },
   enter: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.36,
+      duration: 0.24,
       ease: [0.36, 0.66, 0.6, 1]
     }
   }

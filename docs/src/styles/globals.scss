@@ -15,7 +15,6 @@
   --gradient-end: #03f241;
   --gradient-middle: #03e5f2;
   --gradient-start: #d549dd;
-  --height-overlay: 18rem;
 }
 
 ::selection {
@@ -35,15 +34,6 @@ body {
   font-size: 0.75rem;
   color: var(--neutral-08);
   background-color: var(--background-color);
-  background-image: url("/aurora.png"),
-    linear-gradient(
-      180deg,
-      var(--background-color) 0,
-      var(--background-color) 80%,
-      var(--neutral-01) 100%
-    );
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 main {
@@ -104,24 +94,6 @@ h6,
   @media (max-width: 42rem) {
     max-width: 100%;
   }
-}
-
-.aurora-overlay {
-  width: 100%;
-  height: var(--height-overlay);
-  position: absolute;
-  top: 0;
-  pointer-events: none;
-  mix-blend-mode: var(--animation-blend-mode);
-  background: linear-gradient(
-    218deg,
-    var(--gradient-start),
-    var(--gradient-middle),
-    var(--gradient-end)
-  );
-  background-size: 400% 400%;
-  animation: aurora-overlay var(--animation-duration) var(--fluid) infinite;
-  z-index: -1;
 }
 
 .text {
@@ -188,17 +160,5 @@ h6,
 
   &:hover {
     border-color: var(--neutral-04);
-  }
-}
-
-@keyframes aurora-overlay {
-  0% {
-    background-position: 0 96%;
-  }
-  50% {
-    background-position: 100% 6%;
-  }
-  100% {
-    background-position: 0 96%;
   }
 }
