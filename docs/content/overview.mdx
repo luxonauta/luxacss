@@ -1,0 +1,43 @@
+---
+title: Overview
+description: You only need one CSS file to use Luxa.
+---
+
+Luxa CSS is a CSS library. This means it provides CSS classes to help you style your HTML code.
+
+By using Luxa CSS, you're starting with a clean and lightweight kit that prioritizes minimalism, speed, and ease of maintenance.
+
+To use it, you can either:
+
+- Use one of the pre-compiled `.css` files;
+- Or install the `.scss` files so you can customize Luxa to your needs.
+
+## Code requirements
+
+For Luxa to work correctly, you need to make your webpage responsive.
+
+1. Use the HTML5 `doctype` declaration;
+2. Include the viewport meta tag in the `<head>` of your document.
+
+```html
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hi 👋🏻 Luxa!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/luxacss@1.0.8/dist/compressed/luxa.min.css"
+    />
+  </head>
+  <body>
+    <main class="container-80">
+      <section class="row">
+        <h1>Olá Mundo!</h1>
+        <p>My first website with <strong>Luxa CSS</strong>!</p>
+      </section>
+    </main>
+  </body>
+</html>
+```
