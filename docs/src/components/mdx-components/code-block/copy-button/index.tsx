@@ -4,7 +4,7 @@ import "./index.scss";
 import {
   faCheck,
   faClone
-} from "@awesome.me/kit-a9a956ae09/icons/duotone/solid";
+} from "@awesome.me/kit-6533c71a8a/icons/classic/light";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { isValidElement, ReactNode, useState } from "react";
 

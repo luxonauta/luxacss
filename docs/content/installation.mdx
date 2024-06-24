@@ -1,0 +1,52 @@
+---
+title: How to install Luxa
+description: Install Luxa manually or via CDN for a dependency-free setup, or use NPM.
+---
+
+There are three ways to get started:
+
+## Install manually
+
+[Download the latest version](https://github.com/luxonauta/luxacss/archive/main.zip/?ref=luxacss.com) and link the CSS in the `<head>` of your website.
+
+> The GitHub repository also includes this documentation, so it's significantly bigger than the NPM package.
+
+### Install from CDN
+
+Alternatively, you can easily include Luxa CSS in your project using a CDN. Choose the version that suits your needs:
+
+```html
+<!-- 🦣 Expanded - 8KB -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/luxacss@1.0.8/dist/expanded/luxa.css"
+/>
+
+<!-- 🦐 Compressed - 6KB -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/luxacss@1.0.8/dist/compressed/luxa.min.css"
+/>
+```
+
+### Install with a package manager
+
+```bash
+npm i luxacss
+
+pnpm i luxacss
+
+bun i luxacss
+```
+
+Then import it into your main layout/page:
+
+```jsx
+import "luxacss";
+```
+
+Or, import Luxa into your `.scss` file with [`@use`](https://sass-lang.com/documentation/at-rules/use/?ref=luxacss.com):
+
+```scss
+@use "luxacss";
+```

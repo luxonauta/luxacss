@@ -20,8 +20,9 @@ const About = () => (
         <b>satisfaction</b>.
       </p>
       <p>
-        Popular frameworks often <b>promise</b> ease but typically complicate
-        alignment with our actual needs. My journey led to these insights:
+        Popular frameworks/libs often <b>promise</b> ease but typically
+        complicate alignment with our actual needs. My journey led to these
+        insights:
       </p>
       <ul>
         <li>
@@ -37,14 +38,13 @@ const About = () => (
         </li>
       </ul>
       <p>
-        These inspired me to develop Luxa CSS, a minimal tool that prioritizes
-        flexibility and simplicity. It uses a standard grid system and only the
-        essentials.
+        These inspired me to develop Luxa CSS, a minimal and lightweight kit
+        that prioritizes minimalism, speed, and ease of maintenance.
       </p>
       <p>
         Choosing Luxa and custom CSS not only trims file size but also
         significantly reduces the time and frustration usually spent wrestling
-        with other frameworks.
+        with other solutions.
       </p>
       <p>A breath of fresh air. 🪔</p>
     </article>

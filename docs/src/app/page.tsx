@@ -1,5 +1,5 @@
 import "@/styles/pages/home.scss";
-import { faShapes } from "@awesome.me/kit-a9a956ae09/icons/duotone/solid";
+import { faShapes } from "@awesome.me/kit-6533c71a8a/icons/classic/light";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import Features from "@/components/home/features";
@@ -12,17 +12,12 @@ const Home = () => (
         <FontAwesomeIcon icon={faShapes} />
       </div>
       <h1 className="title primary">Luxa CSS</h1>
-      <h2 className="title">Quickly design, build and ship!</h2>
+      <h2 className="title">The minimalist CSS library.</h2>
     </div>
     <div className="text">
       <p>
-        Luxa is a starting point for a clean, lightweight design system that
-        aims for minimalism, speed, and ease of maintenance.
-      </p>
-      <p>
-        Using it avoids intricate and difficult-to-tweak CSS structures,
-        resulting in a more streamlined development process and better project
-        performance.
+        A clean and lightweight kit that prioritizes minimalism, speed, and ease
+        of maintenance.
       </p>
     </div>
     <div className="row justify-start flow-row-nowrap actions-group">
