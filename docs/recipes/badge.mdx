@@ -1,0 +1,62 @@
+---
+title: Badge
+description: The tiny count and labelling component.
+---
+
+Badges can indicate notifications, item counts, or other information related to navigation; these small UI elements convey important information at a glance.
+
+<div class="example">
+<div class="view code">
+
+```html
+<div className="badge success">
+  <span className="status">
+  <span>Success!</span>
+</div>
+```
+
+```scss
+.badge {
+  padding: 0.5em 0.75em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  border: 0.0625rem solid var(--neutral-03);
+  border-radius: var(--rounded-sm);
+  line-height: 1;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--neutral-09);
+  background-color: var(--neutral-01);
+  transition: border-color 240ms var(--fluid);
+
+  .status {
+    width: 0.75em;
+    height: 0.75em;
+    border-radius: 100%;
+    background-color: var(--neutral-05);
+  }
+
+  &.success {
+    .status {
+      background-color: var(--green);
+    }
+  }
+
+  &:hover {
+    border-color: var(--neutral-04);
+  }
+}
+```
+
+</div>
+<div class="view preview center col">
+<Badge />
+</div>
+</div>
+
+> **Best Practices**
+>
+> - Clearly differentiate the badge from other content;
+> - Keep badges brief and informative;
+> - Ensure accessibility with `aria-label` for non-text badges.

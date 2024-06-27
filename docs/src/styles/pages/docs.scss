@@ -31,6 +31,54 @@ code {
   }
 }
 
+.example {
+  width: 100%;
+  display: flex;
+  gap: var(--gap);
+
+  .view {
+    &.code {
+      width: fit-content;
+      max-width: 50%;
+
+      .code-block {
+        pre {
+          max-height: 30dvh;
+          overflow: auto;
+        }
+      }
+    }
+
+    &.preview {
+      margin: 0.5em 0;
+      padding: var(--space-01);
+      border: 0.0625rem solid var(--neutral-03);
+      border-radius: var(--rounded-sm);
+      transition: border-color 240ms var(--fluid);
+
+      &.center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &:hover {
+        border-color: var(--neutral-04);
+      }
+    }
+  }
+
+  @media (max-width: 42rem) {
+    flex-direction: column;
+
+    .view {
+      &.code {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
 .colors {
   width: 100%;
   margin: 0.5rem 0 1rem 0;
