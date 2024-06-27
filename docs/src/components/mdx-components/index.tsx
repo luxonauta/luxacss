@@ -1,3 +1,4 @@
+import Badge from "../recipes/badge";
 import Table from "../table";
 import Blockquote from "./blockquote";
 import CodeBlock from "./code-block";
@@ -11,7 +12,8 @@ const mdxComponents = {
   h6: createHeading(6),
   table: Table,
   pre: CodeBlock,
-  blockquote: Blockquote
+  blockquote: Blockquote,
+  Badge
 };
 
 export default mdxComponents;

@@ -9,6 +9,7 @@ const pages = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "Docs", path: "/docs" },
+  { label: "Recipes", path: "/recipes" },
   {
     path: "https://github.com/luxonauta/luxacss",
     label: "GitHub",

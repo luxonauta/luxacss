@@ -52,6 +52,11 @@ article {
       text-underline-offset: 0.25rem;
     }
   }
+
+  ol,
+  ul {
+    margin: 0;
+  }
 }
 
 b,
@@ -84,6 +89,11 @@ h6,
     font-weight: 900;
     color: var(--neutral-09);
   }
+}
+
+ol,
+ul {
+  padding-left: 1.5em;
 }
 
 .container {
