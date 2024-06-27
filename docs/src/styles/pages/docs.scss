@@ -34,7 +34,7 @@ code {
 .example {
   width: 100%;
   display: flex;
-  gap: var(--gap);
+  gap: 0.5em;
 
   .view {
     &.code {
