@@ -47,5 +47,11 @@ header {
         }
       }
     }
+
+    @media (max-width: 42rem) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--space-01);
+    }
   }
 }
