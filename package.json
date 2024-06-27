@@ -1,7 +1,7 @@
 {
   "name": "luxacss",
   "version": "1.0.8",
-  "description": "A minimalist CSS framework",
+  "description": "The minimalist CSS library",
   "author": "luxonauta",
   "license": "MIT",
   "homepage": "https://luxacss.com",
@@ -30,12 +30,9 @@
     "sass": "^1.69.7"
   },
   "keywords": [
-    "clean-code",
-    "css-framework",
-    "lightweight",
+    "css",
+    "library",
     "minimal",
-    "minimalist",
-    "responsive",
-    "scss-framework"
+    "scss"
   ]
 }
