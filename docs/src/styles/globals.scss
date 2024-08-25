@@ -1,20 +1,10 @@
 @use "../../../sass/luxa.scss";
 
 * {
-  position: relative;
   outline-width: thin;
   outline-offset: 0.125rem;
   outline-color: var(--neutral-03);
   font: inherit;
-}
-
-:root {
-  --animation-blend-mode: lighten;
-  --animation-duration: 12s;
-  --background-color: #ffff;
-  --gradient-end: #03f241;
-  --gradient-middle: #03e5f2;
-  --gradient-start: #d549dd;
 }
 
 ::selection {
