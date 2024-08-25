@@ -3,41 +3,60 @@ title: Overview
 description: You only need one CSS file to use Luxa.
 ---
 
-Luxa CSS is a CSS library. This means it provides CSS classes to help you style your HTML code.
+Luxa CSS is a lightweight CSS library that provides pre-defined classes to style your HTML. It emphasizes minimalism, speed, and ease of maintenance.
 
-By using Luxa CSS, you're starting with a clean and lightweight kit that prioritizes minimalism, speed, and ease of maintenance.
+## Quick start
 
-To use it, you can either:
+1. Add this line to your HTML `<head>`:
 
-- Use one of the pre-compiled `.css` files;
-- Or install the `.scss` files so you can customize Luxa to your needs.
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/luxacss@1.0.9/dist/compressed/luxa.min.css"
+/>
+```
 
-## Code requirements
+2. Start using Luxa CSS classes in your HTML.
 
-For Luxa to work correctly, you need to make your webpage responsive.
+### Usage options
 
-1. Use the HTML5 `doctype` declaration;
-2. Include the viewport meta tag in the `<head>` of your document.
+- **Quick**: use the pre-compiled `.css` file (as shown above);
+- **Customizable**: install the `.scss` files to tailor Luxa to your needs.
+
+#### Requirements
+
+Ensure your webpage is responsive:
+
+1. Use the HTML5 doctype: `<!doctype html>`;
+2. Include the viewport meta tag:
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+```
+
+##### Example
 
 ```html
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hi 👋🏻 Luxa!</title>
+    <title>Hello Luxa!</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/luxacss@1.0.8/dist/compressed/luxa.min.css"
+      href="https://cdn.jsdelivr.net/npm/luxacss@1.0.9/dist/compressed/luxa.min.css"
     />
   </head>
   <body>
     <main class="container-80">
       <section class="row">
-        <h1>Olá Mundo!</h1>
+        <h1>Hello World!</h1>
         <p>My first website with <strong>Luxa CSS</strong>!</p>
       </section>
     </main>
   </body>
 </html>
 ```
+
+This minimal setup gets you started with Luxa CSS. Explore our documentation for more advanced usage and customization options.

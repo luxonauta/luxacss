@@ -16,7 +16,9 @@
     code {
       .token {
         &.comment {
+          text-transform: uppercase;
           font-family: var(--font-shantell-sans);
+          font-size: .625rem;
           font-style: italic;
           color: var(--neutral-06);
         }
@@ -26,6 +28,7 @@
         }
 
         &.tag {
+
           .punctuation,
           .tag,
           .attr-name {
