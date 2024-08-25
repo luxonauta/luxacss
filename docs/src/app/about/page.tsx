@@ -4,7 +4,7 @@ import PageTransition from "@/components/page-transition";
 export const metadata = {
   title: "About",
   description:
-    "Discover Luxa CSS's journey to simplicity - minimalist and ideal for modern web development.",
+    "Discover Luxa CSS: A minimalist approach to modern web development.",
   alternates: {
     canonical: `/about`
   }
@@ -15,79 +15,52 @@ const About = () => (
     <h1 className="title primary">About</h1>
     <article className="text">
       <p>
-        Many developers find CSS frustrating, yet <b>mastering</b> it can turn
-        this challenge into a wellspring of <b>creativity</b> and{" "}
-        <b>satisfaction</b>.
+        While many find CSS challenging, mastering it can unlock tremendous
+        creativity and satisfaction. Luxa CSS was born from the realization that
+        popular frameworks, despite their promises, often complicate rather than
+        simplify.
       </p>
-      <p>
-        Popular frameworks/libs often <b>promise</b> ease but typically
-        complicate alignment with our actual needs. My journey led to these
-        insights:
-      </p>
+      <h3 className="title">Common framework pitfalls:</h3>
       <ul>
-        <li>
-          They are robust but tend to be <b>complex</b> and <b>inflexible</b>.
-        </li>
-        <li>
-          Their overuse of wrappers and classes clutters HTML,{" "}
-          <b>muddying its clarity</b>.
-        </li>
-        <li>
-          <b>Bulky CSS files</b> bog down style processing, diminishing{" "}
-          <b>performance</b>.
-        </li>
+        <li>Complexity and inflexibility;</li>
+        <li>Cluttered HTML due to excessive wrappers and classes;</li>
+        <li>Performance issues from bulky CSS files.</li>
       </ul>
       <p>
-        These inspired me to develop Luxa CSS, a minimal and lightweight kit
-        that prioritizes minimalism, speed, and ease of maintenance.
+        Luxa CSS addresses these issues by prioritizing minimalism, speed, and
+        maintainability. It&apos;s a breath of fresh air. 🪔
       </p>
-      <p>
-        Choosing Luxa and custom CSS not only trims file size but also
-        significantly reduces the time and frustration usually spent wrestling
-        with other solutions.
-      </p>
-      <p>A breath of fresh air. 🪔</p>
     </article>
     <article className="text">
-      <h2 className="title">Built With</h2>
-      <p>
-        The core technologies and resources powering both Luxa CSS and its
-        documentation website:
-      </p>
+      <h2 className="title">Built with</h2>
+      <p>Core technologies powering Luxa CSS and its documentation:</p>
       <ul>
-        <li>
-          <Link href="https://sass-lang.com/?ref=luxacss.com" target="_blank">
-            Sass:
-          </Link>
-          <span> CSS pre-processor;</span>
-        </li>
-        <li>
-          <Link
-            href="https://www.jsdelivr.com/?ref=luxacss.com"
-            target="_blank"
-          >
-            jsDelivr:
-          </Link>
-          <span> CDN;</span>
-        </li>
-        <li>
-          <Link href="https://nextjs.org/?ref=luxacss.com" target="_blank">
-            Next.js:
-          </Link>
-          <span> React framework;</span>
-        </li>
-        <li>
-          <Link href="https://mdxjs.com/?ref=luxacss.com" target="_blank">
-            MDX:
-          </Link>
-          <span> Markdown with JSX;</span>
-        </li>
-        <li>
-          <Link href="https://vercel.com/?ref=luxacss.com" target="_blank">
-            Vercel:
-          </Link>
-          <span> Hosting and website CDN.</span>
-        </li>
+        {[
+          {
+            name: "Sass",
+            desc: "CSS pre-processor",
+            url: "https://sass-lang.com/"
+          },
+          { name: "jsDelivr", desc: "CDN", url: "https://www.jsdelivr.com/" },
+          {
+            name: "Next.js",
+            desc: "React framework",
+            url: "https://nextjs.org/"
+          },
+          { name: "MDX", desc: "Markdown with JSX", url: "https://mdxjs.com/" },
+          {
+            name: "Vercel",
+            desc: "Hosting and website CDN",
+            url: "https://vercel.com/"
+          }
+        ].map(({ name, desc, url }) => (
+          <li key={name}>
+            <Link href={`${url}?ref=luxacss.com`} target="_blank">
+              {name}:
+            </Link>
+            <span> {desc};</span>
+          </li>
+        ))}
       </ul>
     </article>
   </PageTransition>
