@@ -1,6 +1,11 @@
 import "./index.scss";
 
-const items = [
+interface FeatureItem {
+  title: string;
+  description: string;
+}
+
+const featureItems: FeatureItem[] = [
   {
     title: "Minimal",
     description: "Crafted to be just the ideal start."
@@ -15,22 +20,17 @@ const items = [
   }
 ];
 
-interface CardProps {
-  title: string;
-  description: string;
-}
-
-const Card = ({ title, description }: CardProps) => (
+const FeatureCard: React.FC<FeatureItem> = ({ title, description }) => (
   <div className="card col">
     <h3>{title}</h3>
     <p>{description}</p>
   </div>
 );
 
-const Features = () => (
+const Features: React.FC = () => (
   <section className="features row">
-    {items.map((item, index) => (
-      <Card key={index} title={item.title} description={item.description} />
+    {featureItems.map((item, index) => (
+      <FeatureCard key={index} {...item} />
     ))}
   </section>
 );

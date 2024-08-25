@@ -3,35 +3,38 @@ title: Typography
 description: Enhance readability across devices with Luxa CSS's fluid typography scale.
 ---
 
-Luxa dynamically adjusts font sizes with the viewport width through a fluid-type scale, ensuring optimal readability on any device. A simple formula in the CSS's clamp function creates this fluidity, making the text appear perfectly on screens of any size.
+Luxa CSS uses a fluid typography scale to enhance readability across devices.
 
-> The `clamp()` function in CSS takes three parameters: a minimum value, a preferred value (usually calculated based on the viewport width), and a maximum value. It ensures that the element's size scales fluidly between the minimum and maximum values based on the viewport size.
+## Fluid type scale
 
-| Name        | Min size (px) | Calc (vw + px) | Max size (px) | Fallback size (px) | Fallback size at `80rem` (px) |
-| ----------- | ------------- | -------------- | ------------- | ------------------ | ----------------------------- |
-| `--text-01` | 12            | 0.21vw + 11.36 | 14.08         | 12                 | 14.08                         |
-| `--text-02` | 14.4          | 0.32vw + 13.44 | 17.44         | 14.4               | 17.44                         |
-| `--text-03` | 17.28         | 0.48vw + 15.68 | 21.92         | 17.28              | 21.92                         |
-| `--text-04` | 20.8          | 0.69vw + 18.56 | 27.36         | 20.8               | 27.36                         |
-| `--text-05` | 24.96         | 0.97vw + 21.76 | 34.24         | 24.96              | 34.24                         |
-| `--text-06` | 29.92         | 1.34vw + 25.6  | 42.72         | 29.92              | 42.72                         |
+Luxa dynamically adjusts font sizes using the CSS `clamp()` function, ensuring optimal readability on any device.
 
-## Pixel perfection and design intention
+| Variable    | Min (px) | Calculation    | Max (px) | Fallback (px) | Fallback at `80rem` (px) |
+| ----------- | -------- | -------------- | -------- | ------------- | ------------------------ |
+| `--text-01` | 12       | 0.21vw + 11.36 | 14.08    | 12            | 14.08                    |
+| `--text-02` | 14.4     | 0.32vw + 13.44 | 17.44    | 14.4          | 17.44                    |
+| `--text-03` | 17.28    | 0.48vw + 15.68 | 21.92    | 17.28         | 21.92                    |
+| `--text-04` | 20.8     | 0.69vw + 18.56 | 27.36    | 20.8          | 27.36                    |
+| `--text-05` | 24.96    | 0.97vw + 21.76 | 34.24    | 24.96         | 34.24                    |
+| `--text-06` | 29.92    | 1.34vw + 25.6  | 42.72    | 29.92         | 42.72                    |
 
-Embracing fluid-type scales marks a shift from pixel-perfect design to a more flexible approach. Instead of clinging to precise values and rigid breakpoint control, entrusting the browser with layout adjustments ensures a tailored experience on every device. This 'letting go' doesn't mean losing grip but gaining a more robust, universally adaptive design.
+> The `clamp()` function takes three parameters: minimum value, preferred value (usually calculated based on viewport width), and maximum value.
 
-Further reading:
+### Design philosophy
 
-- [The Myth of Pixel Perfection](https://www.kelliekowalski.com/articles/the-myth-of-pixel-perfection/?ref=luxacss.com)
+Luxa's fluid-type scale represents a shift from pixel-perfect design to a more flexible approach:
 
-### Reproduce in Tailwind CSS
+- Entrusts the browser with layout adjustments;
+- Ensures a tailored experience on every device;
+- Provides a robust, universally adaptive design.
 
-By default, Tailwind will look for an optional `tailwind.config.js` file at the root of your project, where you can define any customizations, such as a fluid-type scale.
+For more on this approach, see [The Myth of Pixel Perfection](https://www.kelliekowalski.com/articles/the-myth-of-pixel-perfection/?ref=luxacss.com).
 
-Add the following settings within the `theme.extend` section to replicate the Luxa-type scale:
+#### Reproduce in Tailwind CSS
+
+To replicate Luxa's type scale in Tailwind CSS, add the following to your `tailwind.config.js`:
 
 ```js
-// tailwind.config.js
 module.exports = {
   theme: {
     extend: {
@@ -47,3 +50,5 @@ module.exports = {
   }
 };
 ```
+
+This configuration allows you to use Luxa-like fluid typography in your Tailwind CSS projects.

@@ -3,85 +3,95 @@ title: Utilities
 description: Quick Flexbox tweaks, visibility controls, and responsive adjustments.
 ---
 
-Luxa has a small and simple collection of utility classes designed for quick modifications to HTML.
-
-These utilities can be convenient, with accessible Flexbox properties, visibility controls, and simple media query-based responsiveness.
+Luxa CSS provides a concise set of utility classes for quick HTML modifications, focusing on Flexbox properties, visibility controls, and responsive adjustments.
 
 ## Visibility
 
-Control the visibility of elements across different screen sizes using these utility classes.
+Control element visibility across screen sizes:
 
-| Class Name      | Description                                   | Properties / Media Query                                                                                                                       |
-| --------------- | --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `.hide`         | Hides elements on all screen sizes.           | `display: none; visibility: hidden;`                                                                                                           |
-| `.hide-on-desk` | Hides elements on desktop, visible on mobile. | `@media (max-width: $breakpoint) { display: none; visibility: hidden; }` on desktop.<br/>`{ display: block; visibility: visible; }` on mobile. |
-| `.hide-on-mb`   | Hides elements on mobile, visible on desktop. | `@media (max-width: $breakpoint) { display: none; visibility: hidden; }` on mobile.<br/>`{ display: block; visibility: visible; }` on desktop. |
+| Class           | Description                                   |
+| --------------- | --------------------------------------------- |
+| `.hide`         | Hides elements on all screen sizes.           |
+| `.hide-on-desk` | Hides elements on desktop, visible on mobile. |
+| `.hide-on-mb`   | Hides elements on mobile, visible on desktop. |
 
 ### Flexbox
 
-Utilize these Flexbox utilities to establish flexible and responsive layouts quickly.
+Quick Flexbox layout utilities:
+
+| Class          | Description                              |
+| -------------- | ---------------------------------------- |
+| `.flex`        | Establishes a flex container.            |
+| `.flex-center` | Center-aligns items in a flex container. |
 
 > **Flexbox** is a layout model that automatically arranges elements within a container depending on screen size, device type, and other factors. It enables the creation of complex and responsive layouts with simple CSS rules. To learn more, visit [MDN Web Docs on Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox/?ref=luxacss.com).
-
-| Class Name     | Description                              | Properties                                                     |
-| -------------- | ---------------------------------------- | -------------------------------------------------------------- |
-| `.flex`        | Establishes a flex container.            | `display: flex;`                                               |
-| `.flex-center` | Center-aligns items in a flex container. | `display: flex; align-items: center; justify-content: center;` |
 
 #### Flow Direction
 
 Adjust the flow direction of your flex wrappers with these classes.
 
-| Class Name            | Description                          | Properties                                   |
-| --------------------- | ------------------------------------ | -------------------------------------------- |
-| `.flow-column-wrap`   | Sets a column flow with wrapping.    | `flex-direction: column; flex-wrap: wrap;`   |
-| `.flow-column-nowrap` | Sets a column flow without wrapping. | `flex-direction: column; flex-wrap: nowrap;` |
-| `.flow-row-wrap`      | Sets a row flow with wrapping.       | `flex-direction: row; flex-wrap: wrap;`      |
-| `.flow-row-nowrap`    | Sets a row flow without wrapping.    | `flex-direction: row; flex-wrap: nowrap;`    |
+| Class                 | Description                          |
+| --------------------- | ------------------------------------ |
+| `.flow-column-wrap`   | Sets a column flow with wrapping.    |
+| `.flow-column-nowrap` | Sets a column flow without wrapping. |
+| `.flow-row-wrap`      | Sets a row flow with wrapping.       |
+| `.flow-row-nowrap`    | Sets a row flow without wrapping.    |
 
-##### Alignment
+#### Alignment
 
 Align flex items effectively using these alignment utilities.
 
-| Class Name       | Description                           | Properties                 |
-| ---------------- | ------------------------------------- | -------------------------- |
-| `.align-center`  | Aligns items at the center.           | `align-items: center;`     |
-| `.align-end`     | Aligns items at the end.              | `align-items: flex-end;`   |
-| `.align-start`   | Aligns items at the start.            | `align-items: flex-start;` |
-| `.align-stretch` | Stretches items to fit the container. | `align-items: stretch;`    |
+| Class            | Description                           |
+| ---------------- | ------------------------------------- |
+| `.align-center`  | Aligns items at the center.           |
+| `.align-end`     | Aligns items at the end.              |
+| `.align-start`   | Aligns items at the start.            |
+| `.align-stretch` | Stretches items to fit the container. |
 
-##### Justification
+#### Justification
 
 Justify content within your flex wrappers using these specific utilities.
 
-| Class Name         | Description                                 | Properties                        |
-| ------------------ | ------------------------------------------- | --------------------------------- |
-| `.justify-around`  | Distributes space around items.             | `justify-content: space-around;`  |
-| `.justify-between` | Distributes space between items.            | `justify-content: space-between;` |
-| `.justify-evenly`  | Distributes space evenly amongst items.     | `justify-content: space-evenly;`  |
-| `.justify-center`  | Centers items along the main axis.          | `justify-content: center;`        |
-| `.justify-end`     | Aligns items to the end of the container.   | `justify-content: flex-end;`      |
-| `.justify-start`   | Aligns items to the start of the container. | `justify-content: flex-start;`    |
+| Class              | Description                                 |
+| ------------------ | ------------------------------------------- |
+| `.justify-around`  | Distributes space around items.             |
+| `.justify-between` | Distributes space between items.            |
+| `.justify-evenly`  | Distributes space evenly amongst items.     |
+| `.justify-center`  | Centers items along the main axis.          |
+| `.justify-end`     | Aligns items to the end of the container.   |
+| `.justify-start`   | Aligns items to the start of the container. |
 
-###### Gap Management
+##### Gap Management
 
 Manage the spacing between flex items with gap utilities.
 
-| Class Name    | Description                             | Properties              |
-| ------------- | --------------------------------------- | ----------------------- |
-| `.gap-01`     | Applies a small gap between flex items. | `gap: var(--space-01);` |
-| `.gap-02`     | Applies a moderate gap.                 | `gap: var(--space-02);` |
-| `.gap-03`     | Applies a larger gap.                   | `gap: var(--space-03);` |
-| `.gap-04`     | Applies a significant gap.              | `gap: var(--space-04);` |
-| `.gap-05`     | Applies a very large gap.               | `gap: var(--space-05);` |
-| `.gap-06`     | Applies the largest gap.                | `gap: var(--space-06);` |
-| `.is-gapless` | Removes the gap between flex items.     | `gap: 0;`               |
+| Class         | Description                             |
+| ------------- | --------------------------------------- |
+| `.gap-01`     | Applies a small gap between flex items. |
+| `.gap-02`     | Applies a moderate gap.                 |
+| `.gap-03`     | Applies a larger gap.                   |
+| `.gap-04`     | Applies a significant gap.              |
+| `.gap-05`     | Applies a very large gap.               |
+| `.gap-06`     | Applies the largest gap.                |
+| `.is-gapless` | Removes the gap between flex items.     |
 
 ###### Responsives
 
 Adapt your layout to different screen sizes with responsive utilities.
 
-| Class Name      | Description                          | Media Query                       |
-| --------------- | ------------------------------------ | --------------------------------- |
-| `.hide-on-desk` | Hides on desktop, visible on mobile. | `@media (max-width: $breakpoint)` |
-| `.hide-on-mb`   | Hides on mobile, visible on desktop. | `@media (max-width: $breakpoint)` |
+| Class           | Description                          |
+| --------------- | ------------------------------------ |
+| `.hide-on-desk` | Hides on desktop, visible on mobile. |
+| `.hide-on-mb`   | Hides on mobile, visible on desktop. |
+
+###### Usage example
+
+```html
+<div class="flex flex-center flow-row-wrap justify-between gap-03">
+  <div class="hide-on-mb">Desktop only</div>
+  <div>Always visible</div>
+  <div class="hide-on-desk">Mobile only</div>
+</div>
+```
+
+This example creates a flexible, responsive layout with centered items, row flow, space-between justification, and medium gap. It also demonstrates visibility control for different screen sizes.
