@@ -3,25 +3,26 @@ title: Grid
 description: Use Luxa's powerful, straightforward grid system to create responsive layouts of all shapes and sizes.
 ---
 
-Create responsive layouts of all shapes and sizes with this simple grid system.
+Create responsive layouts easily with Luxa's straightforward grid system.
 
 ## Containers
 
-Containers fix the element's width to the breakpoint and encapsulate its content, including rows and columns.
+Containers fix element width to breakpoints and encapsulate content.
 
-Each container's width has a minimum and maximum limit to ensure optimal readability and maintain content structure; this width is a variable percentage between 50% and 100% (in 5% increments) based on the viewport's width.
+- Width ranges from 50% to 100% of viewport (in 5% increments);
+- Each has minimum and maximum limits for optimal readability.
+
+Example:
 
 ```html
-<section>
-  <div class="container-80">
-    <!-- Content -->
-  </div>
-</section>
+<div class="container-80">
+  <!-- Content -->
+</div>
 ```
 
 In the example above, `container-80` will have a maximum width of 80% of the viewport, a max size of `96rem`, and a minimum size of `16rem`.
 
-| Name             | Max-Width | Min-Width |
+| Variable         | Max-Width | Min-Width |
 | ---------------- | --------- | --------- |
 | `.container-50`  | 60rem     | 10rem     |
 | `.container-55`  | 66rem     | 11rem     |
@@ -37,59 +38,57 @@ In the example above, `container-80` will have a maximum width of 80% of the vie
 
 ### Rows
 
-Rows group columns and span 100% of the container's width. They use a flex display to organize columns horizontally.
+Rows group columns and span 100% of container width.
+
+- Use flex display for horizontal column organization;
+- Default gap: `var(--gap) (1.125em)`;
+- Remove gap with `is-gapless` class.
+
+Example:
 
 ```html
 <div class="container-75">
   <div class="row">
-    <div class="col">
-      <!-- ... -->
-    </div>
-    <div class="col">
-      <!-- ... -->
-    </div>
+    <div class="col"><!-- Content --></div>
+    <div class="col"><!-- Content --></div>
   </div>
 </div>
 ```
-
-In the example above, the columns occupy 50% of the row within a container and 75% of the viewport's width.
-
-Rows use the `row` direction by default, switch to the `column` on smaller viewports, and centre-align content horizontally and vertically. They use `var(--gap)` as the default gap, which equals `1.125em`, and applying `is-gapless` removes this gap.
 
 #### Columns
 
-Columns are flexible, responsive, and adapt to the size of the row and container.
+Columns are flexible and adapt to row and container size.
+
+- Use `is-X` classes to set column width (X = 1 to 12).
+
+Example:
 
 ```html
 <div class="row">
-  <div class="col is-4">
-    <!-- ... -->
-  </div>
-  <div class="col is-8">
-    <!-- ... -->
-  </div>
+  <div class="col is-4"><!-- 1/3 width --></div>
+  <div class="col is-8"><!-- 2/3 width --></div>
 </div>
 ```
 
-In the example above, the first column takes up 1/3 of the row (4/12) and the second 2/3 (8/12).
+##### Responsive behavior
 
-##### Responsive Behavior
+- Below `80rem`:
+  - Containers adjust `max-width`;
+  - Rows change to column direction;
+  - Columns take full width.
 
-Below `80rem`, containers adjust `max-width`, rows change item direction to `column`, and columns assume full line width. This ensures readability on mobile devices.
+This grid system provides a flexible foundation for creating responsive layouts of various complexities.
 
 ###### Reproduce in Tailwind CSS
 
 ```html
-<!-- Container -->
 <div class="container mx-auto">
-  <!-- Row -->
   <div class="flex flex-col md:flex-row">
-    <!-- Columns -->
     <div class="block basis-0 flex-grow flex-shrink">
-      <!-- ... -->
+      <!-- Content -->
     </div>
     <div class="block basis-0 flex-grow flex-shrink">
-      <!-- ... -->
+      <!-- Content -->
     </div>
   </div>
 </div>

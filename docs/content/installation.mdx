@@ -1,52 +1,58 @@
 ---
-title: How to install Luxa
+title: Installing Luxa CSS
 description: Install Luxa manually or via CDN for a dependency-free setup, or use NPM.
 ---
 
-There are three ways to get started:
+Choose the method that best suits your project:
 
-## Install manually
+## CDN (quickest)
 
-[Download the latest version](https://github.com/luxonauta/luxacss/archive/main.zip/?ref=luxacss.com) and link the CSS in the `<head>` of your website.
-
-> The GitHub repository also includes this documentation, so it's significantly bigger than the NPM package.
-
-### Install from CDN
-
-Alternatively, you can easily include Luxa CSS in your project using a CDN. Choose the version that suits your needs:
+Add one of these lines to your HTML `<head>`:
 
 ```html
-<!-- 🦣 Expanded - 8KB -->
+<!-- Expanded (8KB) -->
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/luxacss@1.0.8/dist/expanded/luxa.css"
+  href="https://cdn.jsdelivr.net/npm/luxacss@1.0.9/dist/expanded/luxa.css"
 />
 
-<!-- 🦐 Compressed - 6KB -->
+<!-- Compressed (6KB) -->
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/luxacss@1.0.8/dist/compressed/luxa.min.css"
+  href="https://cdn.jsdelivr.net/npm/luxacss@1.0.9/dist/compressed/luxa.min.css"
 />
 ```
 
-### Install with a package manager
+## Manual download
+
+1. [Download the latest version](https://github.com/luxonauta/luxacss/archive/main.zip/?ref=luxacss.com);
+2. Extract the CSS file you need;
+3. Link it in your HTML `<head>`.
+
+**Note**: The GitHub repository includes documentation, making it larger than the NPM package.
+
+## Package manager
+
+Install using your preferred package manager:
 
 ```bash
-npm i luxacss
+npm install luxacss
 
-pnpm i luxacss
+pnpm add luxacss
 
-bun i luxacss
+bun add luxacss
 ```
 
-Then import it into your main layout/page:
+Then import it:
 
-```jsx
+```js
 import "luxacss";
 ```
 
-Or, import Luxa into your `.scss` file with [`@use`](https://sass-lang.com/documentation/at-rules/use/?ref=luxacss.com):
+Or in SCSS:
 
 ```scss
 @use "luxacss";
 ```
+
+Choose the method that best fits your development workflow and project requirements.

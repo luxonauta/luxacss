@@ -3,15 +3,30 @@ title: Spacing
 description: Master visual balance with Luxa CSS's fluid spacing system. Perfectly balanced for any screen size.
 ---
 
-As the [Typography](/docs/typography) section states, Luxa builds on a fluid scaling system that dynamically adjusts sizes according to the viewport width.
+Luxa CSS employs a fluid spacing system that dynamically adjusts to viewport width, ensuring visual balance across all screen sizes.
 
-This fluidity comes from a simple formula in the CSS's clamp function, which ensures that everything is perfectly balanced regardless of the screen size.
+## Fluid spacing scale
 
-| Name         | Min size (px) | Calc (px + vw)     | Max size (px) |
-| ------------ | ------------- | ------------------ | ------------- |
-| `--space-01` | 12            | 11.33px + 0.2083vw | 14            |
-| `--space-02` | 18            | 17px + 0.3125vw    | 21            |
-| `--space-03` | 24            | 22.67px + 0.4167vw | 28            |
-| `--space-04` | 36            | 34px + 0.625vw     | 42            |
-| `--space-05` | 48            | 45.33px + 0.8333vw | 56            |
-| `--space-06` | 72            | 68px + 1.25vw      | 84            |
+The spacing system uses the CSS `clamp()` function to create a fluid scale:
+
+| Variable     | Min (px) | Calculation        | Max (px) |
+| ------------ | -------- | ------------------ | -------- |
+| `--space-01` | 12       | 11.33px + 0.2083vw | 14       |
+| `--space-02` | 18       | 17px + 0.3125vw    | 21       |
+| `--space-03` | 24       | 22.67px + 0.4167vw | 28       |
+| `--space-04` | 36       | 34px + 0.625vw     | 42       |
+| `--space-05` | 48       | 45.33px + 0.8333vw | 56       |
+| `--space-06` | 72       | 68px + 1.25vw      | 84       |
+
+## Usage
+
+- Use these spacing variables for margins, padding, and other layout properties;
+- Combine with the Typography system for consistent scaling throughout your design.
+
+## Benefits
+
+- Eliminates the need for multiple breakpoints;
+- Ensures consistent visual rhythm across devices;
+- Simplifies responsive design implementation.
+
+By leveraging this fluid spacing system, you can create layouts that automatically adjust to various screen sizes while maintaining visual balance and proportions.

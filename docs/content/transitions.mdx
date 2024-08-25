@@ -3,9 +3,7 @@ title: Transitions
 description: Enhance UI interactions with Luxa CSS's custom transition timing functions for fluid, sharp, elastic, and impactful animations.
 ---
 
-Luxa provides pre-defined cubic-bezier timing functions to create distinct animation effects, making your UI more responsive and dynamic.
-
-Each timing function conveys a unique energy and motion style suitable for different UI interactions.
+Luxa CSS offers pre-defined cubic-bezier timing functions to create distinct animation effects, enhancing UI responsiveness and dynamism.
 
 | Name        | Beziers                 | Ideal scenario                                                                    |
 | ----------- | ----------------------- | --------------------------------------------------------------------------------- |
@@ -15,3 +13,22 @@ Each timing function conveys a unique energy and motion style suitable for diffe
 | `--impact`  | `0.24, 0.9, 0.32, 1.4`  | Designed for animations that need a dramatic effect with an impactful finish.     |
 
 > If the provided options don’t meet your needs, you can create your own custom easing curves. Start designing your own bézier curves with this [excellent tool from Lea Verou](https://cubic-bezier.com/?ref=luxacss.com).
+
+## Usage
+
+Apply these timing functions to your CSS transitions or animations:
+
+```css
+.element {
+  transition: all 0.3s var(--fluid);
+}
+```
+
+## Best Practices
+
+1. Choose timing functions that match the nature of your UI interaction;
+2. Use consistent transitions throughout your interface for a cohesive feel;
+3. Avoid overusing dramatic transitions, which can be distracting;
+4. Test your animations across different devices to ensure smooth performance.
+
+By leveraging these transition timing functions, you can create more engaging and polished user interfaces that respond naturally to user interactions.
