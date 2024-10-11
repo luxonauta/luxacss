@@ -9,8 +9,8 @@
     padding: 2em;
     position: relative;
     overflow: auto hidden;
-    border: 0.0625rem solid var(--neutral-03);
-    background-color: var(--neutral-01);
+    border: 0.0625rem solid var(--neutral-04);
+    background-color: var(--neutral-02);
     transition: border-color 240ms var(--fluid);
 
     code {
@@ -20,11 +20,11 @@
           font-family: var(--font-shantell-sans);
           font-size: .625rem;
           font-style: italic;
-          color: var(--neutral-06);
+          color: var(--neutral-07);
         }
 
         &.property {
-          color: var(--neutral-10);
+          color: var(--neutral-11);
         }
 
         &.tag {
@@ -32,12 +32,12 @@
           .punctuation,
           .tag,
           .attr-name {
-            color: var(--neutral-10);
+            color: var(--neutral-11);
           }
         }
 
         &.function {
-          color: var(--neutral-09);
+          color: var(--neutral-10);
         }
       }
     }
@@ -46,7 +46,7 @@
   &:focus-within,
   &:hover {
     pre {
-      border-color: var(--neutral-04);
+      border-color: var(--neutral-05);
     }
   }
 }

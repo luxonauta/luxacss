@@ -3,13 +3,13 @@
 * {
   outline-width: thin;
   outline-offset: 0.125rem;
-  outline-color: var(--neutral-03);
+  outline-color: var(--neutral-04);
   font: inherit;
 }
 
 ::selection {
-  color: var(--neutral-09);
-  background-color: var(--neutral-03);
+  color: var(--neutral-10);
+  background-color: var(--neutral-04);
   background-blend-mode: multiply;
 }
 
@@ -22,8 +22,8 @@ body {
   align-items: center;
   font-family: var(--font-inter);
   font-size: 0.75rem;
-  color: var(--neutral-08);
-  background-color: var(--background-color);
+  color: var(--neutral-09);
+  background-color: var(--neutral-01);
 }
 
 main {
@@ -56,7 +56,7 @@ strong {
 
 hr {
   height: 0.0625rem;
-  background-color: var(--neutral-03);
+  background-color: var(--neutral-04);
 }
 
 a {
@@ -77,7 +77,7 @@ h6,
 
   &.primary {
     font-weight: 900;
-    color: var(--neutral-09);
+    color: var(--neutral-10);
   }
 }
 
@@ -125,40 +125,40 @@ ul {
   gap: 0.5rem;
   user-select: none;
   cursor: pointer;
-  border: 0.0625rem solid var(--neutral-03);
+  border: 0.0625rem solid var(--neutral-04);
   border-radius: var(--rounded-sm);
   line-height: 1;
   text-decoration: none;
   font-family: var(--font-general-sans);
   font-size: inherit;
   font-weight: 600;
-  color: var(--neutral-08);
+  color: var(--neutral-09);
   background-color: var(--neutral-01);
   box-shadow: var(--custom-box-shadow);
   transition: background-color 240ms var(--fluid);
 
   &:hover {
-    background-color: var(--neutral-02);
+    background-color: var(--neutral-03);
   }
 
   &.primary {
-    border: 0.0625rem solid var(--neutral-08);
-    color: var(--neutral-01);
-    background-color: var(--neutral-08);
+    border: 0.0625rem solid var(--neutral-09);
+    color: var(--neutral-02);
+    background-color: var(--neutral-09);
 
     &:hover {
-      background-color: var(--neutral-09);
+      background-color: var(--neutral-10);
     }
   }
 }
 
 .card {
   padding: var(--space-01);
-  border: 0.0625rem solid var(--neutral-03);
+  border: 0.0625rem solid var(--neutral-04);
   border-radius: var(--rounded-sm);
   transition: border-color 240ms var(--fluid);
 
   &:hover {
-    border-color: var(--neutral-04);
+    border-color: var(--neutral-05);
   }
 }

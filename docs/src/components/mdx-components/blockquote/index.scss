@@ -3,9 +3,9 @@
   margin: var(--space-01) 0 0 0;
   padding: var(--space-01) var(--space-02);
   position: relative;
-  border: 0.0625rem solid var(--neutral-03);
+  border: 0.0625rem solid var(--neutral-04);
   border-radius: var(--rounded-sm);
-  background-color: var(--neutral-01);
+  background-color: var(--neutral-02);
   transition: border-color 240ms var(--fluid);
 
   .icon {
@@ -18,10 +18,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 0.0625rem solid var(--neutral-03);
+    border: 0.0625rem solid var(--neutral-04);
     border-radius: 100%;
     font-size: 1em;
-    background-color: var(--background-color);
+    background-color: var(--neutral-02);
+    transition: border-color 240ms var(--fluid);
   }
 
   blockquote {
@@ -30,6 +31,10 @@
   }
 
   &:hover {
-    border-color: var(--neutral-04);
+    border-color: var(--neutral-05);
+
+    .icon {
+      border-color: var(--neutral-05);
+    }
   }
 }
