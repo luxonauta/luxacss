@@ -27,13 +27,13 @@ Include Luxa CSS via CDN:
 <!-- Expanded (7.5KB) -->
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/luxacss@1.0.9/dist/expanded/luxa.css"
+  href="https://cdn.jsdelivr.net/npm/luxacss@latest/dist/expanded/luxa.css"
 />
 
 <!-- Compressed (6KB) -->
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/luxacss@1.0.9/dist/compressed/luxa.min.css"
+  href="https://cdn.jsdelivr.net/npm/luxacss@latest/dist/compressed/luxa.min.css"
 />
 ```
 
