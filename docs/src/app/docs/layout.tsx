@@ -6,7 +6,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <div className="row flow-column-wrap align-start">
     <Aside />
     <Ad />
-    <>{children}</>
+    {children}
   </div>
 );
 

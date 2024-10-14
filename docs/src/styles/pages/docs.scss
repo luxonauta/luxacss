@@ -1,4 +1,4 @@
-article {
+section {
   --gap: var(--space-01);
 
   position: relative;
@@ -83,7 +83,6 @@ code {
   width: 100%;
   margin: 0 0 calc(-1 * var(--space-01)) 0;
   display: flex;
-  border-collapse: collapse;
 
   .indicator {
     padding: .25em;
