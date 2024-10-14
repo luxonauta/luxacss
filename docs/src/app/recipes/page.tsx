@@ -8,7 +8,7 @@ export const metadata = {
   description:
     "Component recipes for you to modify, copy and paste into your projects!",
   alternates: {
-    canonical: `/recipes`
+    canonical: "/recipes"
   }
 };
 
