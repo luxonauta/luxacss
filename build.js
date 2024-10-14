@@ -1,8 +1,7 @@
-import fs from "fs";
+import fs from "node:fs";
 import * as sass from "sass";
-import { fileURLToPath } from "url";
-import { dirname, join } from "path";
-import chokidar from "chokidar";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -100,14 +99,13 @@ const run = async () => {
 const watchFiles = () => {
   log("info", "Observing changes in files...");
 
-  const watcher = chokidar.watch(join(__dirname, "sass"), {
-    ignored: /^\./,
-    persistent: true
-  });
+  const sassDir = join(__dirname, "sass");
 
-  watcher.on("change", (path) => {
-    log("info", `File ${path} was changed, recompiling...`);
-    run();
+  fs.watch(sassDir, { recursive: true }, (eventType, filename) => {
+    if (filename) {
+      log("info", `File ${filename} was changed, recompiling...`);
+      run();
+    }
   });
 };
 

@@ -1,12 +1,11 @@
 "use client";
 
-import { AnimatePresence, HTMLMotionProps, motion } from "framer-motion";
-import { ElementType, ReactNode } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import type { ReactNode } from "react";
 
-interface PageTransitionProps extends HTMLMotionProps<"section"> {
+interface PageTransitionProps {
   children: ReactNode;
   className?: string;
-  as?: ElementType;
 }
 
 const variants = {
@@ -24,27 +23,17 @@ const variants = {
   }
 };
 
-const PageTransition = ({
-  children,
-  className,
-  as = "section",
-  ...props
-}: PageTransitionProps) => {
-  const MotionComponent = motion(as);
-
-  return (
-    <AnimatePresence>
-      <MotionComponent
-        initial="initial"
-        animate="enter"
-        variants={variants}
-        className={className}
-        {...props}
-      >
-        {children}
-      </MotionComponent>
-    </AnimatePresence>
-  );
-};
+const PageTransition = ({ children, className }: PageTransitionProps) => (
+  <AnimatePresence>
+    <motion.section
+      initial="initial"
+      animate="enter"
+      variants={variants}
+      className={className}
+    >
+      {children}
+    </motion.section>
+  </AnimatePresence>
+);
 
 export default PageTransition;
