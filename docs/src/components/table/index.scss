@@ -3,7 +3,7 @@
   margin: 0.5em 0;
   position: relative;
   overflow: auto hidden;
-  border: 0.0625rem solid var(--neutral-04);
+  border: 0.0625rem solid var(--neutral-05);
   border-radius: var(--rounded-sm);
 
   table {
@@ -32,8 +32,8 @@
     th,
     td {
       padding: 0.5em 1em;
-      border-right: 0.0625rem solid var(--neutral-04);
-      border-bottom: 0.0625rem solid var(--neutral-04);
+      border-right: 0.0625rem solid var(--neutral-05);
+      border-bottom: 0.0625rem solid var(--neutral-05);
 
       &:last-child {
         border-right: none;

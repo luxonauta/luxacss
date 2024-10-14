@@ -3,20 +3,20 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5em;
-  border: 0.0625rem solid var(--neutral-03);
+  border: 0.0625rem solid var(--neutral-04);
   border-radius: var(--rounded-sm);
   line-height: 1;
   font-size: 1em;
   font-weight: 500;
-  color: var(--neutral-09);
-  background-color: var(--neutral-01);
+  color: var(--neutral-10);
+  background-color: var(--neutral-02);
   transition: border-color 240ms var(--fluid);
 
   .status {
     width: 0.75em;
     height: 0.75em;
     border-radius: 100%;
-    background-color: var(--neutral-05);
+    background-color: var(--neutral-06);
   }
 
   &.success {
@@ -26,6 +26,6 @@
   }
 
   &:hover {
-    border-color: var(--neutral-04);
+    border-color: var(--neutral-05);
   }
 }

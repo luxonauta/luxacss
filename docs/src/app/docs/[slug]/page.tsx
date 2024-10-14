@@ -1,7 +1,7 @@
 import { getCompiledServerMdx } from "@mintlify/mdx";
-import fs from "fs/promises";
 import { notFound } from "next/navigation";
-import path from "path";
+import fs from "node:fs/promises";
+import path from "node:path";
 import TableOfContents from "@/components/docs/table-of-contents";
 import mdxComponents from "@/components/mdx-components";
 import PageTransition from "@/components/page-transition";
@@ -52,7 +52,7 @@ const DynamicPage = async ({ params }: { params: { slug: string } }) => {
   });
 
   return (
-    <PageTransition className="row flow-column-wrap align-start" as={"article"}>
+    <PageTransition className="row flow-column-wrap align-start">
       <div>
         <h1 className="title primary">{String(frontmatter.title)}</h1>
         <p className="description">{String(frontmatter.description)}</p>
