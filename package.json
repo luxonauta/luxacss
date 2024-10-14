@@ -1,6 +1,6 @@
 {
   "name": "luxacss",
-  "version": "1.0.9",
+  "version": "2.0.0",
   "description": "The minimalist CSS library",
   "author": "luxonauta",
   "license": "MIT",
@@ -24,7 +24,6 @@
     "start:docs": "cd docs && npm start"
   },
   "devDependencies": {
-    "chokidar": "^3.5.3",
     "dotenv-cli": "^7.4.2",
     "prettier": "3.0.3",
     "sass": "^1.69.7"

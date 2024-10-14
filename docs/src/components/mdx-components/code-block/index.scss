@@ -18,7 +18,7 @@
         &.comment {
           text-transform: uppercase;
           font-family: var(--font-shantell-sans);
-          font-size: .625rem;
+          font-size: 0.625rem;
           font-style: italic;
           color: var(--neutral-07);
         }
@@ -28,7 +28,6 @@
         }
 
         &.tag {
-
           .punctuation,
           .tag,
           .attr-name {
