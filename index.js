@@ -1,3 +1,1 @@
-import "./sass/luxa.scss";
-
-export default {};
+export * from './dist/luxa-exports.js';
