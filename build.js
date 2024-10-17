@@ -87,7 +87,7 @@ const compileSass = async (filePath, outputPath, options) => {
 };
 
 const generateJsFiles = async () => {
-  const luxaJsContent = `import '../dist/expanded/luxa.css';\n\nexport * from './luxa-exports.js';`;
+  const luxaJsContent = `import './compressed/luxa.min.css';\n\nexport * from './luxa-exports.js';`;
   const luxaJsPath = join(outputDir, "luxa.js");
 
   const luxaExportsContent = `export const version = '2.0.1';`;
