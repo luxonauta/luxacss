@@ -1,10 +1,10 @@
-* {
+@use "sass:list";
+
+@mixin reset-styles {
   box-sizing: border-box;
-
   position: relative;
-
+  -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: transparent;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -13,16 +13,33 @@
   }
 }
 
-html,
-body {
+@mixin reset-text-elements {
   margin: 0;
   padding: 0;
+}
+
+@mixin reset-headings {
+  @for $i from 1 through 6 {
+    h#{$i} {
+      @include reset-text-elements;
+      font-weight: 700;
+      font-size: var(--text-0#{7 - $i});
+    }
+  }
+}
+
+* {
+  @include reset-styles;
+}
+
+html,
+body {
+  @include reset-text-elements;
   line-height: 1.8;
 }
 
 html {
   text-size-adjust: none;
-  -webkit-text-size-adjust: none;
   font-size: var(--base-size);
   font-variation-settings: normal;
 }
@@ -37,43 +54,14 @@ body {
   isolation: isolate;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  font-weight: 700;
-}
-
-h1 {
-  font-size: var(--text-06);
-}
-
-h2 {
-  font-size: var(--text-05);
-}
-
-h3 {
-  font-size: var(--text-04);
-}
-
-h4 {
-  font-size: var(--text-03);
-}
-
-h5,
-h6 {
-  font-size: var(--text-02);
-}
+@include reset-headings;
 
 p,
 b,
 strong,
 sub,
 sup {
-  margin: 0;
+  @include reset-text-elements;
 }
 
 b,
@@ -97,8 +85,7 @@ textarea {
 figure,
 article,
 img {
-  margin: 0;
-  padding: 0;
+  @include reset-text-elements;
   border-style: none;
 }
 
@@ -110,8 +97,7 @@ img {
 hr {
   width: 100%;
   height: 0.125em;
-  margin: 0;
-  padding: 0;
+  @include reset-text-elements;
   position: relative;
   display: block;
   border: none;
