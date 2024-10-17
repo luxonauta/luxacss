@@ -43,16 +43,45 @@ pnpm add luxacss
 bun add luxacss
 ```
 
-Then import it:
+##### Usage with JavaScript bundlers (e.g., Webpack, Rollup)
+
+Import the CSS file in your JavaScript entry point:
 
 ```js
 import "luxacss";
 ```
 
-Or in SCSS:
+> The package manager method is recommended for projects using modern JavaScript frameworks or build tools, as it allows for better integration and customization.
+
+##### Usage with Sass
+
+If you're using Sass in your project, you can import Luxa CSS like this:
 
 ```scss
 @use "luxacss";
+// or
+@use "luxacss" as *;
 ```
 
-Choose the method that best fits your development workflow and project requirements.
+This allows you to use Luxa CSS variables, mixins, and functions in your Sass files.
+
+##### Usage with Next.js
+
+For Next.js projects, you can import Luxa CSS in your `_app.js` or `layout.js` file:
+
+```js
+import "luxacss";
+```
+
+#### Customization
+
+To customize Luxa CSS variables or use specific parts of the library, you can import individual modules:
+
+```scss
+// Import other modules as needed
+@use "luxacss/variables" as vars;
+@use "luxacss/grid" as grid;
+```
+
+Choose the method that best fits your development workflow and project
+requirements. 😊
