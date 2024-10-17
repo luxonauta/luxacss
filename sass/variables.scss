@@ -1,12 +1,11 @@
-@import "./colors.scss";
-@import "./typography.scss";
-@import "./spacing.scss";
+@use "./colors";
+@use "./typography";
+@use "./spacing";
 
-$breakpoint: 80rem;
+$breakpoint: 64rem;
 
 :root {
   --base-size: 100%;
-
   --gap: 1.125em;
 
   --rounded-sm: 0.375rem;

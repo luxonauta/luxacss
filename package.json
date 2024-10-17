@@ -12,8 +12,15 @@
   "bugs": {
     "url": "https://github.com/luxonauta/luxacss/issues"
   },
-  "main": "readme.md",
   "type": "module",
+  "main": "dist/compressed/luxa.css",
+  "module": "dist/luxa.js",
+  "style": "dist/compressed/luxa.css",
+  "sass": "sass/luxa.scss",
+  "files": [
+    "dist",
+    "sass"
+  ],
   "scripts": {
     "build:docs": "cd docs && npm run build",
     "build": "node build.js",
@@ -26,6 +33,9 @@
   "devDependencies": {
     "dotenv-cli": "^7.4.2",
     "prettier": "3.0.3",
+    "sass": "^1.69.7"
+  },
+  "peerDependencies": {
     "sass": "^1.69.7"
   },
   "keywords": [

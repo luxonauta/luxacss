@@ -7,35 +7,42 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const sassFilePath = join(__dirname, "sass", "luxa.scss");
-
 const outputDir = join(__dirname, "dist");
 const minifiedOutputPath = join(outputDir, "compressed", "luxa.min.css");
 const expandedOutputPath = join(outputDir, "expanded", "luxa.css");
 
 const log = async (type, message) => {
-  const timestamp = new Date().toLocaleTimeString("pt-BR", {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false
-  });
-
-  let typeTag;
+  let typeEmoji;
+  let typeText;
 
   switch (type) {
     case "info":
-      typeTag = "ℹ️  Info";
+      typeEmoji = "ℹ️ ";
+      typeText = "Info";
       break;
     case "error":
-      typeTag = "💩 Error";
+      typeEmoji = "🚫";
+      typeText = "Error";
       break;
     case "success":
-      typeTag = "✅ Success";
+      typeEmoji = "✅";
+      typeText = "Success";
+      break;
+    case "compile":
+      typeEmoji = "🔨";
+      typeText = "Compile";
+      break;
+    case "watch":
+      typeEmoji = "👀";
+      typeText = "Watch";
       break;
     default:
-      typeTag = "🪵 Log";
+      typeEmoji = "📝";
+      typeText = "Log";
   }
 
-  console.log(`${timestamp} ${typeTag}: ${message}`);
+  const formattedMessage = message.replace(/`([^`]+)`/g, "\x1b[36m$1\x1b[0m");
+  console.log(`${typeEmoji} ${typeText}: ${formattedMessage}`);
 };
 
 const ensureDirectoryExistence = async (filePath) => {
@@ -54,7 +61,7 @@ const compileSass = async (filePath, outputPath, options) => {
       sourceMap: options.sourceMap
     });
 
-    ensureDirectoryExistence(outputPath);
+    await ensureDirectoryExistence(outputPath);
 
     let cssData = result.css;
     if (typeof cssData !== "string") {
@@ -73,9 +80,21 @@ const compileSass = async (filePath, outputPath, options) => {
       await fs.promises.writeFile(`${outputPath}.map`, sourceMapData, "utf8");
     }
 
-    log("success", `Sass compiled to ${outputPath}`);
+    log("compile", `Sass compiled to \`${outputPath}\``);
   } catch (error) {
     log("error", `Error compiling Sass: ${error}`);
+  }
+};
+
+const generateIndexJs = async () => {
+  const indexJsContent = `import './sass/luxa.scss';`;
+  const indexJsPath = join(__dirname, "dist", "luxa.js");
+
+  try {
+    await fs.promises.writeFile(indexJsPath, indexJsContent, "utf8");
+    log("success", `Generated \`${indexJsPath}\``);
+  } catch (error) {
+    log("error", `Error generating index.js: ${error}`);
   }
 };
 
@@ -89,21 +108,22 @@ const run = async () => {
       minify: false,
       sourceMap: true
     });
+    await generateIndexJs();
 
     log("success", "Compilation process completed successfully.");
   } catch (error) {
-    log("error", `Error in the compilation process: ${error}`);
+    log("error", `Error in compilation process: ${error}`);
   }
 };
 
 const watchFiles = () => {
-  log("info", "Observing changes in files...");
+  log("watch", "Watching for file changes...");
 
   const sassDir = join(__dirname, "sass");
 
-  fs.watch(sassDir, { recursive: true }, (eventType, filename) => {
+  fs.watch(sassDir, { recursive: true }, (_eventType, filename) => {
     if (filename) {
-      log("info", `File ${filename} was changed, recompiling...`);
+      log("info", `File \`${filename}\` changed, recompiling...`);
       run();
     }
   });
@@ -112,5 +132,5 @@ const watchFiles = () => {
 run()
   .then(watchFiles)
   .catch((error) => {
-    log("error", `Error in the overall process: ${error}`);
+    log("error", `Error in overall process: ${error}`);
   });
