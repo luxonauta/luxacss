@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @use "sass:math";
 
-@import "./variables.scss";
-@import "./reset.scss";
-@import "./grid.scss";
-@import "./utilities.scss";
+@use "./variables";
+@use "./reset";
+@use "./grid";
+@use "./utilities";

@@ -1,4 +1,4 @@
-import fs from "fs/promises";
+import fs from "node:fs/promises";
 
 const getFile = async (path: string) => {
   try {

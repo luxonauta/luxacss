@@ -15,6 +15,8 @@
     text-align: left;
 
     tr {
+      transition: background-color 120ms var(--fluid);
+
       &:first-child {
         th {
           padding-top: 1em;
@@ -26,6 +28,12 @@
           padding-bottom: 1em;
           border-bottom: none;
         }
+      }
+
+      &:hover,
+      &:focus-within {
+        background-color: var(--neutral-02);
+        outline: none;
       }
     }
 
@@ -42,6 +50,7 @@
 
     th {
       font-weight: 600;
+      background-color: var(--neutral-02);
     }
   }
 }

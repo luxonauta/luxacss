@@ -88,6 +88,7 @@
 * {
   box-sizing: border-box;
   position: relative;
+  -webkit-text-size-adjust: none;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -107,7 +108,6 @@ body {
 
 html {
   text-size-adjust: none;
-  -webkit-text-size-adjust: none;
   font-size: var(--base-size);
   font-variation-settings: normal;
 }
@@ -122,35 +122,46 @@ body {
   isolation: isolate;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  font-weight: 700;
-}
-
 h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
   font-size: var(--text-06);
 }
 
 h2 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
   font-size: var(--text-05);
 }
 
 h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
   font-size: var(--text-04);
 }
 
 h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
   font-size: var(--text-03);
 }
 
-h5,
-h6 {
+h5 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
   font-size: var(--text-02);
+}
+
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: var(--text-01);
 }
 
 p,
@@ -159,6 +170,7 @@ strong,
 sub,
 sup {
   margin: 0;
+  padding: 0;
 }
 
 b,
@@ -197,7 +209,6 @@ hr {
   height: 0.125em;
   margin: 0;
   padding: 0;
-  position: relative;
   display: block;
   border: none;
 }
@@ -337,7 +348,7 @@ hr {
   flex: none;
 }
 
-@media screen and (max-width: 80rem) {
+@media screen and (max-width: 64rem) {
   .container-50 {
     max-width: 24rem;
   }
@@ -478,7 +489,7 @@ hr {
   border: none;
 }
 
-@media screen and (max-width: 80rem) {
+@media screen and (max-width: 64rem) {
   .hide-on-desk {
     display: block;
     visibility: visible;

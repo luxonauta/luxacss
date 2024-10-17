@@ -6,7 +6,7 @@ import {
   faClone
 } from "@awesome.me/kit-6533c71a8a/icons/classic/light";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { isValidElement, ReactNode, useState } from "react";
+import { isValidElement, type ReactNode, useState } from "react";
 
 interface CopyButtonProps {
   children: ReactNode;
@@ -18,9 +18,11 @@ const CopyButton = ({ children }: CopyButtonProps) => {
   const getTextFromChildren = (children: React.ReactNode): string | null => {
     if (typeof children === "string") {
       return children;
-    } else if (Array.isArray(children)) {
+    }
+    if (Array.isArray(children)) {
       return children.map(getTextFromChildren).join("");
-    } else if (isValidElement(children) && children.props) {
+    }
+    if (isValidElement(children) && children.props) {
       return getTextFromChildren(children.props.children);
     }
 
@@ -41,6 +43,7 @@ const CopyButton = ({ children }: CopyButtonProps) => {
 
   return (
     <button
+      type="button"
       onClick={copyToClipboard}
       className="action copy-button"
       data-state={copied ? "copied" : "not-copied"}

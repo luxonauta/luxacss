@@ -10,9 +10,10 @@ const Ad = () => {
   useEffect(() => {
     if (reference.current && !isScriptAppended.current) {
       reference.current.innerHTML = "";
-      let s = document.createElement("script");
+      const s = document.createElement("script");
       s.id = "_carbonads_js";
-      s.src = `//cdn.carbonads.com/carbon.js?serve=CESDC2QL&placement=luxacsscom&format=cover`;
+      s.src =
+        "//cdn.carbonads.com/carbon.js?serve=CESDC2QL&placement=luxacsscom&format=cover";
       reference.current.appendChild(s);
       isScriptAppended.current = true;
     }
