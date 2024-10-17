@@ -1,12 +1,12 @@
 import "./index.scss";
-import { FC, ReactNode, TableHTMLAttributes } from "react";
+import type { FC, ReactNode, TableHTMLAttributes } from "react";
 
 interface TableProps extends TableHTMLAttributes<HTMLTableElement> {
   children?: ReactNode;
 }
 
 const Table: FC<TableProps> = ({ children, ...props }) => (
-  <div className="table" tabIndex={0}>
+  <div className="table">
     <table {...props}>{children}</table>
   </div>
 );

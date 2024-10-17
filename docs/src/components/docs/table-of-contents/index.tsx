@@ -16,8 +16,8 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({ headings }) => {
     <div className="card col table-of-contents">
       <h2 className="title">On this page</h2>
       <ul>
-        {headings.map((item, index) => (
-          <li key={index}>
+        {headings.map((item) => (
+          <li key={slugify(item.title)}>
             <a href={`#${slugify(item.title)}`}>{item.title}</a>
           </li>
         ))}

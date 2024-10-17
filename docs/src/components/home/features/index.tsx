@@ -1,22 +1,26 @@
 import "./index.scss";
 
 interface FeatureItem {
+  id: string;
   title: string;
   description: string;
 }
 
 const featureItems: FeatureItem[] = [
   {
+    id: "minimal",
     title: "Minimal",
     description: "Crafted to be just the ideal start."
   },
   {
+    id: "extend",
     title: "Effortlessly extend",
     description: "Customize, expand or modify with ease."
   },
   {
-    title: "Reproducible",
-    description: "Reproduce in other frameworks."
+    id: "library",
+    title: "Library",
+    description: "Use with your preferred framework."
   }
 ];
 
@@ -29,8 +33,8 @@ const FeatureCard: React.FC<FeatureItem> = ({ title, description }) => (
 
 const Features: React.FC = () => (
   <section className="features row">
-    {featureItems.map((item, index) => (
-      <FeatureCard key={index} {...item} />
+    {featureItems.map((item) => (
+      <FeatureCard key={item.id} {...item} />
     ))}
   </section>
 );

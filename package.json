@@ -1,9 +1,15 @@
 {
   "name": "luxacss",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "The minimalist CSS library",
   "author": "luxonauta",
   "license": "MIT",
+  "keywords": [
+    "css",
+    "library",
+    "minimal",
+    "scss"
+  ],
   "homepage": "https://luxacss.com",
   "repository": {
     "type": "git",
@@ -12,11 +18,27 @@
   "bugs": {
     "url": "https://github.com/luxonauta/luxacss/issues"
   },
-  "main": "readme.md",
   "type": "module",
+  "main": "./dist/luxa.js",
+  "module": "./dist/luxa.js",
+  "exports": {
+    ".": {
+      "import": "./dist/luxa.js",
+      "require": "./dist/luxa.js"
+    },
+    "./css": "./dist/expanded/luxa.css",
+    "./scss": "./sass/luxa.scss"
+  },
+  "style": "./dist/expanded/luxa.css",
+  "sass": "./sass/luxa.scss",
+  "files": [
+    "dist",
+    "sass"
+  ],
   "scripts": {
-    "build:docs": "cd docs && npm run build",
     "build": "node build.js",
+    "watch": "node build.js --watch",
+    "build:docs": "cd docs && npm run build",
     "dev:docs": "cd docs && npm run dev",
     "format": "prettier --write .",
     "install:all": "npm install && cd docs && dotenv -e .env npm install",
@@ -28,10 +50,7 @@
     "prettier": "3.0.3",
     "sass": "^1.69.7"
   },
-  "keywords": [
-    "css",
-    "library",
-    "minimal",
-    "scss"
-  ]
+  "peerDependencies": {
+    "sass": "^1.69.7"
+  }
 }
