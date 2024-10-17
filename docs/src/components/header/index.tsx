@@ -24,8 +24,8 @@ const Header = () => {
     <header>
       <nav aria-label="Navigation Header">
         <ul>
-          {pages.map((page, index) => (
-            <li key={page.label + index}>
+          {pages.map((page) => (
+            <li key={page.label}>
               {page.isExternal ? (
                 <Link
                   href={page.path}

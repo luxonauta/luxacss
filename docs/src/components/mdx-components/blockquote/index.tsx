@@ -1,7 +1,7 @@
 import "./index.scss";
 import { faSeedling } from "@awesome.me/kit-6533c71a8a/icons/classic/light";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { BlockquoteHTMLAttributes, DetailedHTMLProps } from "react";
+import type { BlockquoteHTMLAttributes, DetailedHTMLProps } from "react";
 
 interface BlockquoteProps
   extends DetailedHTMLProps<

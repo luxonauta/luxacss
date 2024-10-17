@@ -6,7 +6,7 @@ export const metadata = {
   description:
     "Discover Luxa CSS: A minimalist approach to modern web development.",
   alternates: {
-    canonical: `/about`
+    canonical: "/about"
   }
 };
 
