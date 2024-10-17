@@ -26,7 +26,8 @@
       "import": "./dist/luxa.js",
       "require": "./dist/luxa.js"
     },
-    "./css": "./dist/expanded/luxa.css"
+    "./css": "./dist/expanded/luxa.css",
+    "./scss": "./sass/luxa.scss"
   },
   "style": "./dist/expanded/luxa.css",
   "sass": "./sass/luxa.scss",
