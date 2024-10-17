@@ -1,6 +1,6 @@
 {
   "name": "luxacss",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "The minimalist CSS library",
   "author": "luxonauta",
   "license": "MIT",
@@ -13,9 +13,9 @@
     "url": "https://github.com/luxonauta/luxacss/issues"
   },
   "type": "module",
-  "main": "dist/compressed/luxa.css",
+  "main": "dist/compressed/luxa.min.css",
   "module": "dist/luxa.js",
-  "style": "dist/compressed/luxa.css",
+  "style": "dist/compressed/luxa.min.css",
   "sass": "sass/luxa.scss",
   "files": [
     "dist",

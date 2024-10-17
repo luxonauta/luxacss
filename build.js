@@ -87,12 +87,12 @@ const compileSass = async (filePath, outputPath, options) => {
 };
 
 const generateIndexJs = async () => {
-  const indexJsContent = `import './sass/luxa.scss';`;
+  const indexJsContent = `import './compressed/luxa.min.css';`;
   const indexJsPath = join(__dirname, "dist", "luxa.js");
 
   try {
     await fs.promises.writeFile(indexJsPath, indexJsContent, "utf8");
-    log("success", `Generated \`${indexJsPath}\``);
+    log("success", `Generated ${indexJsPath}`);
   } catch (error) {
     log("error", `Error generating index.js: ${error}`);
   }
