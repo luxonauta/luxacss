@@ -1,1 +1,1 @@
-import "./sass/luxa.scss";
+import './sass/luxa.scss';
