@@ -86,15 +86,23 @@ const compileSass = async (filePath, outputPath, options) => {
   }
 };
 
-const generateIndexJs = async () => {
-  const indexJsContent = `import './compressed/luxa.min.css';`;
-  const indexJsPath = join(__dirname, "dist", "luxa.js");
+const generateJsFiles = async () => {
+  const luxaJsContent = `import '../dist/expanded/luxa.css';\n\nexport * from './luxa-exports.js';`;
+  const luxaJsPath = join(outputDir, "luxa.js");
+
+  const luxaExportsContent = `export const version = '2.0.1';`;
+  const luxaExportsPath = join(outputDir, "luxa-exports.js");
+
+  const indexJsContent = `export * from './dist/luxa-exports.js';`;
+  const indexJsPath = join(__dirname, "index.js");
 
   try {
+    await fs.promises.writeFile(luxaJsPath, luxaJsContent, "utf8");
+    await fs.promises.writeFile(luxaExportsPath, luxaExportsContent, "utf8");
     await fs.promises.writeFile(indexJsPath, indexJsContent, "utf8");
-    log("success", `Generated ${indexJsPath}`);
+    log("success", "Generated JS files");
   } catch (error) {
-    log("error", `Error generating index.js: ${error}`);
+    log("error", `Error generating JS files: ${error}`);
   }
 };
 
@@ -108,7 +116,7 @@ const run = async () => {
       minify: false,
       sourceMap: true
     });
-    await generateIndexJs();
+    await generateJsFiles();
 
     log("success", "Compilation process completed successfully.");
   } catch (error) {
@@ -129,8 +137,14 @@ const watchFiles = () => {
   });
 };
 
-run()
-  .then(watchFiles)
-  .catch((error) => {
+if (process.argv.includes("--watch")) {
+  run()
+    .then(watchFiles)
+    .catch((error) => {
+      log("error", `Error in overall process: ${error}`);
+    });
+} else {
+  run().catch((error) => {
     log("error", `Error in overall process: ${error}`);
   });
+}
