@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import PageTransition from "@/components/page-transition";
 
 export const metadata = {
@@ -10,10 +11,62 @@ export const metadata = {
   }
 };
 
-const About = () => (
+const ExternalLink = ({
+  href,
+  children
+}: {
+  href: string;
+  children: ReactNode;
+}) => (
+  <Link href={`${href}?ref=luxacss.com`} target="_blank">
+    {children}
+  </Link>
+);
+
+const Section = ({
+  title,
+  children
+}: {
+  title: string;
+  children: ReactNode;
+}) => (
+  <section className="text">
+    <h2 className="title">{title}</h2>
+    {children}
+  </section>
+);
+
+const ListItem = ({
+  url,
+  name,
+  desc
+}: {
+  url: string;
+  name: string;
+  desc: string;
+}) => (
+  <li>
+    <ExternalLink href={url}>{name}:</ExternalLink>
+    <span> {desc};</span>
+  </li>
+);
+
+const technologies = [
+  { name: "Sass", desc: "CSS pre-processor", url: "https://sass-lang.com/" },
+  { name: "jsDelivr", desc: "CDN", url: "https://www.jsdelivr.com/" },
+  { name: "Next.js", desc: "React framework", url: "https://nextjs.org/" },
+  { name: "MDX", desc: "Markdown with JSX", url: "https://mdxjs.com/" },
+  {
+    name: "Vercel",
+    desc: "Hosting and website CDN",
+    url: "https://vercel.com/"
+  }
+];
+
+const About: React.FC = () => (
   <PageTransition className="row flow-column-wrap align-start">
     <h1 className="title primary">About</h1>
-    <article className="text">
+    <Section title="Introduction">
       <p>
         While many find CSS challenging, mastering it can unlock tremendous
         creativity and satisfaction. Luxa CSS was born from the realization that
@@ -28,41 +81,62 @@ const About = () => (
       </ul>
       <p>
         Luxa CSS addresses these issues by prioritizing minimalism, speed, and
-        maintainability. It&apos;s a breath of fresh air. 🪔
+        maintainability.
       </p>
-    </article>
-    <article className="text">
-      <h2 className="title">Built with</h2>
+    </Section>
+    <Section title="Support this project">
+      <p>
+        <ExternalLink href="https://x.com/luxonauta">
+          I&apos;m Lucas,
+        </ExternalLink>{" "}
+        creator of this project & maintainer of the{" "}
+        <ExternalLink href="https://gumroad.com/a/320709843/tPfIDt">
+          Dracula Theme/Pro
+        </ExternalLink>
+        . Luxa is my side project; if you find it valuable, consider:
+      </p>
+      <ul>
+        <li>
+          <ExternalLink href="https://ko-fi.com/luxonauta">
+            Buy me a coffee at Ko-Fi;
+          </ExternalLink>
+        </li>
+        <li>
+          <ExternalLink href="https://github.com/sponsors/luxonauta">
+            Sponsor me on GitHub.
+          </ExternalLink>
+        </li>
+      </ul>
+      <p>
+        Your support will help me dedicate more time to improving Luxa CSS by
+        adding features, fixing bugs, and developing support materials.
+      </p>
+    </Section>
+    <Section title="Contributing">
+      <p>
+        Luxa CSS is an open-source project. You can contribute by{" "}
+        <ExternalLink href="https://github.com/luxonauta/luxacss/issues/new">
+          reporting issues
+        </ExternalLink>
+        ,{" "}
+        <ExternalLink href="https://github.com/luxonauta/luxacss/discussions/new?category=ideas">
+          suggesting improvements
+        </ExternalLink>
+        , or{" "}
+        <ExternalLink href="https://github.com/luxonauta/luxacss/compare">
+          submitting pull requests
+        </ExternalLink>
+        .
+      </p>
+    </Section>
+    <Section title="Built with">
       <p>Core technologies powering Luxa CSS and its documentation:</p>
       <ul>
-        {[
-          {
-            name: "Sass",
-            desc: "CSS pre-processor",
-            url: "https://sass-lang.com/"
-          },
-          { name: "jsDelivr", desc: "CDN", url: "https://www.jsdelivr.com/" },
-          {
-            name: "Next.js",
-            desc: "React framework",
-            url: "https://nextjs.org/"
-          },
-          { name: "MDX", desc: "Markdown with JSX", url: "https://mdxjs.com/" },
-          {
-            name: "Vercel",
-            desc: "Hosting and website CDN",
-            url: "https://vercel.com/"
-          }
-        ].map(({ name, desc, url }) => (
-          <li key={name}>
-            <Link href={`${url}?ref=luxacss.com`} target="_blank">
-              {name}:
-            </Link>
-            <span> {desc};</span>
-          </li>
+        {technologies.map((tech) => (
+          <ListItem key={tech.name} {...tech} />
         ))}
       </ul>
-    </article>
+    </Section>
   </PageTransition>
 );
 
