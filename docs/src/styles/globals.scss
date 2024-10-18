@@ -33,16 +33,6 @@ main {
 }
 
 section {
-  a {
-    text-decoration: underline;
-    text-underline-offset: 0.125rem;
-    font-weight: 500;
-
-    &:has(> code) {
-      text-underline-offset: 0.25rem;
-    }
-  }
-
   ol,
   ul {
     margin: 0;
@@ -60,8 +50,21 @@ hr {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 0.0313rem;
+  text-underline-offset: 0.125rem;
+  text-decoration-color: var(--neutral-07);
   color: inherit;
+  font-weight: 500;
+
+  &:has(> code) {
+    text-underline-offset: 0.25rem;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration-color: var(--neutral-08);
+  }
 }
 
 h1,

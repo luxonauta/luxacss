@@ -1,5 +1,5 @@
 import "@/styles/pages/home.scss";
-import { faShapes } from "@awesome.me/kit-6533c71a8a/icons/classic/light";
+import { faSeedling } from "@awesome.me/kit-6533c71a8a/icons/duotone/solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import Features from "@/components/home/features";
@@ -9,7 +9,7 @@ const Home = () => (
   <PageTransition className="row flow-column-wrap align-start">
     <div>
       <div className="icon">
-        <FontAwesomeIcon icon={faShapes} />
+        <FontAwesomeIcon icon={faSeedling} />
       </div>
       <h1 className="title primary">Luxa CSS</h1>
       <h2 className="title">The minimalist CSS library.</h2>

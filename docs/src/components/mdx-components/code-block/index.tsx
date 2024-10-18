@@ -1,6 +1,6 @@
 import "./index.scss";
 import type { HTMLAttributes, ReactNode } from "react";
-import CopyButton from "./copy-button";
+import CopyButton from "../copy-button";
 
 interface CodeBlockProps extends HTMLAttributes<HTMLPreElement> {
   children?: ReactNode;
