@@ -1,3 +1,3 @@
-import './compressed/luxa.min.css';
+import "./compressed/luxa.min.css";
 
-export * from './luxa-exports.js';
+export * from "./luxa-exports.js";
