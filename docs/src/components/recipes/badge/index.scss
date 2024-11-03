@@ -1,15 +1,15 @@
 .badge {
-  padding: 0.5em 0.75em;
   display: inline-flex;
   align-items: center;
+  padding: 0.5em 0.75em;
   gap: 0.5em;
   border: 0.0625rem solid var(--neutral-04);
   border-radius: var(--rounded-sm);
-  line-height: 1;
-  font-size: 1em;
-  font-weight: 500;
-  color: var(--neutral-10);
   background-color: var(--neutral-02);
+  color: var(--neutral-10);
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1;
   transition: border-color 240ms var(--fluid);
 
   .status {

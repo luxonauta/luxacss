@@ -1,7 +1,7 @@
 .table {
+  position: relative;
   width: 100%;
   margin: 0.5em 0;
-  position: relative;
   overflow: auto hidden;
   border: 0.0625rem solid var(--neutral-05);
   border-radius: var(--rounded-sm);
@@ -32,8 +32,8 @@
 
       &:hover,
       &:focus-within {
-        background-color: var(--neutral-02);
         outline: none;
+        background-color: var(--neutral-02);
       }
     }
 
@@ -49,8 +49,8 @@
     }
 
     th {
-      font-weight: 600;
       background-color: var(--neutral-02);
+      font-weight: 600;
     }
   }
 }

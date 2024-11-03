@@ -1,13 +1,13 @@
 .code-block {
+  position: relative;
   width: 100%;
   margin: 0.5em 0;
-  position: relative;
 
   pre {
+    position: relative;
     width: 100%;
     margin: 0;
     padding: 2em;
-    position: relative;
     overflow: auto hidden;
     border: 0.0625rem solid var(--neutral-04);
     background-color: var(--neutral-02);
@@ -16,11 +16,11 @@
     code {
       .token {
         &.comment {
-          text-transform: uppercase;
-          font-family: var(--font-shantell-sans);
-          font-size: 0.625rem;
-          font-style: italic;
           color: var(--neutral-07);
+          font-style: italic;
+          font-size: 0.625rem;
+          font-family: var(--font-shantell-sans);
+          text-transform: uppercase;
         }
 
         &.property {

@@ -17,17 +17,17 @@ Badges can indicate notifications, item counts, or other information related to 
 
 ```scss
 .badge {
-  padding: 0.5em 0.75em;
   display: inline-flex;
   align-items: center;
+  padding: 0.5em 0.75em;
   gap: 0.5em;
   border: 0.0625rem solid var(--neutral-03);
   border-radius: var(--rounded-sm);
-  line-height: 1;
-  font-size: 1em;
-  font-weight: 500;
-  color: var(--neutral-09);
   background-color: var(--neutral-01);
+  color: var(--neutral-09);
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1;
   transition: border-color 240ms var(--fluid);
 
   .status {

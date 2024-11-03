@@ -1,16 +1,16 @@
 .ad {
-  width: calc(10rem + 0.5rem) !important;
   position: absolute;
   top: 0;
   left: calc(100% + var(--space-04));
+  width: calc(10rem + 0.5rem) !important;
 
   #carbonads {
     #carbon-responsive {
       a {
+        color: inherit !important;
+        font-size: 0.75rem !important;
         line-height: 1.8 !important;
         font-family: var(--font-inter) !important;
-        font-size: 0.75rem !important;
-        color: inherit !important;
       }
 
       .carbon-responsive-wrap {
@@ -20,13 +20,13 @@
         gap: 0.5rem !important;
         border: 0.0625rem solid var(--neutral-04) !important;
         border-radius: var(--rounded-sm) !important;
-        text-wrap: balance !important;
         background-color: var(--neutral-01) !important;
+        text-wrap: balance !important;
         transition: border-color 240ms var(--fluid) !important;
 
         .carbon-img {
-          width: 100% !important;
           flex: none !important;
+          width: 100% !important;
 
           img {
             width: 100% !important;
