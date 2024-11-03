@@ -86,11 +86,10 @@
   $i: 1;
 
   @while $i <=6 {
+    $i: $i + 1;
     &-0#{$i} {
       gap: var(--space-0#{$i});
     }
-
-    $i: $i + 1;
   }
 }
 
@@ -99,16 +98,16 @@
 }
 
 .sr-only {
-  opacity: 0;
+  position: absolute;
   width: 0;
   height: 0;
   margin: 0;
   padding: 0;
-  position: absolute;
   overflow: hidden;
+  opacity: 0;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
   border: none;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: #{vars.$breakpoint}) {

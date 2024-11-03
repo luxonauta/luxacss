@@ -1,4 +1,7 @@
 {
   "singleQuote": false,
-  "trailingComma": "none"
+  "trailingComma": "none",
+  "plugins": ["prettier-plugin-css-order"],
+  "cssDeclarationSorterKeepOverrides": true,
+  "cssDeclarationSorterOrder": "smacss"
 }

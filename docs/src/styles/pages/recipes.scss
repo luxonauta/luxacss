@@ -3,12 +3,12 @@
   justify-content: flex-start;
 
   .card {
-    width: fit-content;
-    max-width: calc(33% - var(--gap));
-    aspect-ratio: 1/1;
-    padding: 0;
     display: flex;
     flex-direction: column;
+    aspect-ratio: 1/1;
+    width: fit-content;
+    max-width: calc(33% - var(--gap));
+    padding: 0;
     text-decoration: none;
 
     .component,
@@ -17,10 +17,10 @@
     }
 
     .component {
-      flex-basis: 0;
+      display: flex;
       flex-grow: 1;
       flex-shrink: 1;
-      display: flex;
+      flex-basis: 0;
       align-items: center;
       justify-content: center;
     }
