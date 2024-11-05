@@ -83,10 +83,11 @@
 }
 
 .gap {
-  $i: 1;
+  $i: 0;
 
-  @while $i <=6 {
+  @while $i <=5 {
     $i: $i + 1;
+
     &-0#{$i} {
       gap: var(--space-0#{$i});
     }

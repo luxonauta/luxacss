@@ -1,0 +1,24 @@
+.illustration {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 0.5em;
+  padding: 1em;
+  border: 0.0625rem solid var(--neutral-04);
+  border-radius: var(--rounded-sm);
+  transition: border-color 240ms var(--fluid);
+
+  span {
+    padding-left: 0.375rem;
+    font-style: italic;
+    font-size: 0.625rem;
+    font-family: var(--font-shantell-sans);
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    border-color: var(--neutral-05);
+  }
+}

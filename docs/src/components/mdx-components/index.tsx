@@ -1,4 +1,5 @@
 import BezierVisualizer from "../bezier-visualizer";
+import Illustrations from "../illustrations";
 import Badge from "../recipes/badge";
 import Table from "../table";
 import Blockquote from "./blockquote";
@@ -14,6 +15,7 @@ const mdxComponents = {
   h4: createHeading(4),
   h5: createHeading(5),
   h6: createHeading(6),
+  Illustrations,
   pre: CodeBlock,
   table: Table
 };

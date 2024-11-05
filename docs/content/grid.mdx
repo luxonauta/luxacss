@@ -20,6 +20,8 @@ Example:
 </div>
 ```
 
+<Illustrations.Containers />
+
 In the example above, `container-80` will have a maximum width of 80% of the viewport, a max size of `96rem`, and a minimum size of `16rem`.
 
 | Variable         | Max-Width | Min-Width |
@@ -55,6 +57,8 @@ Example:
 </div>
 ```
 
+<Illustrations.Rows />
+
 #### Columns
 
 Columns are flexible and adapt to row and container size.
@@ -66,9 +70,35 @@ Example:
 ```html
 <div class="row">
   <div class="col is-4"><!-- 1/3 width --></div>
+  <div class="col"><!-- 2/3 width --></div>
+</div>
+```
+
+<Illustrations.Columns />
+
+**Important note about `is-X` modifiers:**
+
+When using modifiers to define column widths, apply them to only a few elements in each row. These modifiers make the column occupy the total available width without considering the gap (spacing) between columns.
+
+✅ Recommended (using only one `is-X`):
+
+```html
+<div class="row">
+  <div class="col is-4"><!-- 1/3 width --></div>
+  <div class="col"><!-- remaining 2/3 --></div>
+</div>
+```
+
+❌ Not recommended (using multiple `is-X`):
+
+```html
+<div class="row">
+  <div class="col is-4"><!-- 1/3 width --></div>
   <div class="col is-8"><!-- 2/3 width --></div>
 </div>
 ```
+
+In the second example, since both columns have `is-X` modifiers, they will try to occupy their defined widths (4/12 + 8/12 = 12/12) without considering the gap between them, which can cause layout breaks. Therefore, it is better to let the last column naturally adjust to the remaining space.
 
 ##### Responsive behavior
 
