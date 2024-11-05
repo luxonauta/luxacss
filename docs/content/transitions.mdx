@@ -12,6 +12,21 @@ Luxa CSS offers pre-defined cubic-bezier timing functions to create distinct ani
 | `--elastic` | `0.42, 0, 0.58, 1.8`    | Perfect for bouncy animations that add a playful touch to your elements.          |
 | `--impact`  | `0.24, 0.9, 0.32, 1.4`  | Designed for animations that need a dramatic effect with an impactful finish.     |
 
+<div class="row flow-row-nowrap">
+  <div class="col">
+    <BezierVisualizer name="fluid" bezier={[0.36, 0.66, 0.6, 1]} />
+  </div>
+  <div class="col">
+    <BezierVisualizer name="sharp" bezier={[0.6, 0.12, 0.34, 0.96]} />
+  </div>
+  <div class="col">
+    <BezierVisualizer name="elastic" bezier={[0.42, 0, 0.58, 1.8]} />
+  </div>
+  <div class="col">
+    <BezierVisualizer name="impact" bezier={[0.24, 0.9, 0.32, 1.4]} />
+  </div>
+</div>
+
 > If the provided options don’t meet your needs, you can create your own custom easing curves. Start designing your own bézier curves with this [excellent tool from Lea Verou](https://cubic-bezier.com/?ref=luxacss.com).
 
 ## Usage
