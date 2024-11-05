@@ -1,6 +1,7 @@
 .bezier-visualizer {
   display: flex;
   position: relative;
+  aspect-ratio: 1/1;
   width: 100%;
   overflow: hidden;
   border: 0.0625rem solid var(--neutral-04);
