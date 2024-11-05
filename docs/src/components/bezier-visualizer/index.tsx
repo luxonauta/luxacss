@@ -30,7 +30,6 @@ const BezierVisualizer: React.FC<BezierVisualizerProps> = ({
     <div className="bezier-visualizer" title={info}>
       <svg viewBox="-24 -24 142 142" preserveAspectRatio="xMidYMid meet">
         <title>{info}</title>
-        <rect x="0" y="0" width="100" height="100" fill="url(#grid)" />
         <g className="control-handles">
           <line x1="0" y1="100" x2={cp1.x} y2={cp1.y} />
           <line x1="100" y1="0" x2={cp2.x} y2={cp2.y} />

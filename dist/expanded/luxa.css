@@ -205,11 +205,11 @@ img {
 }
 
 hr {
+  display: block;
   width: 100%;
   height: 0.125em;
   margin: 0;
   padding: 0;
-  display: block;
   border: none;
 }
 
