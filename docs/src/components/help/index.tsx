@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Help = () => (
   <section className="row flow-column-wrap align-start">
-    <h5>Getting Help</h5>
+    <h4>Getting Help</h4>
     <p>
       Need help? Open{" "}
       <Link
