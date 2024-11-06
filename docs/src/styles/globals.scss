@@ -19,7 +19,6 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100dvh;
-  padding: var(--space-04) var(--space-03) var(--space-06) var(--space-03);
   background-color: var(--neutral-01);
   color: var(--neutral-09);
   font-size: 0.75rem;
@@ -90,13 +89,11 @@ ul {
 }
 
 .container {
-  width: 100%;
-  max-width: 42rem;
+  width: 42rem;
+  min-width: 0;
+  max-width: 100%;
   margin-top: var(--space-03);
-
-  @media (max-width: 42rem) {
-    max-width: 100%;
-  }
+  padding: var(--space-04) var(--space-03) var(--space-06) var(--space-03);
 }
 
 .text {
