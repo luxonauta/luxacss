@@ -20,7 +20,7 @@ Luxa dynamically adjusts font sizes using the CSS `clamp()` function, ensuring o
 
 > The `clamp()` function takes three parameters: minimum value, preferred value (usually calculated based on viewport width), and maximum value.
 
-### Design philosophy
+# Design philosophy
 
 Luxa's fluid-type scale represents a shift from pixel-perfect design to a more flexible approach:
 
@@ -28,7 +28,55 @@ Luxa's fluid-type scale represents a shift from pixel-perfect design to a more f
 - Ensures a tailored experience on every device;
 - Provides a robust, universally adaptive design.
 
+> **Understanding browser typography**
+>
+> The foundation of fluid typography lies in understanding how browsers handle font scaling:
+>
+> - The `rem` unit is relative to whatever font size is set on the `html` element;
+> - Percentages in `font-size` are equivalent to using `em/100`;
+> - When applied to the `html` element, percentages reference browser font scaling (default `16px`);
+> - Browser font sizes can be adjusted between `9px` and `72px` in settings.
+
+Recomended reading: [Josh Comeau article.](https://www.joshwcomeau.com/css/surprising-truth-about-pixels-and-accessibility/?ref=luxacss.com)
+
+> **Scaling vs. Zooming**
+>
+> There are two distinct ways users can adjust content size:
+>
+> - Browser font scaling: adjusts through browser settings;
+> - Browser zooming: uses keyboard shortcuts (`⌘`+`/-`) or _menu options_;
+> - Zooming applies additively on top of font scaling;
+> - Each serves different accessibility needs.
+
+> **The reality of web scaling**
+>
+> Unfortunately, many websites break this natural scaling:
+>
+> - Most sites override browser scaling with hard-coded pixel values;
+> - Using `px` units opts out of scaling entirely;
+> - [CNN.com](https://www.cnn.com/?ref=luxacss.com) stands out by properly implementing scaling:
+>   - Main content scales with `rem`;
+>   - Navigation and supplemental text remain stable;
+>   - Creates a balanced, accessible reading experience.
+
+> **Impact on accessibility**
+>
+> When browser scaling is ignored through hard-coded values:
+>
+> - The accessibility benefits of `rem` over `px` are negated;
+> - Users lose control over their reading experience;
+> - The web becomes less adaptable to individual needs.
+
 For more on this approach, see [The Myth of Pixel Perfection](https://www.kelliekowalski.com/articles/the-myth-of-pixel-perfection/?ref=luxacss.com).
+
+---
+
+Luxa's approach embraces these principles by:
+
+1. Respecting browser font scaling;
+2. Using relative units appropriately;
+3. Maintaining hierarchy through selective scaling;
+4. Prioritizing readability across all devices.
 
 #### Reproduce in Tailwind CSS
 
