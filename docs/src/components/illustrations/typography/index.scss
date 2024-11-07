@@ -1,0 +1,34 @@
+.typography {
+  .info {
+    width: 100%;
+    padding: 0.5em;
+    border: 0.0625rem dashed var(--neutral-05);
+    border-radius: var(--rounded-sm);
+    background-color: var(--neutral-02);
+    transition: border-color 240ms var(--fluid);
+
+    code {
+      display: block;
+      margin-bottom: 0.5em;
+    }
+
+    @for $i from 1 through 6 {
+      &.text-0#{$i} {
+        span {
+          display: block;
+          width: 100%;
+          overflow: hidden;
+          color: var(--neutral-08);
+          font-size: var(--text-0#{$i});
+          line-height: 1.2;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    &:hover {
+      border-color: var(--neutral-06);
+    }
+  }
+}

@@ -8,10 +8,6 @@
     border-radius: var(--rounded-sm);
     transition: border-color 240ms var(--fluid);
 
-    code {
-      width: fit-content;
-    }
-
     .wrapper {
       display: flex;
       flex-direction: column;
@@ -29,6 +25,10 @@
       border-radius: var(--rounded-sm);
       background-color: var(--neutral-03);
       transition: border-color 240ms var(--fluid);
+    }
+
+    span {
+      text-transform: uppercase;
     }
   }
 

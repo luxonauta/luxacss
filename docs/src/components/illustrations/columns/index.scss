@@ -3,10 +3,6 @@
   align-items: flex-start;
   gap: 1em;
 
-  code {
-    width: fit-content;
-  }
-
   .row {
     gap: 1em;
   }
@@ -17,6 +13,10 @@
     border-radius: var(--rounded-sm);
     background-color: var(--neutral-02);
     transition: border-color 240ms var(--fluid);
+  }
+
+  span {
+    text-transform: uppercase;
   }
 
   &:hover {
