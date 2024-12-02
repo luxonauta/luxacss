@@ -2,6 +2,7 @@ import "@/styles/pages/recipes.scss";
 import Link from "next/link";
 import PageTransition from "@/components/page-transition";
 import Badge from "@/components/recipes/badge";
+import { Switch } from "@/components/recipes/switch";
 
 export const metadata = {
   title: "Recipes",
@@ -40,6 +41,9 @@ const Recipes = () => (
     <section className="components row">
       <Card title="Badge" description="The tiny count and labelling component.">
         <Badge />
+      </Card>
+      <Card title="Switch" description="The common toggle for binary choices.">
+        <Switch />
       </Card>
     </section>
   </PageTransition>

@@ -33,24 +33,31 @@ code {
 
 .example {
   display: flex;
+  flex-direction: column;
   width: 100%;
   gap: 0.5em;
 
   .view {
+    width: 100%;
+    min-height: 18rem;
+
     &.code {
-      width: fit-content;
-      max-width: 50%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5em;
 
       .code-block {
+        min-width: 0;
+
         pre {
-          max-height: 30dvh;
+          min-height: 100%;
+          max-height: 18rem;
           overflow: auto;
         }
       }
     }
 
     &.preview {
-      margin: 0.5em 0;
       padding: var(--space-01);
       border: 0.0625rem solid var(--neutral-04);
       border-radius: var(--rounded-sm);
@@ -69,11 +76,9 @@ code {
   }
 
   @media (max-width: 42rem) {
-    flex-direction: column;
-
     .view {
       &.code {
-        max-width: 100%;
+        grid-template-columns: 1fr;
       }
     }
   }

@@ -1,6 +1,7 @@
 import BezierVisualizer from "../bezier-visualizer";
 import Illustrations from "../illustrations";
 import Badge from "../recipes/badge";
+import { Switch } from "../recipes/switch";
 import Table from "../table";
 import Blockquote from "./blockquote";
 import CodeBlock from "./code-block";
@@ -8,6 +9,7 @@ import createHeading from "./heading";
 
 const mdxComponents = {
   Badge,
+  Switch,
   BezierVisualizer,
   blockquote: Blockquote,
   h2: createHeading(2),
