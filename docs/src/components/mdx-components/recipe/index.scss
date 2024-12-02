@@ -1,0 +1,52 @@
+.example {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5em;
+
+  .view {
+    width: 100%;
+    min-height: 18rem;
+
+    &.code {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5em;
+
+      .code-block {
+        min-width: 0;
+
+        pre {
+          min-height: 100%;
+          max-height: 18rem;
+          overflow: auto;
+        }
+      }
+    }
+
+    &.preview {
+      padding: var(--space-01);
+      border: 0.0625rem solid var(--neutral-04);
+      border-radius: var(--rounded-sm);
+      transition: border-color 240ms var(--fluid);
+
+      &.center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &:hover {
+        border-color: var(--neutral-05);
+      }
+    }
+  }
+
+  @media (max-width: 42rem) {
+    .view {
+      &.code {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

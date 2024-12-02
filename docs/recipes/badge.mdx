@@ -5,55 +5,7 @@ description: The tiny count and labelling component.
 
 Badges can indicate notifications, item counts, or other information related to navigation; these small UI elements convey important information at a glance.
 
-<div class="example">
-<div class="view preview center col">
-<Badge />
-</div>
-<div class="view code">
-
-```html
-<div className="badge success">
-  <span className="status">
-  <span>Success!</span>
-</div>
-```
-
-```scss
-.badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.5em 0.75em;
-  gap: 0.5em;
-  border: 0.0625rem solid var(--neutral-04);
-  border-radius: var(--rounded-sm);
-  background-color: var(--neutral-02);
-  color: var(--neutral-10);
-  font-weight: 500;
-  font-size: 1em;
-  line-height: 1;
-  transition: border-color 240ms var(--fluid);
-
-  .status {
-    width: 0.75em;
-    height: 0.75em;
-    border-radius: 100%;
-    background-color: var(--neutral-06);
-  }
-
-  &.success {
-    .status {
-      background-color: var(--green);
-    }
-  }
-
-  &:hover {
-    border-color: var(--neutral-05);
-  }
-}
-```
-
-</div>
-</div>
+<Recipe component={<Badge />} />
 
 > **Best Practices**
 >

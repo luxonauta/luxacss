@@ -6,10 +6,10 @@ import Table from "../table";
 import Blockquote from "./blockquote";
 import CodeBlock from "./code-block";
 import createHeading from "./heading";
+import { Recipe } from "./recipe";
 
 const mdxComponents = {
   Badge,
-  Switch,
   BezierVisualizer,
   blockquote: Blockquote,
   h2: createHeading(2),
@@ -19,6 +19,8 @@ const mdxComponents = {
   h6: createHeading(6),
   Illustrations,
   pre: CodeBlock,
+  Recipe,
+  Switch,
   table: Table
 };
 
