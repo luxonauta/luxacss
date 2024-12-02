@@ -4,8 +4,7 @@ import PageTransition from "@/components/page-transition";
 
 export const metadata = {
   title: "About",
-  description:
-    "Discover Luxa CSS: A minimalist approach to modern web development.",
+  description: "Why Luxa CSS exists, and the problems it solves.",
   alternates: {
     canonical: "/about"
   }
@@ -66,7 +65,7 @@ const technologies = [
 const About: React.FC = () => (
   <PageTransition className="row flow-column-wrap align-start">
     <h1 className="title primary">About</h1>
-    <Section title="Introduction">
+    <Section title="Why Luxa CSS?">
       <p>
         While many find CSS challenging, mastering it can unlock tremendous
         creativity and satisfaction. Luxa CSS was born from the realization that

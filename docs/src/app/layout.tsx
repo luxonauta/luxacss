@@ -53,22 +53,16 @@ const commitMono = localFont({
 
 export const metadata = {
   metadataBase: new URL("https://www.luxacss.com"),
+  applicationName: "Luxa CSS",
   title: {
     default: "Luxa CSS",
     template: "%s • Luxa CSS"
   },
   description:
-    "The minimalist CSS framework for quickly designing, building and shipping!",
-  openGraph: {
-    url: "https://www.luxacss.com",
-    siteName: "Luxa CSS",
-    locale: "en_US",
-    type: "website",
-    images: [
-      {
-        url: "https://www.luxacss.com/og.png"
-      }
-    ]
+    "The minimalist CSS library for quickly designing, building, and shipping!",
+  author: {
+    name: "Lucas de França",
+    url: "https://www.luxonauta.com"
   },
   robots: {
     index: true,
@@ -76,17 +70,44 @@ export const metadata = {
     googleBot: {
       index: true,
       follow: true,
+      noimageindex: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1
     }
   },
-  twitter: {
+  keywords: ["css", "library", "design", "minimalist", "framework"],
+  category: "Technology",
+  openGraph: {
+    url: "https://www.luxacss.com",
+    siteName: "Luxa CSS",
     title: "Luxa CSS",
-    card: "summary_large_image"
+    description:
+      "The minimalist CSS library for quickly designing, building, and shipping!",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "https://www.luxacss.com/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Luxa CSS Open Graph Image"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Luxa CSS",
+    description:
+      "The minimalist CSS library for quickly designing, building, and shipping!",
+    creator: "@luxonauta",
+    images: ["https://www.luxacss.com/og.png"]
   },
   alternates: {
     canonical: "/"
+  },
+  icons: {
+    icon: "/favicon.ico"
   }
 };
 
