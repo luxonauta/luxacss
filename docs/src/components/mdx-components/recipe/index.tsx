@@ -2,6 +2,7 @@ import "./index.scss";
 import fs from "node:fs/promises";
 import path from "node:path";
 import type { ReactElement } from "react";
+import { Tabs } from "@/components/tabs";
 import CodeBlock from "../code-block";
 
 interface SourceCode {
@@ -50,11 +51,25 @@ export async function Recipe({ component }: RecipeProps) {
 
   return (
     <div className="example">
-      <div className="view preview center col">{component}</div>
-      <div className="view code center col">
-        <CodeBlock lang="tsx">{sourceCode.tsx}</CodeBlock>
-        <CodeBlock lang="scss">{sourceCode.scss}</CodeBlock>
-      </div>
+      <Tabs
+        tabs={[
+          {
+            id: "preview",
+            label: "Preview",
+            content: <div className="preview">{component}</div>
+          },
+          {
+            id: "tsx",
+            label: "TSX",
+            content: <CodeBlock lang="tsx">{sourceCode.tsx}</CodeBlock>
+          },
+          {
+            id: "scss",
+            label: "SCSS",
+            content: <CodeBlock lang="scss">{sourceCode.scss}</CodeBlock>
+          }
+        ]}
+      />
     </div>
   );
 }
