@@ -1,8 +1,12 @@
 import "@/styles/pages/recipes.scss";
-import Link from "next/link";
+import { getCompiledServerMdx } from "@mintlify/mdx";
+import fs from "node:fs/promises";
+import path from "node:path";
 import PageTransition from "@/components/page-transition";
-import Badge from "@/components/recipes/badge";
-import { Switch } from "@/components/recipes/switch";
+import { RecipeItem } from "@/components/recipe-card";
+import getFile from "@/lib/get-file";
+import { getFileDate } from "@/lib/get-file-date";
+import type { Recipe } from "@/types";
 
 export const metadata = {
   title: "Recipes",
@@ -13,40 +17,54 @@ export const metadata = {
   }
 };
 
-interface CardProps {
-  title: string;
-  description: string;
-  children?: React.ReactNode;
-}
+const Recipes = async () => {
+  const contentDirectory = path.join(process.cwd(), "./recipes");
+  const files = await fs.readdir(contentDirectory);
 
-const Card = ({ title, description, children }: CardProps) => (
-  <Link href={`/recipes/${title.toLowerCase()}`} className="card">
-    <div className="component">{children}</div>
-    <div className="info">
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
-  </Link>
-);
+  const recipes: Recipe[] = await Promise.all(
+    files.map(async (file) => {
+      const filePath = path.join(contentDirectory, file);
+      const source = await getFile(filePath);
 
-const Recipes = () => (
-  <PageTransition className="row flow-column-wrap align-start">
-    <h1 className="title primary">Recipes</h1>
-    <div className="text">
-      <p>
-        Component and elements recipes to modify, copy and paste into your
-        projects!
-      </p>
-    </div>
-    <section className="components row">
-      <Card title="Badge" description="The tiny count and labelling component.">
-        <Badge />
-      </Card>
-      <Card title="Switch" description="The common toggle for binary choices.">
-        <Switch />
-      </Card>
-    </section>
-  </PageTransition>
-);
+      if (!source) {
+        throw new Error(`Failed to load file: "${filePath}".`);
+      }
+
+      const { frontmatter } = await getCompiledServerMdx({
+        source: source
+      });
+
+      return {
+        link: `/recipes/${file.replace(/\.mdx?$/, "")}`,
+        title: frontmatter.title as string,
+        description: frontmatter.description as string,
+        lastModified: await getFileDate(filePath)
+      };
+    })
+  );
+
+  return (
+    <PageTransition className="row flow-column-wrap align-start">
+      <h1 className="title primary">Recipes</h1>
+      <div className="text">
+        <p>
+          Component and elements recipes to modify, copy and paste into your
+          projects!
+        </p>
+      </div>
+      <ul className="list row flow-column-wrap">
+        {recipes.map((recipe) => (
+          <RecipeItem
+            key={recipe.link}
+            link={recipe.link}
+            title={recipe.title}
+            description={recipe.description}
+            lastModified={recipe.lastModified}
+          />
+        ))}
+      </ul>
+    </PageTransition>
+  );
+};
 
 export default Recipes;
