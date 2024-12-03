@@ -1,44 +1,23 @@
-.components {
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-top: 1em;
+.list {
+  margin-top: 0.5em;
+  padding: 0;
   gap: 1em;
+  list-style: none;
 
-  .card {
-    display: flex;
-    flex-direction: column;
-    aspect-ratio: 1/1;
-    width: fit-content;
-    max-width: calc(33% - var(--gap));
-    padding: 0;
-    text-decoration: none;
+  .item {
+    width: 100%;
+    padding: 1em;
+    border: 0.0625rem solid var(--neutral-04);
+    border-radius: var(--rounded-sm);
+    transition: border-color 240ms var(--fluid);
 
-    .component,
-    .info {
-      padding: var(--space-01);
-    }
-
-    .component {
-      display: flex;
-      flex-grow: 1;
-      flex-shrink: 1;
-      flex-basis: 0;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .info {
-      border-top: 0.0625rem solid var(--neutral-04);
+    a {
+      font-weight: 400;
+      text-decoration: none;
     }
 
     &:hover {
-      .info {
-        border-color: var(--neutral-05);
-      }
-    }
-
-    @media (max-width: 42rem) {
-      max-width: 16rem;
+      border-color: var(--neutral-05);
     }
   }
 }
