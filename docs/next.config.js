@@ -26,6 +26,12 @@ const nextConfig = {
         hostname: "avatars.githubusercontent.com"
       }
     ]
+  },
+  experimental: {
+    outputFileTracingRoot: path.join(__dirname),
+    outputFileTracingIncludes: {
+      "/api/**/*": ["src/components/recipes/**/*"]
+    }
   }
 };
 
