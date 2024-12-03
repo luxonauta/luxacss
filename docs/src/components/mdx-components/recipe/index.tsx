@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import "./index.scss";
 import { type ReactElement, use } from "react";
 import { Tabs } from "@/components/tabs";
