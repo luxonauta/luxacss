@@ -6,12 +6,13 @@ import { Tabs } from "@/components/tabs";
 import CodeBlock from "../code-block";
 
 interface SourceCode {
-  tsx: string;
   scss: string;
+  tsx: string;
 }
 
 interface RecipeProps {
   component: ReactElement;
+  dirName: string;
 }
 
 async function getSourceCode(name: string): Promise<SourceCode | null> {
@@ -33,19 +34,11 @@ async function getSourceCode(name: string): Promise<SourceCode | null> {
   }
 }
 
-export async function Recipe({ component }: RecipeProps) {
-  const componentName =
-    typeof component.type === "string" ? component.type : component.type.name;
-
-  if (!componentName) {
-    console.error("Component name could not be determined.");
-    return null;
-  }
-
-  const sourceCode = await getSourceCode(componentName.toLowerCase());
+export async function Recipe({ component, dirName }: RecipeProps) {
+  const sourceCode = await getSourceCode(dirName.toLowerCase());
 
   if (!sourceCode) {
-    console.error(`Source code not found for component: ${componentName}`);
+    console.error(`Source code not found for component: ${dirName}`);
     return null;
   }
 
