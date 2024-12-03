@@ -1,8 +1,7 @@
 import "./index.scss";
-import fs from "node:fs/promises";
-import path from "node:path";
-import type { ReactElement } from "react";
+import { type ReactElement, use } from "react";
 import { Tabs } from "@/components/tabs";
+import { getBasePath } from "@/lib/environment";
 import CodeBlock from "../code-block";
 
 interface RecipeProps {
@@ -10,26 +9,23 @@ interface RecipeProps {
   dirName: string;
 }
 
-const getSourceCode = async (name: string) => {
-  const baseDir = `./src/components/recipes/${name}`;
-  const [tsxContent, scssContent] = await Promise.all([
-    fs.readFile(path.join(baseDir, "index.tsx"), "utf-8"),
-    fs.readFile(path.join(baseDir, "index.scss"), "utf-8")
-  ]);
-
-  return {
-    tsx: tsxContent,
-    scss: scssContent
-  };
+const fetchSourceCode = async (dirName: string) => {
+  try {
+    const response = await fetch(
+      `${getBasePath()}/api/source/${dirName.toLowerCase()}`
+    );
+    return await response.json();
+  } catch (error) {
+    console.error("Error fetching source code.\n", error);
+    return null;
+  }
 };
 
-export const Recipe = async ({ component, dirName }: RecipeProps) => {
-  const sourceCode = await getSourceCode(dirName.toLowerCase());
+export const Recipe = ({ component, dirName }: RecipeProps) => {
+  const sourceCode = use(fetchSourceCode(dirName));
 
-  if (!sourceCode) {
-    console.error(`Source code not found for component: ${dirName}`);
+  if (!sourceCode)
     return <span>Something went wrong. Please try again later.</span>;
-  }
 
   return (
     <div className="example">
