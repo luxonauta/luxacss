@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 
+const path = require("node:path");
+
 const nextConfig = {
   async redirects() {
     return [
