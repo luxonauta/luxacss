@@ -1,7 +1,5 @@
-export const dynamic = "force-dynamic";
-
 import "./index.scss";
-import { type ReactElement, use } from "react";
+import type { ReactElement } from "react";
 import { Tabs } from "@/components/tabs";
 import { getBasePath } from "@/lib/environment";
 import CodeBlock from "../code-block";
@@ -23,8 +21,8 @@ const fetchSourceCode = async (dirName: string) => {
   }
 };
 
-export const Recipe = ({ component, dirName }: RecipeProps) => {
-  const sourceCode = use(fetchSourceCode(dirName));
+export const Recipe = async ({ component, dirName }: RecipeProps) => {
+  const sourceCode = await fetchSourceCode(dirName);
 
   if (!sourceCode)
     return <span>Something went wrong. Please try again later.</span>;
