@@ -5,41 +5,30 @@ import type { ReactElement } from "react";
 import { Tabs } from "@/components/tabs";
 import CodeBlock from "../code-block";
 
-interface SourceCode {
-  scss: string;
-  tsx: string;
-}
-
 interface RecipeProps {
   component: ReactElement;
   dirName: string;
 }
 
-async function getSourceCode(name: string): Promise<SourceCode | null> {
+const getSourceCode = async (name: string) => {
   const baseDir = `./src/components/recipes/${name}`;
+  const [tsxContent, scssContent] = await Promise.all([
+    fs.readFile(path.join(baseDir, "index.tsx"), "utf-8"),
+    fs.readFile(path.join(baseDir, "index.scss"), "utf-8")
+  ]);
 
-  try {
-    const [tsxContent, scssContent] = await Promise.all([
-      fs.readFile(path.join(baseDir, "index.tsx"), "utf-8"),
-      fs.readFile(path.join(baseDir, "index.scss"), "utf-8")
-    ]);
+  return {
+    tsx: tsxContent,
+    scss: scssContent
+  };
+};
 
-    return {
-      tsx: tsxContent,
-      scss: scssContent
-    };
-  } catch (error) {
-    console.error(`Error loading source code for component ${name}:`, error);
-    return null;
-  }
-}
-
-export async function Recipe({ component, dirName }: RecipeProps) {
+export const Recipe = async ({ component, dirName }: RecipeProps) => {
   const sourceCode = await getSourceCode(dirName.toLowerCase());
 
   if (!sourceCode) {
     console.error(`Source code not found for component: ${dirName}`);
-    return null;
+    return <span>Something went wrong. Please try again later.</span>;
   }
 
   return (
@@ -65,4 +54,4 @@ export async function Recipe({ component, dirName }: RecipeProps) {
       />
     </div>
   );
-}
+};
