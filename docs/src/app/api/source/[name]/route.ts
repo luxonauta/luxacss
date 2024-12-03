@@ -14,7 +14,11 @@ export async function GET(
   }
 
   try {
-    const baseDir = `./src/components/recipes/${params.name}`;
+    const baseDir = path.join(
+      process.cwd(),
+      "src/components/recipes",
+      params.name
+    );
 
     const [tsxContent, scssContent] = await Promise.all([
       fs.readFile(path.join(baseDir, "index.tsx"), "utf-8"),
