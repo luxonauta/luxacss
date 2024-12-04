@@ -18,7 +18,6 @@
           color: var(--neutral-07);
           font-style: italic;
           font-size: 0.625rem;
-          font-family: var(--font-shantell-sans);
           text-transform: uppercase;
         }
 
@@ -27,6 +26,7 @@
         }
 
         &.tag {
+
           .punctuation,
           .tag,
           .attr-name {
