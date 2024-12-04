@@ -6,7 +6,6 @@
   --circle-translate: calc(
     var(--slider-width) - var(--circle-size) - var(--slider-padding) * 4
   );
-
   display: flex;
   align-items: center;
   gap: 0.75em;
