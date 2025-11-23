@@ -34,7 +34,7 @@ header ul a::before {
   content: "";
   opacity: 0;
   transition:
-    transform,
+    transform 240ms var(--fluid),
     opacity 240ms var(--fluid);
 }
 
