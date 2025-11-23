@@ -1,4 +1,4 @@
-import "@/styles/pages/docs.scss";
+import "@/styles/pages/docs.css";
 import { getCompiledServerMdx } from "@mintlify/mdx";
 import { notFound } from "next/navigation";
 import fs from "node:fs/promises";
@@ -35,6 +35,9 @@ export const generateMetadata = async ({
     description: frontmatter.description,
     alternates: {
       canonical: `/recipes/${params.slug}`
+    },
+    openGraph: {
+      url: `https://www.luxacss.com/recipes/${params.slug}`
     }
   };
 };

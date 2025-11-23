@@ -1,11 +1,7 @@
-import "@/styles/globals.scss";
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
+import "@/styles/globals.css";
 import localFont from "next/font/local";
 import Script from "next/script";
 import Header from "@/components/header";
-
-config.autoAddCss = false;
 
 const inter = localFont({
   display: "swap",
@@ -37,7 +33,7 @@ export const metadata = {
   metadataBase: new URL("https://www.luxacss.com"),
   applicationName: "Luxa CSS",
   title: {
-    default: "Luxa CSS",
+    default: "Luxa CSS - The Minimalist CSS Library",
     template: "%s • Luxa CSS"
   },
   description:
@@ -63,7 +59,7 @@ export const metadata = {
   openGraph: {
     url: "https://www.luxacss.com",
     siteName: "Luxa CSS",
-    title: "Luxa CSS",
+    title: "Luxa CSS - The Minimalist CSS Library",
     description:
       "The minimalist CSS library for quickly designing, building, and shipping!",
     locale: "en_US",
@@ -79,7 +75,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxa CSS",
+    title: "Luxa CSS - The Minimalist CSS Library",
     description:
       "The minimalist CSS library for quickly designing, building, and shipping!",
     creator: "@luxonauta",

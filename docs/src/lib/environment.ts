@@ -3,5 +3,5 @@ export function isProd() {
 }
 
 export function getBasePath() {
-  return isProd() ? "https://luxacss.com" : "http://localhost:3000";
+  return isProd() ? "https://www.luxacss.com" : "http://localhost:3000";
 }

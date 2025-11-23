@@ -34,6 +34,9 @@ export const generateMetadata = async ({
     description: frontmatter.description,
     alternates: {
       canonical: `/docs/${params.slug}`
+    },
+    openGraph: {
+      url: `https://www.luxacss.com/docs/${params.slug}`
     }
   };
 };
