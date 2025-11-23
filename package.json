@@ -18,6 +18,9 @@
     "url": "https://github.com/luxonauta/luxacss/issues"
   },
   "type": "module",
+  "workspaces": [
+    "docs"
+  ],
   "main": "./dist/luxa.js",
   "module": "./dist/luxa.js",
   "exports": {
@@ -33,18 +36,36 @@
     "css"
   ],
   "scripts": {
-    "install:all": "npm install && cd docs && npm install",
-    "dev": "node scripts/dev.js",
-    "build": "node scripts/build.js",
-    "start": "cd docs && npm start",
-    "lint": "node scripts/lint.js"
+    "dev": "tsx scripts/dev.ts",
+    "build": "tsx scripts/build.ts",
+    "start": "npm start --workspace=docs",
+    "lint": "tsx scripts/lint.ts"
+  },
+  "dependencies": {
+    "next": "^16.0.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "@types/eslint": "^9.6.1",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@typescript-eslint/eslint-plugin": "^8.47.0",
+    "@typescript-eslint/parser": "^8.47.0",
     "autoprefixer": "^10.4.22",
     "cssnano": "^7.1.2",
+    "eslint": "^9",
+    "eslint-config-next": "^16.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "jiti": "^2.6.1",
     "postcss": "^8.5.6",
     "postcss-import": "^16.1.1",
     "prettier": "^3.6.2",
-    "prettier-plugin-css-order": "^2.1.2"
+    "prettier-plugin-css-order": "^2.1.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
   }
 }
