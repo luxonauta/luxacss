@@ -6,7 +6,7 @@ Luxa CSS is organised for simplicity and flexibility. You can use the framework 
 
 ## Directory Structure
 
-```
+```text
 luxacss/
 ├── css/              # Source CSS files (standard CSS, no PostCSS required)
 │   ├── colors.css
@@ -121,7 +121,7 @@ This setup avoids duplicate installations and simplifies dependency management.
 
 ## Available Commands
 
-```bash
+```shell
 # Build framework and docs
 npm run build
 
