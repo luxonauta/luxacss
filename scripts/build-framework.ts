@@ -161,13 +161,32 @@ const generateJsFiles = async (_isWatch = false): Promise<boolean> => {
   const luxaJsContent = `import './compressed/luxa.min.css';\n\nexport * from './luxa-exports.js';`;
   const luxaJsPath = join(outputDir, "luxa.js");
 
-  const luxaExportsContent = `export const version = '2.0.3';`;
-  const luxaExportsPath = join(outputDir, "luxa-exports.js");
-
   const indexJsContent = `export * from './dist/luxa-exports.js';`;
   const indexJsPath = join(rootDir, "index.js");
 
   try {
+    const packageJsonPath = join(rootDir, "package.json");
+    const packageJsonContent = await fs.promises.readFile(
+      packageJsonPath,
+      "utf8"
+    );
+    const packageJson = JSON.parse(packageJsonContent);
+
+    if (
+      !packageJson.version ||
+      typeof packageJson.version !== "string" ||
+      packageJson.version.trim() === ""
+    ) {
+      log.error(
+        "Invalid or missing version in package.json. Expected a non-empty string."
+      );
+      return false;
+    }
+
+    const version = packageJson.version;
+    const luxaExportsContent = `export const version = '${version}';`;
+    const luxaExportsPath = join(outputDir, "luxa-exports.js");
+
     await fs.promises.writeFile(luxaJsPath, luxaJsContent, "utf8");
     await fs.promises.writeFile(luxaExportsPath, luxaExportsContent, "utf8");
     await fs.promises.writeFile(indexJsPath, indexJsContent, "utf8");
