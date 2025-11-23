@@ -1,10 +1,10 @@
 # Scripts
 
-This directory contains utility scripts for the Luxa CSS project.
+This directory contains utility scripts for the Luxa CSS project. All scripts are written in TypeScript and executed using `tsx`.
 
 ## Available Scripts
 
-### `build.js`
+### `build.ts`
 
 Builds both the framework and documentation.
 
@@ -16,10 +16,11 @@ npm run build
 
 **What it does:**
 
+- Lints the codebase
 - Builds the CSS framework (compiles from `/css` to `/dist`)
 - Builds the documentation site
 
-### `build-framework.js`
+### `build-framework.ts`
 
 Core framework build script. Compiles CSS files from source to distribution.
 
@@ -29,8 +30,9 @@ Core framework build script. Compiles CSS files from source to distribution.
 - Adds vendor prefixes
 - Generates minified and expanded versions
 - Creates individual module files
+- Supports watch mode for development
 
-### `dev.js`
+### `dev.ts`
 
 Starts development mode with watch and hot reload.
 
@@ -46,7 +48,7 @@ npm run dev
 - Starts the Next.js documentation dev server with hot reload
 - Both processes run simultaneously
 
-### `lint.js`
+### `lint.ts`
 
 Runs code formatting and linting checks.
 
@@ -58,5 +60,6 @@ npm run lint
 
 **What it does:**
 
+- Runs ESLint to check and fix code issues
 - Formats code with Prettier
 - Ensures consistent code style across the project
