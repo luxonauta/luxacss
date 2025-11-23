@@ -21,18 +21,20 @@ const Recipes = async () => {
   const mdxFiles = getMdxDataFromDirectory("./recipes");
 
   const recipes: Recipe[] = mdxFiles.map((file) => {
-    const createdAt = file.date?.createdAt;
-    const date = createdAt ? new Date(createdAt) : new Date();
+    const date = file.date?.createdAt
+      ? new Date(file.date.createdAt)
+      : new Date();
     const month = date.toLocaleString("en-US", { month: "short" });
     const year = date.getFullYear().toString().slice(-2);
-    const display = `${month}, ${year}`;
-    const iso = date.toISOString();
 
     return {
       link: `/recipes/${file.slug}`,
       title: String(file.title ?? ""),
       description: String(file.description ?? ""),
-      lastModified: { display, iso }
+      lastModified: {
+        display: `${month}, ${year}`,
+        iso: date.toISOString()
+      }
     };
   });
 

@@ -224,7 +224,10 @@ const watchFiles = (): void => {
     if (filename?.endsWith(".css")) {
       console.log("");
       log.info(`${filename} changed`);
-      run(true);
+      run(true).catch((err) => {
+        const errorMessage = err instanceof Error ? err.message : String(err);
+        log.error(`Rebuild failed: ${errorMessage}`);
+      });
     }
   });
 };

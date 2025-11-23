@@ -15,7 +15,6 @@
     "next-mdx-remote": "^5.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "reading-duration": "^1.1.2",
     "rehype-unwrap-images": "^1.0.0",
     "remark-gfm": "^4.0.1"
   },

@@ -1,12 +1,11 @@
 import "@/styles/pages/docs.css";
 
-import { notFound } from "next/navigation";
-
 import TableOfContents from "@/components/docs/table-of-contents";
 import { CustomMDX } from "@/components/mdx-components/custom-mdx";
 import PageTransition from "@/components/page-transition";
 import { getMdxDataFromDirectory, getMdxFromFile } from "@/utils/mdx";
 import { extractHeadings } from "@/utils/mdx/extract-headings";
+import { validateMdxData } from "@/utils/mdx/validate-mdx-data";
 
 export const generateStaticParams = async () => {
   const posts = getMdxDataFromDirectory("./recipes");
@@ -20,14 +19,11 @@ export const generateMetadata = async ({
 }) => {
   const { slug } = await params;
   const mdxData = getMdxFromFile("./recipes", slug);
-
-  if (!mdxData) {
-    notFound();
-  }
+  const validatedData = validateMdxData(mdxData);
 
   return {
-    title: mdxData.title as string,
-    description: mdxData.description as string,
+    title: validatedData.title,
+    description: validatedData.description,
     alternates: {
       canonical: `/recipes/${slug}`
     },
@@ -44,19 +40,16 @@ const DynamicPage = async ({
 }) => {
   const { slug } = await params;
   const mdxData = getMdxFromFile("./recipes", slug);
+  const validatedData = validateMdxData(mdxData);
 
-  if (!mdxData) {
-    notFound();
-  }
-
-  const toc = extractHeadings(mdxData.content as string);
-  const content = mdxData.content as string;
+  const toc = extractHeadings(validatedData.content);
+  const content = validatedData.content;
 
   return (
     <PageTransition className="row flow-column-wrap align-start">
       <div>
-        <h1 className="title primary">{String(mdxData.title)}</h1>
-        <p className="description">{String(mdxData.description)}</p>
+        <h1 className="title primary">{validatedData.title}</h1>
+        <p className="description">{validatedData.description}</p>
       </div>
       <TableOfContents headings={toc} />
       <CustomMDX source={content} />
