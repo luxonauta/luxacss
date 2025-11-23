@@ -1,0 +1,58 @@
+.ad {
+  position: absolute;
+  top: 0;
+  left: calc(100% + var(--space-04));
+  width: calc(10rem + 0.5rem) !important;
+}
+
+.ad #carbonads #carbon-responsive a {
+  color: inherit !important;
+  font-size: 0.75rem !important;
+  line-height: 1.8 !important;
+  font-family: var(--font-inter) !important;
+}
+
+.ad #carbonads #carbon-responsive .carbon-responsive-wrap {
+  width: 100% !important;
+  margin: 0 0 0 auto !important;
+  padding: 0.5rem !important;
+  gap: 0.5rem !important;
+  border: 0.0625rem solid var(--neutral-04) !important;
+  border-radius: var(--rounded-sm) !important;
+  background-color: var(--neutral-01) !important;
+  text-wrap: balance !important;
+  transition: border-color 240ms var(--fluid) !important;
+}
+
+.ad #carbonads #carbon-responsive .carbon-responsive-wrap .carbon-img {
+  flex: none !important;
+  width: 100% !important;
+}
+
+.ad #carbonads #carbon-responsive .carbon-responsive-wrap .carbon-img img {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 0.25rem !important;
+}
+
+.ad #carbonads #carbon-responsive .carbon-responsive-wrap .carbon-text {
+  width: 100% !important;
+  padding: 0 0.25rem !important;
+}
+
+.ad #carbonads #carbon-responsive .carbon-responsive-wrap:hover {
+  border-color: var(--neutral-05) !important;
+}
+
+.ad #carbonads #carbon-responsive .carbon-poweredby {
+  display: none !important;
+}
+
+@media (max-width: 64rem) {
+  .ad {
+    position: relative;
+    top: unset;
+    left: unset;
+  }
+}

@@ -1,0 +1,43 @@
+.blockquote {
+  position: relative;
+  width: 100%;
+  margin: var(--space-01) 0 0 0;
+  padding: var(--space-01) var(--space-02);
+  border: 0.0625rem solid var(--neutral-04);
+  border-radius: var(--rounded-sm);
+  background-color: var(--neutral-02);
+  transition: border-color 240ms var(--fluid);
+}
+
+.blockquote .icon {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 1.625rem;
+  height: 1.625rem;
+  transform: translate(-50%, -50%);
+  border: 0.0625rem solid var(--neutral-04);
+  border-radius: 100%;
+  background-color: var(--neutral-02);
+  font-size: 1em;
+  transition: border-color 240ms var(--fluid);
+}
+
+.blockquote blockquote {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  gap: 0.5em;
+}
+
+.blockquote:hover {
+  border-color: var(--neutral-05);
+}
+
+.blockquote:hover .icon {
+  border-color: var(--neutral-05);
+}

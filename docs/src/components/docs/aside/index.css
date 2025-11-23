@@ -1,0 +1,95 @@
+aside {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: calc(-1 * var(--space-04));
+  flex-direction: column;
+  width: 12rem;
+  gap: var(--space-02);
+  transform: translateX(-100%);
+  transition: all 240ms var(--fluid);
+  will-change: transform, border-color;
+}
+
+aside nav {
+  width: 100%;
+  padding: var(--space-02) var(--space-01) var(--space-02) var(--space-02);
+  border: 0.0625rem solid var(--neutral-04);
+  border-radius: var(--rounded-sm);
+  transition: border-color 240ms var(--fluid);
+}
+
+aside ul {
+  --gap: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+aside ul li:first-child a {
+  padding-top: 0;
+}
+
+aside ul li:last-child a {
+  padding-bottom: 0;
+}
+
+aside ul a {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 0.25rem 0;
+  gap: 0.5rem;
+  color: var(--neutral-09);
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    color 200ms var(--fluid),
+    transform 200ms var(--fluid);
+}
+
+aside ul a::before {
+  display: block;
+  position: absolute;
+  left: -0.75rem;
+  width: 0.25rem;
+  height: 0.25rem;
+  transform: scale(0);
+  border-radius: 100%;
+  background-color: var(--neutral-11);
+  content: "";
+  opacity: 0;
+  transition: all 200ms var(--fluid);
+  will-change: transform, opacity;
+}
+
+aside ul a:hover {
+  transform: translateX(0.25rem);
+  color: var(--neutral-11);
+}
+
+aside ul a.is-active {
+  transform: translateX(0.625rem);
+  color: var(--neutral-11);
+}
+
+aside ul a.is-active::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+aside:focus-within nav,
+aside:hover nav {
+  border-color: var(--neutral-05);
+}
+
+@media (max-width: 64rem) {
+  aside {
+    position: relative;
+    top: unset;
+    left: unset;
+    width: 100%;
+    transform: none;
+  }
+}
