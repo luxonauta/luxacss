@@ -1,0 +1,27 @@
+.example {
+  width: 100%;
+
+  .preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18rem;
+    padding: var(--space-01);
+    border: 0.0625rem solid var(--neutral-04);
+    border-radius: var(--rounded-sm);
+    transition: border-color 240ms var(--fluid);
+
+    &:hover {
+      border-color: var(--neutral-05);
+    }
+  }
+
+  .code-block {
+    min-width: 0;
+
+    pre {
+      height: 18rem;
+      overflow: auto;
+    }
+  }
+}

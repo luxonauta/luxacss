@@ -1,0 +1,60 @@
+.bezier-visualizer {
+  display: flex;
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 0.0625rem solid var(--neutral-04);
+  border-radius: var(--rounded-sm);
+  background-color: var(--neutral-02);
+  transition: border-color 240ms var(--fluid);
+
+  svg {
+    aspect-ratio: 1/1;
+    max-width: 100%;
+    height: 100%;
+
+    .main-axes {
+      line {
+        stroke-width: 1;
+        stroke: currentColor;
+        stroke-linecap: round;
+      }
+    }
+
+    .bezier-curve {
+      fill: none;
+      stroke: var(--neutral-06);
+      stroke-width: 1.25;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .control {
+      &-handles {
+        stroke: var(--neutral-05);
+        stroke-width: 1;
+        stroke-linecap: round;
+
+        line {
+          stroke-dasharray: 2, 2;
+        }
+      }
+
+      &-points {
+        circle {
+          fill: var(--neutral-05);
+        }
+      }
+    }
+
+    .animated-dot {
+      fill: var(--neutral-07);
+    }
+  }
+
+  &:hover {
+    border-color: var(--neutral-05);
+  }
+}
