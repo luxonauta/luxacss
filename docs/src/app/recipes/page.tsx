@@ -18,12 +18,7 @@ export const metadata = {
 };
 
 const Recipes = async () => {
-  const mdxFiles = getMdxDataFromDirectory<{
-    title: string;
-    description: string;
-    slug: string;
-    date?: { createdAt?: string };
-  }>("./recipes");
+  const mdxFiles = getMdxDataFromDirectory("./recipes");
 
   const recipes: Recipe[] = mdxFiles.map((file) => {
     const createdAt = file.date?.createdAt;
@@ -35,8 +30,8 @@ const Recipes = async () => {
 
     return {
       link: `/recipes/${file.slug}`,
-      title: file.title,
-      description: file.description,
+      title: String(file.title ?? ""),
+      description: String(file.description ?? ""),
       lastModified: { display, iso }
     };
   });

@@ -84,10 +84,21 @@ const getMdxData = (dir: string) => {
   });
 };
 
-export const getMdxDataFromDirectory = <T>(directoryName: string): T[] => {
+/**
+ * Reads all MDX files from a directory and returns their parsed data.
+ *
+ * @param directoryName - Relative path to the directory containing MDX files
+ * @returns Array of MDX data entries with frontmatter, slug, content, reading time, and word count
+ *
+ * @remarks
+ * The returned entries include all frontmatter fields from each MDX file.
+ * Callers should narrow or transform the data as needed for their specific use case.
+ */
+export const getMdxDataFromDirectory = (
+  directoryName: string
+): MdxDataEntry[] => {
   const directoryPath = path.join(process.cwd(), directoryName);
-  const data = getMdxData(directoryPath);
-  return data as T[];
+  return getMdxData(directoryPath);
 };
 
 export const getMdxFromFile = (

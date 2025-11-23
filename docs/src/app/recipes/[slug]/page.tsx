@@ -9,7 +9,7 @@ import { getMdxDataFromDirectory, getMdxFromFile } from "@/utils/mdx";
 import { extractHeadings } from "@/utils/mdx/extract-headings";
 
 export const generateStaticParams = async () => {
-  const posts = getMdxDataFromDirectory<{ slug: string }>("./recipes");
+  const posts = getMdxDataFromDirectory("./recipes");
   return posts.map((post) => ({ slug: post.slug }));
 };
 

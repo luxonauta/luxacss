@@ -7,11 +7,13 @@ export const extractHeadings = (content: string): Heading[] => {
   while (match) {
     const level = match[1].length;
     const text = match[2].trim();
-    const id = text
-      .toLowerCase()
-      .replace(/[^a-z0-9\s-]/g, "")
-      .replace(/\s+/g, "-")
-      .trim();
+    const id =
+      text
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, "")
+        .replace(/\s+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        .trim() || `heading-${level}`;
     headings.push({ id, text, level });
     match = headingRegex.exec(content);
   }
