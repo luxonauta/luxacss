@@ -1,3 +1,6 @@
+@import "./spacing.css";
+@import "./tokens.css";
+
 .hide,
 .hide-on-desk {
   display: none;
@@ -73,9 +76,6 @@
 .justify-start {
   justify-content: flex-start;
 }
-
-@import "./spacing.css";
-@import "./tokens.css";
 
 .gap-01 {
   gap: var(--space-01);
