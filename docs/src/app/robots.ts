@@ -5,7 +5,7 @@ const Robots = () => {
         userAgent: "*"
       }
     ],
-    host: "https://luxacss.com"
+    host: "https://www.luxacss.com"
   };
 };
 
