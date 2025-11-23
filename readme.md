@@ -1,15 +1,10 @@
-<h1 align="center">
-	Luxa CSS
-</h1>
+# Luxa CSS
 
-<p align="center">✨ The minimalist CSS library.</p>
-
-<hr/>
-<br/>
+The minimalist CSS library.
 
 A clean and lightweight kit that prioritizes minimalism, speed, and ease of maintenance.
 
-## 🏗️ Installation
+## Installation
 
 Choose one of these methods to get started:
 
@@ -24,13 +19,13 @@ Choose one of these methods to get started:
 Include Luxa CSS via CDN:
 
 ```html
-<!-- Expanded (7.5KB) -->
+<!-- Expanded (7.23KB) -->
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/luxacss@latest/dist/expanded/luxa.css"
 />
 
-<!-- Compressed (6KB) -->
+<!-- Compressed (5.47KB) -->
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/luxacss@latest/dist/compressed/luxa.min.css"
@@ -55,28 +50,54 @@ Then import it:
 import "luxacss";
 ```
 
-Or, import Luxa into your `.scss` file with [`@use`](https://sass-lang.com/documentation/at-rules/use/?ref=luxacss.com):
+Or, import individual CSS modules in your CSS file:
 
-```scss
-@use "luxacss";
+```css
+@import "luxacss/css/colors.css";
+@import "luxacss/css/tokens.css";
+@import "luxacss/css/grid.css";
 ```
 
-## 🧰 Resources
+## Resources
 
-- 📃 [Documentation](https://luxacss.com)
-- 🐈‍⬛ [GitHub Repository](https://github.com/luxonauta/luxacss)
+- [Documentation](https://luxacss.com)
+- [GitHub Repository](https://github.com/luxonauta/luxacss)
 
-## ☕ Support this project
+## Support this project
 
 If you find Luxa CSS helpful, consider supporting the project:
 
 - [Ko-Fi](https://ko-fi.com/luxonauta)
 - [GitHub Sponsors](https://github.com/sponsors/luxonauta)
 
-## 🫱🏻‍🫲🏻 Contributing
+## Development
 
-Please read our [contributing guidelines](./.github/contributing.md) to get started.
+Want to contribute or customize Luxa CSS? Get started quickly:
 
-## ©️ License
+- **[Quick Onboarding](.github/onboarding.md)** - Get started in 5 minutes
+- **[Contributing Guide](.github/contributing.md)** - How to contribute
+- **[Development Guide](.github/development.md)** - Local development setup
+- **[Project Structure](.github/structure.md)** - Repository organization
 
-Luxa CSS is released under the [MIT License](./license.md). Feel free to use and modify it for your projects. 🧩
+### Quick Start
+
+```bash
+# Clone and install
+git clone https://github.com/luxonauta/luxacss.git
+cd luxacss
+npm run install:all
+
+# Build framework and docs
+npm run build
+
+# Or start development mode
+npm run dev
+```
+
+## Contributing
+
+Please read our [contributing guidelines](.github/contributing.md) to get started.
+
+## License
+
+Luxa CSS is released under the [MIT License](./license.md). Feel free to use and modify it for your projects.

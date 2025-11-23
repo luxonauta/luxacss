@@ -1,14 +1,13 @@
 {
   "name": "luxacss",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "The minimalist CSS library",
   "author": "luxonauta",
   "license": "MIT",
   "keywords": [
     "css",
     "library",
-    "minimal",
-    "scss"
+    "minimal"
   ],
   "homepage": "https://luxacss.com",
   "repository": {
@@ -26,32 +25,26 @@
       "import": "./dist/luxa.js",
       "require": "./dist/luxa.js"
     },
-    "./css": "./dist/expanded/luxa.css",
-    "./scss": "./sass/luxa.scss"
+    "./css": "./dist/expanded/luxa.css"
   },
   "style": "./dist/expanded/luxa.css",
-  "sass": "./sass/luxa.scss",
   "files": [
     "dist",
-    "sass"
+    "css"
   ],
   "scripts": {
-    "build": "node build.js",
-    "watch": "node build.js --watch",
-    "build:docs": "cd docs && npm run build",
-    "dev:docs": "cd docs && npm run dev",
-    "format": "prettier --write .",
-    "install:all": "npm install && cd docs && dotenv -e .env npm install",
-    "lint:docs": "cd docs && npx next lint --fix",
-    "start:docs": "cd docs && npm start"
+    "install:all": "npm install && cd docs && npm install",
+    "dev": "node scripts/dev.js",
+    "build": "node scripts/build.js",
+    "start": "cd docs && npm start",
+    "lint": "node scripts/lint.js"
   },
   "devDependencies": {
-    "dotenv-cli": "^7.4.2",
-    "prettier-plugin-css-order": "^2.1.2",
-    "prettier": "3.0.3",
-    "sass": "^1.69.7"
-  },
-  "peerDependencies": {
-    "sass": "^1.69.7"
+    "autoprefixer": "^10.4.22",
+    "cssnano": "^7.1.2",
+    "postcss": "^8.5.6",
+    "postcss-import": "^16.1.1",
+    "prettier": "3.6.2",
+    "prettier-plugin-css-order": "^2.1.2"
   }
 }
