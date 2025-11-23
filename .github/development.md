@@ -14,11 +14,11 @@ This guide covers local development setup and common development tasks for Luxa 
 git clone https://github.com/luxonauta/luxacss.git
 cd luxacss
 
-# Install all dependencies
-npm run install:all
+# Install all dependencies (workspace setup)
+npm install
 ```
 
-This installs dependencies for both the main framework and the documentation site.
+This installs dependencies for both the framework and documentation site using npm workspaces. Shared dependencies are installed once at the root to avoid duplication.
 
 ## Project Structure
 
@@ -49,11 +49,11 @@ luxacss/
 │   ├── src/                # Next.js app source
 │   └── public/            # Static assets
 │
-├── scripts/                # Build and utility scripts
-│   ├── build.js            # Build script (framework + docs)
-│   ├── build-framework.js  # Framework build script (with watch mode)
-│   ├── dev.js              # Development mode (watch + dev server)
-│   └── lint.js             # Linting and formatting
+├── scripts/                # Build and utility scripts (TypeScript)
+│   ├── build.ts            # Build script (framework + docs)
+│   ├── build-framework.ts  # Framework build script (with watch mode)
+│   ├── dev.ts              # Development mode (watch + dev server)
+│   └── lint.ts             # Linting and formatting
 ├── postcss.config.js       # PostCSS configuration
 └── package.json
 ```
@@ -100,7 +100,7 @@ This automatically:
 
 ## Build Process
 
-The build script (`scripts/build-framework.js`) performs:
+The build script (`scripts/build-framework.ts`) performs:
 
 1. **Import Resolution**: Resolves `@import` statements using PostCSS
 2. **Vendor Prefixing**: Adds browser prefixes via Autoprefixer
@@ -150,6 +150,7 @@ luxa.css
 - Semantic naming
 - One declaration per line
 - Consistent spacing
+- British English spelling where applicable
 
 ### Example
 
@@ -165,12 +166,20 @@ luxa.css
 }
 
 /* Avoid */
-.container { width: 100%; max-width: 1024px; margin: 0 auto; padding: 24px; }
-.container { background-color: #ffffff; color: #000000; }
-.containerWrapper { /* Non-kebab-case */
-  & .nested { /* PostCSS nesting syntax */
-    background: white;
-  }
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.container {
+  background-color: #ffffff;
+  color: #000000;
+}
+.containerWrapper {
+  & .nested {
+    background: white; /* PostCSS nesting syntax */
+  } /* Non-kebab-case */
 }
 ```
 
@@ -220,9 +229,8 @@ luxa.css
 
 ```bash
 # Clear node_modules and reinstall
-rm -rf node_modules package-lock.json
+rm -rf node_modules docs/node_modules package-lock.json docs/package-lock.json
 npm install
-npm run install:all
 ```
 
 ### Documentation Issues
@@ -230,7 +238,6 @@ npm run install:all
 ```bash
 # Clear Next.js cache
 rm -rf docs/.next
-cd docs
 npm run dev
 ```
 

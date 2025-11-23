@@ -2,7 +2,7 @@
 
 ## Overview
 
-Luxa CSS is organized for simplicity and flexibility. You can use the framework **without any build tools**—just use the compiled files.
+Luxa CSS is organised for simplicity and flexibility. You can use the framework **without any build tools**—just use the compiled files.
 
 ## Directory Structure
 
@@ -33,11 +33,11 @@ luxacss/
 │   ├── src/          # Next.js app source
 │   └── public/       # Static assets
 │
-├── scripts/              # Build and utility scripts
-│   ├── build.js          # Build script (framework + docs)
-│   ├── build-framework.js # Framework build script (with watch mode)
-│   ├── dev.js            # Development mode (watch + dev server)
-│   └── lint.js           # Linting and formatting
+├── scripts/              # Build and utility scripts (TypeScript)
+│   ├── build.ts          # Build script (framework + docs)
+│   ├── build-framework.ts # Framework build script (with watch mode)
+│   ├── dev.ts            # Development mode (watch + dev server)
+│   └── lint.ts           # Linting and formatting
 │
 ├── .github/          # GitHub templates and workflows
 ├── postcss.config.js  # PostCSS config (only needed for building)
@@ -95,7 +95,7 @@ All source files in `/css` use **standard CSS only**:
 
 ## Build Process
 
-The build scripts (`scripts/build-framework.js` and `scripts/build.js`) use PostCSS to:
+The build scripts (`scripts/build-framework.ts` and `scripts/build.ts`) use PostCSS to:
 
 1. Resolve `@import` statements
 2. Add vendor prefixes (autoprefixer)
@@ -103,12 +103,21 @@ The build scripts (`scripts/build-framework.js` and `scripts/build.js`) use Post
 
 **PostCSS is only required for building**, not for using the framework.
 
-## File Organization
+## File Organisation
 
 - **`/css`**: Source files (edit these)
 - **`/dist`**: Compiled output (use these, don't edit)
-- **`/docs`**: Documentation website
+- **`/docs`**: Documentation website (workspace)
 - **`/scripts`**: Build and utility scripts
+
+## Workspace Structure
+
+This repository uses npm workspaces:
+
+- **Root**: Shared dependencies (Next.js, React, ESLint, Prettier, TypeScript, etc.)
+- **`docs/`**: Documentation-specific dependencies (MDX plugins, etc.)
+
+This setup avoids duplicate installations and simplifies dependency management.
 
 ## Available Commands
 

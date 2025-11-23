@@ -5,7 +5,7 @@ Thank you for your interest in contributing to Luxa CSS! This guide will help yo
 ## Quick Start
 
 1. **Fork and clone** the repository
-2. **Install dependencies**: `npm run install:all`
+2. **Install dependencies**: `npm install`
 3. **Make your changes** in the `/css` directory
 4. **Build the framework**: `npm run build`
 5. **Submit a pull request**
@@ -14,19 +14,17 @@ Thank you for your interest in contributing to Luxa CSS! This guide will help yo
 
 ### Prerequisites
 
-- Node.js 18+
+- Node.js 18 or higher
 - npm, pnpm, or bun
 
 ### Installation
 
 ```bash
-# Install all dependencies (main + docs)
-npm run install:all
-
-# Or install separately
-npm install              # Main framework dependencies
-cd docs && npm install    # Documentation site dependencies
+# Install all dependencies (workspace setup)
+npm install
 ```
+
+This uses npm workspaces to install dependencies for both the framework and documentation site. Shared dependencies (like Next.js and React) are installed once at the root to avoid duplication.
 
 ### Project Structure
 
@@ -48,11 +46,11 @@ luxacss/
 │   └── individual/   # Individual module files
 │
 ├── docs/             # Documentation website (Next.js)
-├── scripts/          # Build and utility scripts
-│   ├── build.js          # Build script (framework + docs)
-│   ├── build-framework.js # Framework build script
-│   ├── dev.js            # Development mode (watch + dev server)
-│   └── lint.js           # Linting and formatting
+├── scripts/          # Build and utility scripts (TypeScript)
+│   ├── build.ts          # Build script (framework + docs)
+│   ├── build-framework.ts # Framework build script
+│   ├── dev.ts            # Development mode (watch + dev server)
+│   └── lint.ts           # Linting and formatting
 ├── postcss.config.js  # PostCSS configuration
 └── package.json
 ```
@@ -91,6 +89,7 @@ npm run dev
 ```
 
 This automatically:
+
 - Watches CSS files and rebuilds on changes
 - Starts the documentation dev server with hot reload
 - Visit `http://localhost:3000` to see your changes in the documentation site
@@ -104,6 +103,7 @@ This automatically:
 - Follow the existing naming conventions
 - Use kebab-case for class names
 - Keep files focused and modular
+- Use British English spelling where applicable (e.g., 'colour' in variable names)
 
 ### File Organization
 
