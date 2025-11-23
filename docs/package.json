@@ -11,14 +11,14 @@
   },
   "dependencies": {
     "next": "16.0.3",
-    "react-dom": "^19",
-    "react": "^19"
+    "react-dom": "^18.3.1",
+    "react": "^18.3.1"
   },
   "devDependencies": {
     "@mintlify/mdx": "^3.0.4",
     "@types/node": "^24",
-    "@types/react-dom": "^19",
-    "@types/react": "^19",
+    "@types/react-dom": "^18",
+    "@types/react": "^18",
     "eslint-config-next": "16.0.3",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-simple-import-sort": "^12.1.1",
