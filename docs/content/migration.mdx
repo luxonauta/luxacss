@@ -45,16 +45,18 @@ PostCSS handles essential build tasks: resolving `@import` statements, adding ve
 
 ### PostCSS configuration
 
-The build process uses PostCSS with these plugins:
+The build process uses PostCSS with this configuration:
 
 ```js
-{
-  "postcss-import": {},  // Resolves @import statements
-  "autoprefixer": {}      // Adds vendor prefixes
-}
+export default {
+  plugins: {
+    "postcss-import": {},  // Resolves @import statements
+    autoprefixer: {}        // Adds vendor prefixes
+  }
+};
 ```
 
-For minification, we use `cssnano` during the build process.
+For minification, `cssnano` is applied conditionally during the build/minify step, not in the static PostCSS configuration.
 
 ### Source file structure
 
