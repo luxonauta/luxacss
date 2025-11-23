@@ -22,21 +22,20 @@ Example:
 
 <Illustrations.Containers />
 
-In the example above, `container-80` will have a maximum width of 80% of the viewport, a max size of `96rem`, and a minimum size of `16rem`.
+In the example above, `container-80` will have a maximum width of 80% of the viewport, a max size of `38rem`, and a minimum size of `16rem`.
 
-| Variable         | Max-Width | Min-Width |
-| ---------------- | --------- | --------- |
-| `.container-50`  | 60rem     | 10rem     |
-| `.container-55`  | 66rem     | 11rem     |
-| `.container-60`  | 72rem     | 12rem     |
-| `.container-65`  | 78rem     | 13rem     |
-| `.container-70`  | 84rem     | 14rem     |
-| `.container-75`  | 90rem     | 15rem     |
-| `.container-80`  | 96rem     | 16rem     |
-| `.container-85`  | 102rem    | 17rem     |
-| `.container-90`  | 108rem    | 18rem     |
-| `.container-95`  | 114rem    | 19rem     |
-| `.container-100` | 120rem    | 20rem     |
+| Variable        | Max-Width | Min-Width |
+| --------------- | --------- | --------- |
+| `.container-50` | 24rem     | 10rem     |
+| `.container-55` | 26rem     | 11rem     |
+| `.container-60` | 29rem     | 12rem     |
+| `.container-65` | 31rem     | 13rem     |
+| `.container-70` | 34rem     | 14rem     |
+| `.container-75` | 36rem     | 15rem     |
+| `.container-80` | 38rem     | 16rem     |
+| `.container-85` | 41rem     | 17rem     |
+| `.container-90` | 43rem     | 18rem     |
+| `.container-95` | 46rem     | 19rem     |
 
 ### Rows
 
@@ -63,7 +62,8 @@ Example:
 
 Columns are flexible and adapt to row and container size.
 
-- Use `is-X` classes to set column width (X = 1 to 12).
+- Use `is-X` classes to set column width (X = 1 to 12);
+- Column widths use `calc()` for precise 12-column grid calculations.
 
 Example:
 
@@ -102,8 +102,8 @@ In the second example, since both columns have `is-X` modifiers, they will try t
 
 ##### Responsive behavior
 
-- Below `80rem`:
-  - Containers adjust `max-width`;
+- Below `64rem` (the `--breakpoint` variable):
+  - Containers adjust `max-width` to maintain readability;
   - Rows change to column direction;
   - Columns take full width.
 

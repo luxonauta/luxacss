@@ -1,29 +1,39 @@
 ---
 title: Contents
-description: Discover what's included in Luxa.
+description: Discover what's included in Luxa CSS—compiled CSS files, source files, build scripts, and documentation. Everything you need to get started.
 ---
 
-Luxa source download includes the compiled CSS, Sass, build scripts, and documentation.
+Luxa includes compiled CSS files (ready to use), source CSS files (for customization), and build scripts. **No build tools required**—use the compiled files directly.
 
 ```sh
 luxacss/
 ├── dist/
 │   ├── compressed/
-│   │   ├── luxa.min.css
+│   │   └── luxa.min.css
 │   ├── expanded/
 │   │   ├── luxa.css
-│   │   ├── luxa.css.map
+│   │   └── luxa.css.map
+│   └── individual/
+│       ├── compressed/
+│       │   └── [individual files].min.css
+│       └── expanded/
+│           └── [individual files].css
+├── css/
+│   ├── colors.css
+│   ├── grid.css
+│   ├── luxa.css
+│   ├── reset.css
+│   ├── spacing.css
+│   ├── tokens.css
+│   ├── typography.css
+│   └── utilities.css
 ├── docs/
-├── sass/
-│   ├── colors.scss
-│   ├── grid.scss
-│   ├── luxa.scss
-│   ├── reset.scss
-│   ├── spacing.scss
-│   ├── typography.scss
-│   ├── utilities.scss
-│   ├── variables.scss
-├── build.js
+├── scripts/
+│   ├── build.js
+│   ├── build-framework.js
+│   ├── dev.js
+│   └── lint.js
+├── postcss.config.js
 ├── license.md
 ├── package.json
 └── readme.md
