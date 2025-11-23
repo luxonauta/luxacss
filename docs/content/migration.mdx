@@ -50,8 +50,8 @@ The build process uses PostCSS with this configuration:
 ```js
 export default {
   plugins: {
-    "postcss-import": {},  // Resolves @import statements
-    autoprefixer: {}        // Adds vendor prefixes
+    "postcss-import": {}, // Resolves @import statements
+    autoprefixer: {} // Adds vendor prefixes
   }
 };
 ```
@@ -79,9 +79,9 @@ No Sass-specific syntax is used anywhere in the source files.
 ## Benefits
 
 - No build tools required: use compiled files directly or import source files in modern browsers;
-- Easier customization: edit standard CSS files without learning Sass;
+- Easier customisation: edit standard CSS files without learning Sass;
 - Better tooling: standard CSS works with all CSS tooling and linters.
 
 ## Migration impact
 
-The migration was transparent to end users—only the build process and source files changed, not the final output. The compiled output is functionally identical, all classes and utilities work the same, and users have more flexibility in how they use and customize the framework.
+The migration was transparent to end users—only the build process and source files changed, not the final output. The compiled output is functionally identical, all classes and utilities work the same, and users have more flexibility in how they use and customise the framework.

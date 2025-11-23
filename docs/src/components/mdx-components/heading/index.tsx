@@ -1,4 +1,5 @@
 import { createElement, type FC, type HTMLAttributes } from "react";
+
 import { slugify } from "@/lib/slugify";
 
 const createHeading = (level: 2 | 3 | 4 | 5 | 6) => {

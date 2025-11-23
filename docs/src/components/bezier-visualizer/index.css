@@ -7,6 +7,7 @@
   overflow: hidden;
   border: 0.0625rem solid var(--neutral-04);
   border-radius: var(--rounded-sm);
+  corner-shape: squircle;
   background-color: var(--neutral-02);
   transition: border-color 240ms var(--fluid);
 }

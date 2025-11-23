@@ -1,8 +1,10 @@
 "use client";
 
 import "./index.css";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 import isActive from "@/lib/active-pathname";
 
 interface MenuItemProps {

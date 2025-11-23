@@ -11,6 +11,7 @@ section .title {
 pre,
 code {
   border-radius: var(--rounded-sm);
+  corner-shape: squircle;
   font-size: inherit;
   font-family: var(--font-commit-mono);
 }
@@ -75,6 +76,7 @@ code {
   width: 100%;
   margin: 0 0 1rem 0;
   overflow: hidden;
+  corner-shape: squircle;
 }
 
 .colors .col {

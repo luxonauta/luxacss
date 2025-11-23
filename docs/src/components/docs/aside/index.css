@@ -16,6 +16,7 @@ aside nav {
   padding: var(--space-02) var(--space-01) var(--space-02) var(--space-02);
   border: 0.0625rem solid var(--neutral-04);
   border-radius: var(--rounded-sm);
+  corner-shape: squircle;
   transition: border-color 240ms var(--fluid);
 }
 

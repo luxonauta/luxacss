@@ -1,67 +1,63 @@
-import { getCompiledServerMdx } from "@mintlify/mdx";
 import { notFound } from "next/navigation";
-import fs from "node:fs/promises";
-import path from "node:path";
-import TableOfContents from "@/components/docs/table-of-contents";
-import mdxComponents from "@/components/mdx-components";
-import PageTransition from "@/components/page-transition";
-import { extractHeadings } from "@/lib/extract-headings";
-import getFile from "@/lib/get-file";
 
-const contentDirectory = path.join(process.cwd(), "./content");
-const contentExtension = ".mdx";
+import TableOfContents from "@/components/docs/table-of-contents";
+import { CustomMDX } from "@/components/mdx-components/custom-mdx";
+import PageTransition from "@/components/page-transition";
+import { getMdxDataFromDirectory, getMdxFromFile } from "@/utils/mdx";
+import { extractHeadings } from "@/utils/mdx/extract-headings";
 
 export const generateStaticParams = async () => {
-  return await fs.readdir(contentDirectory);
+  const posts = getMdxDataFromDirectory<{ slug: string }>("./content");
+  return posts.map((post) => ({ slug: post.slug }));
 };
 
 export const generateMetadata = async ({
   params
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) => {
-  const filePath = path.join(contentDirectory, params.slug + contentExtension);
-  const source = await getFile(filePath);
+  const { slug } = await params;
+  const mdxData = getMdxFromFile("./content", slug);
 
-  if (!source) notFound();
-
-  const { frontmatter } = await getCompiledServerMdx({
-    source: source
-  });
+  if (!mdxData) {
+    notFound();
+  }
 
   return {
-    title: frontmatter.title,
-    description: frontmatter.description,
+    title: mdxData.title as string,
+    description: mdxData.description as string,
     alternates: {
-      canonical: `/docs/${params.slug}`
+      canonical: `/docs/${slug}`
     },
     openGraph: {
-      url: `https://www.luxacss.com/docs/${params.slug}`
+      url: `https://www.luxacss.com/docs/${slug}`
     }
   };
 };
 
-const DynamicPage = async ({ params }: { params: { slug: string } }) => {
-  const filePath = path.join(contentDirectory, params.slug + contentExtension);
-  const source = await getFile(filePath);
+const DynamicPage = async ({
+  params
+}: {
+  params: Promise<{ slug: string }>;
+}) => {
+  const { slug } = await params;
+  const mdxData = getMdxFromFile("./content", slug);
 
-  if (!source) notFound();
+  if (!mdxData) {
+    notFound();
+  }
 
-  const toc = extractHeadings(source);
-
-  const { content, frontmatter } = await getCompiledServerMdx({
-    source: source,
-    components: mdxComponents
-  });
+  const toc = extractHeadings(mdxData.content as string);
+  const content = mdxData.content as string;
 
   return (
     <PageTransition className="row flow-column-wrap align-start">
       <div>
-        <h1 className="title primary">{String(frontmatter.title)}</h1>
-        <p className="description">{String(frontmatter.description)}</p>
+        <h1 className="title primary">{String(mdxData.title)}</h1>
+        <p className="description">{String(mdxData.description)}</p>
       </div>
       <TableOfContents headings={toc} />
-      {content}
+      <CustomMDX source={content} />
     </PageTransition>
   );
 };

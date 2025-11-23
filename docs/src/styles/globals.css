@@ -13,6 +13,11 @@
   color: var(--neutral-10);
 }
 
+html {
+  overscroll-behavior: contain;
+  touch-action: manipulation;
+}
+
 body {
   display: flex;
   position: relative;
@@ -84,7 +89,6 @@ h5.primary,
 h6.primary,
 .title.primary {
   color: var(--neutral-10);
-  font-weight: 900;
 }
 
 ol,
@@ -129,6 +133,7 @@ ul {
   gap: 0.5rem;
   border: 0.0625rem solid var(--neutral-04);
   border-radius: var(--rounded-sm);
+  corner-shape: squircle;
   background-color: var(--neutral-01);
   box-shadow: var(--custom-box-shadow);
   color: var(--neutral-09);
@@ -160,6 +165,7 @@ ul {
   padding: var(--space-01);
   border: 0.0625rem solid var(--neutral-04);
   border-radius: var(--rounded-sm);
+  corner-shape: squircle;
   transition: border-color 240ms var(--fluid);
 }
 

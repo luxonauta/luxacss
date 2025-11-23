@@ -19,6 +19,7 @@
   gap: 0.5rem !important;
   border: 0.0625rem solid var(--neutral-04) !important;
   border-radius: var(--rounded-sm) !important;
+  corner-shape: squircle;
   background-color: var(--neutral-01) !important;
   text-wrap: balance !important;
   transition: border-color 240ms var(--fluid) !important;

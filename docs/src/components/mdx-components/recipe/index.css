@@ -10,6 +10,7 @@
   padding: var(--space-01);
   border: 0.0625rem solid var(--neutral-04);
   border-radius: var(--rounded-sm);
+  corner-shape: squircle;
   transition: border-color 240ms var(--fluid);
 }
 

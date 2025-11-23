@@ -5,6 +5,7 @@
   overflow: auto hidden;
   border: 0.0625rem solid var(--neutral-05);
   border-radius: var(--rounded-sm);
+  corner-shape: squircle;
 }
 
 .table table {

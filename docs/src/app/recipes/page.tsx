@@ -1,12 +1,9 @@
 import "@/styles/pages/recipes.css";
-import { getCompiledServerMdx } from "@mintlify/mdx";
-import fs from "node:fs/promises";
-import path from "node:path";
+
 import PageTransition from "@/components/page-transition";
 import { RecipeItem } from "@/components/recipe-card";
-import getFile from "@/lib/get-file";
-import { getFileDate } from "@/lib/get-file-date";
 import type { Recipe } from "@/types";
+import { getMdxDataFromDirectory } from "@/utils/mdx";
 
 export const metadata = {
   title: "Recipes",
@@ -21,30 +18,28 @@ export const metadata = {
 };
 
 const Recipes = async () => {
-  const contentDirectory = path.join(process.cwd(), "./recipes");
-  const files = await fs.readdir(contentDirectory);
+  const mdxFiles = getMdxDataFromDirectory<{
+    title: string;
+    description: string;
+    slug: string;
+    date?: { createdAt?: string };
+  }>("./recipes");
 
-  const recipes: Recipe[] = await Promise.all(
-    files.map(async (file) => {
-      const filePath = path.join(contentDirectory, file);
-      const source = await getFile(filePath);
+  const recipes: Recipe[] = mdxFiles.map((file) => {
+    const createdAt = file.date?.createdAt;
+    const date = createdAt ? new Date(createdAt) : new Date();
+    const month = date.toLocaleString("en-US", { month: "short" });
+    const year = date.getFullYear().toString().slice(-2);
+    const display = `${month}, ${year}`;
+    const iso = date.toISOString();
 
-      if (!source) {
-        throw new Error(`Failed to load file: "${filePath}".`);
-      }
-
-      const { frontmatter } = await getCompiledServerMdx({
-        source: source
-      });
-
-      return {
-        link: `/recipes/${file.replace(/\.mdx?$/, "")}`,
-        title: frontmatter.title as string,
-        description: frontmatter.description as string,
-        lastModified: await getFileDate(filePath)
-      };
-    })
-  );
+    return {
+      link: `/recipes/${file.slug}`,
+      title: file.title,
+      description: file.description,
+      lastModified: { display, iso }
+    };
+  });
 
   return (
     <PageTransition className="row flow-column-wrap align-start">

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+
 import PageTransition from "@/components/page-transition";
 
 export const metadata = {

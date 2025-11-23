@@ -1,5 +1,7 @@
 import "@/styles/pages/home.css";
+
 import Link from "next/link";
+
 import Features from "@/components/home/features";
 import { SeedlingIcon } from "@/components/icons";
 import PageTransition from "@/components/page-transition";

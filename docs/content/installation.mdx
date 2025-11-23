@@ -1,6 +1,6 @@
 ---
 title: Installing Luxa CSS
-description: Install Luxa manually or via CDN for a dependency-free setup, or use NPM.
+description: Install Luxa manually or via CDN for a dependency-free setup, or use npm.
 ---
 
 Choose the method that best suits your project:
@@ -29,7 +29,7 @@ Add one of these lines to your HTML `<head>`:
 2. Extract the CSS file you need;
 3. Link it in your HTML `<head>`.
 
-**Note**: The GitHub repository includes documentation, making it larger than the NPM package.
+**Note**: The GitHub repository includes documentation, making it larger than the npm package.
 
 #### Package manager
 
@@ -51,7 +51,7 @@ Import the CSS file in your JavaScript entry point:
 import "luxacss";
 ```
 
-> The package manager method is recommended for projects using modern JavaScript frameworks or build tools, as it allows for better integration and customization.
+> The package manager method is recommended for projects using modern JavaScript frameworks or build tools, as it allows for better integration and customisation.
 
 ##### Using source files
 
@@ -69,7 +69,7 @@ Or import the full framework:
 @import "luxacss/css/luxa.css";
 ```
 
-> **Note**: Source files use standard CSS `@import`. For better browser compatibility or to customize with PostCSS plugins, use the compiled files from `dist/` or set up PostCSS in your build process.
+> **Note**: Source files use standard CSS `@import`. For better browser compatibility or to customise with PostCSS plugins, use the compiled files from `dist/` or set up PostCSS in your build process.
 
 ##### Usage with Next.js
 
@@ -79,9 +79,9 @@ For Next.js projects, you can import Luxa CSS in your `_app.js` or `layout.js` f
 import "luxacss";
 ```
 
-#### Customization
+#### Customisation
 
-To customize Luxa CSS or use specific parts of the library:
+To customise Luxa CSS or use specific parts of the library:
 
 **Option 1: Use compiled individual files via CDN** (recommended, no build step needed):
 
@@ -126,9 +126,8 @@ To customize Luxa CSS or use specific parts of the library:
 @import "luxacss/css/utilities.css";
 ```
 
-**Option 3: Extend with PostCSS** (optional, for advanced customization):
+**Option 3: Extend with PostCSS** (optional, for advanced customisation):
 
 If you want to use PostCSS plugins (mixins, nesting, etc.), you can extend the source files. PostCSS is not required to use the framework—the compiled files in `dist/` work without any build tools.
 
-Choose the method that best fits your development workflow and project
-requirements.
+Choose the method that best fits your development workflow and project requirements.

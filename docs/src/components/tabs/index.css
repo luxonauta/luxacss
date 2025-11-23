@@ -32,6 +32,7 @@
   inset: 0;
   border: 0.0625rem solid var(--neutral-04);
   border-radius: var(--rounded-sm);
+  corner-shape: squircle;
   background-color: var(--neutral-02);
 }
 

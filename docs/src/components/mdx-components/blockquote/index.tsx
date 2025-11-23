@@ -1,12 +1,13 @@
 import "./index.css";
+
 import type { BlockquoteHTMLAttributes, DetailedHTMLProps } from "react";
+
 import { SeedlingIcon } from "@/components/icons";
 
-interface BlockquoteProps
-  extends DetailedHTMLProps<
-    BlockquoteHTMLAttributes<HTMLQuoteElement>,
-    HTMLQuoteElement
-  > {}
+type BlockquoteProps = DetailedHTMLProps<
+  BlockquoteHTMLAttributes<HTMLQuoteElement>,
+  HTMLQuoteElement
+>;
 
 const Blockquote = ({ children, ...props }: BlockquoteProps) => (
   <div className="blockquote">

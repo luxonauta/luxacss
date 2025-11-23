@@ -18,7 +18,7 @@ const variants = {
     y: 0,
     transition: {
       duration: 0.24,
-      ease: [0.36, 0.66, 0.6, 1]
+      ease: [0.36, 0.66, 0.6, 1] as const
     }
   }
 };

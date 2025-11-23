@@ -1,7 +1,9 @@
 "use client";
 
 import "./index.css";
+
 import { isValidElement, type ReactNode, useState } from "react";
+
 import { CheckIcon, CloneIcon } from "@/components/icons";
 
 interface CopyButtonProps {
@@ -19,7 +21,10 @@ const CopyButton = ({ children }: CopyButtonProps) => {
       return children.map(getTextFromChildren).join("");
     }
     if (isValidElement(children) && children.props) {
-      return getTextFromChildren(children.props.children);
+      const props = children.props as { children?: React.ReactNode };
+      if (props.children) {
+        return getTextFromChildren(props.children);
+      }
     }
 
     return null;
@@ -33,9 +38,7 @@ const CopyButton = ({ children }: CopyButtonProps) => {
         await navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
-      } catch {
-        // Ignore clipboard errors
-      }
+      } catch {}
     }
   };
 

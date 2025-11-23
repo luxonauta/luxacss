@@ -1,6 +1,8 @@
 import "@/styles/globals.css";
+
 import localFont from "next/font/local";
 import Script from "next/script";
+
 import Header from "@/components/header";
 
 const inter = localFont({

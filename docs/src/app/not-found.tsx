@@ -1,4 +1,5 @@
 import Link from "next/link";
+
 import PageTransition from "@/components/page-transition";
 
 export const metadata = {

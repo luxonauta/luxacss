@@ -20,10 +20,6 @@
   text-transform: uppercase;
 }
 
-.columns:hover {
-  border-color: var(--neutral-05);
-}
-
 .columns:hover .col {
   border-color: var(--neutral-06);
 }

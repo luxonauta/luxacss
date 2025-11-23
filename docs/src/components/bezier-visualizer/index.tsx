@@ -6,7 +6,9 @@ interface BezierVisualizerProps {
 }
 
 const processInput = (input: string | number[]): number[] => {
-  if (Array.isArray(input)) return input.map(Number);
+  if (Array.isArray(input)) {
+    return input.map(Number);
+  }
   return input
     .toString()
     .trim()

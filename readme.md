@@ -72,20 +72,20 @@ If you find Luxa CSS helpful, consider supporting the project:
 
 ## Development
 
-Want to contribute or customize Luxa CSS? Get started quickly:
+Want to contribute or customise Luxa CSS? Get started quickly:
 
 - **[Quick Onboarding](.github/onboarding.md)** - Get started in 5 minutes
 - **[Contributing Guide](.github/contributing.md)** - How to contribute
 - **[Development Guide](.github/development.md)** - Local development setup
-- **[Project Structure](.github/structure.md)** - Repository organization
+- **[Project Structure](.github/structure.md)** - Repository organisation
 
 ### Quick Start
 
 ```bash
-# Clone and install
+# Clone and install (workspace dependencies)
 git clone https://github.com/luxonauta/luxacss.git
 cd luxacss
-npm run install:all
+npm install
 
 # Build framework and docs
 npm run build
@@ -96,7 +96,7 @@ npm run dev
 
 ## Contributing
 
-Please read our [contributing guidelines](.github/contributing.md) to get started.
+Please read our [GitHub contributing guidelines](.github/contributing.md) to get started.
 
 ## License
 
