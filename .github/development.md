@@ -49,7 +49,11 @@ luxacss/
 │   ├── src/                # Next.js app source
 │   └── public/            # Static assets
 │
-├── build.js                # Build script
+├── scripts/                # Build and utility scripts
+│   ├── build.js            # Build script (framework + docs)
+│   ├── build-framework.js  # Framework build script (with watch mode)
+│   ├── dev.js              # Development mode (watch + dev server)
+│   └── lint.js             # Linting and formatting
 ├── postcss.config.js       # PostCSS configuration
 └── package.json
 ```

@@ -35,7 +35,7 @@ luxacss/
 │
 ├── scripts/              # Build and utility scripts
 │   ├── build.js          # Build script (framework + docs)
-│   ├── build-framework.js # Framework build script
+│   ├── build-framework.js # Framework build script (with watch mode)
 │   ├── dev.js            # Development mode (watch + dev server)
 │   └── lint.js           # Linting and formatting
 │
@@ -95,7 +95,7 @@ All source files in `/css` use **standard CSS only**:
 
 ## Build Process
 
-The build script (`build.js`) uses PostCSS to:
+The build scripts (`scripts/build-framework.js` and `scripts/build.js`) use PostCSS to:
 
 1. Resolve `@import` statements
 2. Add vendor prefixes (autoprefixer)

@@ -47,8 +47,13 @@ luxacss/
 │   ├── expanded/     # Expanded versions
 │   └── individual/   # Individual module files
 │
-├── docs/             # Documentation website
-├── build.js          # Build script
+├── docs/             # Documentation website (Next.js)
+├── scripts/          # Build and utility scripts
+│   ├── build.js          # Build script (framework + docs)
+│   ├── build-framework.js # Framework build script
+│   ├── dev.js            # Development mode (watch + dev server)
+│   └── lint.js           # Linting and formatting
+├── postcss.config.js  # PostCSS configuration
 └── package.json
 ```
 
@@ -67,11 +72,8 @@ The `/dist` directory is auto-generated from source files. When you make changes
 ### 2. Build the Framework
 
 ```bash
-# Build once
+# Build once (framework + docs)
 npm run build
-
-# Watch for changes (auto-rebuild)
-npm run watch
 ```
 
 The build process:
@@ -84,14 +86,14 @@ The build process:
 ### 3. Test Your Changes
 
 ```bash
-# Build the framework
-npm run build
-
-# Start the documentation site to preview
-npm run dev:docs
+# Start development mode (watches CSS files and starts docs dev server)
+npm run dev
 ```
 
-Visit `http://localhost:3000` to see your changes in the documentation site.
+This automatically:
+- Watches CSS files and rebuilds on changes
+- Starts the documentation dev server with hot reload
+- Visit `http://localhost:3000` to see your changes in the documentation site
 
 ## Code Style
 
@@ -180,10 +182,10 @@ When reporting bugs, include:
 The documentation site is in `/docs`. To contribute:
 
 ```bash
-# Start development mode (includes docs)
+# Start development mode (watches CSS + docs dev server)
 npm run dev
 
-# Build for production
+# Build for production (framework + docs)
 npm run build
 ```
 
