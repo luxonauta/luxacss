@@ -15,7 +15,7 @@ cd luxacss
 npm run install:all
 ```
 
-This installs dependencies for both the framework and documentation site.
+This installs dependencies for both the framework (from root `package.json`) and documentation site (from `docs/package.json`).
 
 ## Step 3: Build the Framework
 
@@ -23,7 +23,10 @@ This installs dependencies for both the framework and documentation site.
 npm run build
 ```
 
-This compiles the CSS files from `/css` to `/dist`.
+This runs `node scripts/build.js`, which:
+- Lints the code
+- Compiles CSS files from `/css` to `/dist`
+- Builds the documentation site
 
 ## Step 4: Start Development Mode
 
@@ -31,7 +34,11 @@ This compiles the CSS files from `/css` to `/dist`.
 npm run dev
 ```
 
-This starts both the framework watch mode and the documentation dev server. Visit `http://localhost:3000` to see the framework in action.
+This runs `node scripts/dev.js`, which:
+- Starts framework watch mode (rebuilds CSS on changes)
+- Starts the documentation dev server with hot reload
+
+Visit `http://localhost:3000` to see the framework in action.
 
 ## You're Ready!
 
@@ -48,17 +55,21 @@ Now you can:
 
 ## Common Commands
 
+All commands are run from the repository root. Scripts are defined in `package.json`:
+
 ```bash
-# Build framework and docs
+# Build framework and docs (runs: node scripts/build.js)
 npm run build
 
-# Start development mode (watch + dev server)
+# Start development mode (runs: node scripts/dev.js)
+# - Watches CSS files and rebuilds on changes
+# - Starts docs dev server at http://localhost:3000
 npm run dev
 
-# Format and lint code
+# Format and lint code (runs: node scripts/lint.js)
 npm run lint
 
-# Start production docs server
+# Start production docs server (runs: cd docs && npm start)
 npm run start
 ```
 
