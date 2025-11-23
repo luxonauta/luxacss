@@ -159,13 +159,18 @@ luxa.css
   width: 100%;
   max-width: 64rem;
   margin: 0 auto;
+  padding: 1.5rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 /* Avoid */
-.container {
-  width: 100%;
-  max-width: 64rem;
-  margin: 0 auto;
+.container { width: 100%; max-width: 1024px; margin: 0 auto; padding: 24px; }
+.container { background-color: #ffffff; color: #000000; }
+.containerWrapper { /* Non-kebab-case */
+  & .nested { /* PostCSS nesting syntax */
+    background: white;
+  }
 }
 ```
 
