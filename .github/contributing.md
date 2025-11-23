@@ -1,37 +1,226 @@
-# 🫱🏻‍🫲🏻 Contributing to Luxa
+# Contributing to Luxa CSS
 
-Thank you for your interest in contributing to Luxa CSS! Please review these guidelines before submitting a [bug report](https://github.com/luxonauta/luxacss/issues) or a [pull request](https://github.com/luxonauta/luxacss/pulls).
+Thank you for your interest in contributing to Luxa CSS! This guide will help you get started quickly.
 
-## 🦗 Bug reports
+## Quick Start
 
-Use the [issue tracker](https://github.com/luxonauta/luxacss/issues) for bug reports, with the following considerations:
+1. **Fork and clone** the repository
+2. **Install dependencies**: `npm run install:all`
+3. **Make your changes** in the `/css` directory
+4. **Build the framework**: `npm run build`
+5. **Submit a pull request**
 
-- ✅ Bug reports and non-critical issues;
-- ❌ Personal support requests (use [discussion forums](https://github.com/luxonauta/luxacss/discussions/new?category=help) instead);
-- ❌ Feature requests (use [discussion forums](https://github.com/luxonauta/luxacss/discussions/new?category=ideas) instead).
+## Development Setup
 
-## ↗️ Pull requests
+### Prerequisites
 
-We welcome pull requests for improvements and new features. Please follow these guidelines:
+- Node.js 18+
+- npm, pnpm, or bun
 
-1. **Ask first**: before starting work on significant new features, [suggest your feature idea in our discussion forums](https://github.com/luxonauta/luxacss/discussions/new?category=ideas);
-2. **Target branch**: submit pull requests to the [`dev`](https://github.com/luxonauta/luxacss/tree/dev) branch;
-3. **Source files**:
-
-- ✅ Edit files in [`/sass`](https://github.com/luxonauta/luxacss/tree/master/sass);
-- ❌ Do not edit [`/dist`](https://github.com/luxonauta/luxacss/tree/master/dist) files directly.
-
-4. **Compilation**: After editing source files, recompile the [`/dist`](https://github.com/luxonauta/luxacss/tree/master/dist) files with:
+### Installation
 
 ```bash
+# Install all dependencies (main + docs)
+npm run install:all
+
+# Or install separately
+npm install              # Main framework dependencies
+cd docs && npm install    # Documentation site dependencies
+```
+
+### Project Structure
+
+```
+luxacss/
+├── css/              # Source CSS files (edit these)
+│   ├── colors.css
+│   ├── tokens.css
+│   ├── typography.css
+│   ├── spacing.css
+│   ├── reset.css
+│   ├── grid.css
+│   ├── utilities.css
+│   └── luxa.css      # Main entry point
+│
+├── dist/             # Compiled output (auto-generated)
+│   ├── compressed/   # Minified versions
+│   ├── expanded/     # Expanded versions
+│   └── individual/   # Individual module files
+│
+├── docs/             # Documentation website
+├── build.js          # Build script
+└── package.json
+```
+
+## Making Changes
+
+### 1. Edit Source Files
+
+**Always edit files in `/css`, never `/dist`.**
+
+The `/dist` directory is auto-generated from source files. When you make changes:
+
+1. Edit the appropriate file in `/css`
+2. Run `npm run build` to compile
+3. The build script will update `/dist` automatically
+
+### 2. Build the Framework
+
+```bash
+# Build once
+npm run build
+
+# Watch for changes (auto-rebuild)
+npm run watch
+```
+
+The build process:
+
+- Resolves `@import` statements
+- Adds vendor prefixes
+- Generates minified and expanded versions
+- Creates individual module files
+
+### 3. Test Your Changes
+
+```bash
+# Build the framework
+npm run build
+
+# Start the documentation site to preview
+npm run dev:docs
+```
+
+Visit `http://localhost:3000` to see your changes in the documentation site.
+
+## Code Style
+
+### CSS Guidelines
+
+- Use standard CSS only (no PostCSS-specific syntax)
+- Use CSS custom properties for values
+- Follow the existing naming conventions
+- Use kebab-case for class names
+- Keep files focused and modular
+
+### File Organization
+
+- **Colors**: `css/colors.css`
+- **Design tokens**: `css/tokens.css`
+- **Typography**: `css/typography.css`
+- **Spacing**: `css/spacing.css`
+- **Reset styles**: `css/reset.css`
+- **Grid system**: `css/grid.css`
+- **Utilities**: `css/utilities.css`
+
+### Formatting
+
+```bash
+# Format and lint code
+npm run lint
+```
+
+## Pull Requests
+
+### Before Submitting
+
+1. **Ask first**: For significant features, open a discussion first
+2. **Target branch**: Submit PRs to `main` (or `dev` if it exists)
+3. **Build**: Run `npm run build` and commit the `/dist` changes
+4. **Test**: Verify your changes work (use `npm run dev` for development)
+5. **Lint**: Run `npm run lint`
+
+### PR Checklist
+
+- [ ] Changes made in `/css` directory
+- [ ] Build completed successfully (`npm run build`)
+- [ ] Code formatted (`npm run lint`)
+- [ ] Documentation updated (if needed)
+- [ ] Changes tested locally
+
+### PR Title Format
+
+Use clear, descriptive titles:
+
+- `fix: correct grid column calculation`
+- `feat: add new utility class`
+- `docs: update installation guide`
+
+## Bug Reports
+
+Use the [issue tracker](https://github.com/luxonauta/luxacss/issues) for:
+
+- Bug reports and non-critical issues
+- Documentation improvements
+
+**Not for:**
+
+- Personal support requests (use [discussions](https://github.com/luxonauta/luxacss/discussions))
+- Feature requests (use [discussions](https://github.com/luxonauta/luxacss/discussions))
+
+### Bug Report Template
+
+When reporting bugs, include:
+
+- Clear description of the issue
+- Steps to reproduce
+- Expected vs actual behavior
+- Browser/device information
+- Screenshots (if applicable)
+
+## Feature Requests
+
+1. Check existing [discussions](https://github.com/luxonauta/luxacss/discussions) to avoid duplicates
+2. Open a new discussion in the "Ideas" category
+3. Describe the feature and use case
+4. Wait for feedback before implementing
+
+## Documentation
+
+The documentation site is in `/docs`. To contribute:
+
+```bash
+# Start development mode (includes docs)
+npm run dev
+
+# Build for production
 npm run build
 ```
 
-### 🆘 Getting Help
+Documentation files are in `/docs/content` (MDX format).
 
-For usage questions or other support:
+## Getting Help
 
-1. Check the [documentation](https://luxacss.com);
-2. [Open a new discussion](https://github.com/luxonauta/luxacss/discussions/new?category=help) in the Help category
+1. Check the [documentation](https://luxacss.com)
+2. Search [existing issues](https://github.com/luxonauta/luxacss/issues)
+3. Ask in [discussions](https://github.com/luxonauta/luxacss/discussions)
 
-Thank you for contributing to Luxa CSS! 🧩
+## Common Tasks
+
+### Add a new utility class
+
+1. Edit `css/utilities.css`
+2. Add your utility class
+3. Use `npm run dev` to see changes automatically
+
+### Modify colors
+
+1. Edit `css/colors.css`
+2. Update OKLCH values
+3. Use `npm run dev` to see changes automatically
+
+### Update grid system
+
+1. Edit `css/grid.css`
+2. Make your changes
+3. Use `npm run dev` to see changes automatically
+
+## Questions?
+
+If you have questions about contributing:
+
+- Open a [discussion](https://github.com/luxonauta/luxacss/discussions)
+- Check existing issues and PRs
+- Review the codebase structure
+
+Thank you for contributing to Luxa CSS!
