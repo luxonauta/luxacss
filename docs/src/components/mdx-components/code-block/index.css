@@ -1,0 +1,41 @@
+.code-block {
+  position: relative;
+  width: 100%;
+}
+
+.code-block pre {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 2em;
+  overflow: auto hidden;
+  border: 0.0625rem solid var(--neutral-04);
+  background-color: var(--neutral-02);
+  transition: border-color 240ms var(--fluid);
+}
+
+.code-block pre code .token.comment {
+  color: var(--neutral-07);
+  font-style: italic;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+}
+
+.code-block pre code .token.property {
+  color: var(--neutral-11);
+}
+
+.code-block pre code .token.tag .punctuation,
+.code-block pre code .token.tag .tag,
+.code-block pre code .token.tag .attr-name {
+  color: var(--neutral-11);
+}
+
+.code-block pre code .token.function {
+  color: var(--neutral-10);
+}
+
+.code-block:focus-within pre,
+.code-block:hover pre {
+  border-color: var(--neutral-05);
+}

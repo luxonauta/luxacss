@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 
-const path = require("node:path");
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const nextConfig = {
   async redirects() {
@@ -29,12 +33,11 @@ const nextConfig = {
       }
     ]
   },
-  experimental: {
-    outputFileTracingRoot: path.join(__dirname),
-    outputFileTracingIncludes: {
-      "/api/**/*": ["src/components/recipes/**/*"]
-    }
+  outputFileTracingRoot: join(__dirname, ".."),
+  outputFileTracingIncludes: {
+    "/api/**/*": ["src/components/recipes/**/*"],
+    "**/*": ["../dist/**/*", "../css/**/*"]
   }
 };
 
-module.exports = nextConfig;
+export default nextConfig;

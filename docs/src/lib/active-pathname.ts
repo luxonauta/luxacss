@@ -1,5 +1,11 @@
 const isActive = (pathname: string, pagePath: string) => {
-  return pathname === pagePath || pathname.startsWith(`${pagePath}/`);
+  if (pathname === pagePath) {
+    return true;
+  }
+  if (pathname.startsWith(`${pagePath}/`)) {
+    return true;
+  }
+  return false;
 };
 
 export default isActive;

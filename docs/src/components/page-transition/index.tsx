@@ -1,6 +1,6 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, type Variants } from "framer-motion";
 import type { ReactNode } from "react";
 
 interface PageTransitionProps {
@@ -8,7 +8,7 @@ interface PageTransitionProps {
   className?: string;
 }
 
-const variants = {
+const variants: Variants = {
   initial: {
     opacity: 0,
     y: 6
@@ -18,7 +18,7 @@ const variants = {
     y: 0,
     transition: {
       duration: 0.24,
-      ease: [0.36, 0.66, 0.6, 1]
+      ease: [0.36, 0.66, 0.6, 1] as [number, number, number, number]
     }
   }
 };

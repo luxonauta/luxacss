@@ -1,4 +1,5 @@
-import "./index.scss";
+import "./index.css";
+
 import { Columns } from "./columns";
 import { Containers } from "./containers";
 import { Rows } from "./rows";

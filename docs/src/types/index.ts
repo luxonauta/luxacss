@@ -3,6 +3,12 @@ export interface DateFormats {
   iso: string;
 }
 
+export interface Heading {
+  id: string;
+  text: string;
+  level: number;
+}
+
 export interface Recipe {
   description: string;
   lastModified: DateFormats;

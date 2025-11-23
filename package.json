@@ -1,14 +1,13 @@
 {
   "name": "luxacss",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "The minimalist CSS library",
   "author": "luxonauta",
   "license": "MIT",
   "keywords": [
     "css",
     "library",
-    "minimal",
-    "scss"
+    "minimal"
   ],
   "homepage": "https://luxacss.com",
   "repository": {
@@ -19,6 +18,9 @@
     "url": "https://github.com/luxonauta/luxacss/issues"
   },
   "type": "module",
+  "workspaces": [
+    "docs"
+  ],
   "main": "./dist/luxa.js",
   "module": "./dist/luxa.js",
   "exports": {
@@ -26,32 +28,44 @@
       "import": "./dist/luxa.js",
       "require": "./dist/luxa.js"
     },
-    "./css": "./dist/expanded/luxa.css",
-    "./scss": "./sass/luxa.scss"
+    "./css": "./dist/expanded/luxa.css"
   },
   "style": "./dist/expanded/luxa.css",
-  "sass": "./sass/luxa.scss",
   "files": [
     "dist",
-    "sass"
+    "css"
   ],
   "scripts": {
-    "build": "node build.js",
-    "watch": "node build.js --watch",
-    "build:docs": "cd docs && npm run build",
-    "dev:docs": "cd docs && npm run dev",
-    "format": "prettier --write .",
-    "install:all": "npm install && cd docs && dotenv -e .env npm install",
-    "lint:docs": "cd docs && npx next lint --fix",
-    "start:docs": "cd docs && npm start"
+    "dev": "tsx scripts/dev.ts",
+    "build": "tsx scripts/build.ts",
+    "start": "npm start --workspace=docs",
+    "lint": "tsx scripts/lint.ts"
+  },
+  "dependencies": {
+    "next": "^16.0.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "dotenv-cli": "^7.4.2",
+    "@types/eslint": "^9.6.1",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@typescript-eslint/eslint-plugin": "^8.47.0",
+    "@typescript-eslint/parser": "^8.47.0",
+    "autoprefixer": "^10.4.22",
+    "cssnano": "^7.1.2",
+    "eslint": "^9",
+    "eslint-config-next": "^16.0.3",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "jiti": "^2.6.1",
+    "postcss": "^8.5.6",
+    "postcss-import": "^16.1.1",
+    "prettier": "^3.6.2",
     "prettier-plugin-css-order": "^2.1.2",
-    "prettier": "3.0.3",
-    "sass": "^1.69.7"
-  },
-  "peerDependencies": {
-    "sass": "^1.69.7"
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
   }
 }

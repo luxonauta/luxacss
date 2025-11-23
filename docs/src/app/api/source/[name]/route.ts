@@ -1,12 +1,15 @@
-import { type NextRequest, NextResponse } from "next/server";
 import fs from "node:fs/promises";
 import path from "node:path";
 
+import { type NextRequest, NextResponse } from "next/server";
+
 export async function GET(
-  request: NextRequest,
-  { params }: { params: { name: string } }
+  _request: NextRequest,
+  { params }: { params: Promise<{ name: string }> }
 ) {
-  if (!params?.name) {
+  const { name } = await params;
+
+  if (!name) {
     return NextResponse.json(
       { error: "The Component name is required." },
       { status: 400 }
@@ -14,25 +17,21 @@ export async function GET(
   }
 
   try {
-    const baseDir = path.join(
-      process.cwd(),
-      "src/components/recipes",
-      params.name
-    );
+    const baseDir = path.join(process.cwd(), "src/components/recipes", name);
 
-    const [tsxContent, scssContent] = await Promise.all([
+    const [tsxContent, cssContent] = await Promise.all([
       fs.readFile(path.join(baseDir, "index.tsx"), "utf-8"),
-      fs.readFile(path.join(baseDir, "index.scss"), "utf-8")
+      fs.readFile(path.join(baseDir, "index.css"), "utf-8")
     ]);
 
     return NextResponse.json({
       tsx: tsxContent,
-      scss: scssContent
+      css: cssContent
     });
   } catch (error) {
-    console.error(`Error loading source from: "${params.name}".\n`, error);
+    console.error(`Error loading source from: "${name}".\n`, error);
     return NextResponse.json(
-      { error: `Failed to load component source from: "${params.name}".` },
+      { error: `Failed to load component source from: "${name}".` },
       { status: 500 }
     );
   }

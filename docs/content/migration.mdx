@@ -1,0 +1,87 @@
+---
+title: Migration from Sass to CSS
+description: Why Luxa moved from Sass to standard CSS with PostCSS
+---
+
+Luxa CSS migrated from Sass to standard CSS with PostCSS to improve accessibility, simplify the build process, and align with modern web standards.
+
+## Why standard CSS?
+
+Standard CSS offers better accessibility and flexibility. Users can import source files directly in modern browsers without build tools:
+
+```css
+@import "luxacss/css/luxa.css";
+```
+
+This approach provides native browser support for `@import` statements, better IDE support, and a smaller learning curve for contributors who don't know Sass.
+
+Modern CSS has evolved to include features that Sass once provided: CSS custom properties replace Sass variables, native `@import` replaces Sass `@import`, and CSS nesting (gaining browser support) can replace Sass nesting when needed. We don't need Sass-specific features like mixins—standard CSS is sufficient for our needs.
+
+## PostCSS for building
+
+PostCSS handles essential build tasks: resolving `@import` statements, adding vendor prefixes via Autoprefixer, and minifying output with cssnano. It's JavaScript-based and integrates seamlessly with modern tooling, reducing complexity compared to Sass which required Ruby or a Node.js Sass compiler.
+
+## What changed
+
+### Source files
+
+| Before                                | After                                       |
+| ------------------------------------- | ------------------------------------------- |
+| `/sass/*.scss` files with Sass syntax | `/css/*.css` files with standard CSS syntax |
+
+### Build process
+
+| Before                     | After                                       |
+| -------------------------- | ------------------------------------------- |
+| Sass compiler → CSS output | PostCSS processes standard CSS → CSS output |
+
+### User experience
+
+| Before                                                 | After                                                     |
+| ------------------------------------------------------ | --------------------------------------------------------- |
+| Users needed to compile Sass or use pre-compiled files | Users can use source files directly or use compiled files |
+
+## Technical details
+
+### PostCSS configuration
+
+The build process uses PostCSS with this configuration:
+
+```js
+export default {
+  plugins: {
+    "postcss-import": {}, // Resolves @import statements
+    autoprefixer: {} // Adds vendor prefixes
+  }
+};
+```
+
+For minification, `cssnano` is applied conditionally during the build/minify step, not in the static PostCSS configuration.
+
+### Source file structure
+
+All source files use standard CSS:
+
+```css
+/* css/colors.css */
+:root {
+  --color-primary: oklch(0.5 0.2 250);
+}
+
+/* css/luxa.css */
+@import "./colors.css";
+@import "./tokens.css";
+/* ... */
+```
+
+No Sass-specific syntax is used anywhere in the source files.
+
+## Benefits
+
+- No build tools required: use compiled files directly or import source files in modern browsers;
+- Easier customisation: edit standard CSS files without learning Sass;
+- Better tooling: standard CSS works with all CSS tooling and linters.
+
+## Migration impact
+
+The migration was transparent to end users—only the build process and source files changed, not the final output. The compiled output is functionally identical, all classes and utilities work the same, and users have more flexibility in how they use and customise the framework.

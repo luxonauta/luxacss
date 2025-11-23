@@ -1,8 +1,10 @@
 "use client";
 
-import "./index.scss";
+import "./index.css";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+
 import isActive from "@/lib/active-pathname";
 
 interface MenuItemProps {
@@ -16,6 +18,7 @@ const menuItems = [
   { href: "/contents", text: "Contents" },
   { href: "/responsiveness", text: "Responsiveness" },
   { href: "/usage-scenarios", text: "Usage Scenarios" },
+  { href: "/migration", text: "Migration" },
   { href: "/grid", text: "Grid" },
   { href: "/typography", text: "Typography" },
   { href: "/colours", text: "Colours" },

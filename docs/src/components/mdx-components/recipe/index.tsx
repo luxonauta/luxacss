@@ -1,7 +1,10 @@
-import "./index.scss";
+import "./index.css";
+
 import { type ReactElement, use } from "react";
+
 import { Tabs } from "@/components/tabs";
 import { getBasePath } from "@/lib/environment";
+
 import CodeBlock from "../code-block";
 
 interface RecipeProps {
@@ -24,8 +27,9 @@ const fetchSourceCode = async (dirName: string) => {
 export const Recipe = ({ component, dirName }: RecipeProps) => {
   const sourceCode = use(fetchSourceCode(dirName));
 
-  if (!sourceCode)
+  if (!sourceCode) {
     return <span>Something went wrong. Please try again later.</span>;
+  }
 
   return (
     <div className="example">
@@ -42,9 +46,9 @@ export const Recipe = ({ component, dirName }: RecipeProps) => {
             content: <CodeBlock lang="tsx">{sourceCode.tsx}</CodeBlock>
           },
           {
-            id: "scss",
-            label: "SCSS",
-            content: <CodeBlock lang="scss">{sourceCode.scss}</CodeBlock>
+            id: "css",
+            label: "CSS",
+            content: <CodeBlock lang="css">{sourceCode.css}</CodeBlock>
           }
         ]}
       />

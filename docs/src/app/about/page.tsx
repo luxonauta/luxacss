@@ -1,12 +1,17 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+
 import PageTransition from "@/components/page-transition";
 
 export const metadata = {
   title: "About",
-  description: "Why Luxa CSS exists, and the problems it solves.",
+  description:
+    "Learn why Luxa CSS exists, the problems it solves, and how it prioritizes minimalism, speed, and maintainability over complexity.",
   alternates: {
     canonical: "/about"
+  },
+  openGraph: {
+    url: "https://www.luxacss.com/about"
   }
 };
 
@@ -51,7 +56,7 @@ const ListItem = ({
 );
 
 const technologies = [
-  { name: "Sass", desc: "CSS pre-processor", url: "https://sass-lang.com/" },
+  { name: "PostCSS", desc: "CSS processing tool", url: "https://postcss.org/" },
   { name: "jsDelivr", desc: "CDN", url: "https://www.jsdelivr.com/" },
   { name: "Next.js", desc: "React framework", url: "https://nextjs.org/" },
   { name: "MDX", desc: "Markdown with JSX", url: "https://mdxjs.com/" },

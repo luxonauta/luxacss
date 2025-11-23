@@ -1,4 +1,5 @@
-import "./index.scss";
+import "./index.css";
+
 import type { FC, ReactNode, TableHTMLAttributes } from "react";
 
 interface TableProps extends TableHTMLAttributes<HTMLTableElement> {

@@ -1,15 +1,16 @@
-import "@/styles/pages/home.scss";
-import { faSeedling } from "@awesome.me/kit-6533c71a8a/icons/duotone/solid";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "@/styles/pages/home.css";
+
 import Link from "next/link";
+
 import Features from "@/components/home/features";
+import { SeedlingIcon } from "@/components/icons";
 import PageTransition from "@/components/page-transition";
 
 const Home = () => (
   <PageTransition className="row flow-column-wrap align-start">
     <div>
       <div className="icon">
-        <FontAwesomeIcon icon={faSeedling} />
+        <SeedlingIcon />
       </div>
       <h1 className="title primary">Luxa CSS</h1>
       <h2 className="title">The minimalist CSS library.</h2>
@@ -19,9 +20,14 @@ const Home = () => (
         A clean and lightweight kit that prioritizes minimalism, speed, and ease
         of maintenance.
       </p>
+      <p>
+        Explore our <Link href="/recipes">component recipes</Link> for
+        ready-to-use components, or dive into the{" "}
+        <Link href="/docs/overview">documentation</Link> to learn more.
+      </p>
     </div>
     <div className="row justify-start flow-row-nowrap actions-group">
-      <Link href="/docs" className="action primary">
+      <Link href="/docs/overview" className="action primary">
         <span>Get started</span>
       </Link>
       <Link

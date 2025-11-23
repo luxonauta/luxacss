@@ -1,15 +1,22 @@
 ---
 title: Overview
-description: You only need one CSS file to use Luxa.
+description: Get started with Luxa CSS in minutes. You only need one CSS file to use Luxa—no build tools required, just add it to your HTML and start building.
 ---
 
 Luxa CSS is a lightweight CSS library that provides pre-defined classes to style your HTML. It emphasizes minimalism, speed, and ease of maintenance.
 
 ## Quick start
 
-1. Add this line to your HTML `<head>`:
+1. Add one of these lines to your HTML `<head>`:
 
 ```html
+<!-- Expanded (7.23KB) -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/luxacss@latest/dist/expanded/luxa.css"
+/>
+
+<!-- Compressed (5.47KB) -->
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/luxacss@latest/dist/compressed/luxa.min.css"
@@ -21,7 +28,7 @@ Luxa CSS is a lightweight CSS library that provides pre-defined classes to style
 ### Usage options
 
 - **Quick**: use the pre-compiled `.css` file (as shown above);
-- **Customizable**: install the `.scss` files to tailor Luxa to your needs.
+- **Customisable**: import individual CSS modules to tailor Luxa to your needs.
 
 #### Requirements
 
@@ -43,10 +50,16 @@ Ensure your webpage is responsive:
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hello Luxa!</title>
+    <!-- Expanded (7.23KB) -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/luxacss@latest/dist/compressed/luxa.min.css"
+      href="https://cdn.jsdelivr.net/npm/luxacss@latest/dist/expanded/luxa.css"
     />
+    <!-- Or use compressed (5.47KB) -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/luxacss@latest/dist/compressed/luxa.min.css"
+    /> -->
   </head>
   <body>
     <main class="container-80">
@@ -59,4 +72,4 @@ Ensure your webpage is responsive:
 </html>
 ```
 
-This minimal setup gets you started with Luxa CSS. Explore our documentation for more advanced usage and customization options.
+This minimal setup gets you started with Luxa CSS. Explore our documentation for more advanced usage and customisation options.

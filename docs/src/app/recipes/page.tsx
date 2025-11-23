@@ -1,12 +1,9 @@
-import "@/styles/pages/recipes.scss";
-import { getCompiledServerMdx } from "@mintlify/mdx";
-import fs from "node:fs/promises";
-import path from "node:path";
+import "@/styles/pages/recipes.css";
+
 import PageTransition from "@/components/page-transition";
 import { RecipeItem } from "@/components/recipe-card";
-import getFile from "@/lib/get-file";
-import { getFileDate } from "@/lib/get-file-date";
 import type { Recipe } from "@/types";
+import { getMdxDataFromDirectory } from "@/utils/mdx";
 
 export const metadata = {
   title: "Recipes",
@@ -14,34 +11,32 @@ export const metadata = {
     "Component recipes for you to modify, copy and paste into your projects!",
   alternates: {
     canonical: "/recipes"
+  },
+  openGraph: {
+    url: "https://www.luxacss.com/recipes"
   }
 };
 
 const Recipes = async () => {
-  const contentDirectory = path.join(process.cwd(), "./recipes");
-  const files = await fs.readdir(contentDirectory);
+  const mdxFiles = getMdxDataFromDirectory("./recipes");
 
-  const recipes: Recipe[] = await Promise.all(
-    files.map(async (file) => {
-      const filePath = path.join(contentDirectory, file);
-      const source = await getFile(filePath);
+  const recipes: Recipe[] = mdxFiles.map((file) => {
+    const date = file.date?.createdAt
+      ? new Date(file.date.createdAt)
+      : new Date();
+    const month = date.toLocaleString("en-US", { month: "short" });
+    const year = date.getFullYear().toString().slice(-2);
 
-      if (!source) {
-        throw new Error(`Failed to load file: "${filePath}".`);
+    return {
+      link: `/recipes/${file.slug}`,
+      title: String(file.title ?? ""),
+      description: String(file.description ?? ""),
+      lastModified: {
+        display: `${month}, ${year}`,
+        iso: date.toISOString()
       }
-
-      const { frontmatter } = await getCompiledServerMdx({
-        source: source
-      });
-
-      return {
-        link: `/recipes/${file.replace(/\.mdx?$/, "")}`,
-        title: frontmatter.title as string,
-        description: frontmatter.description as string,
-        lastModified: await getFileDate(filePath)
-      };
-    })
-  );
+    };
+  });
 
   return (
     <PageTransition className="row flow-column-wrap align-start">
@@ -50,6 +45,17 @@ const Recipes = async () => {
         <p>
           Component and elements recipes to modify, copy and paste into your
           projects!
+        </p>
+        <p>
+          These recipes are pre-built components using Luxa CSS that you can use
+          as starting points for your own designs. Each recipe includes complete
+          source code with TSX and CSS, so you can see exactly how it works and
+          customize it to fit your needs.
+        </p>
+        <p>
+          All recipes are built with standard CSS and follow Luxa&apos;s
+          minimalist principles—no complex dependencies, just clean,
+          maintainable code that you can understand and modify easily.
         </p>
       </div>
       <ul className="list row flow-column-wrap">

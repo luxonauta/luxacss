@@ -1,14 +1,13 @@
 import Link from "next/link";
-import type { Recipe } from "@/types";
 
-interface RecipeItemProps extends Recipe {}
+import type { Recipe } from "@/types";
 
 export const RecipeItem = ({
   link,
   title,
   description,
   lastModified
-}: RecipeItemProps) => (
+}: Recipe) => (
   <li className="item">
     <Link href={link} className="row">
       <div className="col">

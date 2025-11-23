@@ -1,12 +1,10 @@
 "use client";
 
-import "./index.scss";
-import {
-  faCheck,
-  faClone
-} from "@awesome.me/kit-6533c71a8a/icons/classic/light";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./index.css";
+
 import { isValidElement, type ReactNode, useState } from "react";
+
+import { CheckIcon, CloneIcon } from "@/components/icons";
 
 interface CopyButtonProps {
   children: ReactNode;
@@ -23,7 +21,10 @@ const CopyButton = ({ children }: CopyButtonProps) => {
       return children.map(getTextFromChildren).join("");
     }
     if (isValidElement(children) && children.props) {
-      return getTextFromChildren(children.props.children);
+      const props = children.props as { children?: React.ReactNode };
+      if (props.children) {
+        return getTextFromChildren(props.children);
+      }
     }
 
     return null;
@@ -37,7 +38,7 @@ const CopyButton = ({ children }: CopyButtonProps) => {
         await navigator.clipboard.writeText(text);
         setCopied(true);
         setTimeout(() => setCopied(false), 2000);
-      } catch (error) {}
+      } catch {}
     }
   };
 
@@ -50,8 +51,8 @@ const CopyButton = ({ children }: CopyButtonProps) => {
       title={copied ? "Copied!" : "Copy"}
     >
       <div className="icon">
-        <FontAwesomeIcon icon={faClone} className="icon-copy" />
-        <FontAwesomeIcon icon={faCheck} className="icon-check" />
+        <CloneIcon className="icon-copy" />
+        <CheckIcon className="icon-check" />
       </div>
       <span className="sr-only">{copied ? "Copied!" : "Copy"}</span>
     </button>

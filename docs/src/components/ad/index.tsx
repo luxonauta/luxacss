@@ -1,6 +1,7 @@
 "use client";
 
-import "./index.scss";
+import "./index.css";
+
 import { useEffect, useRef } from "react";
 
 const Ad = () => {

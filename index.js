@@ -1,1 +1,1 @@
-export * from "./dist/luxa-exports.js";
+export * from './dist/luxa-exports.js';

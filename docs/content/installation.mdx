@@ -1,6 +1,6 @@
 ---
 title: Installing Luxa CSS
-description: Install Luxa manually or via CDN for a dependency-free setup, or use NPM.
+description: Install Luxa manually or via CDN for a dependency-free setup, or use npm.
 ---
 
 Choose the method that best suits your project:
@@ -10,13 +10,13 @@ Choose the method that best suits your project:
 Add one of these lines to your HTML `<head>`:
 
 ```html
-<!-- Expanded (8KB) -->
+<!-- Expanded (7.23KB) -->
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/luxacss@latest/dist/expanded/luxa.css"
 />
 
-<!-- Compressed (6KB) -->
+<!-- Compressed (5.47KB) -->
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/luxacss@latest/dist/compressed/luxa.min.css"
@@ -29,7 +29,7 @@ Add one of these lines to your HTML `<head>`:
 2. Extract the CSS file you need;
 3. Link it in your HTML `<head>`.
 
-**Note**: The GitHub repository includes documentation, making it larger than the NPM package.
+**Note**: The GitHub repository includes documentation, making it larger than the npm package.
 
 #### Package manager
 
@@ -51,19 +51,25 @@ Import the CSS file in your JavaScript entry point:
 import "luxacss";
 ```
 
-> The package manager method is recommended for projects using modern JavaScript frameworks or build tools, as it allows for better integration and customization.
+> The package manager method is recommended for projects using modern JavaScript frameworks or build tools, as it allows for better integration and customisation.
 
-##### Usage with Sass
+##### Using source files
 
-If you're using Sass in your project, you can import Luxa CSS like this:
+You can import individual CSS modules directly (works in modern browsers with native `@import` support):
 
-```scss
-@use "luxacss";
-// or
-@use "luxacss" as *;
+```css
+@import "luxacss/css/colors.css";
+@import "luxacss/css/tokens.css";
+@import "luxacss/css/grid.css";
 ```
 
-This allows you to use Luxa CSS variables, mixins, and functions in your Sass files.
+Or import the full framework:
+
+```css
+@import "luxacss/css/luxa.css";
+```
+
+> **Note**: Source files use standard CSS `@import`. For better browser compatibility or to customise with PostCSS plugins, use the compiled files from `dist/` or set up PostCSS in your build process.
 
 ##### Usage with Next.js
 
@@ -73,15 +79,55 @@ For Next.js projects, you can import Luxa CSS in your `_app.js` or `layout.js` f
 import "luxacss";
 ```
 
-#### Customization
+#### Customisation
 
-To customize Luxa CSS variables or use specific parts of the library, you can import individual modules:
+To customise Luxa CSS or use specific parts of the library:
 
-```scss
-// Import other modules as needed
-@use "luxacss/variables" as vars;
-@use "luxacss/grid" as grid;
+**Option 1: Use compiled individual files via CDN** (recommended, no build step needed):
+
+```html
+<!-- Colors module: 0.80KB expanded / 0.67KB compressed -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/luxacss@latest/dist/individual/expanded/colors.css"
+/>
+<!-- Or compressed -->
+<!-- <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/luxacss@latest/dist/individual/compressed/colors.min.css"
+/> -->
+
+<!-- Grid module: 2.69KB expanded / 1.92KB compressed -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/luxacss@latest/dist/individual/expanded/grid.css"
+/>
+<!-- Or compressed -->
+<!-- <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/luxacss@latest/dist/individual/compressed/grid.min.css"
+/> -->
+
+<!-- Other available modules:
+  - Reset: 2.23KB expanded / 1.67KB compressed
+  - Typography: 0.37KB expanded / 0.29KB compressed
+  - Spacing: 0.40KB expanded / 0.32KB compressed
+  - Tokens: 0.37KB expanded / 0.27KB compressed
+  - Utilities: 1.54KB expanded / 1.16KB compressed
+-->
 ```
 
-Choose the method that best fits your development workflow and project
-requirements. 😊
+**Option 2: Import source files** (requires native CSS `@import` support or PostCSS):
+
+```css
+@import "luxacss/css/colors.css";
+@import "luxacss/css/tokens.css";
+@import "luxacss/css/grid.css";
+@import "luxacss/css/utilities.css";
+```
+
+**Option 3: Extend with PostCSS** (optional, for advanced customisation):
+
+If you want to use PostCSS plugins (mixins, nesting, etc.), you can extend the source files. PostCSS is not required to use the framework—the compiled files in `dist/` work without any build tools.
+
+Choose the method that best fits your development workflow and project requirements.

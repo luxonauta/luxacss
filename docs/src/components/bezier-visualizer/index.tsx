@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./index.css";
 
 interface BezierVisualizerProps {
   name?: string;
@@ -6,12 +6,9 @@ interface BezierVisualizerProps {
 }
 
 const processInput = (input: string | number[]): number[] => {
-  if (Array.isArray(input)) return input.map(Number);
-  return input
-    .toString()
-    .trim()
-    .split(",")
-    .map((point) => Number.parseFloat(point));
+  return Array.isArray(input)
+    ? input.map(Number)
+    : input.toString().trim().split(",").map(Number.parseFloat);
 };
 
 const BezierVisualizer: React.FC<BezierVisualizerProps> = ({

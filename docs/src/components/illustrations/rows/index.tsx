@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./index.css";
 
 export const Rows = () => (
   <div className="illustration rows">
