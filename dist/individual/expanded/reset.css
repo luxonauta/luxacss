@@ -42,8 +42,8 @@ body {
 }
 html {
   -webkit-text-size-adjust: none;
-  -moz-text-size-adjust: none;
-  text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
   font-size: var(--base-size);
   font-variation-settings: normal;
 }
@@ -133,3 +133,5 @@ hr {
   padding: 0;
   border: none;
 }
+
+/*# sourceMappingURL=reset.css.map */
