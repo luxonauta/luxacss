@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./index.css";
 
 interface FeatureItem {
   id: string;

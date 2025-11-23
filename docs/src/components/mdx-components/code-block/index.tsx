@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./index.css";
 import type { HTMLAttributes, ReactNode } from "react";
 import CopyButton from "../copy-button";
 

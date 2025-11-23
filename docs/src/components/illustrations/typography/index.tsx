@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./index.css";
 
 const textClasses = [
   { className: "text-01", code: "--text-01" },

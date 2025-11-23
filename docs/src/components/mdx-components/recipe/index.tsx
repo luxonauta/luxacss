@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./index.css";
 import { type ReactElement, use } from "react";
 import { Tabs } from "@/components/tabs";
 import { getBasePath } from "@/lib/environment";
@@ -42,9 +42,9 @@ export const Recipe = ({ component, dirName }: RecipeProps) => {
             content: <CodeBlock lang="tsx">{sourceCode.tsx}</CodeBlock>
           },
           {
-            id: "scss",
-            label: "SCSS",
-            content: <CodeBlock lang="scss">{sourceCode.scss}</CodeBlock>
+            id: "css",
+            label: "CSS",
+            content: <CodeBlock lang="css">{sourceCode.css}</CodeBlock>
           }
         ]}
       />

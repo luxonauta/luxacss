@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./index.css";
 
 export const Switch = () => (
   <label className="switch" htmlFor="switch">

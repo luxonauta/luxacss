@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./index.css";
 import { slugify } from "@/lib/slugify";
 
 interface Heading {

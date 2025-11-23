@@ -1,0 +1,23 @@
+.list {
+  margin-top: 0.5em;
+  padding: 0;
+  gap: 1em;
+  list-style: none;
+}
+
+.list .item {
+  width: 100%;
+  padding: 1em;
+  border: 0.0625rem solid var(--neutral-04);
+  border-radius: var(--rounded-sm);
+  transition: border-color 240ms var(--fluid);
+}
+
+.list .item a {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.list .item:hover {
+  border-color: var(--neutral-05);
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import "./index.scss";
+import "./index.css";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import isActive from "@/lib/active-pathname";
@@ -8,7 +8,7 @@ import isActive from "@/lib/active-pathname";
 const pages = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
-  { label: "Docs", path: "/docs" },
+  { label: "Docs", path: "/docs/overview" },
   { label: "Recipes", path: "/recipes" },
   {
     path: "https://github.com/luxonauta/luxacss",

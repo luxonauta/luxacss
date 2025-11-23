@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./index.css";
 
 export const Containers = () => (
   <div className="illustration containers">
